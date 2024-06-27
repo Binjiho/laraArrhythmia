@@ -1,0 +1,3083 @@
+@charset "utf-8";
+/* ==================================================
+
+    * layout
+    
+================================================== */
+@media screen and (max-width: 1600px){
+    /* layer */
+    .inner-layer.wide{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1400px){  
+    /* header */
+    .gnb > li > a{
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    /* layer */
+    .inner-layer{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    /* intro */
+    .intro-menu-list{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .intro-menu-list > li{
+        width: calc((100% - 61px)/3);
+        margin-left: 30px;
+    }
+    .intro-menu-list:has(.eng) > li:first-child{
+        margin-left: 0;
+    }
+    .intro-menu-list:has(.eng) > li{        
+        width: calc((100% - 91px)/4);
+        margin-left: 30px;
+    }
+    .intro-menu-list:has(.eng) .icon{
+        width: 120px;
+        height: 120px;
+    }
+
+    /* header */
+    .header-logo > a{
+        width: 200px;
+        height: 45px;
+        background-size: 100%;
+    }
+    .gnb > li > a{
+        padding-left: 0.7vw;
+        padding-right: 0.7vw;
+    }
+    
+    /* main contents */
+    .quick-menu-wrap .main-tit-wrap{
+        width: 280px;
+    }
+    .quick-menu-wrap .quick-menu-list{
+        width: calc(100% - 280px);
+    }
+
+    .video-rolling-wrap .btn-rolling-prev{
+        left: 20px;
+    }
+    .video-rolling-wrap .btn-rolling-next{
+        right: 20px;
+    }
+
+    .journal-contents .img-wrap{
+        width: 280px;
+    }
+    .journal-contents .text-wrap{
+        width: calc(100% - 280px);
+        padding-left: 40px;
+    }
+
+    /* sponsor */
+    .sponsor-rolling-wrap .slick-prev{
+        left: 20px;
+    }
+    .sponsor-rolling-wrap .slick-next{
+        right: 20px;
+    }
+
+    /* footer */
+    .footer-con{
+        padding-left: 5%;
+        padding-right: 340px;
+    }
+    .footer-menu > li > a{
+        width: 160px;
+        padding: 12px 15px;
+        font-size: 1.4rem;
+    }
+
+    /* main contents */
+    .video-rolling-wrap.inner-layer{
+        padding: 0;
+    }
+    .video-rolling{
+        width: 100%;
+    }
+
+    /* sub */
+    .sub-menu{
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+    .sub02 + .sub-menu-wrap .sub-menu-list > li > ul > li > a{
+        padding-right: 1.2vw;
+        padding-left: 1.2vw;
+    }
+    .sub07 + .sub-menu-wrap .sub-menu-list > li > ul > li > a{
+        padding-right: 1.5vw;
+        padding-left: 1.5vw;
+    }
+
+    /* 부정맥 진료지침 */
+    .down-list .img-wrap{
+        width: 150px;
+        height: 200px;
+    }
+    .down-list .text-wrap{
+        width: calc(100% - 150px);
+    }
+
+    /* 학회지::학회지 관련 안내 */
+    .journal-conbox .img-wrap{
+        width: 400px;
+    }
+    .journal-conbox .text-wrap{
+        width: calc(100% - 370px);
+    }
+
+    /* 대한부정맥학회::연구회/지회 */
+    .branch-list > li > a{
+        padding-right: 100px;
+    }
+    .branch-list > li > a:has(img){
+        padding: 25px 30px;
+    }
+}
+@media screen and (max-width: 1200px){
+    /* header */
+    .header-logo > a{
+        width: 180px;
+        height: 42px;
+    }
+    .gnb{
+        margin: 0;
+    }
+    .gnb > li > a{
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
+        font-size: 1.7rem;
+    }
+    .gnb > li > div{
+        top: 144px;
+    }
+    .gnb > li .gnb-img{
+        width: 300px;
+    }
+    .gnb > li > div > ul{
+        width: calc(100% - 301px);
+        padding: 0 20px;
+    }
+    .gnb > li > div > ul > li > a{
+        padding: 20px;
+        font-size: 1.6rem;
+    }
+
+    /* header active */
+    #header.active{
+        height: 299px;
+    }
+
+    /* footer */
+    .footer-con{
+        padding-left: 30px;
+        padding-right: 0;
+    }
+    .footer-menu{
+        position: static;
+        top: auto;
+        right: auto;
+        margin-bottom: 15px;
+    }
+    .footer-menu > li > a{
+        width: 160px;
+        padding: 12px 15px;
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 1024px){    
+    html,
+    body{
+        font-size: 9px;
+    }
+
+    /* layer */
+    .inner-layer{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .inner-layer.wide{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* form */    
+    .form-item.medium{
+        width: 100%;
+    }
+    .form-item.small{
+        max-width: 150px;
+    }
+    .form-group .form-item.small{
+        max-width: 100%;
+    }
+    .form-item + .form-group{
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* intro */    
+    .intro-menu-list > li > a{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .intro-menu-list:has(.eng) > li{        
+        width: calc((100% - 61px)/4);
+        margin-left: 20px;
+    }
+    .intro-menu-list:has(.eng) .icon{
+        width: 120px;
+        height: 120px;
+        background-size: 100%;
+    }
+    .intro-menu-list:has(.eng) .btn-link{
+        min-width: initial;
+        width: 100%;
+    }
+
+    /* header */
+    #header{
+        height: 70px;
+        background-color: #fff;
+    }
+    .header-wrap,
+    .header-wrap .inner-layer{
+        height: 100%;
+    }
+    .header-logo > a{
+        background-image: url('../image/common/h1_logo_on.png');
+    }
+    .util-wrap{
+        display: none;
+    }
+
+    .gnb-wrap{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 85%;
+        height: 100%;
+        background-color: #fff;
+    }
+    .gnb-header{
+        display: block;
+        width: 100%;
+        padding: 20px;
+        background-color: #f5f8ff;
+    }
+    .gnb-header .util-menu{
+        width: 100%;
+    }
+    .gnb-header .util-menu:after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+    .gnb-header .util-menu > li{
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    .gnb-header .util-menu > li > a{
+        display: block;
+        padding: 10px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-image: none;
+        color: #183371;
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+    }
+    .gnb-header .util-menu > li > a:before{
+        display: inline-block;
+        content: '';
+        clear: both;
+        width: 18px;
+        height: 18px;
+        margin-top: -5px;
+        margin-right: 5px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;        
+        vertical-align: middle;
+    }
+    .gnb-header .util-menu > li.login > a:before{
+        background-image: url('../image/common/ic_login_m.png');
+    }
+    .gnb-header .util-menu > li.signup > a:before{
+        background-image: url('../image/common/ic_signup_m.png');
+    }    
+    .gnb-header .util-menu > li.admin > a:before{
+        background-image: url('../image/common/ic_admin_m.png');
+    }
+    .gnb-header .util-menu > li:not(.admin){
+        width: 50%;
+    }
+    .gnb-header .util-menu li + li{
+        position: relative;
+        margin-left: 0;
+    }
+    .gnb-header .util-menu li + li:before{
+        display: block;
+        content: '';
+        clear: both;
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 1px;
+        height: 18px;
+        background-color: #d9deec;
+    }
+    .gnb-header .util-menu li.admin{
+        margin-top: 10px;
+    }
+    .gnb-header .util-menu li.admin > a{
+        padding: 12px 10px;
+        border-radius: 3px;
+        background-color: #183371;
+        color: #fff;
+    }
+    #gnb{
+        overflow-y: auto;
+        height: calc(100% - 120px);
+        padding-bottom: 50px;
+    }
+    .gnb{
+        padding-top: 15px;
+    }
+    .gnb > li{
+        display: block;
+        width: 100%;
+    }
+    .gnb > li > div{
+        display: none;
+        position: static;
+        top: auto;
+        left: auto;
+        -webkit-transform: none;
+        transform: none;
+    }
+    .gnb > li > div.inner-layer{
+        height: auto;
+        padding: 0;
+        -webkit-transition: none;
+        transition: none;
+    }
+    .gnb > li > a{
+        display: block;
+        position: relative;
+        width: 100%;
+        padding: 15px 20px;
+        padding-right: 30px;
+        color: #000000;
+        font-size: 18px;
+    }
+    .gnb > li.on > a{
+        font-weight: 700;
+        color: #133171;
+    }
+    .gnb > li > a:before{
+        display: inline-block;
+        content: '+';
+        clear: both;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateX(0) translateY(-50%);
+        transform: translateX(0) translateY(-50%);
+        left: auto;
+        right: 15px;
+        bottom: auto;
+        width: 20px;
+        height: 15px;
+        background: none;
+        color: #000;
+        font-weight: 400;
+        text-align: center;
+    }
+    .gnb > li:hover > a:before{
+        width: 20px;
+    }
+    .gnb > li.on > a:before{
+        content: '-';
+    }
+    .gnb > li .gnb-img{
+        display: none;
+    }
+    .gnb > li > div > ul{
+        width: 100%;
+        padding: 0 0 45px;
+    }
+    .gnb > li > div > ul > li{
+        display: block;
+        width: 100%;
+    }
+    .gnb > li > div > ul > li + li:before{
+        display: none;
+    }
+    .gnb > li > div > ul > li > a{
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #575757;
+    }
+
+    .btn-menu-open,
+    .btn-menu-close{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .btn-menu-open{
+        background-image: url('../image/common/ic_menu_open.png');
+        background-size: 30px;
+    }
+    .btn-menu-close{
+        position: absolute;
+        top: 10px;
+        left: -45px;
+        background-image: url('../image/common/ic_menu_close.png');
+        background-size: 30px;
+    }  
+
+    /* main visual */
+    .main-visual{
+        height: auto;
+        padding-top: 70px;
+    }
+    .main-visual-con picture,
+    .main-visual-con source,
+    .main-visual-con img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .main-visual-wrap .slick-dots{
+        bottom: 45px;
+    }
+    .btn-visual-wrap{
+        bottom: 30px;
+    }
+
+    /* main contents */
+    .quick-menu-wrap .main-tit-wrap{
+        width: 250px;
+    }
+    .quick-menu-wrap .quick-menu-list{
+        width: calc(100% - 250px);
+    }
+
+    .main-board-tit{
+        height: 40px;
+    }
+    .main-board-con{
+        height: 58px;
+    }
+
+    .main-contents:has(.journal-contents){
+        margin-top: 80px;
+    }
+    .video-rolling-wrap.inner-layer{
+        padding: 0;
+    }
+
+    .journal-contents{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .journal-contents .img-wrap{
+        width: 200px;
+        margin-top: -50px;
+    }
+    .journal-contents .text-wrap{
+        width: calc(100% - 200px);
+    }
+    .btn.btn-journal{
+        min-width: initial;
+        padding-right: 70px;
+        background-size: 24px;
+    }
+
+    /* sponsor */
+    .sponsor-wrap{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /* footer */
+    #footer{
+        padding: 30px 0;
+    }
+    .footer-logo{
+        width: 180px;
+    }
+    .footer-logo > a > img{
+        width: 100%;
+    }
+    .footer-con{
+        width: calc(100% - 181px);
+        padding-left: 20px;
+    }
+
+    /* sub */
+    #container.sub{
+        padding-top: 70px;
+    }
+    .sub-visual{
+        height: 235px;
+        background-position: top right;
+    }
+    .sub-visual-con{
+        padding-top: 45px;
+    }
+    .breadcrumb > li + li{
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+    .breadcrumb > li + li:before{
+        font-size: 15px;
+    }
+
+    /* sub menu */
+    .sub-menu{
+        width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+    .sub-menu.inner-layer{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .sub-menu-wrap{
+        height: 55px;
+        margin-top: -55px;
+    }
+    .sub-menu-list > li > ul > li > a{
+        padding: 0 30px;
+        font-size: 16px;
+    }
+
+    .sub07 +  .sub-menu-wrap .sub-menu-list > li > ul > li > a{
+        padding-left: 1.2vw;
+        padding-right: 1.2vw;
+    }
+
+    /* 회원가입::회원가입 */
+    .step-list .icon{
+        width: 120px;
+        height: 120px;
+        background-size: auto 60px;
+    }
+
+    /* 회원가입::로그인 */
+    .login-form{
+        padding: 0 30px;
+    }    
+    
+    /* 마이페이지::회원정보 수정 */
+    .box-list.n3{
+        gap: 30px;
+    }
+    .box-list.n3 > li{
+        width: calc((100% - 61px)/3);
+    }
+    .mypage-list > li > a{
+        padding: 30px;
+    }
+    .mypage-list > li .icon{
+        bottom: 30px;
+        right: 30px;
+    }
+
+    /* 마이페이지::학술행사 */
+    .btn.btn-download{
+        max-width: none;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .btn.btn-download img{
+        margin: 2px 0;
+        margin-left: 5px;
+        width: 15px;
+    }
+
+    /* 부정맥 진료지침 */
+    .box-list.n2{
+        gap: 30px;
+    }
+    .box-list.n2 > li{
+        width: calc((100% - 30px)/2);
+    }
+    .down-list > li{
+        padding: 20px;
+    }
+    .down-list > li:hover:before{
+        display: none;
+    }
+    .down-list .img-wrap{
+        width: 120px;
+        height: 170px;
+    }
+    .down-list .text-wrap{
+        width: calc(100% - 120px);
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+
+    /* 학회지::학회지 관련 안내 */
+    .journal-conbox .img-wrap{
+        width: 300px;
+    }
+    .journal-conbox .text-wrap{
+        width: calc(100% - 270px);
+    }
+
+    /* 학회지::온라인 논문 투고 */
+    .bg-info-box{
+        padding: 30px;
+    }    
+    .sub-tab-menu > li > a br{
+        display: none;
+    }
+
+    /* 대한부정맥학회::인사말 */
+    .greeting-wrap{
+        gap: 40px;
+    }
+    .greeting-wrap .img-wrap{
+        width: 200px;
+    }
+    .greeting-wrap .img-wrap .name{
+        padding: 0;
+    }
+    .greeting-wrap .text-wrap{
+        width: calc(100% - 200px);
+    }
+
+    /* 대한부정맥학회::미션/비전 */
+    .mission-conbox{
+        padding: 50px 30px;
+    }
+    .vision-list > li{
+        width: 180px;
+        height: 180px;
+    }
+    .vision-box{
+        width: 300px;
+        height: 300px;
+    }
+
+    /* 대한부정맥학회::연구회/지회 */
+    .branch-list > li > a{
+        padding: 30px 20px;
+        background-size: 40px;
+        background-position: top 30px right 20px;
+    }
+    .branch-list > li > a:has(img){
+        padding: 30px 20px;
+    }
+    
+    .research-tit-wrap{
+        padding: 20px;
+        background-position: right bottom;
+        background-size: auto 48px;
+        background-image: url('../image/sub/bg_research_tit_m.png');
+    }
+    .research-tit-wrap.branch{
+        background-size: auto 55px;
+    }
+    .research-tit{
+        font-size: 20px;
+    }
+    .research-tit-wrap.branch + .img-wrap{
+        margin-top: 40px;
+    }    
+
+    /* 회원공간::전문회원 가입안내 */
+    .process-list > li{
+        padding: 25px 30px;
+    }
+    .process-list .icon{
+        width: 60px;
+    }
+    .process-list .icon img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){    
+    html,
+    body{
+        font-size: 8px;
+    }
+
+    /* base */
+    /* table */
+    .table-wrap + .table-wrap{
+        margin-top: 30px;
+    }
+    .scroll-x{
+        overflow-x: auto;
+    }
+    .scroll-x table,
+    .scroll-x.img-wrap img{
+        width: 768px;
+        max-width: none;
+    }
+
+    .touch-help{
+		position: relative;
+	}
+	.touch-help:before{
+		display: block;
+		content: '';
+		color: #fff;
+		clear: both;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		width: 100%;
+		max-width: 80%;
+		height: 100%;
+		-webkit-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		background-image: url('../image/common/img_touch_help.png');
+	}
+	.touch-help.small:before{
+		width: 100%;
+		max-width: 100%;
+		height: 75px;
+		background-size: auto 100%;
+	}
+	.touch-help table{
+		position: relative;
+	}
+	.touch-help table:before,
+    .touch-help.img-wrap > div:before{
+		display: block;
+		content: '';
+		clear: both;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.7);
+	}
+
+    .cst-table th,
+    .cst-table td{
+        padding: 10px;
+        font-size: 14px;
+        word-break: break-word;
+    }
+    .cst-table .text-left{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cst-table.list-table th,
+    .cst-table.list-table td{
+        padding: 10px;
+    }
+    
+    /* list */
+    .list-type-bar > li{
+        padding-left: 12px;
+    }
+    .list-type-bar > li:before{
+        width: 6px;
+    }
+    .list-type-dot > li{
+        padding-left: 12px;
+    }
+    .list-type-dot > li:before{
+        top: 9px;
+    }
+    .list-type-text > li span{
+        width: 18px;
+    }
+    .list-type-text > li span + div{
+        width: calc(100% - 23px);
+    }
+
+    /* button */
+    .btn-wrap{
+        margin-top: 30px;
+    }
+    .btn.btn-type1{
+        min-width: 80px;
+        padding: 9px 16px;
+        margin: 2px;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+    .btn-type1 .arrow{
+        margin-left: 30px;
+    }
+    .btn-type1 img{
+        width: 16px;
+        margin-top: -4px;
+        margin-right: 5px;
+        margin-left: 0;
+    }
+    .btn.btn-type1:has(img){
+        padding-right: 21px;
+    }
+    .btn.btn-small{
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    .btn.btn-small:has(.arrow){
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .btn-small .arrow{
+        margin-top: -3px;
+        margin-left: 10px;
+    }
+    .btn-type2.btn-small{
+        min-width: 78px;
+        padding: 3px 12px;
+        font-size: 12px;
+    }
+    .btn-type2.btn-small .arrow{
+        margin-left: 3px;
+    }
+
+    /* radio, checkbox */
+    .radio-wrap, 
+    .checkbox-wrap{
+        margin: -5px;
+    }
+    .radio-group, 
+    .checkbox-group{
+        margin: 5px;
+    }
+    .radio-group:has(.form-item),
+    .checkbox-group:has(.form-item){
+        vertical-align: top;
+    }
+    .radio-group input[type="radio"],
+    .checkbox-group input[type="checkbox"]{
+        margin-top: -4px;
+        vertical-align: middle;
+    }
+    .cst .radio-group input[type="radio"] + label, 
+    .cst .checkbox-group input[type="checkbox"] + label{
+        padding-left: 30px;
+    }
+    .cst .radio-group input[type="radio"] + label:before, 
+    .cst .checkbox-group input[type="checkbox"] + label:before{
+        top: 2px;
+    }
+    .cst .radio-group input[type="radio"] + label:before, 
+    .cst .checkbox-group input[type="checkbox"] + label:before{
+        width: 20px;
+        height: 20px;
+    }
+    .cst .radio-group input[type="radio"]:checked + label:before, 
+    .cst .checkbox-group input[type="checkbox"]:checked + label:before{
+        background-size: 9px;
+    }
+
+    /* form */
+    .write-tit{
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .write-tit .form-item.w-10p{
+        min-width: 70px;
+    }
+    .write-wrap dt,
+    .write-wrap dd{
+        display: block;
+        width: 100%;
+        min-height: 40px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .write-wrap dt + dd{
+        border-top: 1px solid #e2e2e2;
+    }
+    .write-wrap dd .link{
+        margin: 0 !important;
+    }
+    .write-wrap dd > dl{
+        border-left: 0;
+    }
+    .write-wrap dl.n2 dt,
+    .write-wrap dl.n2 dd{
+        width: 100%;
+        text-align: left;
+    }
+    .write-wrap dl.n2 dd + dt{
+        border-top: 1px solid #e2e2e2;
+    }
+    .write-wrap dl.n2 + dl:not(.n2) dt{
+        text-align: left;
+    }
+    .write-wrap .help-text{
+        font-size: 13px;
+    }
+    .form-group-text .text{
+        width: 80px;
+    }
+    .form-group-text .form-item{
+        width: calc(100% - 85px);
+    }
+    .form-group.n2 .form-item{
+        width: 100%;
+    }
+    .form-group.n2 .form-item + .form-item{
+        margin-top: 10px;
+    }
+    .form-group-text.n2 .form-item{
+        width: calc((100% - 32px) / 2);
+    }
+    .form-group-text.n4 .text{
+        width: 80px;
+        text-align: left;
+    }
+    .form-group-text.n4 .form-item{
+        width: calc(100% - 85px);
+    }
+    .form-group-text.n4 .text:last-child,
+    .form-group-text.n4 .form-item:last-child{
+        margin-top: 10px;
+    }
+    .form-item + .form-group{
+        margin: 0;
+        margin-top: 10px;
+        width: 100%;
+    }    
+    .form-group.has-btn .form-item{
+        width: calc(100% - 107px);
+    }
+    .write-wrap .cst .radio-group input[type="radio"] + label:before, 
+    .write-wrap .cst .checkbox-group input[type="checkbox"] + label:before{
+        top: 3px;
+    }
+    .write-wrap .cst .radio-group input[type="radio"]:checked + label:after{
+        top: 8px;
+    }
+
+    /* input file custom */
+    .filebox label{
+        width: 85px;
+        padding: 7px 0;
+        font-size: 14px;
+    }
+    .filebox .upload-name{
+        width: calc(100% - 90px);
+    }
+
+    /* popup */
+    .popup-wrap{
+        justify-content: start;
+    }
+    .win-popup-wrap.popup-wrap .popup-contents{
+        margin: 0 auto;
+    }
+    .popup-wrap .popup-contents{
+        margin: 3vh auto;
+    }
+    .popup-tit-wrap{
+        padding: 15px 20px;
+        padding-right: 50px;
+    }
+    .popup-tit{
+        font-size: 20px;
+    }
+    .popup-conbox{
+        padding: 30px 20px;
+        font-size: 14px;
+    }
+    .popup-contents .btn-popup-close{
+        background-size: 20px;
+    }
+    .popup-contents .btn-popup-close{
+        top: 12px;
+        right: 15px;
+    }
+    .popup-conbox .btn-wrap{
+        margin-top: 30px;
+    }
+    .popup-conbox .btn-wrap .btn-type1{
+        min-width: 80px;
+        padding: 9px 16px;
+        font-size: 14px;
+    }
+    .popup-wrap:not(.win-popup-wrap) .popup-conbox{
+        padding: 30px 20px;
+    }
+    .popup-wrap:not(.win-popup-wrap) .btn-wrap{
+        margin-top: 30px;
+    }
+
+    /* popup skin type 01 */
+    #skin-type01 .popup-tit-wrap{
+        padding: 20px 15px;
+        background-size: auto 100%, auto 100%;
+    }
+    .popup-wrap .view-contents{
+        font-size: 14px;
+    }
+    .popup-footer{
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .popup-wrap:not(.win-popup-wrap) .cst-table th, 
+    .popup-wrap:not(.win-popup-wrap) .cst-table td{
+        padding: 10px;
+    }
+    
+    .m-br{
+        display: block;
+    }
+
+    /* show, hiide */
+    .p-show{
+        display: none !important;
+    }
+    .m-show{
+        display: block !important;
+    }
+    
+    /* intro */
+    #wrap.intro{
+        justify-content: start;
+        height: 100%;
+        max-height: 100%;
+        padding: 70px 0;
+        background-image: url('../image/intro/bg_intro_m.png');
+    }
+    #intro-header{
+        margin-bottom: 30px;
+    }
+    #intro-header > a{
+        width: 180px;
+    }
+    #intro-header > a img{
+        max-width: 100%;
+    }
+    .intro-menu-list > li{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        margin-left: 0;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .intro-menu-list > li:nth-child(1){
+        margin-top: 0;
+        /* background-color: #7599c5; */
+    }
+    /* .intro-menu-list > li:nth-child(2){
+        background-color: #48b1b7;
+    }
+    .intro-menu-list > li:nth-child(3){
+        background-color: #3152ad;
+    }
+    .intro-menu-list > li:nth-child(4){
+        background-color: #2d8eb7;
+    } */
+    .intro-menu-list > li:hover{
+        -webkit-transform: none;
+        transform: none;
+    }
+    .intro-menu-list > li > a{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        letter-spacing: -0.05em;
+    }
+    .intro-menu-list .icon{
+        width: 80px;
+        height: 80px;
+        background-size: 100%;
+    }
+    .intro-menu-list .text-wrap{
+        width: calc(100% - 81px);
+        margin-top: 0;
+        padding-left: 20px;
+        text-align: left;
+    }
+    .intro-menu-list .tit{
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .intro-menu-list .btn-link{
+        min-width: initial;
+        width: auto;
+        padding: 8px 15px;
+        padding-right: 35px;
+        border-width: 1px;
+        border-radius: 30px;
+        background-size: 7px;
+        background-position: right 15px center;
+        font-size: 12px;
+    }
+    .intro-menu-list:has(.eng) > li{
+        width: 100%;
+        margin-left: 0;
+    }
+    .intro-menu-list:has(.eng) .btn-link{
+        min-width: initial;
+        width: auto;
+    }
+    .intro-menu-list:has(.eng) .icon{
+        width: 80px;
+        height: 80px;
+    }
+
+    /* header */
+    #header{
+        height: 65px;
+    }
+    .header-logo > a{
+        width: 145px;
+        height: 34px;
+    }
+    .gnb-header{
+        padding: 15px;
+    }
+    .btn-menu-open{
+        background-position: right center;
+        background-size: 20px;
+    }
+    .btn-menu-close{
+        background-size: 25px;
+    }
+    .gnb-header .util-menu li + li:before{
+        top: 9px;
+    }
+    .gnb > li > a{
+        padding: 15px;
+    }
+    .gnb > li > div > ul > li > a{
+        padding: 10px 15px;
+    }
+
+    /* main visual */
+    .main-visual{
+        padding-top: 65px;
+    }
+    .btn-visual-wrap{
+        display: none;
+    }
+    .main-visual-wrap .slick-dots{
+        width: 100%;
+        bottom: 25px;
+        margin: 0;
+        text-align: center;
+    }
+    .main-visual-wrap .slick-dots > li > button{
+        width: 8px;
+        height: 8px;
+    }
+    .main-visual-wrap .slick-dots > li.slick-active > button{
+        width: 20px;
+    }
+
+    /* main contents */
+    .quick-menu-wrap{
+        flex-direction: column;
+    }
+    .quick-menu-wrap .main-tit-wrap{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+        padding: 20px;
+    }
+    .quick-menu-wrap .main-tit-wrap:after{
+        display: none;
+    }
+    .quick-menu-wrap .btn-rolling-wrap{
+        margin-top: 0;
+    }
+    .btn-rolling-wrap .btn-rolling{
+        top: -3px;
+        width: 25px;
+        height: 25px;
+        margin: 2px;
+        font-size: 12px;
+    }
+    .quick-menu-wrap .main-tit > span{
+        font-size: 12px;
+    }
+    .quick-menu-wrap .quick-menu-list{
+        width: 100%;
+        max-height: 129px;
+        padding: 20px 0 25px;
+    }
+    .quick-menu-list .icon{
+        width: 57px;
+        height: 57px;
+    }
+    .quick-menu-list .icon img{
+        width: 100%;
+    }
+    .quick-menu-list .tit{
+        font-size: 14px;
+    }
+
+    .main-tit-wrap{
+        margin-bottom: 15px;
+    }
+    .main-tit{
+        font-size: 18px;
+    }
+
+    .main-contents:has(.main-board-wrap){
+        background: none;
+        border-bottom: 1px solid #d6dde9;
+    }
+    .main-board-wrap{
+        height: auto;
+        min-height: 270px;
+        padding: 30px 0;
+    }
+    .main-board-wrap .main-tit-wrap{
+        margin-bottom: 15px;
+    }
+    .main-board-wrap .main-tit{
+        padding: 0 100px;
+        font-size: 18px;
+    }
+    .main-board-wrap .btn-rolling-wrap{
+        right: 35px;
+    }
+    .main-board-wrap .btn-rolling-wrap{
+        top: 26px;
+    }
+    .main-board-wrap .btn-more{
+        top: 26px;
+        width: 25px;
+        height: 25px;
+        margin: 2px;
+        background-size: 13px;
+        background-image: url('../image/main/btn_more_m.png');
+    }
+    .notice-conbox{
+        padding: 20px;
+		height: 170px;
+        background-color: #eef4ff;
+        border-radius: 0 0 15px 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .main-board-tit{
+        height: auto;
+        font-size: 16px;
+    }
+    .main-board-date{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .main-board-con{
+        height: 60px;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .notice-list .slick-list{
+        padding-bottom: 0;
+    }
+
+    .main-contents:has(.video-rolling-wrap){
+        margin-top: 35px;
+    }
+    .video-rolling-wrap .main-tit{
+        padding: 0 35px;
+    }
+    .video-rolling-wrap.inner-layer{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .video-rolling{
+        margin-top: -40px;
+        height: auto;
+        padding: 40px 0;
+        width: calc(100% - 30px);
+    }
+    .video-rolling .swiper-slide > a{
+        position: static;
+        top: auto;
+        left: auto;
+        -webkit-transform: none;
+        transform: none;
+        border-radius: 15px;
+        border-width: 2px;
+    }
+    .video-rolling .swiper-slide-active > a:after{
+        background-size: 46px;
+    }
+    .video-rolling .swiper-slide > a,
+    .video-rolling .swiper-slide-prev > a, 
+    .video-rolling .swiper-slide-next > a{
+        width: 100%;
+        height: auto;
+        filter: blur(0px);                
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }    
+    .video-rolling .swiper-slide-active > a{
+        -webkit-box-shadow: 0 4px 6px rgba(192,200,214,0.5);
+        box-shadow: 0 4px 6px rgba(192,200,214,0.5);
+    }
+
+    .main-contents:has(.journal-contents){
+        margin-top: 0;
+    }
+    .journal-contents{
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 75px;
+    }
+    .journal-contents *{
+        flex-grow: 1;
+    }
+    .journal-contents .img-wrap{
+        width: 33%;
+        max-width: 120px;
+        margin-top: -30px;
+    }
+    .journal-contents .text-wrap{
+        width: calc(100% - 120px);
+        padding-left: 15px;
+    }
+    .journal-contents .img-wrap img{
+        border-radius: 0 20px 0 20px;
+    }
+    .journal-contents .text-wrap span{
+        font-size: 13px;
+    }
+    .journal-tit{
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    .journal-contents p{
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .journal-contents .btn-wrap{
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        width: 100%;
+        padding: 0 15px;
+        margin-left: 0;
+    }
+    .btn.btn-journal{
+        display: block;
+        float: left;
+        width: calc((100% - 8px)/2);
+        margin: 0;
+        padding: 10px 12px;
+        padding-right: 30px;
+        background-size: 17px;
+        background-position: right 12px center;
+        font-size: 14px;
+        line-height: 1.2;
+        word-break: keep-all;
+    }
+    .btn.btn-journal + .btn.btn-journal{
+        margin-left: 8px;
+    }
+
+     /* sponsor */
+     .sponsor-wrap{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .sponsor-rolling-wrap .slick-list{
+        margin: 0 20px;
+    }
+    .sponsor-rolling-wrap .slick-slide{
+        margin: 0 5px;
+    }
+    .sponsor-rolling-wrap .slick-arrow{
+        background-size: 10px;
+    }
+    .sponsor-rolling-wrap .slick-prev{
+        left: 15px;
+    }
+    .sponsor-rolling-wrap .slick-next{
+        right: 15px;
+    }
+
+    /* footer */
+    #footer{
+        padding: 20px 0;
+    }
+    .footer-wrap{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer-logo{
+        width: 100px;
+    }
+    .footer-con{
+        width: 100%;
+        padding-left: 0;
+    }
+    .footer-menu{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .footer-menu > li + li{
+        margin-left: 0;
+    }
+    .footer-menu > li > a{
+        width: auto;
+        padding: 8px 15px;
+        padding-right: 25px;
+        margin: 2px;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: left;
+    }
+    .footer-menu > li > a:before{
+        right: 5px;
+        font-size: 10px;
+    }
+    .footer-con{
+        font-size: 12px;
+        line-height: 1.3;
+    }
+    .footer-con ul:not(.footer-menu) > li + li{
+        padding-left: 10px;
+        margin-left: 8px;
+    }
+    .footer-con ul:not(.footer-menu) > li + li:before{
+        top: 4px;
+        height: 8px;
+    }
+    .footer-con ul:not(.footer-menu) > li:nth-child(3){
+        width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .footer-con ul:not(.footer-menu) > li:nth-child(4){
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .footer-con ul:not(.footer-menu) > li:nth-child(3):before,
+    .footer-con ul:not(.footer-menu) > li:nth-child(4):before{
+        display: none;
+    }
+    .footer-con .copy{
+        margin-top: 10px;
+    }
+
+    /* sub header */
+    .sub #header{
+        height: auto;
+        background-color: #183371;
+    }
+    .sub .header-wrap{
+        padding: 0;
+    }
+    .sub .btn-menu-open{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 45px;
+        height: 65px;
+        background-image: url('../image/common/ic_menu_open_white.png');
+        background-position: center;
+    }
+    .sub .header-wrap > .inner-layer{
+        display: block;
+    }
+    .sub .header-logo{
+        display: none;
+    }
+
+    /* sub */
+    #container.sub{
+        padding-top: 0;
+    }
+    .sub-visual{
+        display: none;
+    }
+
+    /* sub menu */
+    .sub-menu-wrap{
+        width: 100%;
+        height: 65px;
+        margin-top: 0;
+        margin-bottom: 0;
+        border: 0;
+    }
+    .sub-menu{
+        bottom: 0;
+        width: 100%;
+        border: 0;
+        text-align: left;
+    }
+    .sub-menu.inner-layer{
+        padding: 0;
+        background-color: #183371;
+        border-radius: 0;
+    }
+    .sub-menu .btn-home{
+        display: block;
+        width: 45px;
+        height: 65px;
+        margin: 0;
+        border-radius: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../image/sub/ic_home.png');
+        background-size: 16px;
+    }
+    .sub-menu-list{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 90px);
+        margin: 0 45px;
+        border: 0;
+    }
+    .sub-menu-list > li{
+        position: relative;
+        width: 100%;
+    }
+    .sub-menu-list > li > ul > li + li > a:before{
+        display: none;
+    }
+    .sub-menu .btn-sub-menu{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        padding: 0;
+        font-size: 23px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.2;
+        word-break: keep-all;
+    }
+    .btn-sub-menu:after{
+        display: inline-block;
+        content: '▼';
+        clear: both;       
+        margin-left: 12px;
+        font-size: 10px; 
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+    }
+    .btn-sub-menu.on:after {
+        -webkit-transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%) rotate(180deg);
+        margin-top: 12px;
+    }
+    .sub-menu-list .sub-menu-depth01{
+        display: block;
+    }    
+    .sub-menu-list .sub-menu-depth01 > ul{
+        z-index: 6;
+    }
+	.sub-menu-depth01:not(:has(ul)) .btn-sub-menu:after{
+		display: none;
+    }
+    
+    .sub-menu-list .sub-menu-depth02{
+        width: calc(100% + 90px);
+        height: 50px;
+        margin-left: -45px;
+    }    
+    .sub-menu-depth02 .btn-sub-menu{
+        height: 100%;
+        background-color: #dae1f1;
+        font-size: 18px;
+        color: #48587a;
+    }
+    .sub-menu-list .sub-menu-depth02 > ul{
+        top: 50px;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        margin-left: 0;
+        background-color: #dae1f1;
+    }
+    .sub-menu-list .sub-menu-depth02 > ul:after{
+        width: calc(100% - 30px);
+    }
+    .sub-menu-list .sub-menu-depth02 > ul > li > a{
+        font-size: 16px;
+        font-weight: 600;
+        color: #48587a;
+    }
+    .sub-menu-list .sub-menu-depth02 > ul > li:hover > a{
+        color: #48587a;
+    }
+    .sub-menu-list li + li{
+        border-left: 0;
+    }
+    .sub-menu-list li > ul{
+        display: none;
+        position: absolute;
+        top: 65px;
+        width: calc(100% + 90px);
+        height: auto;
+        padding: 15px;
+        margin-left: -45px;
+        border: 0;
+        background-color: #183371;
+    }
+    .sub-menu-list > li  > ul:after{
+        display: block;
+        content: '';
+        clear: both;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: calc(100% - 30px);
+        height: 1px;
+        background-color: rgba(255,255,255,0.8);
+    } 
+    
+    .sub-menu-list li > ul > li{
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .sub-menu-list li > ul > li > a{
+        display: block;
+        height: auto;
+        padding: 7px 15px;
+        margin-right: 15px;
+        font-size: 16px;
+        color: #fff;
+    }
+    .sub-menu-list li > ul > li:hover > a{
+        color: #fff;
+    }
+    .sub-menu-list > li > ul > li > a > span:before{
+        display: none;
+    }
+
+    /* sub contents */
+    .sub-contents{
+        padding-bottom: 60px;
+    }
+    .sub-tit{
+        font-size: 20px;
+    }
+    .sub-tit-wrap{
+        margin-bottom: 20px;
+    }
+    .sub-tit:before{
+        top: -15px;
+        left: -20px;
+        width: 28px;
+        height: 20px;
+        background-size: 100%;
+    }
+    .sub-contit-wrap{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .sub-contit{
+        padding-left: 15px;
+        background-size: 6px;
+        background-position: 0 4px;
+        font-size: 17px;
+    }
+    .sub-contit.underline{
+        font-size: 16px;
+        -webkit-box-shadow: inset 0 -6px #eef3fc;
+        box-shadow: inset 0 -6px #eef3fc;
+    }
+    .sub-contit-wrap:has(.sub-tit-img){
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .sub-tit-img{
+        padding-left: 20px;
+        background-size: 15px;
+        background-position: 0 4px;
+        font-size: 16px;
+    }
+    .sub-conbox{
+        font-size: 14px;
+        /* word-break: keep-all; */
+    }
+
+    /* 준비중 */
+    .ready-wrap{
+        padding-bottom: 30px;
+    }
+    .ready-wrap img{
+        max-width: 100%;
+    }
+    .ready-wrap .tit{
+        padding: 0 20px;
+        font-size: 19px;
+    }
+    .ready-wrap p{
+        margin-top: 15px;
+        font-size: 14px;
+    }    
+
+    /* 연구지원::연구비 신청 */
+    .research-conbox .filebox{
+        width: 100%;
+    }
+    .filebox + *{
+        margin-top: 10px;
+    }
+    .research-conbox .filebox .upload-name{
+        width: calc(100% - 90px);
+    }
+
+    /* 연구지원::현황 및 결과 */
+    .popup-research-conbox .write-wrap dt,
+    .popup-research-conbox .write-wrap dd{
+        width: 100%;
+        text-align: left;
+    }
+
+    /* 회원가입::회원가입 안내 */
+    .tooltip-con{
+        max-width: 100%;
+        padding: 15px;
+        margin-top: 25px;
+        border-radius: 0 0 15px 0;
+    }
+    .tooltip-con:before{
+        top: -9px;
+        left: 4px;
+        width: 15px;
+        height: 15px;
+    }
+    .tooltip-con .tit{
+        padding-left: 20px;
+        background-position: 0 3px;
+        background-size: 15px;
+    }
+    .tooltip-con .list-type{
+        margin-top: 5px;
+    }
+    .signup-intro .list-type-decimal:has(.list-type-bar) > li + li{
+        margin-top: 20px;
+    }
+    .signup-intro .list-type + .tit{
+        margin-top: 20px;
+    }
+    .tooltip-con .list-type > li{
+        font-size: 12px;
+    }
+    .list-type-bar > li:before{
+        top: 9px;
+        width: 5px;
+    }
+
+    /* 회원가입::회원가입 */
+    .step-list > li{
+        padding: 4px 0;
+        font-size: 14px;
+    }
+    .step-list .icon{
+        width: 38px;
+        height: 38px;
+        border-radius: 5px 5px 25px 5px;
+        background-size: auto 20px;
+    }
+    .step-list > li strong{
+        margin-top: 10px;
+    }
+    .term-conbox.scroll-y{
+        padding: 20px 15px; 
+    }
+    .term-wrap .checkbox-wrap{
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+    /* 회원가입::회원가입 완료 */
+    .success-conbox > img{
+        width: 100%;
+        max-width: 110px;
+    }
+    .success-conbox .tit{
+        margin: 25px 0;
+        font-size: 22px;
+        line-height: 1.3;
+    }
+    .success-conbox .tit br{
+        display: block;
+    }
+    .success-conbox .highlights{
+        font-size: 15px;
+        -webkit-box-shadow: inset 0 -7px 0 #fffce5;
+        box-shadow: inset 0 -7px 0 #fffce5;
+    }
+    .success-conbox p{
+        margin-top: 25px;
+    }
+    .success-conbox ul{
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .success-conbox ul > li{
+        font-size: 14px;
+    }
+    .success-conbox ul > li + li:before{
+        top: 7px;
+        height: 10px;
+    }
+    .success-conbox ul > li:last-child{
+        padding-left: 0;
+        width: 100%;
+    }
+    .success-conbox ul > li:last-child:before{
+        display: none;
+    }
+    .success-conbox .btn-wrap{
+        margin-top: 30px;
+    }
+
+    /* 회원가입::로그인 */
+    .login-form-wrap{
+        height: auto;
+        border-radius: 0 0 30px 0;
+    }
+    .login-form,
+    .login-info{
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .login-form{
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-bottom: 0;
+    }
+    .login-tit{
+        font-size: 20px;
+    }
+    .login-tit img{
+        width: 80px;
+        margin-bottom: 20px;
+    }
+    .login-form .help-text{
+        font-size: 12px;
+    }
+    .input-box{
+        font-size: 14px;
+    }
+    .input-box .form-item{
+        height: 36px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    .login-form p > a{
+        font-size: 13px;
+    }
+    .login-form .btn-wrap{
+        margin-top: 10px;
+    }
+    .login-info-tit{
+        margin-bottom: 20px;
+    }
+    .login-info-tit img{
+        width: 115px;
+    }
+    .login-info p{
+        line-height: 1.7;
+    }
+    .login-info .btn-wrap{
+        margin-top: 20px;
+    }
+
+    /* 회원가입::아이디 / 비밀번호 찾기 */
+    /* sub tab menu */
+    .sub-tab-wrap{
+        margin-bottom: 30px;
+    }
+    .sub-tab-menu{
+        height: 40px;
+        border-radius: 5px;
+    }
+    .sub-tab-menu > li > a{
+        padding: 0 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        line-height: 1.1;
+    }
+
+    .find-form{
+        width: 100%;
+        max-width: 100%;
+    }
+    .find-tit{
+        font-size: 20px;
+    }
+    .find-tit img{
+        width: 30px;
+        margin: 0 auto 5px;
+    }
+    .find-form p{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .find-form .write-wrap dt{
+        /* background-color: #eff5ff; */
+    }
+    .find-form .write-wrap dt + dd:before{
+        display: none;
+    }
+    .find-form .btn-wrap{
+        margin-top: 30px;
+    }
+    .find-result-conbox{
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    .find-result-conbox + .find-result-conbox{
+        margin-top: 10px;
+    }
+
+    /* 회원가입::개인정보 취급방침 */
+    .term-wrap .term-conbox{
+        font-size: 14px;
+    }
+
+    /* 회원가입::이메일 무단 수집 거부 */
+    #email .popup-header{
+        padding: 15px 10px;
+    }
+    #email .popup-header img{
+        width: 160px;
+    }
+    #email .popup-tit-wrap{
+        margin-bottom: 10px;
+    }
+    #email .popup-tit{
+        font-size: 18px;
+    }
+    #email .popup-tit img{
+        width: 22px;
+        margin-right: 5px;
+    }    
+    #email .popup-conbox{
+        padding: 20px;
+    }
+    #email .popup-conbox .btn.btn-type1{
+        min-width: initial;
+        padding: 7px 15px;        
+        border-radius: 0;
+        font-size: 12px;
+    }
+    #email .popup-conbox .btn.btn-type1 img{
+        width: auto;
+        margin-left: 15px;
+    }
+    #email.popup-wrap .popup-contents{
+        margin: 3vh auto;
+    }
+
+     /* 마이페이지::회원정보 수정 */
+    .box-list.n3{
+        gap: 10px;
+    }
+    .box-list.n3 > li{
+        width: 100%;
+    }
+    .mypage-list > li{
+        height: 75px;
+        border-radius: 0 0 20px 0;
+    }
+    .mypage-list > li > a{        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    .mypage-list > li .icon{
+        position: static;
+        width: 50px;
+    }
+    .mypage-list > li .icon img{
+        width: 100%;
+    }
+    .mypage-list > li:hover .icon{
+        -webkit-transform: none;
+        transform: none;
+    }
+    .mypage-list .tit{
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .mypage-form .find-tit{
+        font-size: 23px;
+    }
+    .mypage-form .find-tit img{
+        width: 90px;
+    }
+    .mypage-form .bg-box{
+        margin: 20px 0;
+        padding: 15px;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+    .mypage-form .write-wrap + p{
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    /* 마이페이지::회비납부 */
+    .bg-img-box{
+        flex-direction: column;
+        padding: 30px;
+        border-radius: 3px;
+    }
+    .bg-img-box > img{
+        width: 90px;
+    }
+    .bg-img-box .text-wrap{
+        padding-left: 0;
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .bg-img-box .tit{
+        font-size: 23px;
+        line-height: 1.2;
+    }
+    .bg-img-box .text-wrap p{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .top-btn-wrap{
+        margin: 20px 0 40px;
+    }
+    .top-btn-wrap .btn{
+        font-size: 14px;
+    }
+    .cst-table.type-list .btn-small{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12px;
+    }
+    .price-con{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    
+    /* 마이페이지::중재시술인증 */
+    .popup-conbox .table-wrap + .write-wrap{
+        margin-top: 20px;
+    }
+    .cst-table.col-4 colgroup col{
+        width: 25% !important;
+    }
+    .cst-table.col-4 colgroup col:last-child{
+        width: 30% !important;
+    }
+    .cst-table.col-4 .btn-admin .btn-board{
+        padding: 2px 10px;
+    }
+
+    /* 마이페이지::연구지원 */
+    .research-table-wrap + .btn-wrap .btn-type1{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .popup-research-conbox .filebox{
+        margin-bottom: 5px;
+    }
+    .popup-research-conbox .btn-small{
+        margin: 2px;
+    }
+
+    /* 마이페이지::회원탈퇴 */
+    .resign-form .bg-img-box .text-wrap{
+        padding-left: 0;
+    }
+    .resign-form .bg-img-box{
+        padding: 30px;
+    }
+
+    /* sub tab menu */
+    .btn-tab-menu + .sub-tab-menu{
+       display: none;
+    }
+    .board-cate-wrap{
+        height: 40px;
+    }
+    .tab-wrap .board-cate-wrap{
+        float: left;
+        width: 50%;
+        border: 1px solid #144393;
+    }
+    .tab-wrap:not(:has(.sub-tab-wrap + .sub-tab-wrap)) .board-cate-wrap{
+        width: 100%;
+    }
+    .board-cate-wrap + .sub-tab-wrap{
+        float: left;
+        width: 50%;
+        height: 40px;
+        border: 1px solid #144393;
+        border-left: 0;
+    }
+    .sub-tab-wrap{
+        position: relative;
+    }
+    .btn-tab-menu{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 12px 15px;
+        padding-right: 30px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+    }
+    .sub-conbox:has(.rules-conbox) .btn-tab-menu{
+        background-color: #f3f7ff;
+        border: 1px solid #144393;
+        color: #144393;
+    }
+    .sub-conbox:has(.rules-conbox) .btn-tab-menu br{
+        display: none;
+    }
+    .sub-conbox:has(.rules-conbox) .btn-tab-menu:before{        
+        background-image: url('../image/icon/ic_tab_menu_on.png');
+    }
+    .sub-conbox:has(.rules-conbox) .btn-tab-menu + .sub-tab-menu{
+        top: 38px;
+        left: 0;
+        width: 100%;
+    }
+    .btn-tab-menu:before{
+        display: block;
+        content: '';
+        clear: both;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 10px;
+        height: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../image/icon/ic_tab_menu.png');
+        background-size: 10px;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+    }
+    .btn-tab-menu.on{
+        background-color: #f3f7ff;
+        color: #144393;
+    }
+    .btn-tab-menu.on:before{
+        background-image: url('../image/icon/ic_tab_menu_on.png');
+        -webkit-transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%) rotate(180deg);
+    }
+    .btn-tab-menu + .sub-tab-menu{
+        position: absolute;
+        top: 38px;
+        left: -1px;
+        z-index: 2;
+        width: calc(100% + 2px);
+        padding: 10px 0;
+        height: auto;
+        border: 1px solid #144393;
+        border-top: 0;
+        border-radius: 0;
+        background-color: #f3f7ff;
+    }
+    .btn-tab-menu + .sub-tab-menu > li{
+        width: 100% !important;
+        height: auto;
+        text-align: left;
+    }
+    .btn-tab-menu + .sub-tab-menu > li > a{
+        display: block;
+        padding: 5px 15px;
+        text-align: left;
+        line-height: 1.2;
+    }
+    .btn-tab-menu + .sub-tab-menu > li > a br{
+        display: none;
+    }
+    .btn-tab-menu + .sub-tab-menu > li:hover > a, 
+    .btn-tab-menu + .sub-tab-menu > li.on > a{
+        background-color: transparent;
+        color: #144393;
+        font-weight: 500;
+    }
+    .btn-tab-menu + .sub-tab-menu.type2 > li.on > a, 
+    .btn-tab-menu + .sub-tab-menu.type2 > li:hover > a{
+        color: #144393;
+        font-weight: 500;
+        background-color: transparent;
+    }
+    .btn-tab-menu + .sub-tab-menu.type2 > li > a:before{
+        display: none;
+    }
+    .btn-tab-menu + .sub-tab-menu.n4 > li{
+        height: auto;
+        border: 0 !important;
+    }
+    .sub-tab-wrap:has(.type3){
+        margin-bottom: 20px;
+        border: 1px solid #144393;
+        background-color: #fff;
+    }
+    
+    .sub-tab-menu.type3 > li{
+        border: 0;
+        border-radius: 0;
+    }
+    .sub-tab-menu.type3 > li > a{
+        height: auto;
+        border-bottom: 0;
+        font-size: 14px;
+        color: #111;
+    }
+    .sub-tab-menu.type3.n5 > li{
+        width: 100%;
+        max-width: none;
+        border: 0;
+    }
+    .sub-tab-menu.type3.n5 > li > a{
+        height: auto;
+        border: 0;
+    }
+    .sub-tab-menu.type3 > li.on > a, 
+    .sub-tab-menu.type3 > li:hover > a{
+        height: auto;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+        border-bottom: 0;
+        font-weight: 400;
+    }
+
+    .event-wrap .sub-tab-menu.type2{
+        border-color: #144393;
+    }
+    .event-wrap .sub-tab-menu.type2 > li > a{
+        font-size: 14px;
+    }
+    
+    /* 학술행사::해외학회 신청 */
+    .complete-conbox img{
+        width: 90px;
+    }
+    .complete-conbox .tit{
+        margin-top: 15px;
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    .complete-conbox .tit strong{
+        font-size: 20px;
+    }
+    .complete-conbox p{
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .complete-conbox .btn-type1{
+        font-size: 14px;
+    }
+    .overseas-conbox .list-type-bar > li:before{
+        top: 9px;
+    }
+    .overseas-conbox .bg-img-box > img{
+        width: 40px;
+    }
+
+    /* 학술행사::국내외 학술행사 */
+    .complete-contop{
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+    .complete-contop img{
+        width: 65px;
+    }
+    .complete-contop p{
+        padding-top: 0;
+        text-align: center;
+    }
+    .ev-complete-conbox .bg-box{
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    .ev-complete-conbox .bg-box + .btn-wrap{
+        margin-top: 15px;
+    }
+    .confirm-contop{
+        gap: 10px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+    .confirm-contop img{
+        width: 68px;
+    }
+    .confirm-form-wrap .write-wrap dt,
+    .confirm-form-wrap .write-wrap dd{
+        width: 100%;
+    }
+    .confirm-form-wrap .write-wrap + .btn-wrap{
+        margin-top: 15px;
+    }
+
+    .ev-map-wrap{
+        height: 125px;
+    }
+    .ev-map-info{
+        margin-top: 15px;
+        padding: 15px 5px;
+    }
+    .ev-map-info ul > li{
+        padding-left: 20px;
+        background-position: 0 4px;
+        background-size: 13px;
+        font-size: 14px;
+    }
+    .ev-map-info .tit{
+        display: block;
+    }
+
+    /* 마이페이지::학술행사 */
+    .info-conbox img{
+        width: 90px;
+    }
+    .info-conbox .tit{
+        margin-top: 15px;
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    .info-conbox .tit strong{
+        display: block;
+        font-size: 20px;
+    }
+    .info-conbox + .table-wrap{
+        margin-top: 20px;
+    }
+    .cst-table.list-table .btn-small,
+    .cst-table.list-table .btn-small:has(.arrow){
+        padding: 3px 10px;
+        font-size: 12px;
+    }
+    .cst-table.list-table .btn-small .arrow{
+        margin-left: 5px;
+    }
+    .btn.btn-download{
+        width: auto;
+        margin-left: 5px;
+        padding: 4px 12px;
+    }
+    .write-wrap dd > .form-group.w-40p{
+        width: 100% !important;
+    }
+    .form-group-text + .filebox{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .contact-conbox{
+        margin-top: 30px;
+    }
+    .contact-conbox .help-text{
+        line-height: 1.3;
+    }
+    .icon-conbox{
+        padding: 20px;
+        border-radius: 3px;
+    }
+    .icon-conbox img{
+        width: 40px;
+    }
+    .icon-conbox .text-wrap{
+        width: clac(100% - 41px);
+        padding-left: 20px;
+    }
+    .icon-conbox .tit{
+        font-size: 16px;
+    }
+    .icon-conbox ul{
+        margin-top: 0;
+    }
+    .icon-conbox ul > li{
+        display: inline;
+        font-size: 14px;
+    }
+    .icon-conbox ul > li:first-child{
+        display: block;
+    }
+    .icon-conbox ul > li:nth-child(2){
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .icon-conbox ul > li:nth-child(2):before{
+        display: none;
+    }
+    .icon-conbox ul > li + li{
+        padding-left: 10px;
+        margin-left: 8px;
+    }
+    .icon-conbox ul > li + li:before{
+        top: 4px;
+        height: 10px;
+    }
+
+    /* 마이페이지::연구회/지회 */
+    .bg-notice-box{
+        display: block;
+        padding: 20px 15px;
+    }
+    .bg-notice-box img{
+        display: block;
+        width: 40px;
+        margin: 0 auto;
+    }
+    .bg-notice-box .text-wrap{
+        width: 100%;
+        margin-top: 15px;
+        padding-left: 0;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .btn.btn-type1:has(.ic-down){
+        min-width: initial;
+        padding: 9px 16px;
+    }
+    .btn-type1 .ic-down{
+        width: 16px;
+        margin-top: 2px;
+        margin-left: 20px;
+    }
+    .inquiry-conbox{
+        display: block;
+        padding: 0;
+        border: 0;
+    }
+    .inquiry-conbox ul{
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: start;
+    }
+    .inquiry-conbox ul > li{
+        flex-direction: column;
+        align-items: start;
+        width: calc((100% - 10px)/2);
+        padding: 20px;
+        border: 1px solid #d9ddea;
+        border-radius: 5px;
+    }
+    .inquiry-conbox ul > li img{
+        width: 30px;
+    }
+    .inquiry-conbox ul > li > p{
+        display: block;
+        margin-top: 20px;
+        padding-left: 0;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    .inquiry-conbox ul > li > p strong{
+        display: block;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .inquiry-conbox ul > li > p strong:before{
+        display: none;
+    }
+    .research-list > li{
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .research-list > li:after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+    .grade{
+        margin: 0;
+    }
+    .research-list > li .btn-small{
+        float: right;
+        margin-top: 5px;
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+
+    /* 부정맥 진료지침 */
+    .box-list.n2{
+        gap: 15px;
+    }
+    .box-list.n2 > li{
+        width: 100%;
+    }
+    .down-list > li{
+        padding: 15px;
+    }
+    .down-list .img-wrap{
+        width: 100px;
+        height: 125px;
+    }
+    .down-list .text-wrap{
+        width: calc(100% - 100px);
+        padding-top: 5px;
+    }
+    .down-list .tit{
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .btn.btn-down{
+        max-width: 115px;
+        padding: 5px 15px;
+        font-size: 13px;
+    }
+    .btn.btn-down img{
+        float: none;
+        width: 15px;
+        margin-top: -3px;
+        margin-bottom: 0;
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+    .down-list .btn-down:has(.arrow){
+        max-width: 130px;
+    }
+    .down-list .btn-down .arrow{
+        margin-left: 12px;
+        font-size: 13px;
+    }
+
+    /* 보험정보::보험기준 */
+    .sub-tab-menu.n4{
+        overflow: hidden;
+        height: auto;
+    }
+    .sub-tab-menu.n4 > li{
+        width: 50%;
+        height: 40px;
+        border-left: 1px solid #9bb5c0;
+        border-radius: 0;
+    }
+    .sub-tab-menu.n4 > li:nth-child(-n+2){
+        border-bottom: 1px solid #9bb5c0;
+    }
+    .sub-tab-menu.n4 > li:nth-child(2n+1){
+        border-left: 0;
+    }
+    .sub-tab-menu.n4 > li > a{
+        border-radius: 0;
+    }
+    .insurance-list.n3{
+        gap: 20px;
+    }
+    .insurance-list.n3 > li{
+        width: calc((100% - 20px)/2);
+    }
+    .insurance-list.n3 > li + li{
+        margin-top: 0;
+    }
+    .insurance-list > li > a{
+        padding: 20px 15px;
+    }
+    .insurance-list .tit{
+        font-size: 15px;
+    }
+    .insurance-list > li span:not(.btn-down){
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .insurance-list .btn-down{
+        margin-top: 20px;
+        padding: 6px 15px;
+        padding-right: 35px;
+        background-size: 15px;
+        background-position: right 15px center;
+        line-height: 1.2;
+        word-break: break-all;
+    }
+    .insurance-list > li:hover > a{
+        background-image: url('../image/sub/bg_insurance_list.png');
+    }
+    .insurance-list > li:hover .tit{
+        color: #144393;
+    }
+    .insurance-list > li:hover span:not(.btn-down){
+        color: #111111;
+    }
+    .insurance-list > li:hover .btn-down{
+        border: 1px solid #e8efff;
+        background-color: #e8efff;
+        background-image: url('../image/sub/btn_down.png');
+        color: #144393;
+    }    
+
+    /* 학회지::학회지 관련 안내 */
+    .journal-conbox{
+        flex-direction: column;
+        margin-top: 0;
+        padding: 30px 20px;
+    }
+    .journal-conbox .img-wrap{
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+    .journal-conbox .img-wrap img{
+        display: inline-block;
+        width: 280px;
+    }
+    .journal-conbox .text-wrap{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .journal-conbox .btn-wrap{
+        text-align: center;
+    }
+    .journal-conbox .btn.btn-journal{
+        float: none;
+        display: inline-block;
+        width: 100%;
+        max-width: 235px;
+        padding: 10px 20px;
+        margin: 4px;
+        text-align: left;
+    }
+    .btn.btn-journal + .btn.btn-journal{
+        margin-left: 4px;
+    }
+
+    /* 학회지::온라인 논문 투고 */
+    .bg-info-box{
+        padding: 35px 20px 30px;
+    }
+    .bg-info-box img{
+        display: block;
+        width: 95px;
+        margin: 0 auto;
+    }
+    .bg-info-box .text-wrap{
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        padding-left: 0;
+        font-size: 14px;
+    }
+    .bg-info-box .btn{
+        font-size: 14px;
+    }
+    .no-br{
+        display: none;
+    }
+    .rules-conbox{
+        padding-left: 0;
+    }
+    .rules-conbox p + ul, 
+    .rules-conbox p + ol,
+    .rules-conbox ul + ol{
+        margin-top: 15px;
+    }
+    .rules-conbox .list-type-decimal > li + li{
+        margin-top: 15px;
+    }
+    .rules-conbox .list-type-bar > li:before{
+        top: 10px;
+    }
+    .rules-conbox + .sub-contit-wrap{
+        margin-top: 30px;
+    }
+
+    /* 학회지::편집위원회 규정 */
+    .journal-term-wrap .term-conbox + .term-conbox{
+        margin-top: 50px;
+    }
+    .term-tit-wrap{
+        border-radius: 0 0 20px 0;
+        margin-bottom: 20px;
+    }
+    .term-tit{
+        padding: 8px 0;
+        font-size: 18px;
+    }
+    .term-tit:before{
+        height: 2px;
+    }
+    .term-tit:after{
+        width: 70px;
+        height: 25px;
+        background-size: 100%;
+    }
+    .journal-term-wrap p + .tit{
+        margin-top: 20px;
+    }
+
+    /* 연구지원::연구지원 프로그램 */
+    .bd-box .btn-wrap{
+        margin-top: 30px;
+    }
+    .bd-box .btn.btn-type1{
+        font-size: 14px;
+    }
+    .bd-box .btn-type1 .ic-down{
+        margin-top: 0;
+    }
+
+    /* 대한부정맥학회::인사말 */
+    .greeting-wrap{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .greeting-wrap .img-wrap{
+        width: 100%;
+    }
+    .greeting-wrap .img{
+        display: inline-block;
+        width: 130px;
+    }
+    .greeting-wrap .img:before{
+        left: auto;
+        right: -10px;
+        bottom: 42%;
+        width: 20px;
+        height: 3px;
+    }
+    .greeting-wrap .img-wrap .name{
+        display: inline-block;
+        width: calc(100% - 135px);
+        margin-top: 0;
+        padding-left: 30px;
+        font-size: 15px;
+        vertical-align: bottom;
+    }
+    .greeting-wrap .img-wrap .name img{
+        display: block;
+        width: 130px;
+    }
+    .greeting-wrap .text-wrap{
+        width: 100%;
+        padding-top: 0;
+    }
+    .greeting-wrap .text-wrap .tit{
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    /* 대한부정맥학회::미션/비전 */
+    .mission-conbox{
+        padding: 30px 20px;
+        border-radius: 5px;
+        background-position: center 0;
+        background-image: url('../image/sub/bg_mission_conbox_m.png');
+        font-size: 14px;
+    }
+    .mission-conbox .tit{
+        font-size: 23px;
+    }
+    .vision-conbox{
+        margin-top: 45px;
+    }
+    .vision-conbox > .tit{
+        font-size: 23px;
+    }
+    .vision-conbox p{
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .vision-list{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 30px;
+        padding: 10px;
+        margin-top: 30px;
+    }
+    .vision-list:after{
+        width: 100%;
+        height: 100px;
+        background-size: auto 100%;
+    }
+    .vision-list > li{
+        width: 80px;
+        height: 80px;
+    }
+    .vision-list > li + li:before{
+        width: 30px;
+        height: 30px;
+        background-size: 12px;
+    }
+    .vision-list .icon{
+        width: 40px;
+    }
+    .vision-list .icon img{
+        width: 100%;
+    }
+    .vision-list .tit{
+        margin-top: 5px;
+        font-size: 12px;
+    }
+    .vision-box{
+        margin-top: 130px;
+        width: 165px;
+        height: 165px;
+    }
+    .vision-box .icon{
+        width: 60px;
+    }
+    .vision-box .icon img{
+        width: 100%;
+    }
+    .vision-box .tit{
+        margin-top: 5px;
+        font-size: 16px;
+    }    
+
+    /* 대한부정맥학회::사무국 안내 */
+    .map-wrap{
+        height: 280px;
+        margin-top: 20px;
+    }
+    .address-conbox{
+        margin-top: 20px;
+        padding: 30px 20px;
+        border-radius: 0 0 25px 0;
+        background-image: url('../image/sub/bg_address_conbox_m.png');
+        background-size: cover;
+    }
+    .address-conbox .tit{
+        font-size: 23px;
+    }
+    .address-conbox ul{
+        margin-top: 15px;
+    }
+    .address-conbox ul > li{
+        font-size: 14px;
+    }
+    .address-conbox ul > li + li{
+        margin-top: 15px;
+    }
+    .trasnport-list{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .trasnport-list > li{
+        width: 100%;
+        padding: 20px 25px;
+        border-radius: 3px 3px 18px 3px;
+    }
+    .trasnport-list img{
+        width: 35px;
+    }
+    .trasnport-list > li .text-wrap{
+        padding-left: 20px;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    .trasnport-list .tit{
+        font-size: 15px;
+    }
+    .trasnport-list > li p{
+        margin-top: 5px;
+    }
+
+    /* 대한부정맥학회::연구회/지회 */
+    .branch-list.n3{
+        gap: 30px;
+    } 
+    .branch-list .logo-wrap{
+        font-size: 16px;
+    }
+    .branch-list > li > a{
+        padding: 20px;
+        background-position: top 20px right 20px;
+        background-size: 30px;
+    }
+    .branch-list > li > a:before,
+    .branch-list > li > a:after{
+        display: none;
+    }
+    .branch-list ul{
+        margin-top: 15px;
+    }
+    .branch-list ul > li{
+        font-size: 14px;
+    }
+    .branch-list ul > li{
+        padding: 5px 0;
+    }
+    .branch-list li > strong{
+        width: 60px;
+    }
+    .branch-list li > p{
+        width: calc(100% - 60px);
+        padding: 0 10px;
+    }
+    .branch-list li > p:before{
+        top: 5px;
+        height: 10px;
+    }
+    .branch-list > li > a:has(img) .logo-wrap{
+        height: 40px;
+    }
+    .branch-list > li > a:has(img) .logo-wrap img{
+        height: 100%;
+    }
+
+    /* 회원공간::중재시술인증 */
+    .list-type-text > li div > span,
+    .list-type-text > li div > span + p{
+        display: inline;
+        width: auto;
+    }
+    .sub-contit-wrap .list-type{
+        padding-left: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .sub-contit-wrap:not(.top-btn-wrap) .btn.full-right{
+        margin-top: -7px;
+        padding: 7px 12px;
+        padding-left: 7px;
+        font-size: 14px;
+    }
+    .btn .plus{
+        margin-top: -3px;
+        font-size: 16px;
+    }
+
+    /* 회원공간::전문회원 가입안내 */
+    .process-list{
+        gap: 30px;
+        margin-bottom: 15px;
+    }
+    .process-list > li{
+        flex-direction: column;    
+        gap: 10px;
+        width: calc((100% - 60px)/3);
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .process-list > li + li:before{
+        left: -30px;
+        width: 30px;
+        background-size: 8px;
+        background-position: center 30%;
+    }
+    .process-list .icon{
+        width: 43px;
+    }
+    .process-list .tit{
+        font-size: 16px;
+    }
+    .signup-info-conbox .bg-box{
+        gap: 15px;
+        padding: 10px 15px;
+        margin-top: 30px;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+    .signup-info-conbox .bg-box img{
+        width: 48px;
+    }    
+    .signup-info-conbox .list-type-bar > li:before{
+        top: 10px;
+    }    
+
+    /* 대한부정맥학회::KHRS 로고 */
+    .logo-list{
+        gap: 30px;
+    }
+    .logo-list > li{
+        width: 100%;
+    }
+    .logo-list .img-wrap{
+        margin-bottom: 20px;
+    }
+    .logo-list .tit{
+        padding: 7px 30px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* radio, checkbox */
+    .radio-group, 
+    .checkbox-group{
+        white-space: normal;
+    }    
+    .cst .radio-group .form-item, 
+    .cst .checkbox-group .form-item{
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    /* main contents */
+    .journal-contents .text-wrap{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #gnb{
+		height: 100%;
+		padding-bottom: 150px;
+	}
+}

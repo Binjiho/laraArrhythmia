@@ -1,0 +1,86 @@
+/*.pop-layer {*/
+/*    position: absolute;*/
+/*    box-sizing: border-box;*/
+/*    border-radius: 3px;*/
+/*    background: #fff;*/
+/*    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2); !*x y 번짐 색상*!*/
+/*    z-index: 9999;*/
+/*}*/
+
+/*.popClose {*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    font-size: 13px;*/
+/*    overflow: hidden;*/
+/*    text-align: right;*/
+/*    background-color: #b2b2b2;*/
+/*}*/
+
+/*.popClose .fl {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.popClose .fr {*/
+/*    display: flex;*/
+/*    padding: 5px;*/
+/*}*/
+
+/*.popClose .fl input[type=checkbox] {*/
+/*    margin-left: 5px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+/*.popClose .fl label {*/
+/*    display: block;*/
+/*    padding: 5px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.popup_close_btn {*/
+/*    display: block;*/
+/*    padding: 5px;*/
+/*    margin-right: 5px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/* popup skin type01 */
+.popup-main .popup-contents{
+    max-width: 550px;
+    padding: 0;
+}
+.popup-main .popup-conbox{
+    padding: 0;
+    border: 0;
+}
+.popup-main .popup-tit-wrap{
+    padding: 30px;
+    background-repeat: no-repeat;
+    background-image: url('../image/common/bg_pop_tit_type01_left.png'), url('../image/common/bg_pop_tit_type01_right.png');
+    background-position: 0 0, right 0;
+    background-color: #1bacc9;
+}
+.popup-main .popup-tit{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+.popup-main .view-contents{
+    font-size: 1.7rem;
+}
+.popup-footer{
+    padding: 15px 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #111;
+    background-color: #d7d7d7;
+}
+.popup-footer input[type="checkbox"]{
+    margin-top: -3px;
+    margin-right: 3px;
+    vertical-align: middle;
+}

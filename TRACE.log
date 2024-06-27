@@ -1,0 +1,459 @@
+2024-03-20 18:06:06.3537 ================================================================================
+2024-03-20 18:06:06.3537 Rows : 355
+2024-03-20 18:06:06.3537 --------------------------------------------------------------------------------
+2024-03-20 18:06:06.3537 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21383, name_kr:변창우, license_number:, email:burn74@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:06.6045 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:11.6084 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21377, name_kr:이정연, license_number:, email:sandy.rhie@ewha.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:11.7020 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:16.7050 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21375, name_kr:정지윤, license_number:107043, email:ddddhan@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:16.8105 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:21.8125 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21371, name_kr:Finn Gustafsson, license_number:, email:Finn.Gustafsson@regionh.dk, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:21.9140 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:26.9180 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21370, name_kr:Masateru Takigawa, license_number:, email:teru.takigawa@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:27.0186 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:32.0205 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21369, name_kr:이유빈, license_number:107930, email:youbin.lee@samsung.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:32.1260 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:37.1299 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21367, name_kr:김중희, license_number:, email:joonghee79@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:37.2325 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:42.2364 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21336, name_kr:홍여진, license_number:.'.'., email:nutrihong06@kumc.or.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:42.3380 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:47.3439 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21335, name_kr:서인석, license_number:79406, email:bluedoc910@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:47.4435 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:52.4474 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21325, name_kr:이상온, license_number:108317, email:seanelgon@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:52.5480 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:06:57.5549 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21324, name_kr:김태정, license_number:121069, email:tjk07@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:06:57.6684 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:02.6723 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21323, name_kr:이정훈, license_number:106784, email:me@leejunghoon.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:02.7649 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:07.7719 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21322, name_kr:오상우, license_number:43301, email:osw6021@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:07.8714 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:12.8754 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21321, name_kr:김필수, license_number:, email:ps.kim@navercorp.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:12.9769 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:17.9838 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21320, name_kr:Frank Visseren, license_number:, email:F.L.J.Visseren@umcutrecht.nl, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:18.1083 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:23.1103 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21316, name_kr:김유원, license_number:, email:sungyoung.oh@navercorp.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:23.2129 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:28.2168 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21314, name_kr:김태훈, license_number:, email:AIRTECH2@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:28.3134 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:33.3183 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21313, name_kr:이성엽, license_number:.9.9., email:dysylee@korea.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:33.4209 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:38.4288 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21311, name_kr:구교인, license_number:없음*, email:kikoo@ulsan.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:38.5333 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:43.5373 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21310, name_kr:성학준, license_number:없음--, email:hj72sung@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:43.6448 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:48.6517 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21309, name_kr:박종길, license_number:, email:jonggilpark@kribb.re.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:48.7523 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:53.7562 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21308, name_kr:Børge Nordestgaard, license_number:, email:Boerge.Nordestgaard@regionh.dk, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:53.8578 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:07:58.8607 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21307, name_kr:Choon Ta Ng, license_number:, email:choonta@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:07:58.9593 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:03.9633 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21306, name_kr:Hans-Peter Brunner-La Rocca, license_number:, email:hp.brunnerlarocca@mumc.nl, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:04.0618 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:09.0658 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21305, name_kr:Jannick Dorresteijn, license_number:, email:J.A.N.Dorresteijn-2@umcutrecht.nl, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:09.1693 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:14.1713 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21304, name_kr:Jacob C. Jentzer, license_number:, email:jentzer.jacob@mayo.edu, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:14.2678 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:19.2717 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21303, name_kr:Alexander Van De  Bruaene, license_number:, email:alexander.vandebruaene@uzleuven.be, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:19.3574 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:24.3613 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21302, name_kr:Jonathan H. Soslow, license_number:, email:jonathan.h.soslow@vumc.org, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:24.4579 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:29.4619 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21298, name_kr:지영건, license_number:49767, email:ykjee@cha.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:29.5952 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:34.6002 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21292, name_kr:유보영, license_number:, email:dew0711@korea.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:34.7237 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:39.7256 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21291, name_kr:한주희, license_number:없음.,., email:hanjh5621@woosuk.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:39.8271 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:44.8311 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21288, name_kr:Sripal Bangalore, license_number:, email:, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:44.9008 API RESPONSE --> {"ResultCode":"MISSING_PARM","ResultMessage":"missing parameters (license_number or email)"}
+2024-03-20 18:08:49.9047 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21278, name_kr:박현지, license_number:없음/, email:hyunjipark@ajou.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:50.0053 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:08:55.0073 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21156, name_kr:최성화, license_number:114882, email:shchoi.cardio@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:08:55.1098 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:00.1135 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21104, name_kr:이윤성, license_number:126494, email:yoonseonglee31@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:00.2131 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:05.2151 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21077, name_kr:이경연, license_number:130090, email:managingheart@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:05.3166 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:10.3205 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21071, name_kr:김홍래, license_number:, email:khrjsk@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:10.4181 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:15.4221 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:21001, name_kr:김주현, license_number:107275, email:jhnkim86@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:15.5346 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:20.5385 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20954, name_kr:김남훈, license_number:84400, email:pourlife@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:20.6441 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:25.6480 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20952, name_kr:김원진, license_number:96968, email:virgo914@cha.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:25.7485 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:30.7525 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20923, name_kr:안상호, license_number:, email:chdkorea@chdkorea.org, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:30.8540 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:35.8560 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20900, name_kr:이병환, license_number:해당없음, email:jack.lee@skylabs.io, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:35.9586 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:40.9621 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20871, name_kr:허경선, license_number:, email:kheo@cnu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:41.0686 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:46.0706 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20775, name_kr:유지혜, license_number:110190, email:shilanep@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:46.1681 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:51.1721 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20731, name_kr:문인태, license_number:106873, email:mit1021@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:51.2736 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:09:56.2776 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20717, name_kr:최윤재, license_number:, email:edwardchoi@kaist.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:09:56.3811 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:01.3850 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20709, name_kr:김영국, license_number:, email:ykk@chonnam.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:01.4826 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:06.4875 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20698, name_kr:현준호, license_number:108436, email:guswnsghek@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:06.5921 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:11.5940 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20693, name_kr:변정희, license_number:93098, email:africa3217@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:11.6936 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:16.6995 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20690, name_kr:하호진, license_number:, email:hojinha@kangwon.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:16.8021 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:21.8060 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20667, name_kr:이상협, license_number:125788, email:shlee0917@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:21.9384 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:26.9404 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20664, name_kr:이주성, license_number:93189, email:drsuccess@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:27.0399 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:32.0439 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20587, name_kr:황도연, license_number:110161, email:kudoc05@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:32.1415 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:37.1474 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20572, name_kr:윤소미, license_number:, email:somyyoon@jnu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:37.2500 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:42.2519 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20543, name_kr:안경진, license_number:103079, email:treasure007@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:42.3505 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:47.3544 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20529, name_kr:김미진, license_number:114107, email:atlranta83@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:47.4589 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:52.4627 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20528, name_kr:정현, license_number:112957, email:hyunsss83@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:52.5672 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:10:57.5712 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20503, name_kr:권준명, license_number:104661, email:happywithhj@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:10:57.6747 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:02.6787 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20498, name_kr:박성수, license_number:95674, email:sspark@catholic.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:02.7932 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:07.7971 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20441, name_kr:김대영, license_number:114874, email:entialov@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:07.9026 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:12.9056 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20424, name_kr:TBA(해외), license_number:, email:, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:12.9683 API RESPONSE --> {"ResultCode":"MISSING_PARM","ResultMessage":"missing parameters (license_number or email)"}
+2024-03-20 18:11:17.9722 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20411, name_kr:정주희, license_number:125628, email:jessica0115@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:18.0768 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:23.0806 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20316, name_kr:천대영, license_number:110105, email:arkad86@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:23.1792 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:28.1861 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20284, name_kr:고지원, license_number:110869, email:jiwonsophia@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:28.2926 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:33.3015 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20257, name_kr:이승준, license_number:96317, email:sjunlee@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:33.4071 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:38.4080 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20216, name_kr:장은화, license_number:1992, email:yinzhang@snu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:38.5146 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:43.5205 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20211, name_kr:이혁희, license_number:, email:jamie2621@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:43.6270 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:48.6330 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20183, name_kr:박일근, license_number:105712, email:thestyner@hotmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:48.7405 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:53.7444 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20118, name_kr:정태완, license_number:123759, email:dany3645@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:53.8480 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:11:58.8519 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20075, name_kr:이치훈, license_number:99368, email:liebemh@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:11:58.9535 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:03.9574 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20068, name_kr:조형원, license_number:101850, email:hwcho12@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:04.0599 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:09.0639 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20047, name_kr:이호규, license_number:114667, email:hokyou.lee@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:09.1664 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:14.1704 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20029, name_kr:전경현, license_number:102731, email:ckh8601@nhimc.or.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:14.3944 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:19.3983 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:20013, name_kr:배대환, license_number:114224, email:daehwan0514@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:19.5049 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:24.5068 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19599, name_kr:안준호, license_number:106859, email:yhbky@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:24.6054 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:29.6093 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19584, name_kr:조준환, license_number:101964, email:cardio.jhcho@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:29.7099 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:34.7138 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19568, name_kr:차슬기, license_number:98088, email:siminhuhu@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:34.8084 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:39.8123 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19521, name_kr:김아영, license_number:106667, email:DALKIAY@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:39.9059 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:44.9079 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19487, name_kr:김소리, license_number:109777, email:sleep8826@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:45.0094 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:50.0134 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19472, name_kr:이현정, license_number:110438, email:hyunjungmed@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:50.1139 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:12:55.1179 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19468, name_kr:배성아, license_number:118022, email:bsaking@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:12:55.2234 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:00.2254 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19452, name_kr:윤지홍, license_number:105275, email:sirbe@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:00.3439 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:05.3479 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19381, name_kr:양인호, license_number:103000, email:seventi4@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:05.4484 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:10.4524 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19366, name_kr:왕주미, license_number:, email:crf7@crf.or.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:10.5510 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:15.5529 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19355, name_kr:구현정, license_number:105563, email:elfin19@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:15.6554 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:20.6578 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19351, name_kr:조윤호, license_number:101788, email:foreigns83@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:20.7633 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:25.7672 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19275, name_kr:오규철, license_number:100826, email:david.gyuchul@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:25.8668 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:30.8687 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19270, name_kr:서지원, license_number:102742, email:eprangiana@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:30.9683 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:35.9702 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19269, name_kr:TBA, license_number:, email:, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:36.0369 API RESPONSE --> {"ResultCode":"MISSING_PARM","ResultMessage":"missing parameters (license_number or email)"}
+2024-03-20 18:13:41.0409 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19263, name_kr:장영우, license_number:110245, email:albert.jang.md@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:41.1444 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:46.1484 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19252, name_kr:이영미, license_number:44591, email:ymleehj@korea.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:46.2549 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:51.2588 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19249, name_kr:김대훈, license_number:111409, email:kimdhoon@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:51.3634 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:13:56.3673 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19242, name_kr:윤자경, license_number:100896, email:happyjk11@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:13:56.4709 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:01.4754 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19234, name_kr:이주미, license_number:96721, email:jmlee01@cnu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:01.5789 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:06.5808 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19176, name_kr:주현철, license_number:76224, email:vietcomm@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:06.6854 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:11.6885 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19145, name_kr:신유림, license_number:99160, email:YULL0629@YUHS.AC, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:11.7920 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:16.7970 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19092, name_kr:최희정, license_number:77893, email:joung756@dsmc.or.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:16.9025 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:21.9054 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19090, name_kr:김완기, license_number:99913, email:sgwkwhite@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:22.0050 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:27.0100 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19067, name_kr:김혜미, license_number:103082, email:hmkimmd@cau.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:27.1105 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:32.1144 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19028, name_kr:정통령, license_number:, email:rohtty@korea.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:32.2150 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:37.2180 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:19002, name_kr:김우현, license_number:97754, email:coincidence1@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:37.3205 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:42.3244 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18868, name_kr:오진경, license_number:108039, email:olivefrv@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:42.4240 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:47.4289 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18844, name_kr:김진호, license_number:95390, email:trust948@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:47.5305 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:52.5344 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18843, name_kr:김병규, license_number:98740, email:bong9abc@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:52.6389 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:14:57.6419 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18833, name_kr:권혜원, license_number:94843, email:drhwkwon@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:14:57.7335 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:02.7701 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18814, name_kr:최기홍, license_number:101058, email:cardiokh@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:02.8767 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:07.8816 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18696, name_kr:우선희, license_number:, email:shwoo@cnu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:07.9712 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:12.9752 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18631, name_kr:최미란, license_number:, email:88_mr@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:13.0608 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:18.0648 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18584, name_kr:최자연, license_number:101595, email:kekeruki@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:18.1514 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:23.1533 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18575, name_kr:정세용, license_number:92607, email:jung811111@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:23.2530 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:28.2569 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18562, name_kr:제형곤, license_number:61577, email:jehg7332@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:28.3574 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:33.3613 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18558, name_kr:이철현, license_number:94908, email:movicbeat@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:33.4649 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:38.4668 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18554, name_kr:최효인, license_number:95651, email:sinclair0119@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:38.5684 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:43.5703 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18538, name_kr:황지원, license_number:99348, email:enigma1012@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:43.6709 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:48.6748 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18525, name_kr:강지훈, license_number:97459, email:medikang@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:48.7744 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:53.7784 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18524, name_kr:김현진, license_number:96056, email:titi8th@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:53.8809 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:15:58.8829 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18399, name_kr:이중희, license_number:99206, email:seranflute@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:15:58.9814 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:03.9853 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18371, name_kr:조윤하, license_number:, email:herz8@circulation.or.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:04.0839 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:09.0859 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18299, name_kr:박혁진, license_number:101490, email:hyukjin@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:09.1924 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:14.1963 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18202, name_kr:박상우, license_number:104531, email:warya7@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:14.3019 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:19.3059 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18158, name_kr:정혜문, license_number:96136, email:Bluesunny52@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:19.4114 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:24.4153 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18151, name_kr:이상은, license_number:99218, email:tkddmss@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:24.5228 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:29.5268 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18134, name_kr:김형윤, license_number:95132, email:medoc7@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:29.6283 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:34.6303 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18101, name_kr:국형돈, license_number:98125, email:kookhyungdon@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:34.7348 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:39.7388 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18098, name_kr:허란, license_number:94832, email:cardiohr@hanyang.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:39.8413 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:44.8452 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18086, name_kr:송진영, license_number:43589, email:amyjys@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:44.9467 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:49.9507 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:18016, name_kr:허선영, license_number:, email:herz2@circulation.or.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:50.0503 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:16:55.0522 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:17741, name_kr:조화진, license_number:84142, email:chhj98@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:16:55.1488 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:00.1518 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:17729, name_kr:송미경, license_number:90015, email:mksong00@snu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:00.2533 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:05.2563 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:17527, name_kr:김미현, license_number:88463, email:momotaro77@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:05.3359 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:10.3379 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:17524, name_kr:원호연, license_number:94577, email:mdnowhy@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:10.4414 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:15.4453 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:17507, name_kr:이소령, license_number:98127, email:minerva1368@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:15.5429 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:20.5469 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:17468, name_kr:조동혁, license_number:97801, email:why012@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:20.6484 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:25.6503 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:17365, name_kr:정미향, license_number:92713, email:floria0515@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:25.7619 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:30.7658 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:17339, name_kr:김주연, license_number:92646, email:kzzoo921@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:30.8683 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:35.8723 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:17043, name_kr:김형규, license_number:, email:estrus74@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:35.9728 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:40.9748 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:16864, name_kr:박예민, license_number:85254, email:ypruimin@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:41.0754 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:46.0803 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:16764, name_kr:강은주, license_number:89817, email:medcarrot@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:46.1788 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:51.1828 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:16467, name_kr:이지현, license_number:89688, email:hidrleejh@dau.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:51.3231 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:17:56.3321 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:16426, name_kr:정수련, license_number:94206, email:suryeun.chung@samsung.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:17:56.4297 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:01.4336 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:16265, name_kr:공민규, license_number:96041, email:mingyu.kong@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:01.5312 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:06.5341 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:16122, name_kr:이민호, license_number:79093, email:neoich@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:06.6356 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:11.6396 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:16111, name_kr:박진주, license_number:81468, email:jinjooparkmd@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:11.7431 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:16.7461 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:16033, name_kr:권오성, license_number:89045, email:oscaesar@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:16.8436 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:21.8476 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15781, name_kr:이재항, license_number:84476, email:truemed@hotmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:22.0925 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:27.0965 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15524, name_kr:김경진, license_number:93679, email:kyungjinkimkorea@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:27.2000 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:32.2040 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15428, name_kr:이찬주, license_number:85212, email:zanzu@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:32.3065 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:37.3085 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15427, name_kr:위진, license_number:85186, email:caesar@gilhospital.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:37.4150 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:42.4180 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15405, name_kr:김민철, license_number:89453, email:kmc3242@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:42.5195 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:47.5225 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15404, name_kr:조경훈, license_number:89354, email:zarazoro@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:47.6200 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:52.6223 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15362, name_kr:김미나, license_number:89829, email:alsk1229@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:52.7238 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:18:57.7278 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15350, name_kr:김현국, license_number:87830, email:sale38@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:18:57.8283 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:02.8323 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15239, name_kr:정수인, license_number:80628, email:argillae@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:02.9348 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:07.9388 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15185, name_kr:백용수, license_number:87613, email:existsoo@inha.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:08.0393 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:13.0433 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:15124, name_kr:문동규, license_number:86873, email:donggoo@catholic.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:13.1478 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:18.1517 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14996, name_kr:공은정, license_number:87300, email:ejkong@ymc.yu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:18.2364 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:23.2454 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14704, name_kr:성기익, license_number:49779, email:kiick.sung@samsung.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:23.3519 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:28.3559 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14701, name_kr:고혜현, license_number:, email:herz1@circulation.or.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:28.4604 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:33.4644 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14680, name_kr:이수용, license_number:100295, email:shonge0906@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:33.5689 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:38.5729 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14511, name_kr:김주연, license_number:, email:, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:38.6346 API RESPONSE --> {"ResultCode":"MISSING_PARM","ResultMessage":"missing parameters (license_number or email)"}
+2024-03-20 18:19:43.6365 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14442, name_kr:조민정, license_number:61844, email:mjchomd@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:43.7391 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:48.7410 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14291, name_kr:조은정, license_number:88734, email:ounjungcho@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:48.8436 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:53.8512 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14223, name_kr:조익성, license_number:86409, email:iksungcho.md@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:53.9607 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:19:58.9647 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14222, name_kr:전기현, license_number:86401, email:imcardio@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:19:59.0712 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:04.0732 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14221, name_kr:임우현, license_number:86150, email:woosion@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:04.1757 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:09.1796 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14220, name_kr:김경희, license_number:87143, email:learnbyliving9@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:09.2892 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:14.2932 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:14207, name_kr:한진, license_number:45230, email:phyhanj@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:14.4077 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:19.4097 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:13940, name_kr:추은호, license_number:81576, email:cmcchu@catholic.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:19.5122 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:24.5165 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:13599, name_kr:윤영진, license_number:70222, email:younyj@yonsei.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:24.6251 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:29.6281 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:13581, name_kr:우종신, license_number:82438, email:snowball77@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:29.7375 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:34.7395 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:13536, name_kr:김인철, license_number:85577, email:aupfe80@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:34.8261 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:39.8300 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:13457, name_kr:강시혁, license_number:89420, email:eandp303@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:39.9296 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:44.9336 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:13454, name_kr:권유욱, license_number:02020202, email:ywkwon@snu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:45.0371 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:50.0391 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:13343, name_kr:박상민, license_number:78262, email:samipark@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:50.1625 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:20:55.1665 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:13130, name_kr:이선기, license_number:87253, email:galiard@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:20:55.2700 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:00.2740 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12969, name_kr:윤연이, license_number:83768, email:yeonyeeyoon@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:00.3775 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:05.3814 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12967, name_kr:조영진, license_number:83727, email:yino.md@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:05.4869 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:10.4909 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12913, name_kr:조재영, license_number:84133, email:jaeyeongcho@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:10.5944 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:15.5994 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12864, name_kr:선병주, license_number:82582, email:bjcardio@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:15.6989 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:20.7029 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12855, name_kr:이상현, license_number:82164, email:greenral@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:20.8004 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:25.8024 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12697, name_kr:이승률, license_number:79258, email:seungyul79@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:25.8930 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:30.9009 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12646, name_kr:이종민, license_number:38341, email:jonglee@knu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:30.9835 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:35.9885 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12642, name_kr:백재숙, license_number:78931, email:mdjsbaek@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:36.0761 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:41.0780 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12545, name_kr:곽재건, license_number:73936, email:switch.surgeon@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:41.1826 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:46.1895 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12363, name_kr:정인석, license_number:65377, email:isjeong1201@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:46.2940 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:51.2960 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12345, name_kr:이상현, license_number:082164, email:, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:51.4025 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:21:56.4085 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12248, name_kr:정인현, license_number:64029, email:drjih@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:21:56.5130 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:01.5169 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12218, name_kr:이기홍, license_number:80483, email:drgood2@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:01.6185 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:06.6285 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12216, name_kr:서정숙, license_number:81032, email:orifilter@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:06.7320 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:11.7359 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:12146, name_kr:방지석, license_number:79871, email:babang515@daum.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:11.8325 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:16.8394 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11930, name_kr:고진신, license_number:80212, email:kjs0175@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:16.9310 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:21.9349 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11840, name_kr:김현창, license_number:58201, email:hckim@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:22.0355 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:27.0374 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11800, name_kr:최웅길, license_number:65169, email:gilll7@daum.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:27.1579 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:32.1594 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11577, name_kr:윤종찬, license_number:76294, email:jong.chan.youn@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:32.2619 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:37.2659 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11354, name_kr:신정훈, license_number:75130, email:hyapex@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:37.3684 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:42.3694 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11258, name_kr:최은영, license_number:73864, email:symptom02@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:42.4710 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:47.4729 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11256, name_kr:김성혜, license_number:64771, email:rohetkim@yahoo.co.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:47.5754 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:52.5794 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11129, name_kr:이장훈, license_number:67967, email:ljhmh75@knu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:52.7109 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:22:57.7128 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11090, name_kr:안철민, license_number:63949, email:drcello@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:22:57.8163 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:02.8238 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11089, name_kr:심재민, license_number:72333, email:jaemins@korea.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:02.9263 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:07.9313 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:11010, name_kr:양정훈, license_number:77219, email:jhysmc@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:08.0368 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:13.0407 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:10731, name_kr:조정선, license_number:74088, email:tworugi@daum.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:13.1402 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:18.1442 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:10514, name_kr:장성원, license_number:53232, email:clement@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:18.2418 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:23.2455 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:10291, name_kr:이준상, license_number:, email:joonlee@yonsei.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:23.3470 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:28.3519 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:10216, name_kr:임영효, license_number:72108, email:mdoim@hanyang.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:28.4575 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:33.4614 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:10172, name_kr:한정규, license_number:77139, email:hpcrates@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:33.5680 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:38.5719 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:10166, name_kr:안효석, license_number:77768, email:alaco0502@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:38.6645 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:43.6685 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:10059, name_kr:김용숙, license_number:, email:reorgan@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:43.7680 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:48.7700 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9978, name_kr:손장원, license_number:75736, email:gubjae@yu.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:48.8725 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:53.8764 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9849, name_kr:최현희, license_number:79000, email:jumdure@hallym.or.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:53.9760 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:23:58.9780 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9839, name_kr:고강지, license_number:71392, email:lovesba@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:23:59.0835 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:04.0874 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9581, name_kr:이승표, license_number:73878, email:splee0624@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:04.1939 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:09.1979 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9579, name_kr:장성아, license_number:74475, email:elisabet.chang@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:09.2955 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:14.2994 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9520, name_kr:최성훈, license_number:60853, email:heartcsh@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:14.4119 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:19.4139 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9519, name_kr:심지영, license_number:70355, email:cysprs@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:19.5194 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:24.5233 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9447, name_kr:이현종, license_number:68734, email:untouchables00@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:24.6279 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:29.6319 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9351, name_kr:허진, license_number:, email:gene44@pusan.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:29.8459 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:34.8478 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9328, name_kr:박한기, license_number:50483, email:hank@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:34.9454 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:39.9493 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9270, name_kr:서존, license_number:59623, email:sirjon@hanmail.net, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:40.0489 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:45.0548 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9258, name_kr:이종영, license_number:67452, email:jyleeheart@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:45.1594 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:50.1633 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9231, name_kr:조윤경, license_number:73615, email:ds010042@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:50.2629 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:24:55.2668 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9225, name_kr:엄재선, license_number:72042, email:jason@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:24:55.3713 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:25:00.3753 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9140, name_kr:오재원, license_number:92568, email:ericjcoh@yuhs.ac, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:25:00.4739 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:25:05.4778 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9127, name_kr:정우백, license_number:69205, email:peace816@catholic.ac.kr, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:25:05.5813 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:25:10.5833 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9118, name_kr:박찬석, license_number:60269, email:chanseok2002@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:25:10.6839 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:25:15.6878 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9074, name_kr:유철웅, license_number:55765, email:ycw717@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:25:15.7883 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:25:20.7903 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:9063, name_kr:정조원, license_number:37116, email:jowonjung@gmail.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:25:20.8978 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}
+2024-03-20 18:25:25.8998 Fetch Row --> conferenceId:40, year:2024, mode:S,  memberId:8888, name_kr:박종성, license_number:70578, email:thinkmed@naver.com, url:https://2024.circulation.or.kr/api/workshop.php
+2024-03-20 18:25:25.9993 API RESPONSE --> {"ResultCode":"NO_DATA","ResultMessage":"NO_DATA"}

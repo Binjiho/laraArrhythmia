@@ -1,0 +1,928 @@
+@charset "utf-8";
+
+/* 서브페이지 관련 CSS */
+
+/* ================================================================================================ */
+/* ============================================= 공통 CSS ============================================ */
+/* ================================================================================================ */
+
+/* display 관련 */
+.mOnly,
+.mobileNote {display: none !important;}
+span.pcOnly {display: inline-block !important;}
+.pcOnly {display: block !important;}
+
+.pcClear {clear: both !important;}
+
+.ing {width: 670px;border: 3px solid #e5e5e5;border-radius: 20px 0 20px 0;margin: 30px auto;}
+.ing {display: block;}
+
+/* column 갯수 */
+ul.col4ea > li {width: 25%;}
+
+ul.col3ea > li:nth-child(3n+1),
+ul.col4ea > li:nth-child(4n+1) {clear: both;}
+
+
+/* ===================== 메뉴 관련 ======================= */
+
+/* 반응형 메뉴 */
+dl.rwMenu > dt {display: none;}
+dl.rwMenu > dd {display: block !important;}
+
+/* 메뉴 > 박스 형식 */
+ul.subMenu {border-radius: 5px;border: 1px solid #338fce;box-shadow: 0 9px 7px rgba(228,228,240,0.16);}
+ul.subMenu li {width: 25%;}
+ul.subMenu a {height: 65px;font-size: 20px;line-height: 25px;}
+ul.subMenu .on a {border-radius: 5px}
+
+ul.subMenu li:nth-child(4n+1) a {}
+ul.subMenu li:nth-child(4n) a {border-right: 0 none;}
+ul.subMenu li:nth-child(-n+4) a {border-top: 0 none;}
+
+/* 메뉴 > 아래 보더가 있는 형식 */
+ul.conMenu > li {min-width: 200px;}
+ul.conMenu a {padding: 15px;font-size: 19px;line-height: 30px;}
+ul.conMenu .on a {color: #2c9be4;font-family: 'Pretendard-SemiBold', sans-serif;}
+ul.conMenu .on a:after {bottom: -2px;height: 4px;}
+
+/* 탭메뉴 > 박스 형식 (subMenu와 같은 디자인) */
+ul.tabMenu {border-radius: 5px;border: 1px solid #338fce;box-shadow: 0 9px 7px rgba(228,228,240,0.16);}
+ul.tabMenu li {width: 25%;}
+ul.tabMenu a {height: 65px;font-size: 20px;line-height: 25px;}
+ul.tabMenu .on a {border-radius: 5px}
+
+ul.tabMenu li:nth-child(4n+1) a {}
+ul.tabMenu li:nth-child(4n) a {border-right: 0 none;}
+ul.tabMenu li:nth-child(-n+4) a {border-top: 0 none;}
+
+/* ========================================================================================================== */
+/* ============================================= 버튼 및 폼태그 공통 CSS ============================================ */
+/* ========================================================================================================== */
+
+textarea {height: 200px;}
+
+div.btnArea {padding-top: 40px;}
+
+/* 큰 버튼 */
+.btn .btnBig,
+form div.btnArea > * {min-width:100px;height:50px;padding:0 30px;font-size:18px;line-height: 48px !important;}
+
+
+form div.btnArea > .pcOnly {display: inline-block !important;vertical-align: top;}
+.btn .btnBig img,
+form div.btnArea.btn img {padding:13px 10px 0 0;}
+
+
+/* 세로 정렬 */
+div.contents > div.colArea {width: 1300px;margin: 0 auto;}
+div.colArea {}
+div.colArea:after {clear: both;display: block;height: 0;line-height: 0;font-size: 0;content: "";}
+div.col2ea div.col {float: right;width: calc(50% - 10px);}
+div.col2ea div.col:nth-child(odd) {clear: both;float: left;}
+
+div.col3ea div.col {float: left;width: 420px;margin-left: 20px;}
+div.col3ea div.col:nth-child(3n+1) {clear: both;margin-left: 0;}
+
+/* ===================== 테이블 관련 ======================= */
+/* 테이블 공통 */
+table colgroup.pcOnly {display: table-column-group !important;}
+table col.pcOnly {display: table-column !important;}
+
+table .pcOnly {display: table-cell !important;}
+
+table.halfTbl {width: 50%;}
+
+/* 기본 Table */
+table.tblDef > * > tr > *,
+table.inputTbl > * > tr > * {padding: 15px;font-size: 16px;line-height: 25px;}
+table.tblDef > thead > tr > th {font-size: 18px;}
+table.tblDef > thead > tr > th:before {height: 20px;}
+
+table.tblDef.half {width: 50%;}
+
+/* 리스트 Table */
+table.listTbl > thead > tr > th {font-size: 16px;}
+table.listTbl > * > tr > * {padding: 10px 15px;}
+
+/* pointTbl */
+table.tblPoint > * > tr > * {padding: 5px 10px;font-size: 17px;line-height: 25px;}
+table.tblPoint > thead > tr > th {padding: 10px;font-size: 18px;}
+table.tblPoint > thead > tr > th:before {height: 20px;}
+
+/* ===================== 폼태그 관련 ======================= */
+/* 폼태그 영역 */
+dl.inputArea {margin-top: 50px;}
+dl.inputArea > dt {margin: 30px 0 10px;font-size: 22px;line-height: 24px;}
+
+/* 폼태그용 Table */
+div.contents > div.formArea {margin: 0 auto;}
+table.inputTbl > * > tr > * {padding: 7px 20px;}
+table.inputTbl > * > tr > th {padding-left: 25px;}
+
+div.formArea table.inputTbl + .subTit {margin-top: 50px;}
+
+/* 동의하기 */
+.agreeCon > div {max-height: 310px;padding: 20px;}
+
+dl.agree {margin-top: 50px;}
+dl.agree > dd.bg {padding: 15px 20px;}
+
+dl.agree > dd.agree input {margin:7px 5px 0 25px;}
+dl.agree > dd.agree label {line-height: 36px;}
+
+div.agree {}
+div.agree label {display: inline-block;vertical-align: top;font-size: 17px;line-height: 20px;margin-left: 5px;}
+
+/* 폼태그 */
+input[type=radio],
+input[type=checkbox] {width: 20px;height: 20px;}
+
+table.inputTbl + table.inputTbl {margin-top: 50px;}
+
+table.inputTbl label,
+table.inputTbl span {line-height: 36px;}
+
+table.inputTbl div.note,
+table.inputTbl span.note {line-height: 36px;}
+
+.abstract table.inputTbl div.note,
+.abstract table.inputTbl span.note {line-height: 1.5em;}
+
+table.inputTbl td input[type=text],
+table.inputTbl td input[type=password],
+table.inputTbl td input[type=number],
+table.inputTbl td select {height: 36px;}
+table.inputTbl td select {min-width: 200px;font-size: 15px;}
+
+table.inputTbl td input[type=text],
+table.inputTbl td input[type=password],
+table.inputTbl td input[type=number] {width: 390px;padding: 0 10px;}
+
+.multi input[type=radio],
+.multi input[type=checkbox] {margin:8px 4px 0 30px;}
+.multi input[type=image] {margin-top: 10px;}
+
+div.addUtil {padding: 10px 0 30px;}
+
+div.phone {width: 50%;}
+
+.accountInfo label,
+.accountInfo span {margin-right: 5px;}
+.accountInfo input[type=text] + label,
+.accountInfo input[type=text] + span {margin-left: 50px;}
+.accountInfo input[type=text] {width: 200px;}
+
+/* input:text + a */
+.withBtn {}
+
+/* select + input[type=text] */
+.selectType {}
+
+/* 파일첨부 */
+div.selectFile span.attach {padding-left: 25px;}
+
+
+/* 이메일 주소 */
+.email input[type=text] {width: 310px;}
+.email input[type=text]:first-child {width:200px;}
+.email select {width: 145px;margin-left: 10px;}
+
+
+/* 주소 */
+.address input[type=text] {width: 450px;}
+.address input[type=text].clear {width: calc(100% - 460px);margin-right: 5px;}
+
+
+/* 날짜 : 시작일, 종료일 */
+form .date {}
+
+/* 날짜 : 년월 ~ 년월 */
+.dateInfo > * {float: left;margin-left: 5px;}
+.dateInfo > *:first-child {margin-left: 0;}
+
+.dateInfo input[type=text],
+.dateInfo input[type=number] {width: 120px !important;}
+.dateInfo span.mClear {width: 30px;margin-left: 0;text-align: center;}
+.dateInfo + input[type=number] {width: 600px;}
+
+/* 기간 : 년월 ~ 년월 */
+.term > * {float: left;}
+
+.term input[type=text] {width: calc(50% - 20px) !important;max-width: 185px;}
+
+/* 학력 취득기간 */
+dl.period {}
+dl.period > dt {width: 80px;}
+
+dl.period input[type=text] {width: 150px;}
+dl.period input[type=text].wide {width: 320px !important;}
+
+dl.period input[type=checkbox] {margin: 7px 5px 0 15px;}
+
+/* 가입인증 */
+div.verification input[type=text] {width: 200px;}
+
+div.verification span.code,
+div.verification a {line-height: 36px;}
+
+div.verification a img {padding: 11px 5px 0 0;}
+
+/* 팝업 사이즈 */
+ul.popSize li {margin-top:10px;}
+
+/* 구분값 */
+ul.option > li {padding-left: 28px;}
+ul.option > li label,
+ul.option > li span {line-height: 22px !important;}
+ul.option > li input[type=text] {margin-left: 5px;width: 250px;}
+
+ul.option_m li {display: inline-block;vertical-align: top;margin-left: 20px;}
+ul.option_m li:first-child {margin-left: 0;}
+ul.option_m li > input:first-child {margin: 7px 5px 0 0;}
+ul.option_m li input[type=text] {margin-left: 5px;width: 250px;}
+
+ul.option.col2ea_m {}
+ul.option.col2ea_m li {display: inline-block;vertical-align: top;margin-left: 35px;}
+ul.option.col2ea_m li:first-child {margin-left: 0;}
+
+ul.option.col6ea {overflow: hidden;}
+ul.option.col6ea > li {float: left;width:16.66666%;box-sizing: border-box;margin-left: 0;}
+ul.option.col6ea > li:nth-child(6n+1) {clear: both;}
+
+/* 회칙, 이용약관 등 */
+dl.rule > dt {margin-top: 25px;}
+dl.rule > dd > *,
+dl.rule > dd ul ul {margin-top: 15px;}
+
+
+/* ===================== 팝업 관련 ======================= */
+div.layerPopup > div.popupWrap {width: 90%;}
+
+
+/* ===================================================================================================*/
+/* ============================================= 게시판 CSS ============================================ */
+/* ================================================================================================= */
+
+/* 검색영역 */
+div.searchArea {margin: 0 auto;font-size: 0;line-height: 0;text-align: center;}
+div.searchArea form {padding: 32px 0;}
+div.searchArea select,
+div.searchArea input[type=text],
+input[type=submit].search,
+button.reset {display: inline-block;vertical-align: top;height: 46px !important;border-radius: 3px;margin-left: 10px;font-size: 15px !important;border-color: #ccc;}
+
+div.searchArea select {width: 100px;}
+div.searchArea input[type=text] {width: 534px;}
+input[type=submit].search {width: 95px;}
+button.reset {width: 115px;}
+button.reset img {height: 15px;padding-top: 2px;}
+
+/* 게시판 */
+div.bbs {}
+
+/* 게시판 검색 */
+div.bbsSearch {font-size: 0;line-height: 0;text-align: right;}
+div.bbsSearch select,
+div.bbsSearch input[type=text],
+div.bbsSearch input[type=submit],
+div.bbsSearch input[type=reset] {display: inline-block;vertical-align: top;height: 45px;font-size: 15px;}
+
+div.bbsSearch select {width: 145px;}
+div.bbsSearch input[type=text] {width: 260px;padding: 0 15px;margin-left: 13px;}
+
+div.bbsSearch input[type=submit] {font-size: 16px;}
+
+div.bbsSearch input[type=submit] {width: 80px;margin-left: -2px;color: #fff !important;background-color: #4f4cd9 !important;}
+div.bbsSearch input[type=reset] {width: 155px;margin-left: 13px;font-size: 0;line-height: 0;}
+
+/* 게시판 요약 */
+div.bbsBrief {padding: 30px 0 15px;}
+
+div.noData {margin: 100px 0;padding-top: 135px;background-image: url('/image/sub/noData.png');}
+
+/* 게시판 리스트 */
+table.list {table-layout:fixed;border-top: 2px solid #1b4f99;margin-top: 35px;}
+table.list + table.list {margin-top: 20px;}
+table.list > * > tr > * {border-bottom: 1px solid #dcdcdc;text-align: center;padding: 10px;font-size: 16px;line-height: 23px;}
+
+table.list td.tit {text-align: left;}
+table.list td.tit a {display: inline-block;vertical-align: top;max-width:100%;}
+table.list td.tit a img {display: none;}
+table.list td.tit a.new {padding-right: 25px;}
+table.list td.tit a.new:after {width: 30px;}
+
+table.list td.util a {box-shadow:0 4px 7px rgba(131,132,131,.15);}
+
+/* 게시판 > 상세보기 */
+div.bbsView {}
+div.bbsView h4 {/* border-top: 2px solid #42458e; */padding: 25px 15px;font-size: 30px;line-height: 35px;}
+div.bbsView h4 span {position: relative;display: inline-block;vertical-align: top;margin-right: 5px;padding: 0 10px;color: #1b4f99;font-size: 18px;font-family: 'Pretendard-SemiBold', sans-serif;}
+div.bbsView h4 span:after {z-index: -1;position: absolute;left: 0;top: 50%;height: 11px;border-radius: 6px;transform:translateY(-50%);width: 100%;content: "";background-color: rgba(27,79,153,0.2);}
+
+div.bbsView h4.guideTit {height: 217px;;padding-right: 202px;font-size: 25px;line-height: 25px;}
+div.bbsView h4.guideTit span {width: 158px;height: 213px;}
+div.bbsView h4.guideTit span:after {}
+
+div.bbsView td {text-align: left;font-size: 16px;font-family: 'Pretendard-Medium', sans-serif;}
+div.bbsView td[colspan] {text-align: left; line-height:25px;}
+div.bbsView td a {padding-left: 30px;}
+
+div.bbsCon {min-height: 350px;padding: 25px 30px;font-size: 17px;line-height: 35px;}
+
+/* 게시판 > 등록 */
+div.bbsWrite .btnArea > * {box-shadow:0 8px 9px rgba(58,89,135,.08);}
+
+/* 게시판 버튼 영역 */
+div.bbsUtil {width: 1400px;margin: 40px auto 0;}
+div.bbsUtil .btn a,
+div.bbsUtil.btn a,
+div.yearMenu .btn a {width: 125px;height: 55px;font-size: 20px;line-height: 53px;}
+div.bbsUtil .btn img,
+div.bbsUtil.btn img,
+div.yearMenu .btn img {display: inline-block;vertical-align: top;padding:18px 8px 0 0;}
+
+/* Pager */
+ul.pager {margin-top: 35px;padding: 15px 0;}
+ul.pager li.prev {margin-right: 15px;}
+ul.pager li.next {margin-left: 15px;}
+
+ul.pager a {width: 30px;line-height: 30px;font-size: 14px;}
+ul.pager li.first a,
+ul.pager li.prev a,
+ul.pager li.next a,
+ul.pager li.last a {padding: 10px 0 9px;}
+
+/* 년도 메뉴 */
+div.year {width: 1400px;margin: 0 auto;padding: 0 50px;}
+div.year:before {top: 25px;height: 5px;}
+
+div.year li {width: 250px;padding: 55px 0 40px;}
+div.year li a {padding: 0 5px;font-size: 30px;line-height: 40px;}
+div.year li a:before {top: -25px;height: 20px;}
+div.year li.on {padding: 90px 0 40px;}
+div.year li.on:before {top: 23px;height: 10px;border-radius: 5px;box-shadow: 0 7px 10px rgba(23,24,53,0.18);}
+div.year li.on a {font-size: 45px;}
+div.year li.on a:before {top: -57px;height: 47px;}
+
+div.yearUtil:before,
+div.yearUtil:after {width: 50px;}
+div.year a.prev,
+div.year a.next {width: 50px;height: 50px;}
+
+div.year a.prev:hover,
+div.year a.next:hover {background-color: #2c8eef;}
+div.year a.prev:hover {background-image: url('/image/sub/year_prev_ov.png');}
+div.year a.next:hover {background-image: url('/image/sub/year_next_ov.png');}
+
+
+/* ====================================================================================================== */
+/* ============================================= 서브페이지 관련 CSS ============================================ */
+/* ====================================================================================================== */
+
+/* ============ 공통 ============ */
+/* 좌(타이틀) 우(컨텐츠) 배열 (PC) */
+div.gridBox {display: grid;grid-template-columns: 215px 1fr; gap: 0 40px;}
+.gridTit {min-height: 110px;padding: 25px 20px;border-top-width: 3px;font-size: 24px;line-height: 30px;}
+.gridTit img {position: absolute;bottom: 30px;right: 20px;}
+.gridCon {padding: 30px 20px;border-top-width: 3px;}
+
+.gridTit:last-of-type,
+.gridTit:last-of-type + .gridCon {border-bottom: 1px solid #e5e5e5;}
+
+/* 회원가입 */
+div.join {}
+
+dl.joinInfo {float: left;width: 50%;margin-bottom: 50px;}
+dl.joinInfo + div.agreeCon {clear: both;}
+dl.joinInfo dd {padding: 5px 25px;}
+
+dl.joinInfo ul.listDot {overflow: hidden;}
+dl.joinInfo ul.listDot li {float: left;margin-right: 50px;}
+dl.joinInfo ul.listDot li:last-child {margin-right: 0;}
+
+div.agree {padding-top: 55px;}
+div.agree button {height: 60px;padding: 0 40px;margin: 0 8px;font-size: 18px;line-height: 20px;}
+div.agree button:before {width: 20px;height: 20px;margin-right: 20px;}
+div.agree .agree {min-width: 480px;}
+
+div.join .util {padding-top: 40px;}
+div.join .util > * {min-width: 100px;height: 50px;font-size: 18px;line-height: 48px;box-shadow: 0 8px 18px rgba(152,163,169,0.25);}
+div.join .util .btnAdd:after {margin-left: 40px;}
+
+/* 회원가입 완료 */
+div.joinComp {padding-top: 270px;background-position: center 30px}
+div.joinComp > p:first-child  {margin-bottom: 30px;font-size: 30px;line-height: 40px;}
+div.joinComp > p:first-child span {box-shadow: inset 0 -15px 0px #e9f8ff}
+div.joinComp > p,
+dl.contact p {font-size: 18px;line-height: 30px;}
+
+dl.contact {width: 700px;margin: 60px auto 0;}
+dl.contact dt {width: 230px;padding: 10px 0;border-radius: 5px 25px 0 0;text-align: center;font-size: 20px;line-height: 35px;}
+dl.contact dd {padding: 25px 40px;border-radius: 0 5px 35px 5px;}
+
+dl.contact ul.listDot li {float: left;width: 33.3333%;padding-left: 0.5em;text-align: left;box-sizing: border-box;font-size: 16px;line-height: 25px;}
+
+div.joinComp div.btnArea {padding-top: 80px;}
+
+/* 로그인 */
+div.login {width: 420px;margin: 50px auto;}
+div.login h4 {padding: 132px 0 35px;font-size: 30px;line-height: 30px;}
+
+p.loginUtil {padding: 5px 0 30px;}
+
+ul.inputArea input {height: 58px;padding: 0 20px;}
+ul.inputArea input::placeholder {font-size: 16px;line-height: 20px;}
+
+div.login div.btn > * {height: 60px;font-size: 20px;}
+div.login div.btn a {line-height: 58px;}
+
+/* 아이디/비밀번호 찾기 */
+div.find {position: relative;width: 1100px;margin: 50px auto;}
+div.find:before {position: absolute;left: 50%;top: 0;content: "";width: 1px;height: 100%;background-color: #e9e9e9;}
+div.find:after {clear: both;display: block;height: 0;line-height: 0;font-size: 0;content: "";}
+
+div.find div.formArea {float: left;width: 50%;box-sizing:border-box;padding: 0 50px;}
+
+div.find h4  {padding:140px 0 40px;font-size: 30px;line-height: 30px;}
+
+div.find div.btn {}
+div.find div.btn > * {height: 60px;font-size: 22px;}
+
+div.find div.result,
+div.find div.noResult {width: 460px;height: 65px;font-size: 16px;line-height: 20px;}
+
+div.find div.result span {box-shadow: inset 0 -12px 0px #ffead6;}
+
+/* 개인정보 취급방침 */
+dl.privacy dt.pointTit:first-child {margin-top: 30px !important;}
+dl.privacy dd > * + * {margin-top: 20px;}
+
+/* 마이페이지 */
+div.mypage {}
+
+ul.myNote {margin-bottom: 40px;padding: 40px 210px 40px 225px;border-radius: 15px 0 15px 0;background-repeat: no-repeat;background-position: left 82px center;}
+ul.myNote > li {margin-top: 10px;}
+
+div.changePwd form {padding: 0 185px;}
+
+/* 마이페이지 > 회비납부 */
+div.feeNote {overflow: hidden;margin-bottom: 40px;padding: 35px 35px 35px 230px;background-position: left 80px center;border-radius: 15px 0 15px 0;}
+div.feeNote p {margin-bottom: 15px;font-size: 20px;line-height: 30px;}
+div.feeNote ul.listDot > li  {line-height: 22px;}
+
+div.feeNote dl {float: left;width: 50%;}
+
+/* 팝업 > 회비납부 */
+#popupFee {width: 530px;padding: 40px 40px 45px;}
+#popupFee h1 {padding: 16px 0 40px;font-size: 24px;line-height: 30px;}
+
+/* 팝업 > 입급정보 */
+#popupFeeInfo {width: 530px;padding: 40px 40px 45px;}
+#popupFeeInfo h1 {padding: 16px 0 40px;font-size: 24px;line-height: 30px;}
+
+/* 마이페이지 > 회원 탈퇴 */
+div.memberOut form {padding: 0 185px;} 
+div.memberOut div.agree {padding-top: 30px;}
+div.memberOut div.agree label {font-size: 16px;line-height: 20px;}
+div.memberOut div.agree label span {box-shadow: inset 0 -10px 0px #ffeded;}
+
+div.memberOut.comp {padding-top: 200px;background-position: center 40px;}
+div.memberOut.comp p:first-child {margin-bottom: 20px;font-size: 30px;line-height: 36px;}
+div.memberOut.comp p span {box-shadow: inset 0 -16px 0 #ffbbbe;}
+
+/* ============ 학술행사 ============ */
+
+/* 학회 연간일정 */
+div.calendar {width: 1400px;margin: 10px auto 0;}
+
+table.schedule > * > tr > * {font-size: 18px;}
+
+table.schedule > * > tr > th,
+table.schedule table.innerTbl > * > tr > th {padding: 10px;}
+
+table.schedule td.calendar {padding: 20px 0;}
+table.schedule td.con td {height: 96px;}
+
+/* 학술대회 */
+div.workshopList {display: grid;grid-template-columns: repeat(2, 1fr);gap: 20px;margin-top: 45px;}
+dl.workshop {position: relative;justify-self: stretch;align-self: stretch;border-radius: 5px 5px 35px 5px;padding: 35px 26px 30px;}
+dl.workshop dt {padding: 8px 19px 14px;font-size: 28px;line-height: 40px;}
+dl.workshop ul {padding: 0 19px;}
+dl.workshop li {margin-top: 10px;padding-left: 30px;line-height: 21px;background-repeat: no-repeat;background-position: 4px 0;}
+dl.workshop .btn {margin-top: 25px;text-align: center;font-size: 0;line-height: 0;}
+dl.workshop .btn a {margin: 0 8px;padding: 16px 80px 15px 25px;border-radius: 25px;background-position: right 20px center;}
+
+dl.workshop .moreMenu {margin-top: 25px;text-align: center;font-size: 0;line-height: 0;}
+dl.workshop .moreMenu a {width: 177px;padding: 0 15px;font-size: 16px;line-height: 50px;border-radius: 3px;background-position: right 20px center;}
+dl.workshop .moreMenu a:not(:first-child) {margin-left: 8px;}
+dl.workshop .moreMenu a.viewDetail {width: 265px;}
+dl.workshop .moreMenu a img {padding: 18px 0 0 20px;}
+
+dl.workshop .admin {position: absolute;top: 25px;right: 25px;font-size: 0;line-height: 0;text-align: right;}
+dl.workshop .admin a {display: inline-block;vertical-align: top;margin-left: 5px;box-shadow: 0 4px 7px rgba(131,132,131,0.17);}
+
+/* 학술대회 > 힉술대회 수상자 */
+div.award {position: relative;}
+div.award .toggleMenu {position: absolute;top: -15px;right: 0;min-width: 300px;}
+div.award .pointTit {margin-bottom: 25px;padding-bottom: 25px;border-bottom: 1px solid #e4edf3;}
+
+/* 학술대회 개최연혁 */
+div.wsHistory {}
+
+div.wsHistory + div.wsHistory {margin-top: 45px;}
+
+/* 진행중인 학술대회 2023-08-08 */
+dl.currentWs {margin-top: 35px;}
+dl.currentWs:first-of-type {margin-top: 0;}
+dl.currentWs dt {padding: 12px 0;color: #113a63;font-size: 22px;line-height: 40px;font-weight: normal;font-family: 'Pretendard-SemiBold', sans-serif;}
+dl.currentWs dd {position: relative;padding: 30px 365px 30px 40px;background-color: #f7fafd;color: #000;font-size: 17px;line-height: 30px;}
+dl.currentWs .btn {position: absolute;top: 50%;right: 35px;min-height: 100px;transform: translateY(-50%);font-size: 0;line-height: 0;text-align: right;}
+dl.currentWs .btn a {width: 140px;height: 100px;margin-left: 12px;padding: 25px 10px 15px;border-radius: 5px 5px 20px 5px;background-color: #6b48bc;border-color: #6b48bc;text-align: center;color: #fff;font-size: 18px;font-weight: normal;font-family: 'TheJamsil-3Regular', sans-serif;box-sizing: border-box;}
+dl.currentWs .btn a:first-child {margin-left: 0;}
+dl.currentWs .btn img {display: block;margin: 0 auto 10px;}
+
+/* 비공개 */
+dl.currentWs.closed {}
+dl.currentWs.closed dt {color: #b0bcc8;}
+dl.currentWs.closed dt:before {display: inline-block;vertical-align: top;margin-right: 15px;padding: 0 15px;border: 2px solid #c7cfd7;border-radius: 2px;font-size: 17px;line-height: 36px;content: '비공개';box-sizing: border-box;}
+
+/* 진행중인 학술대회 > 상세보기 */
+div.wsBrief {overflow: hidden;margin-bottom: 35px;padding: 45px 60px;/* max-height: 200px; */border-radius: 10px;color: #000;background-repeat: no-repeat;background-position: right bottom;box-sizing: border-box;}
+.wsTit {margin-bottom: 15px;font-size: 30px;line-height: 40px;font-weight: normal;font-family: 'Pretendard-SemiBold', sans-serif;}
+div.wsBrief ul span {font-family: 'Pretendard-Medium', sans-serif;}
+
+div.wsBrief.typeA {background-color: #eff8ff;background-image: url('/image/sub/wsTypeA.png');}
+div.wsBrief.typeA .wsTit {color: #002e51;}
+
+div.wsBrief.typeB {background-color: #f0f9f3;background-image: url('/image/sub/wsTypeB.png');}
+div.wsBrief.typeB .wsTit {color: #00a437;}
+
+div.wsBrief.typeC {background-color: #f6f6ff;background-image: url('/image/sub/wsTypeC.png');}
+div.wsBrief.typeC .wsTit {color: #2e2a6f;}
+
+div.wsBrief.typeD {padding: 0 !important;}
+div.wsBrief.typeD img {display: block;width: 100%;height: 100%;}
+
+div.wsCon {margin-top: 30px;}
+div.wsCon > * + * {margin-top: 25px;}
+div.wsCon p.info {padding: 0 30px;}
+
+/* 진행중인 학술대회 > 상세보기 >  */
+dl.registInfo {}
+dl.registInfo dt {margin-top: 50px;}
+dl.registInfo dd {padding-left: 30px;}
+
+/* 진행중인 학술대회 > 접수폼 */
+div.wsCon .agree {padding-top: 10px;}
+
+/* 진행중인 학술대회 > 접수폼 */
+div.applyComp {padding-top: 260px;background: url('/image/sub/applyComp.png') center top 100px no-repeat;}
+div.applyComp p {text-align: center;color: #272727;font-size: 30px;line-height: 35px;font-family: 'TheJamsil-3Regular', sans-serif;}
+div.applyComp p span {box-shadow: inset 0 -15px 0 #d7edff;}
+
+/* 진행중인 학술대회 > 조회하기 */
+div.applySearch {width: 420px;margin: 0 auto;padding-top: 260px;background: url('/image/sub/applySearch.png') center top 100px no-repeat;}
+div.applySearch h5 {text-align: center;color: #272727;font-size: 30px;line-height: 35px;font-family: 'TheJamsil-3Regular', sans-serif;font-weight: normal;}
+div.applySearch h5 + p {margin-top: 5px;text-align: center;}
+div.applySearch form {margin-top: 30px;}
+div.applySearch div.btn > * {display: block;width: 100%;height: 60px;margin-top: 10px;padding: 0;border-radius: 5px;text-align: center;font-size: 22px;font-family: 'Pretendard-SemiBold', sans-serif;}
+div.applySearch div.btn input {border-color: #0e9ad0;background-color: #0e9ad0;color: #fff;}
+
+/* 진행중인 학술대회 > 초록접수 */
+div.abstract {}
+div.absInfo {position: relative;margin-bottom: 25px;padding: 30px 240px 30px 135px;border-radius: 15px 0px 15px 0px;background-color: #ecf2f9;background-image: url('/image/sub/absInfo.png');background-repeat: no-repeat;background-position: 45px center;font-size: 16px;line-height: 35px;}
+div.absInfo .btn {position: absolute;top: 50%;right: 35px;transform: translateY(-50%);}
+div.absInfo .btn > * {padding: 7px 30px;border-radius: 5px;box-shadow: 11px 11px 18px rgba(183,199,217,0.19);border-color: #bacce1;background-color: #fff;color: #1565c0;font-family: 'Pretendard-SemiBold', sans-serif;}
+div.abstract form textarea {height: 100px;}
+
+.btn .btnPPT {margin-left: 5px;padding: 7px 20px;font-size: 13px;font-family: 'Pretendard-Medium', sans-serif;border-color: #234ba6;background-color: #fafdff;color: #1b4f99;}
+.btn .btnAbs {padding: 7px 20px;font-size: 13px;font-family: 'Pretendard-Medium', sans-serif;border-color: #00a600;background-color: #f9fff9;color: #13b823;}
+
+div.abstract .btn input.btnBig,
+div.regist .btn input.btnBig {padding: 0 35px;box-shadow: 8px 8px 18px rgba(152,163,169.0.25);}
+
+/* 집담회 */
+div.conference {}
+dl.currConference {padding: 40px 50px 33px;}
+dl.currConference dt {margin-bottom: 5px;font-size: 30px;line-height: 50px;}
+dl.currConference ul.info li {padding-left: 28px;font-size: 18px;line-height: 30px;}
+
+div.conference p.bbsBrief {margin: 45px 0 15px;}
+div.conference div.btn.btnArea.ar {margin-bottom: 15px;}
+
+dl.absList {position: relative;min-height: 100px;}
+dl.absList dt {padding: 22px 220px 10px 40px;font-size: 25px;line-height: 40px;}
+dl.absList dd {padding: 0 220px 22px 40px;}
+dl.absList dd .file > span {font-size: 14px;}
+dl.absList dd.btn {padding: 0;position: absolute;top: 50%;right: 40px;transform: translateY(-50%);}
+dl.absList dd.btn a {width: 140px;height: 100px;margin-left: 12px;padding: 25px 10px 15px;border-radius: 5px 5px 20px 5px;text-align: center;font-size: 18px;box-sizing: border-box;}
+dl.absList dd.btn img {display: block;margin: 0 auto 10px;}
+
+dl.absList dd.util {}
+dl.absList dd.util ul {padding: 10px 0;font-size: 0;line-height: 0;}
+dl.absList dd.util li {display: inline-block;vertical-align: top;padding-left: 40px;font-size: 15px;line-height: 30px;font-family: 'Pretendard-SemiBold', sans-serif;}
+dl.absList dd.util label,
+dl.absList dd.util span.label {display: inline-block;vertical-align: top;margin-right: 20px;line-height: 30px;}
+dl.absList dd.util select {min-width: 80px;height: 30px;border-radius: 3px;}
+dl.absList dd.util a.add {width: 60px;line-height: 30px;text-align: center;border-radius: 3px;}
+dl.absList dd.util div.util {top: 30px;right: 40px;}
+dl.absList dd.util div.util a {display: inline-block;padding: 5px 25px;vertical-align: top;border-width: 1px; border-style: solid;border-radius: 3px;line-height: 24px;}
+
+div.noResult {padding: 30px 0;font-size: 30px;line-height: 50px;letter-spacing: -1px;}
+div.noResult img {margin-bottom: 15px;}
+
+div.conference div.formArea {margin-top: 45px;}
+
+/* 팝업 > 초록 보기 */
+#popupConference {width: 800px;}
+#popupConference h1 {padding: 30px 30px 0px;text-align: left;}
+#popupConference .popupCon {padding: 30px;}
+#popupConference .con {margin-top: 20px;}
+
+/* 팝업 > 지정 토론자 */
+#popupDiscussion {width: 800px;padding: 30px;}
+#popupDiscussion h1 {padding-bottom: 20px;text-align: left;}
+#popupDiscussion div.searchArea {}
+#popupDiscussion div.searchArea form {background: transparent;padding: 0;}
+
+#popupDiscussion div.searchArea input[type=text] {width: calc(100% - 225px);}
+#popupDiscussion div.searchArea .search {background-color: #494c5d;}
+#popupDiscussion div.noResult {font-size: 20px;}
+
+
+
+/* 전공의 연수교육 */
+div.workshop {}
+div.workshop > div.admin {}
+div.workshop > div.admin a {width: 170px;padding: 11px 0;border-radius: 22px;font-size: 18px;text-align: center;font-family: 'Pretendard-Medium', sans-serif;}
+div.workshop > div.admin + .bdTit {margin-top: 30px;}
+
+dl.wsProgram {}
+dl.wsProgram:not(:first-of-type) {margin-top: 20px;}
+
+dl.wsProgram > dt {padding: 15px;font-size: 18px;line-height: 20px;}
+dl.wsProgram > dt span.time {width: 20%;}
+dl.wsProgram > dt span.tit {flex-grow: 1;padding: 0 15px;}
+dl.wsProgram > dt span.admin {flex-shrink: 0;width: 60px;font-size: 0;line-height: 0;}
+dl.wsProgram > dt span.admin a {display: inline-block;vertical-align: top;}
+dl.wsProgram > dt span.admin a + a {margin-left: 8px;}
+
+dl.wsProgram table.tblDef > * > tr > * {padding: 5px 10px;border-left: 1px solid #dcdcdc;border-bottom: 1px solid #dcdcdc;color: #222;}
+dl.wsProgram table.tblDef > * > tr > *:first-child {border-left: 0 none;}
+dl.wsProgram table.tblDef th {padding: 10px;color: #1b4f99;background-color: #f5f5fb;}
+dl.wsProgram table.tblDef th:before {display: none;}
+
+
+/* 전공의 연수교육 > 등록 */
+div.wpProgram .bdTit {position: relative;}
+div.wpProgram .bdTit img {display: inline-block;vertical-align: top;padding-right: 10px;}
+div.wpProgram .bdTit span {position: absolute;right: 35px;top: 50%;transform:translateY(-50%);color: #252525;font-size: 14px;font-family: 'Pretendard-Regular', sans-serif;}
+div.wpProgram .bdTit span.note {margin-top: 10px;line-height: 20px;}
+div.wpProgram .bdTit label {line-height: 40px;}
+div.wpProgram .bdTit select {width: 125px;height: 40px;border: 1px solid #939393;border-radius: 3px;color: #51606d;font-size: 16px;font-family: 'Pretendard-Regular', sans-serif;}
+
+
+
+
+/* ============ 회원공간 ============ */
+
+/* 포토갤러리 */
+div.gallery {}
+
+div.sorting {}
+div.sorting .pointTit {float: left;}
+div.sorting select {width: 300px;height: 50px;padding: 0 35px 0 20px;font-size: 16px;background-position: calc(100% - 20px) center;}
+
+ul.thumbList {display: grid;grid-template-columns: repeat(4, 1fr);gap: 25px;margin-top: 45px;}
+ul.thumbList li {position: relative;}
+ul.thumbList li .thumb {height: 220px;}
+ul.thumbList li .thumb img {height: 220px;}
+ul.thumbList li .tit {padding: 20px 10px;font-size: 18px;}
+
+ul.thumbList .admin {position: absolute;top: 10px;right: 10px;font-size: 0;line-height: 0;text-align: right;}
+ul.thumbList .admin a {display: inline-block;vertical-align: top;margin-left: 5px;box-shadow: 0 4px 7px rgba(131,132,131,0.17);}
+
+div.galleryCon {padding: 50px 0 40px;}
+
+ul.galleryList {display: grid;grid-template-columns: repeat(2, 1fr);gap: 25px;}
+ul.galleryList li .thumb {height: 455px;margin-bottom: 15px;}
+ul.galleryList li .thumb img {height: 455px;}
+
+ul.galleryList a.btnDown {padding: 9px 23px 8px;}
+ul.galleryList a.btnDown:before {width: 18px;height: 16px;margin: 4px 9px 0 0;}
+
+/* 흉부외과 화보집 */
+.photoBook ul.galleryList {display: block;}
+.photoBook ul.galleryList li .thumb {height: auto;}
+.photoBook ul.galleryList li .thumb img {height: auto;}
+
+/* 관련사이트 */
+ul.relSite {margin-top: 70px;display: grid;grid-template-columns: repeat(2, 1fr);gap: 20px}
+ul.relSite li {position: relative;padding: 45px 45px 110px;place-self: stretch;border-radius: 5px 5px 35px 5px;font-size: 16px;line-height: 24px;}
+ul.relSite .tit {margin-bottom: 10px;font-size: 30px;line-height: 36px;}
+ul.relSite .btn {position: absolute;left: 0;bottom: 35px;width: 100%;text-align: center;}
+ul.relSite .btn a {min-width: 215px;padding: 15px 45px 16px 30px;background-position: right 20px center;border-radius: 25px;}
+
+/* ============ 학회 소개 ============ */
+/* 인사말 */
+div.message {display: grid;grid-template-columns: 450px 510px 300px;gap: 100px 70px;}
+
+div.messageImg {padding-left: 43px;}
+div.messageImg .img {width: 407px;height: 570px;}
+div.messageImg .img img {width: 100%;height: 100%;}
+div.messageImg .info {position: relative;width: 310px;margin: -50px 0 0 -43px;padding: 20px 20px 20px 60px;background-color: #002669;color: #fff;font-size: 20px;line-height: 32px;}
+div.messageImg .info strong {font-size: 24px;}
+div.messageImg .info:before {position: absolute;top: -78px;left: 43px;display: block;width: 4px;height: 115px;background-color: #52a2f3;}
+
+div.messageCon {grid-area: 1/2/2/4;font-size: 18px;line-height: 30px;}
+div.messageCon .dear {font-size: 26px;}
+div.messageCon > p {margin-top: 30px;}
+div.message dl.toggleMenu {grid-area: 2/3/3/4;}
+
+/* 이미지가 없는 경우 */
+div.message.noImg {}
+div.message.noImg div.messageCon {grid-area: 1/1/2/4;}
+
+/* 연혁 */
+div.history {}
+div.history > p {margin-top: 25px;}
+div.history ul.tabMenu {margin: 45px 0;}
+div.hisCon p {padding-left: 20px;}
+
+/* 학회 회원 */
+div.member {display: grid;grid-template-columns: repeat(2, 1fr);gap: 30px 40px}
+dl.state {grid-area: 1/1/2/3;padding-top: 20px;}
+dl.state dt {font-size: 26px;line-height: 50px;}
+dl.state dd {padding-left: 60px;}
+dl.state span {font-size: 17px;box-shadow: inset 0 -10px 0 #e4f3ff;}
+
+.pointTit_bl + * {padding-left: 20px;}
+
+div.member table.tblPoint > * > tr.total > * {padding: 10px;}
+
+/* 지부현황 */
+div.branch {}
+div.branch dl.toggleMenu {float: right;min-width: 300px;}
+div.branch .pointTit_bl {clear: both;}
+
+/* 기구 및 임원 */
+div.board {margin-top: 25px;}
+div.board dl.toggleMenu {float: right;min-width: 300px;}
+div.board .pointTit_bl {clear: both;}
+div.board table.tblPoint {padding-left: 20px;}
+div.board table.tblPoint > tbody > tr > td {padding: 10px 15px;text-align: left;}
+
+/* 역대회장 및 이사장 */
+div.president {margin-top: 35px;}
+div.president table.tblPoint {}
+div.president table.tblPoint > tbody > tr > th {border-left: 0 none;background-color: #f7f7f7;color: #000;}
+div.president table.tblPoint + table.tblPoint {margin-top: 25px;}
+
+/* 회칙 */
+div.rule {}
+
+div.ruleUtil {margin-bottom: 70px;grid-template-columns: 465px auto;column-gap: 30px;}
+
+div.ruleUtil > ul {column-gap: 25px}
+div.ruleUtil > ul li {}
+div.ruleUtil > ul a {border-radius: 10px 10px 40px 10px;height: 180px;font-size: 20px;line-height: 26px;box-shadow: 0 14px 10px rgba(23,24,53,0.08);}
+div.ruleUtil > ul img {margin-bottom: 10px;}
+
+div.rule dl.history {padding: 30px 40px;border-width: 3px;border-radius: 10px 10px 40px 10px}
+div.rule dl.history dt {margin-bottom: 10px;font-size: 20px;line-height: 26px;}
+div.rule dl.history dt img {margin-right: 8px;}
+div.rule dl.history dd {}
+
+div.rule dl.history li {font-size: 15px;line-height: 25px;letter-spacing: -0.5px; }
+
+ul#floatingMenu, ul#floatingMenu li, ul#floatingMenu a {margin: 0;padding: 0;list-style:none;text-decoration: none;}
+ul#floatingMenu {z-index: 10;position: absolute;left: 50%;top: 700px;width: 215px;margin-left: 485px;padding: 5px 20px;border: 1px solid #bbc7e8;border-radius: 4px 4px 20px 4px;background-color: rgba(248,249,253,0.77);box-sizing: border-box;}
+ul#floatingMenu li {border-top: 1px solid rgba(211,217,233,0.48);}
+ul#floatingMenu li:first-child {border-top: 0 none;}
+ul#floatingMenu a {display: table-cell;width: 300px;height: 40px;text-align: center;vertical-align: middle;color: #a4a7b3;font-size: 16px;line-height: 20px;font-family: 'Pretendard-Regular', sans-serif;word-break:keep-all;letter-spacing: -0.5px;}
+ul#floatingMenu a:hover,
+ul#floatingMenu a:focus {color: #465db9;font-family: 'Pretendard-Medium', sans-serif;}
+
+div.rule dl.toggleMenu {float: right;min-width: 300px;}
+div.rule dl.toggleMenu dd {z-index: 30;}
+div.rule .pointTit_bl:first-of-type {clear: both;}
+
+/* 윤리 강경 */
+div.ethics {}
+div.ethics p {}
+div.ethics p span {font-size: 25px;line-height: 36px;box-shadow: inset 0 -14px 0 #dce6f0}
+
+dl.ethics, dl.ethics dt, dl.ethics dd {margin: 0;padding: 0;}
+dl.ethics {padding: 50px 0 50px 625px;background-position: left top 97px;}
+dl.ethics dt {margin-top: 25px;font-size: 20px;line-height: 35px;}
+dl.ethics dd {}
+
+/* 학회사무국 */
+div.map {padding: 55px 0 186px;overflow: hidden;}
+
+div.mapArea {position: absolute;top: 0;left: 0;width: 700px;height: 560px;box-shadow: 20px 20px 32px rgba(122,142,166,0.52);}
+
+div.map > dl > dt {padding-bottom: 10px;font-size: 25px;line-height: 34px;}
+div.map > dl > dt img {display: inline-block;vertical-align: top;margin-right: 5px;}
+div.map dd dt {margin: 15px 0 0;font-weight: normal;font-family: 'TheJamsil-3Regular', sans-serif;font-size: 18px;}
+div.map dd {font-family: 'Pretendard-Light', sans-serif;font-size: 17px;line-height: 25px;}
+div.map ul.listBl li:before {background-color: #ffce00;width: 5px;height: 5px;}
+
+dl.mapInfo {padding: 55px 30px 150px 775px;background-color: #f6fbff;border-radius: 0 0 40px 0;}
+dl.transportation {position: absolute;bottom: 0;right: 60px;width: 585px;padding: 35px 40px;border-radius: 40px 4px 40px 4px;background-color: #425ac3;color: #fff;box-sizing: border-box;}
+
+/* 흉부외과 백서 */
+div.ebookWrap div#container {background: url('/image/sub/ebook_bg.png') center bottom 81px no-repeat;}
+div.ebook {}
+dl.ebook {}
+dl.ebook > *:not(.btn) {float: left;overflow: hidden;}
+dl.ebook > dt {}
+dl.ebook > dd:not(.btn) {width: calc(100% - 530px);padding:0 90px 35px;box-sizing: border-box;}
+
+dl.ebook dl > dt {margin: 25px 0 10px;font-size: 27px;line-height: 32px;}
+dl.ebook dl > dt:first-child {margin-top: 0 !important; }
+dl.ebook dl dd {color: #000;font-size: 16px;line-height: 25px;font-family: 'Pretendard-Light', sans-serif;}
+
+dl.ebook .btn {position: absolute;top: 705px;left: 100px;}
+dl.ebook .btn a {padding: 15px 35px;border-width: 5px;font-size: 20px;line-height: 30px;border-radius: 36px;box-shadow: 20px 20px 32px rgba(122,142,166,0.27);}
+dl.ebook .btn img {margin-right: 15px;}
+
+/* 흉부외과 화보집 */
+dl.photoBook {border-radius: 15px 15px 65px 15px}
+dl.photoBook > *:not(.btn) {float: left;overflow: hidden;}
+dl.photoBook dt {border-radius: 15px 0 0 15px;}
+dl.photoBook dd:not(.btn) {width: calc(100% - 596px);padding: 34px 60px;box-sizing: border-box;}
+dl.photoBook li > a {padding: 15px 190px 15px 10px;font-size: 20px;line-height: 35px;}
+dl.photoBook li > a:after {right: 0;padding: 0 55px 0 20px;border-radius: 17px;background-position: right 20px center;font-size: 14px;line-height: 32px;}
+
+dl.photoBook .btn {position: absolute;bottom: -35px;left: 50%;transform: translateX(-50%);}
+dl.photoBook .btn a {padding: 15px 35px;border-width: 5px;font-size: 20px;line-height: 30px;border-radius: 36px;box-shadow: 20px 20px 32px rgba(122,142,166,0.27);}
+dl.photoBook .btn img {margin-right: 15px;}
+
+/* ============ 전공의 ============ */
+
+/* 수련병원 */
+div.hospital {position: relative;}
+div.hospital div.sorting {}
+div.hospital form {position: absolute;top: -15px;right: 0;}
+div.hospital div.sorting select {background-color: #f7fcff;background-image: url('/image/common/toggle.png');border: 1px solid #338fce;color: #338fce;}
+div.hospital  .pointTit {float: none;margin-bottom: 25px;padding-bottom: 25px;border-bottom: 1px solid #e4edf3;}
+
+/* ============ 분과학회 ============ */
+
+
+ul.divisionList {}
+ul.divisionList li {margin-top: 20px;padding-left: 30px;font-size: 18px;line-height: 25px;}
+ul.divisionList li:before {top: 3px;left: 0;width: 19px;height: 19px;}
+ul.divisionList li:first-child {margin-top: 0;}
+ul.divisionList a {padding: 3px 0 0 10px;}
+ul.divisionList span:hover {text-decoration: underline;}
+ul.divisionList img {width: 20px;}
+
+/* 팝업 */
+#popupDivision {width: 900px;padding: 35px;border-width: 3px;}
+#popupDivision h1 {padding: 0 5px 25px;font-size: 30px;line-height: 36px;}
+
+#popupDivision ul.link {padding: 15px 0;font-size: 0;line-height: 0;text-align: right;}
+#popupDivision ul.link li {display: inline-block;vertical-align: top;margin-left: 10px;}
+#popupDivision ul.link li:first-child {margin-left: 0;}
+#popupDivision ul.link a {padding: 10px 25px;border-radius: 3px;color: #fff;font-size: 17px;line-height: 20px;font-family: 'Pretendard-Medium', sans-serif;}
+#popupDivision ul.link a img {display: inline-block;height: 17px;margin: 2px 5px 0 0;vertical-align: top;}
+#popupDivision p {font-size: 17px;line-height: 30px;}
+
+#popupDivision h2 {margin: 25px 0 10px;padding-left: 30px;background-position: 0 5px;background-size: 19px;font-size: 24px;line-height: 30px;}
+#popupDivision table.listTbl {margin-top: 0;width: 80%;}
+#popupDivision table.listTbl > * > tr > * {font-size: 16px;}
+
+#popupDivision .btn a {min-width: 130px;padding: 9px 15px;border-radius: 0;font-family: 'Pretendard-Medium', sans-serif;}
+
+/* ============ 학회자료 ============ */
+div.database {display: grid;grid-template-columns: repeat(4, 1fr);gap: 75px;padding-bottom: 75px;}
+div.database h4 {padding-bottom: 20px;grid-area: 1/1/2/5;font-size: 35px;line-height: 60px;}
+div.database h4 span {font-size: 55px;}
+div.database h4 span:after {height: 26px;border-radius: 13px;}
+
+dl.database {place-self: stretch;position: relative;min-height: 430px;padding: 35px 30px 95px;border-radius: 120px 120px 0 0;}
+dl.database:before {position: absolute;bottom: -72px;left: 0;width: calc(100% + 45px);height: 72px;background: url('/image/sub/database_shadow01.png') left top no-repeat;content: '';}	
+dl.database:after {position: absolute;top: 0;right: -45px;width: 45px;height: calc(100% + 72px);background: url('/image/sub/database_shadow02.png') left top no-repeat;content: '';}	
+dl.database dt {width: 182px;height: 182px;margin: 0 auto 35px;padding: 9px;border-radius: 50%;border: 2px solid #fff;box-sizing: border-box;font-size: 22px;line-height: 26px;}
+dl.database dt span {display: table-cell;vertical-align: middle;	width: 162px;height: 162px;border-radius: 50%;background-color: #fff;}
+dl.database dd {font-size: 17px;}
+
+dl.database .btn  {position: absolute;bottom: 45px;left: 0;width: 100%;text-align: center;}
+dl.database .btn a {padding: 10px 40px 9px 20px;border: 0 none;text-align: left;background-position: right 12px center;}
+
+dl.database:nth-of-type(2) dt {font-size: 20px;}
+
+dl.database:nth-of-type(1) {background: linear-gradient(to right bottom, #17d4ff, #018fff);}
+dl.database:nth-of-type(2) {background: linear-gradient(to right bottom, #1777ff, #012aff);}
+dl.database:nth-of-type(3) {background: linear-gradient(to right bottom, #7c17ff, #b001ff);}
+dl.database:nth-of-type(4) {background: linear-gradient(to right bottom, #ff7c17, #ffb001);}
+
+/* ============ 언론기사 ============ */
+ul.newsList li {margin-top: 20px;padding: 35px;}
+ul.newsList span.paper {font-size: 15px;}
+ul.newsList span.tit {padding-top: 10px;font-size: 22px;}
+ul.newsList span.con {padding-top: 20px;font-size: 17px;}
+ul.newsList span.btn {width: 105px;height: 40px;right: 30px;top: 30px;line-height: 40px;font-size: 15px;}

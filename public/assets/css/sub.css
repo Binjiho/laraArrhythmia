@@ -1,0 +1,2351 @@
+@charset "utf-8";
+/* ==================================================
+
+    * sub
+    
+================================================== */
+/* sub header */
+.sub #header{
+    background-color: #fff;
+}
+.sub .util-wrap{
+    background-color: #31343d;
+    border-bottom: 0;
+}
+.sub #header.active .util-wrap{    
+    border-bottom: 1px solid transparent;
+}
+.sub .util-link-menu li + li{
+    margin-left: -4px;
+}
+.sub .util-link-menu li + li:before{
+    display: none;
+}
+.sub .util-link-menu li:nth-child(1) > a{
+    background-color: #102888;
+}
+.sub .util-link-menu li:nth-child(2) > a{
+    background-color: #d64b54;
+}
+.sub .util-link-menu li:nth-child(3) > a{
+    background-color: #3aa4c7;
+}
+.sub .header-logo > a{
+    background-image: url('../image/common/h1_logo_on.png');
+}
+.sub .gnb > li > a{
+    color: #282828;
+}
+.sub .gnb > li > a{
+    color: #282828;
+}
+.sub .gnb > li:hover > a{
+    color: #183371;
+}
+.sub #header.active .util-wrap{
+    border-bottom: 0;
+}
+.sub #header.active .util-wrap ul > li > a{
+    color: #fff;
+}
+#header.active .util-wrap ul > li > a{
+    color: #111111;
+}
+
+/* sub container */
+#container.sub{
+    padding-top: 145px;
+}
+
+/* sub visual */
+.sub-visual{
+    width: 100%;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+}
+.sub-visual.sub01{
+    background-image: url('../image/sub/img_subvisual01.png');
+}
+.sub-visual.sub02{
+    background-image: url('../image/sub/img_subvisual02.png');
+}
+.sub-visual.sub03{
+    background-image: url('../image/sub/img_subvisual03.png');
+}
+.sub-visual.sub04{
+    background-image: url('../image/sub/img_subvisual04.png');
+}
+.sub-visual.sub05{
+    background-image: url('../image/sub/img_subvisual05.png');
+}
+.sub-visual.sub06{
+    background-image: url('../image/sub/img_subvisual06.png');
+}
+.sub-visual.sub07{
+    background-image: url('../image/sub/img_subvisual07.png');
+}
+.sub-visual.sub08{
+    background-image: url('../image/sub/img_subvisual08.png');
+}
+.sub-visual.sub09{
+    background-image: url('../image/sub/img_subvisual09.png');
+}
+.sub-visual.sub10{
+    background-image: url('../image/sub/img_subvisual10.png');
+}
+.sub-visual-con{
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+}
+.sub-visual-tit{
+    display: inline-block;
+    position: relative;
+    font-size: 4.5rem;
+    font-weight: 500;
+    color: #111111;
+    letter-spacing: -0.075em;
+    vertical-align: top;
+}
+.sub-visual-tit:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    left: calc((100% + 20px));
+    bottom: 0;
+    width: 200px;
+    height: 3px;
+    background-color: #31343d;
+}
+.breadcrumb{
+    margin-top: 25px;
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-image: url('../image/sub/ic_breadcrumb.png');
+}
+.breadcrumb > li{
+    position: relative;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #111;
+}
+.breadcrumb > li + li{
+    padding-left: 30px;
+    margin-left: 20px;
+    font-weight: 500;
+}
+.breadcrumb > li + li:before{
+    display: inline-block;
+    content: '>';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 17px;
+    color: #acb8bd;
+}
+
+/* sub menu */
+.sub-menu-wrap{
+    width: 100%;
+    height: 70px;
+    margin-top: -70px;
+    border-bottom: 1px solid #144393;
+}
+.sub-menu{
+    position: relative;
+    bottom: -1px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 25px 25px 0 0;
+    border: 1px solid #144393;
+    border-bottom: 0;
+    text-align: center;
+}
+.sub-menu-list .sub-menu-depth01{
+    display: none;
+}
+.btn-sub-menu{
+    display: none;
+}
+.btn-home{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.sub-menu-list{
+    width: 100%;
+    height: 100%;
+}
+.sub-menu-list > li {
+    height: 100%;
+}
+.sub-menu-list > li > ul{
+    width: 100%;
+    height: 100%;
+    margin-left: -4px;
+}
+.sub-menu-list > li > ul:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.sub-menu-list > li > ul > li{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+.sub-menu-list > li > ul > li > a{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+    font-size: 2rem;
+    line-height: 1.2;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.sub01 +  .sub-menu-wrap .sub-menu-list > li > ul > li > a,
+.sub10 +  .sub-menu-wrap .sub-menu-list > li > ul > li > a{
+    padding-right: 2vw;
+    padding-left: 2vw;
+}
+.sub02 +  .sub-menu-wrap .sub-menu-list > li > ul > li > a{
+    padding-right: 1.5vw;
+    padding-left: 1.5vw;
+}
+.sub-menu-list > li > ul > li + li > a:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    width: 1px;
+    height: 15px;
+    background-color: #cccccc;
+}
+.sub-menu-list > li > ul > li > a > span{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.sub-menu-list > li > ul > li > a > span:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 5px;
+    background-color: #183371;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.sub-menu-list > li > ul > li:hover > a > span:before,
+.sub-menu-list > li > ul > li.on > a > span:before{
+    width: calc(100% - 10px);
+}
+.btn-home:hover,
+.sub-menu-list > li > ul > li.on > a,
+.sub-menu-list > li > ul > li:hover > a{
+    color: #183371;
+    font-weight: 600;
+}
+
+/* sub contents */
+.sub-contents{
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 120px;
+}
+.sub-tit-wrap{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.sub-tit{
+    display: inline-block;
+    position: relative;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    vertical-align: top;
+}
+.sub-tit:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: -30px;
+    left: -45px;
+    width: 55px;
+    height: 39px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url('../image/sub/bg_sub_tit.png');
+}
+.sub-contit-wrap{
+    margin-top: 65px;
+    margin-bottom: 25px;
+}
+.sub-tit-wrap + .sub-contit-wrap{
+    margin-top: 0;
+}
+.sub-contit-wrap .fz-small{
+    display: block;
+    margin-top: 5px;
+    font-size: 1.6rem;
+}
+.sub-contit-wrap .list-type{
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: -15px;
+}
+.sub-contit-wrap .list-type > li:before{
+    top: 13px;
+}
+.sub-contit{
+    display: inline-block;
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+    background-image: url('../image/sub/bg_sub_contit.png');
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    vertical-align: top;
+}
+.sub-contit.underline{
+    padding-left: 0;
+    background: none;
+    -webkit-box-shadow: inset 0 -13px #eef3fc;
+    box-shadow: inset 0 -13px #eef3fc;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #102888;
+}
+.sub-contit-wrap:has(.sub-tit-img){
+    margin-top: 65px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.sub-tit-img{
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+    background-image: url('../image/sub/ic_subtit_img.png');
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #105895;
+    letter-spacing: -0.05em;
+}
+.sub-conbox{
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+/* 준비중 */
+.ready-wrap{
+    max-width: 740px;
+    margin: 0 auto;  
+    padding-bottom: 60px;  
+    background-color: #fff7f8;
+    border-radius: 30px;
+    letter-spacing: -0.03em;
+    text-align: center;
+}
+.ready-wrap .tit{
+    display: block;
+    font-size: 3.8rem;
+    font-weight: 600;
+    color: #505050;
+    line-height: 1.2;
+}
+.ready-wrap p{
+    margin-top: 35px;
+    font-size: 2rem;
+    color: #525252;
+    line-height: 1.5;
+}
+.ready-wrap .highlights:before{
+    height: 18px;
+    border-radius: 50px;
+    background-color: #ffeaed;
+}
+
+/* 연구지원::연구비 신청*/
+.research-conbox .filebox{
+    display: inline-block;
+    width: 70%;
+}
+.research-conbox .filebox .upload-name{
+    width: calc(100% - 120px);
+}
+
+/* 연구지원:: 현황 및 결과 */
+.popup-wrap:not(.win-popup-wrap) .cst-table th,
+.popup-wrap:not(.win-popup-wrap) .cst-table td{
+    padding: 12px 15px;
+    border-color: #e2e2e2;
+}
+.popup-wrap:not(.win-popup-wrap) .cst-table th{
+    background-color: #eff5ff;
+}
+.popup-research-conbox .write-wrap dt{
+    width: 29%;
+    text-align: center;
+}
+.popup-research-conbox .write-wrap dd{
+    width: 69%;
+}
+
+
+/* 회원가입::회원가입 안내 */
+.tooltip-con{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px 30px;
+    margin-top: 50px;
+    background-color: #f1f6fd;
+    border: 1px solid #bdcadc;
+    border-radius: 0 0 30px 0;
+    -webkit-box-shadow: 0 7px 13px rgba(192,200,214,0.58);
+    box-shadow: 0 7px 13px rgba(192,200,214,0.58);
+}
+.tooltip-con:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: -12px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #f1f6fd;
+    border-top: 1px solid #bdcadc;
+    border-left: 1px solid #bdcadc;
+}
+.tooltip-con .tit{
+    position: relative;
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-position: 0 4px;
+    background-image: url('../image/icon/ic_exclamation.png');
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #144393;
+}
+.tooltip-con .list-type{
+    margin-top: 15px;
+}
+.tooltip-con .list-type > li{
+    font-size: 1.5rem;
+    color: #111;
+}
+.signup-intro .list-type-decimal:has(.list-type-bar) > li + li{
+    margin-top: 40px;
+}
+.signup-intro .tit{
+    display: block;
+}
+.signup-intro .list-type + .tit{
+    margin-top: 40px;
+}
+
+/* 회원가입::회원가입 */
+.step-list-wrap{
+    margin-bottom: 40px;
+}
+.step-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.step-list > li{
+    width: 33.33%;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5dce7;
+    font-size: 2.4rem;
+    color: #a9a9a9;
+    line-height: 1.2;
+    text-align: center;
+}
+.step-list .icon{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f4f4f4;
+    border-radius: 10px 10px 50px 10px;
+}
+.step-list > li strong{
+    display: block;
+    margin-top: 25px;
+    font-weight: 500;
+}
+.step-list > li:nth-child(1) .icon{
+    background-image: url('../image/sub/ic_step01_on.png');
+}
+.step-list > li:nth-child(1).on{
+    border-color: #41b6d3;
+    color: #41b6d3;
+}
+.step-list > li:nth-child(1).on .icon{
+    background-color: #41b6d3;
+    background-image: url('../image/sub/ic_step01_on.png');
+}
+.step-list > li:nth-child(2) .icon{
+    background-image: url('../image/sub/ic_step02.png');
+}
+.step-list > li:nth-child(2).on{
+    border-color: #0092b7;
+    color: #0092b7;
+}
+.step-list > li:nth-child(2).on .icon{
+    background-color: #0092b7;
+    background-image: url('../image/sub/ic_step02_on.png');
+}
+.step-list > li:nth-child(3) .icon{
+    background-image: url('../image/sub/ic_step03.png');
+}
+.step-list > li:nth-child(3).on{
+    border-color: #005590;
+    color: #005590;
+}
+.step-list > li:nth-child(3).on .icon{
+    background-color: #005590;
+    background-image: url('../image/sub/ic_step03_on.png');
+}
+.term-conbox.scroll-y{
+    overflow-y: auto;
+    height: 320px;
+    min-height: initial;
+    padding: 35px 30px;
+    border: 1px solid #c7dadd;
+    word-break: keep-all;
+}
+.term-wrap .checkbox-wrap{
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: right;
+}
+.write-wrap .cst .radio-group input[type="radio"]:checked + label:before, 
+.write-wrap .cst .checkbox-group input[type="checkbox"]:checked + label:before{
+    background-size: 10px;
+}
+
+/* 회원가입::회원가입 완료 */
+.success-conbox{
+    text-align: center;
+}
+.success-conbox .tit{
+    display: block;
+    margin: 35px 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.success-conbox .tit br{
+    display: none;
+}
+.success-conbox .highlights{
+    font-size: 2.5rem;
+    font-weight: 600;
+    -webkit-box-shadow: inset 0 -14px 0 #fffce5;
+    box-shadow: inset 0 -14px 0 #fffce5;
+}
+.success-conbox p{
+    margin-top: 55px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.success-conbox ul{
+    display: inline-block;
+    padding: 20px 30px;
+    margin-top: 40px;
+    border-radius: 50px;
+    background-color: #edfbff;
+    vertical-align: top;
+}
+.success-conbox ul > li{    
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #2b7084;
+    vertical-align: middle;
+}
+.success-conbox ul > li + li{
+    margin-left: -4px;
+}
+.success-conbox ul > li a{
+    color: #2b7084;
+}
+.success-conbox ul > li + li:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 1px;
+    height: 13px;
+    background-color: #c4dde4;
+}
+.success-conbox .btn-wrap{
+    margin-top: 60px;
+}
+
+/* 회원가입::로그인 */
+.login-form-wrap:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.login-form-wrap{
+    overflow: hidden;
+    height: 500px;
+    border-radius: 0 0 50px 0;
+}
+.login-form-wrap form,
+.login-form-wrap fieldset{
+    height: 100%;
+}
+.login-form{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 47%;
+    height: 100%;
+    padding: 0 8%;
+    border: 1px solid #cccccc;
+    border-right: 0;
+    text-align: center;
+}
+.login-tit{
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #102888;
+    line-height: 1.2;
+}
+.login-tit img{
+    display: block;
+    margin: 0 auto 15px;
+}
+.login-form .help-text{
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.05em;
+}
+.login-form .input-box{
+    margin-top: 30px;
+}
+.login-form .input-box:has(.help-text){
+    margin-top: 15px;
+}
+.input-box .form-item{
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+}
+.input-box .form-item + .form-item{
+    margin-top: 10px;
+}
+.login-form p > a{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.login-form p > a + a:before{
+    display: inline-block;
+    content: '/';
+    margin: 0 10px;
+    color: #b5b5b5;
+}
+.input-box{
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.login-form .btn-wrap{
+    margin-top: 20px;
+}
+.login-form:not(.login-info) .btn-type1{
+    width: 100%;
+}
+.login-info{
+    float: left;
+    width: 53%;
+    height: 100%;
+    padding: 0 30px;
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-image: url('../image/sub/bg_login_info.png');
+    background-size: cover;
+    text-align: center;
+}
+.login-info-tit{
+    margin-bottom: 40px;
+}
+.login-info p{
+    font-size: 1.7rem;
+    color: #Fff;
+    line-height: 2.2;
+}
+.login-info .btn-wrap{
+    margin-top: 40px;
+}
+.login-info .btn-type1{
+    min-width: 250px;
+}
+
+/* 회원가입::아이디 / 비밀번호 찾기 */
+/* sub tab menu */
+.sub-tab-wrap{
+    margin-bottom: 40px;
+}
+.sub-tab-wrap + .sub-contit-wrap{
+    margin-top: 0;
+}
+.sub-tab-menu{
+    width: 100%;
+    height: 60px;
+    border-radius: 50px;
+    border: 1px solid #9bb5c0;
+    -webkit-box-shadow: 0 7px 13px rgba(192,200,214,0.08);
+    box-shadow: 0 7px 13px rgba(192,200,214,0.08);
+}
+.sub-tab-menu:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.sub-tab-menu > li{
+    float: left;
+    height: 100%;
+}
+.sub-tab-menu > li > a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 50px;
+    font-size: 2.2rem;
+    letter-spacing: -0.05em;
+    text-align: center;
+    line-height: 1.2;
+    word-break: keep-all;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.sub-tab-menu > li:hover > a,
+.sub-tab-menu > li.on > a{
+    background-color: #1396ca;
+    color: #fff;
+}
+.sub-tab-menu.type2{
+    border: 0;
+    border-bottom: 2px solid #cedadf;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.sub-tab-menu.type2 > li > a{
+    position: relative;
+    border-radius: 0;
+    line-height: 1;
+}
+.sub-tab-menu.type2 > li > a:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -2px;
+    width: 0;
+    height: 5px;
+    background-color: #1396ca;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.sub-tab-menu.type2 > li.on > a:before,
+.sub-tab-menu.type2 > li:hover > a:before{
+    width: 100%;
+}
+.sub-tab-menu.type2 > li.on > a,
+.sub-tab-menu.type2 > li:hover > a{
+    background-color: transparent;
+    color: #1396ca;
+    font-weight: 600;
+}
+.sub-tab-menu.type2 > li > a{
+    font-size: 1.8rem;
+    color: #484848;
+    letter-spacing: -0.08em;
+}
+.sub-tab-wrap:has(.type3){    
+    margin-bottom: 70px;
+    border-bottom: 1px solid #2b57bc;
+}
+.sub-tab-menu.type3{
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.sub-tab-menu.type3 > li{
+    float: left;
+    width: auto;
+    border: 1px solid #e3e6ec;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0;
+}
+.sub-tab-menu.type3.n5 > li{
+    width: 20%;
+    max-width: 185px;
+}
+.sub-tab-menu.type3 > li > a{
+    height: 64px;
+    border-radius: 0;
+    border-bottom: 1px solid transparent;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #939393;    
+    letter-spacing: -0.05em;
+}
+.sub-tab-menu.type3 > li.on,
+.sub-tab-menu.type3 > li:hover{
+    border-color: #2b57bc;
+}
+.sub-tab-menu.type3 > li.on > a,
+.sub-tab-menu.type3 > li:hover > a{
+    height: 65px;
+    padding-bottom: 1px;
+    margin-bottom: -1px;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    font-weight: 700;
+    color: #2b57bc;
+}
+
+.board-cate-wrap:has(.type3){
+    margin-bottom: 50px;
+}
+.event-wrap .sub-tab-menu.type2{
+    border-color: #e3e6ec;
+}
+.event-wrap .sub-tab-menu.type2 > li > a{
+    font-size: 2rem;
+}
+.event-wrap .sub-tab-menu.type2 > li > a:before{
+    background-color: #2b57bc;
+    height: 2px;
+}
+.event-wrap .sub-tab-menu.type2 > li.on > a, 
+.event-wrap .sub-tab-menu.type2 > li:hover > a{
+    color: #2b57bc;
+}
+
+.sub-tab-menu.n2 > li{
+    width: 50%;
+}
+.sub-tab-menu.n3 > li{
+    width: calc(100% / 3);
+}
+.sub-tab-menu.n4 > li{
+    width: calc(100% / 4);
+}
+.sub-tab-menu.n5 > li{
+    width: calc(100% / 5);
+}
+.sub-tab-menu.n6 > li{
+    width: calc(100% / 6);
+}
+.sub-tab-menu.n7 > li{
+    width: calc(100% / 7);
+}
+.btn-tab-menu{
+    display: none;
+}
+.sub-tab-con{
+    display: none;
+}
+
+.find-form{
+    max-width: 650px;
+    margin: 0 auto;
+}
+.find-tit{
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1396ca;
+    text-align: center;
+}
+.find-tit img{
+    display: block;
+    margin: 0 auto 10px;
+}
+.find-form p{
+    margin-bottom: 30px;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    text-align: center;
+    word-break: keep-all;
+}
+.find-result-conbox{
+    max-width: 560px;
+    margin: 50px auto 0;
+    padding: 30px;
+    background-color: #f5f9ff;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    text-align: center;
+}
+.find-result-conbox + .find-result-conbox{
+    margin-top: 15px;
+}
+.find-form .btn-wrap{
+    margin-top: 40px;
+}
+.find-form .btn-type1{
+    min-width: 130px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.find-form .write-wrap dt{
+    background-color: #fff;
+}
+.find-form .write-wrap dt + dd{
+    position: relative;
+}
+.find-form .write-wrap dt + dd:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    width: 1px;
+    height: 20px;
+    background-color: #e2e2e2;
+}
+
+/* 회원가입::개인정보 취급방침 */
+.term-wrap .term-conbox{
+    font-size: 1.8rem;
+}
+.term-wrap .term-conbox strong{
+    font-size: 2rem;
+}
+
+/* 회원가입::이메일 무단 수집 거부 */
+#email.popup-wrap{
+    display: none;
+}
+#email.popup-wrap .popup-contents{
+    position: relative;
+    width: 90%;
+    max-width: 550px;
+    margin: 7vh auto;
+    background-color: #fff;
+    border: 3px solid #3480c0;
+}
+#email .popup-header{
+    padding: 15px;
+    background-color: #f3f6fa;
+    text-align: center;
+}
+#email .popup-tit-wrap{
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+#email .popup-tit{
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #2d74af;
+    vertical-align: middle;
+}
+#email .popup-tit img{
+    margin-top: -5px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+#email .popup-conbox{
+    padding: 30px;
+    text-align: center;
+}
+#email .popup-conbox > p strong{
+    font-weight: 600;
+}
+#email .popup-conbox .btn-wrap{
+    margin-top: 20px;
+}
+#email .popup-conbox .btn-type1{
+    min-width: 90px;
+    background-color: #5e5e5e;
+    border-color: #5e5e5e;
+    padding: 8px 0;
+    border-radius: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+}
+#email .popup-conbox .btn-type1 img{
+    margin-top: -4px;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+/* 마이페이지::회원정보 수정 */
+.box-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-list > li{
+    float: left;
+}
+.box-list.n3{
+    gap: 30px 40px;
+}
+.box-list.n3 > li{
+    width: calc((100% - 80px)/3);
+}
+.mypage-list > li{
+    position: relative;
+    height: 220px;
+    background-color: #f3f6fc;
+    border-radius: 0 0 40px 0;
+}
+.mypage-list > li > a{
+    display: block;
+    height: 100%;
+    padding: 45px 40px;
+}
+.mypage-list .tit{
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #144393;
+}
+.mypage-list > li .icon{
+    position: absolute;
+    bottom: 35px;
+    right: 40px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.mypage-list > li:hover .icon{
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.mypage-form{
+    max-width: 870px;
+}
+.mypage-form .find-tit{
+    font-size: 2.8rem;
+    color: #144393;
+}
+.mypage-form p{
+    margin-bottom: 0;
+}
+.mypage-form .bg-box{
+    padding: 25px;
+    margin: 20px 0 50px;
+    border-radius: 6px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: -0.075em;
+    text-align: center;
+}
+.mypage-form .write-wrap + p{
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #111111;
+    text-align: left;
+}
+
+/* 마이페이지::회비납부 */
+.bg-img-box{
+    display: flex;
+    align-items: center;
+    padding: 40px 80px;
+    border-radius: 6px;
+    letter-spacing: -0.075em;
+}
+.bg-img-box .text-wrap{
+    padding-left: 50px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: left;
+}
+.bg-img-box .tit{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #102888;
+}
+.bg-img-box .text-wrap p{
+    margin-top: 15px;
+    text-align: left;
+}
+.cst-table.list-table .btn-small{
+    min-width: initial;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.top-btn-wrap{
+    margin: 35px 0 45px;
+}
+.top-btn-wrap .btn{
+    min-width: initial;
+    padding: 12px 34px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.price-con{
+    margin-top: 20px;
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+.price-con strong{
+    font-weight: 700;
+}
+
+/* 마이페이지::회원탈퇴 */
+.resign-form .bg-img-box{
+    padding: 40px 60px;
+}
+.resign-form .bg-img-box .text-wrap{
+    padding-left: 30px;
+}
+
+/* 학술행사::해외학회 신청 */
+.complete-conbox .tit{
+    margin-top: 20px;
+    font-size: 3rem;
+}
+.complete-conbox .tit strong{
+    display: block;
+    font-weight: 600;
+}
+.complete-conbox p{
+    margin-top: 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.complete-conbox .btn-type1{
+    min-width: initial;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.complete-conbox .btn-line{
+    background-color: #f1f6ff;
+}
+ul + .table-wrap{
+    margin-top: 30px;
+}
+.overseas-conbox .list-type-bar > li:before{
+    top: 13px;
+}
+
+/* 학술행사::국내외 학술행사 */
+.ev-complete-conbox{
+    max-width: 560px;
+    margin: 0 auto;
+}
+.complete-contop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    letter-spacing: -0.07em;
+    line-height: 1.5;
+    text-align: left;
+}
+.complete-contop p{
+    padding-top: 30px;
+}
+.complete-contop p > strong{
+    font-weight: 600;
+}
+.ev-complete-conbox .bg-box{
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f1f6ff;
+    font-size: 1.8rem;
+}
+.ev-complete-conbox .bg-box + .btn-wrap{
+    margin-top: 20px;
+}
+
+.confirm-form-wrap{
+    max-width: 560px;
+    margin: 0 auto;
+}
+.confirm-contop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.07em;
+}
+.confirm-form-wrap .write-wrap dt{
+    width: 30%;
+}
+.confirm-form-wrap .write-wrap dd{
+    width: 70%;
+}
+.confirm-form-wrap .write-wrap + .btn-wrap{
+    margin-top: 30px;
+}
+.ev-map-wrap{
+    width: 100%;
+    height: 250px;
+}
+.ev-map-wrap > iframe{
+    width: 100%;
+    height: 100%;
+}
+.ev-map-info{
+    margin-top: 15px;
+    padding: 25px 20px;
+    border-top: 2px solid #144393;
+    border-bottom: 1px solid #e2e2e2;
+}
+.ev-map-info ul > li{
+    padding-left: 35px;
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+    font-size: 1.8rem;
+    letter-spacing: -0.05em;
+}
+.ev-map-info ul > li + li{
+    margin-top: 10px;
+}
+.ev-map-info .address{
+    background-image: url('../image/sub/ic_map_address.png');
+}
+.ev-map-info .tel{
+    background-image: url('../image/sub/ic_map_tel.png');
+}
+.ev-map-info .tit{
+    display: inline-block;
+    font-weight: 600;
+    color: #144393;
+}
+.ev-map-info .con{
+    display: inline-block;
+}
+
+/* 마이페이지::해외학회 */
+.info-conbox .tit{
+    margin-top: 20px;
+    font-size: 3rem;
+    letter-spacing: -0.075em;
+}
+.info-conbox .tit strong{
+    font-weight: 600;
+}
+.info-conbox + .table-wrap{
+    margin-top: 40px;
+}
+.cst-table.list-table .btn-small{
+    line-height: 1.6;
+}
+.cst-table.list-table .btn-small:has(.arrow){
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+.cst-table.list-table .btn-small .arrow{
+    margin-left: 15px;
+}
+.state{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.state.ing{
+    color: #b3b3b3;
+}
+.state.success{
+    color: #3772d5;
+}
+.state.fail{
+    color: #ed133c;
+}
+.state.complete{
+    color: #111111;
+}
+.btn.btn-download{
+    width: 100%;
+    max-width: 180px;
+    padding: 6px 15px;
+    padding-right: 12px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+.btn.btn-download:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.btn.btn-download img{
+    float: right;
+    margin: 1px 0;
+}
+.contact-conbox{
+    margin-top: 40px;
+}
+.contact-conbox .help-text{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.contact-conbox .icon-conbox{
+    margin: 15px 0;
+}
+.icon-conbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 40px 60px;
+    background-color: #f1f6ff;
+    border-radius: 6px;
+    letter-spacing: -0.075em;
+}
+.icon-conbox .text-wrap{
+    padding-left: 40px;
+}
+.icon-conbox .tit{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #102888;   
+}
+.icon-conbox ul{
+    margin-top: 5px;
+}
+.icon-conbox ul > li{
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+}
+.icon-conbox ul > li + li{
+    padding-left: 20px;
+    margin-left: 18px;
+}
+.icon-conbox ul > li + li:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 1px;
+    height: 13px;
+    background-color: #c4cddd;
+}
+
+/* 마이페이지::연구회/지회 */
+.btn.btn-type1:has(.ic-down){
+    min-width: 255px;
+    padding: 12px 25px;
+    padding-right: 20px;
+    font-size: 2rem;
+    text-align: left;
+}
+.btn-type1 .ic-down{
+    float: right;
+    margin: 0;
+    margin-left: 20px;
+}
+.bg-notice-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px 40px;
+    letter-spacing: -0.05em;
+}
+.bg-notice-box .text-wrap{
+    width: calc(100% - 45px);
+    padding-left: 25px;
+    font-size: 1.7rem;
+    line-height: 1.7;
+}
+.inquiry-conbox{
+    padding: 40px 5%;
+    border: 1px solid #d9ddea;
+    border-radius: 10px;
+}
+.inquiry-conbox ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.inquiry-conbox ul > li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 33.33%;
+}
+.inquiry-conbox ul > li > p{
+    padding-left: 20px;
+    font-size: 1.8rem;
+    letter-spacing: -0.05em;
+}
+.inquiry-conbox ul > li > p strong{
+    position: relative;
+    padding-right: 12px;
+    margin-right: 10px;
+    font-weight: 700;
+    color: #005bc8;
+}
+.inquiry-conbox ul > li > p strong:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 2px;
+    height: 13px;
+    background-color: #005bc8;
+}
+.research-list{
+    width: 100%;
+    border-top: 2px solid #144393;
+}
+.research-list > li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #b3c0d7;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.grade{
+    margin: 0 15px;
+}
+.grade01{
+    color: #b8ccf0;
+}
+.grade02{
+    color: #759add;
+}
+.grade03{
+    color: #285dbc;
+}
+.grade04{
+    color: #3d28bc;
+}
+.grade05{
+    color: #8d28bc;
+}
+.research-list > li .btn-small{
+    padding: 4px 15px;
+    border-radius: 2px;
+}
+.research-list > li .btn-small:has(.arrow){
+    padding-right: 10px;
+}
+
+/* 마이페이지::중재시술인증 */
+.popup-conbox .table-wrap + .write-wrap{
+    margin-top: 30px;
+}
+
+/* 마이페이지::연구지원 */
+.research-table-wrap + .btn-wrap .btn-type1{
+    min-width: initial;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.popup-research-conbox .btn-small{
+    margin: 6px 2px;
+    padding: 6px 20px;
+}
+
+/* 부정맥 진료지침 */
+.box-list.n2{
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.box-list.n2 > li{
+    width: calc((100% - 50px)/2);
+}
+.down-list > li{
+    display: flex;
+    justify-content: start;
+    position: relative;
+    padding: 35px 40px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+.down-list > li:before{
+    opacity: 0;
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: 3px solid #144393;
+    box-sizing: border-box;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.down-list > li:hover:before{
+    opacity: 1;
+}
+.down-list .img-wrap{
+    overflow: hidden;
+    width: 200px;
+    height: 250px;
+    border-radius: 6px;
+}
+.down-list .img-wrap img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f7f7f7;
+    -webkit-object-fit: cover;
+    object-fit: cover;
+}
+.down-list .text-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: calc(100% - 200px);
+    padding-top: 15px;
+    padding-left: 30px;
+}
+.down-list .tit{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+.btn.btn-down{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 190px;
+    padding: 7px 30px;
+    border-radius: 30px;
+    background-color: #e8efff;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #144393;
+    letter-spacing: -0.05em;
+    vertical-align: top;
+}
+.btn.btn-down img{
+    float: right;
+    margin: 2px 0;
+}
+.down-list .btn-down:has(.arrow){
+    max-width: 200px;
+}
+.down-list .btn-down .arrow{
+    display: inline-block;
+    margin-top: -3px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #1e4777;
+    vertical-align: middle;
+}
+
+/* 보험정보::보험기준 */
+.insurance-list.n3{
+    gap: 20px;
+}
+.insurance-list > li{
+    width: calc((100% - 40px)/3);
+    text-align: center;
+}
+.insurance-list > li > a{
+    display: block;
+    padding: 50px 20px;
+    border: 1px solid #e8efff;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    background-image: url('../image/sub/bg_insurance_list.png');
+    letter-spacing: -0.05em;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.insurance-list .tit{
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #144393;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+.insurance-list > li span:not(.btn-down){
+    display: block;
+    margin-top: 10px;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: #111111;
+}
+.insurance-list .btn-down{
+    margin-top: 30px;
+    border: 1px solid #e8efff;
+    background-repeat: no-repeat;
+    background-position: right 25px center;
+    background-image: url('../image/sub/btn_down.png');
+    text-align: left;
+}
+.insurance-list > li:hover > a{    
+    background-image: url('../image/sub/bg_insurance_list_on.png');
+}
+.insurance-list > li:hover .tit,
+.insurance-list > li:hover span:not(.btn-down){
+    color: #fff;
+}
+.insurance-list > li:hover .btn-down{
+    border: 1px solid #fff;
+    background-color: transparent;
+    background-image: url('../image/sub/btn_down_on.png');
+    color: #fff;
+}
+
+/* 학회지::학회지 관련 안내 */
+.journal-conbox{
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    padding: 50px 40px 40px;
+    background-color: #fcf1e8;
+}
+.journal-conbox .img-wrap{
+    width: 532px;
+    margin-top: -100px;
+}
+.journal-conbox .text-wrap{
+    width: calc(100% - 502px);
+    margin-left: -30px;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    word-break: keep-all;
+    letter-spacing: -0.05em;
+}
+.journal-conbox .text-wrap .text-red{
+    font-weight: 600;
+}
+.journal-conbox .btn-wrap{
+    margin-top: 30px;
+}
+.journal-conbox .btn-journal{
+    background-color: #703e16;
+    border-color: #703e16;
+    -webkit-box-shadow: 0 13px 24px rgba(216,198,198,0.3);
+    box-shadow: 0 13px 24px rgba(216,198,198,0.3);
+}
+.journal-conbox .btn-journal.btn-line{
+    background-color: #fff;
+    border-color: #703e16;
+    background-image: url('../image/sub/ic_arrow_right_brown.png');
+    color: #602e05;
+}
+
+/* 학회지::온라인 논문 투고 */
+.bg-box{
+    background-color: #eef3fc;
+}
+.bg-info-box{
+    padding: 50px;
+}
+.bg-info-box .text-wrap{
+    display: inline-block;
+    width: calc(100% - 145px);
+    padding-left: 40px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.6;
+    vertical-align: top;
+    word-break: keep-all;
+}
+
+/* 학회지::논문 투고 규정 */
+.rules-conbox{
+    padding-left: 30px;
+    word-break: keep-all;
+}
+.rules-conbox p + p{
+    margin-top: 30px;
+}
+.rules-conbox p + ul,
+.rules-conbox p + ol,
+.rules-conbox ul + ol{
+    margin-top: 30px;
+}
+.rules-conbox .list-type-decimal > li + li{
+    margin-top: 30px;
+}
+.rules-conbox .list-type-bar > li:before{
+    top: 12px;
+}
+.rules-conbox + .sub-contit-wrap{
+    margin-top: 50px;
+} 
+
+/* 학회지::편집위원회 규정 */
+.journal-term-wrap .term-conbox + .term-conbox{
+    margin-top: 100px;
+}
+.term-tit-wrap{
+    background-color: #f1f6ff;
+    border-radius: 0 0 40px 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.term-tit{
+    display: inline-block;
+    position: relative;
+    padding: 11px 0;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1a52b0;
+    letter-spacing: -0.07em;
+}
+.term-tit:before,
+.term-tit:after{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+}
+.term-tit:before{
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);    
+    width: calc(100% - 10px);
+    height: 3px;
+    background-color: #2e5cb4;
+}
+.term-tit:after{
+    top: 0;
+    left: 95%;
+    width: 131px;
+    height: 49px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../image/sub/bg_term_tit.png');
+}
+.journal-term-wrap .tit{
+    display: block;
+    font-weight: 600;
+    color: #111;
+}
+.journal-term-wrap p + .tit{
+    margin-top: 30px;
+}
+
+/* 연구지원::연구지원 프로그램 */
+.bd-box{
+    border: 1px solid #d3dcea;
+}
+.bd-box .btn-wrap{
+    margin-top: 10px;
+}
+.bd-box .btn.btn-type1{
+    min-width: 225px;
+}
+
+/* 대한부정맥학회::인사말 */
+.greeting-wrap{
+    display: flex;
+    gap: 60px;
+    letter-spacing: -0.075em;
+    word-break: keep-all;
+}
+.greeting-wrap .img-wrap{
+    width: 255px;
+}
+.greeting-wrap .img{
+    position: relative;
+}
+.greeting-wrap .img:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    left: 20px;
+    bottom: -10px;
+    width: 6px;
+    height: 30px;
+    background-color: #144393;
+}
+.greeting-wrap .img-wrap .name{
+    margin-top: 30px;
+    padding: 0 15px;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.greeting-wrap .text-wrap{
+    width: calc(100% - 255px);
+    padding-top: 20px;
+    line-height: 1.8;
+}
+.greeting-wrap .text-wrap .tit{
+    display: block;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #144393;
+    line-height: 1.3;
+}
+
+/* 대한부정맥학회::미션/비전 */
+.mission-conbox{
+    overflow: hidden;
+    padding: 75px 90px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-image: url('../image/sub/bg_mission_conbox.png');
+    background-size: cover;
+    font-size: 3rem;
+    letter-spacing: -0.05em;
+}
+.mission-conbox .tit{
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #144393;
+}
+.vision-conbox{
+    margin-top: 100px;
+    text-align: center;
+}
+.vision-conbox > .tit{    
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #144393;
+}
+.vision-conbox p{
+    margin-top: 10px;
+    font-size: 2.2rem;
+    color: #191919;
+}
+.vision-list{
+    display: inline-flex;
+    position: relative;
+    gap: 70px;
+    width: auto;
+    margin-top: 60px;
+    padding: 20px 30px;
+    border-radius: 125px;
+    background-color: #fff;
+    border: 1px solid #d3dcea;
+    text-align: center;
+    -webkit-box-shadow: 0 19px 43px rgba(216,219,232,0.17);
+    box-shadow: 0 19px 43px rgba(216,219,232,0.17);
+}
+.vision-list:after{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    height: 220px;
+    top: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-image: url('../image/sub/img_arrow_bottom.png');
+}
+.vision-list > li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+}
+.vision-list > li + li:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 100%;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../image/sub/ic_vision_plus.png');
+}
+.vision-list > li:nth-child(1){
+    background-color: #148993;
+}
+.vision-list > li:nth-child(2){
+    background-color: #215fad;
+}
+.vision-list > li:nth-child(3){
+    background-color: #3d36c1;
+}
+.vision-list .tit{
+    display: block;
+    margin-top: 10px;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1;
+}
+.vision-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 230px auto 0;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background-color: #fff;
+    vertical-align: top;
+    -webkit-box-shadow: 0 19px 43px rgba(216,219,232,0.34);
+    box-shadow: 0 19px 43px rgba(216,219,232,0.34);
+}
+.vision-box .tit{
+    margin-top: 10px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2b4c73;
+}
+
+/* 대한부정맥학회::사무국 안내 */
+.map-wrap{
+    height: 555px;
+    margin-top: 35px;
+}
+.map-wrap iframe{
+    width: 100%;
+    height: 100%;
+}
+.address-conbox{
+    margin-top: 120px;
+    padding: 70px 90px;
+    border-radius: 0 0 50px 0;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-image: url('../image/sub/bg_address_conbox.png');
+    color: #fff;
+    letter-spacing: -0.075em;
+}
+.address-conbox .tit{
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.address-conbox ul{
+    margin-top: 45px;
+}
+.address-conbox ul > li{
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+.address-conbox ul > li + li{
+    margin-top: 20px;
+}
+.trasnport-list{
+    display: flex;
+    gap: 20px;
+}
+.trasnport-list > li{
+    display: flex;
+    align-items: center;
+    width: calc(100% - 20px);
+    padding: 45px 50px;
+    border-radius: 5px 5px 35px 5px;
+    background-color: #effaff;
+}
+.trasnport-list > li + li{
+    background-color: #eff4ff;
+}
+.trasnport-list > li img{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.trasnport-list > li .text-wrap{
+    padding-left: 40px;
+    font-size: 1.8rem;
+}
+.trasnport-list .tit{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2481ac;
+}
+.trasnport-list > li + li .tit{
+    color: #2f54a4;
+}
+
+/* 대한부정맥학회::연구회/지회 */
+.branch-list{
+    gap: 30px 20px;
+}
+.branch-list > li{
+    overflow: hidden;
+    position: relative;
+    /* flex: 1 1 auto; */
+    border: 1px solid #e8efff;
+    border-radius: 6px;
+}
+/* .branch-list > li:last-child{
+    flex: 0 0 auto;
+} */
+.branch-list > li > a{
+    display: block;
+    position: relative;
+}
+.branch-list > li > a:before{
+    opacity: 0;
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.branch-list > li > a:after{
+    opacity: 0;
+    display: inline-block;
+    content: '자세히 보기';
+    clear: both;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    min-width: 160px;
+    padding: 12px 25px;
+    background-color: #e8efff;
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-image: url('../image/sub/ic_branch_arrow.png');
+    border-radius: 50px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #144393;
+    line-height: 1.2;
+    box-sizing: border-box;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.branch-list > li:hover > a:before,
+.branch-list > li:hover > a:after{
+    opacity: 1;
+}
+
+.branch-list > li > a:has(img){
+    padding: 25px 80px;
+    background: none;
+}
+.branch-list > li > a:has(img) ul{
+    margin-top: 15px;
+}
+.branch-list > li > a:has(img) .logo-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+}
+.branch-list > li > a:has(img) .logo-wrap img{
+    max-width: 100%;
+    height: auto;
+}
+.branch-list > li > a{
+    width: 100%;
+    height: 100%;
+    padding: 40px 30px;
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-position: top 40px right 30px;
+    background-image: url('../image/sub/bg_branch_list.png');
+    letter-spacing: -0.05em;
+}
+.branch-list .logo-wrap{
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #144393;
+}
+.branch-list ul{
+    margin-top: 20px;
+    border-top: 2px solid #144393;
+}
+.branch-list ul > li{
+    padding:10px 0;
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+.branch-list .no-data{
+    display: block;
+}
+.branch-list li > strong{
+    width: 80px;
+    font-weight: 600;
+    color: #144393;
+    text-align: center;
+}
+.branch-list li > p{
+    position: relative;
+    width: calc(100% - 80px);
+    padding: 0 20px; 
+    text-align: left;
+}
+.branch-list li > p:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 1px;
+    height: 20px;
+    background-color: #e2e2e2;
+}
+
+.research-tit-wrap{
+    padding: 40px 50px;
+    background-repeat: no-repeat;
+    background-color: #f5f8ff;
+    background-position: right 60px bottom;
+    background-image: url('../image/sub/bg_research_tit.png');
+    text-align: center;
+}
+.research-tit-wrap.branch{
+    background-position: right bottom;
+    background-image: url('../image/sub/bg_branch_tit.png');
+}
+.research-tit{
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.research-tit-wrap.branch + .img-wrap{
+    margin-top: 100px;
+}
+
+
+/* 회원공간::중재시술인증 */
+.list-type-text > li div > span,
+.list-type-text > li div > span + p{
+    display: inline-block;
+    vertical-align: top;
+}
+.list-type-text > li div > span{
+    width: 105px;
+}
+.list-type-text > li div > span + p{
+    width: calc(100% - 110px);
+}
+
+.sub-contit-wrap:not(.top-btn-wrap) .btn.full-right{
+    min-width: initial;
+    margin-top: -10px;
+    padding: 10px 20px;
+    padding-left: 15px;
+    font-weight: 400;
+}
+.btn .plus{
+    display: inline-block;
+    margin-top: -5px;
+    margin-right: 5px;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+/* 회원공간::전문회원 가입안내 */
+.process-list{
+    display: flex;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+.process-list > li{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    width: calc((100% - 120px)/2);
+    padding: 25px 45px;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.075em;
+}
+.process-list > li + li:before{
+    display: block;
+    content: '';
+    clear: both;
+    position: absolute;
+    left: -60px;
+    width: 60px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../image/sub/ic_process_arrow.png');
+}
+.process-list .tit{
+    display: block;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.process-list > li:nth-child(1){
+    background-color: #effafd;
+}
+.process-list > li:nth-child(1) .tit{
+    color: #2e95b1;
+}
+.process-list > li:nth-child(2){
+    background-color: #eff1fd;
+}
+.process-list > li:nth-child(2) .tit{
+    color: #2a40c2;
+}
+.process-list > li:nth-child(3){
+    background-color: #f6effd;
+}
+.process-list > li:nth-child(3) .tit{
+    color: #8551b9;
+}
+.bg-box{
+    background-color: #f4f9ff;
+    border-radius: 6px;
+}
+.signup-info-conbox .bg-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: -0.075em;
+}
+.signup-info-conbox .list-type-bar > li:before{
+    top: 12px;
+}
+
+/* 대한부정맥학회::KHRS 로고 */
+.box-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo-list{
+    gap: 80px;
+}
+.logo-list > li{
+    width: calc((100% - 80px)/2);
+    text-align: center;
+}
+.logo-list .img-wrap{
+    overflow: hidden;
+    margin-bottom: 35px;
+    border-radius: 10px;
+}
+.logo-list .tit{
+    display: inline-block;
+    padding: 13px 57px;
+    border-radius: 50px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.07em;
+    color: #fff;
+    line-height: 1.4;
+}
+.logo-list .tit.kor{
+    background-color: #024493;
+}
+.logo-list .tit.eng{
+    background-color: #ca5254;
+}
