@@ -32,6 +32,32 @@
     </div>
     @endif
 
+    @if( $isAdminPage )
+        @if( !empty($search_display) )
+            @if( $search_display == 'Y' )
+            <div class="write-form-wrap">
+                <fieldset>
+                    <div class="write-wrap">
+                        <dl>
+                            <dt>부정맥 전문가 찾기 노출여부</dt>
+                            <dd>
+                                <div class="radio-group">
+                                    <input type="radio" name="search_yn" id="search_yn_Y" value="Y" {{ ($user->search_yn ?? '') == 'Y' ? 'checked' : '' }}>
+                                    <label for="search_yn_Y">노출</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" name="search_yn" id="search_yn_N" value="N" {{ ($user->search_yn ?? '') == 'N' ? 'checked' : '' }}>
+                                    <label for="search_yn_N">비노출</label>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </fieldset>
+            </div>
+          @endif
+       @endif
+    @endif
+
     <div class="sub-contit-wrap">
         <h4 class="sub-contit">
             회원가입정보
@@ -163,11 +189,11 @@
                         </select>
                         <div class="from-group form-group-text mt-10">
                             <span class="text">국문 : </span>
-                            <input type="text" name="sosok_kr" id="sosok_kr" class="form-item" value="{{ $user->sosok_kr ?? '' }}" readonly>
+                            <input type="text" name="sosok_kr" id="sosok_kr" class="form-item" value="{{ $user->sosok_kr ?? '' }}" {{ ($user->sosok ?? '') != '999' ? 'readonly' : '' }}>
                         </div>
                         <div class="from-group form-group-text mt-10">
                             <span class="text">영문 : </span>
-                            <input type="text" name="sosok_en" id="sosok_en" class="form-item" value="{{ $user->sosok_en ?? '' }}" readonly>
+                            <input type="text" name="sosok_en" id="sosok_en" class="form-item" value="{{ $user->sosok_en ?? '' }}" {{ ($user->sosok ?? '') != '999' ? 'readonly' : '' }}>
                         </div>
                     </dd>
                 </dl>

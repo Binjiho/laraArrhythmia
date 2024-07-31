@@ -25,7 +25,7 @@
                             {{ $row->subject }}
                         </a>
                         <div class="acco-con">
-                            <div class="view-contents">
+                            <div class="view-contents editor-contents">
                                 {!! $row->content !!}
                             </div>
                             <div class="btn-wrap text-right">

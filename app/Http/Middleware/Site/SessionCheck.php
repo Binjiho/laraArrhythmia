@@ -43,9 +43,9 @@ class SessionCheck
             case 'board':
                 break;
             default:
-//                if (Session::has('siteType')) {
-//                    Session::forget('siteType');
-//                }
+                if (Session::has('siteType')) {
+                    Session::forget('siteType');
+                }
                 break;
         }
 

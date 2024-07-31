@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Services\CommonServices;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Board extends Model
 {
@@ -95,6 +96,8 @@ class Board extends Model
         $this->edate = ($this->date_type == 'D') ? null : $data['edate'];
         $this->etime = $data['etime'] ?? null;
         $this->place = $data['place'] ?? null;
+        $this->host = $data['host'] ?? null;
+        $this->etc = $data['etc'] ?? null;
         if($data['content']) {
             $this->content = $data['content'] ?? null;
         }
@@ -196,6 +199,11 @@ class Board extends Model
         return $this->hasMany(BoardReply::class, 'bsid');
     }
 
+    public function sessions()
+    {
+        return $this->hasMany(Sessions::class, 'bsid')->where(['del'=>'N'])->orderBy('sort');
+    }
+
     public function downloadFileUrl($file, $name) // 게시판 첨부 파일 다운로드
     {
         return route('download', ['type' => 'only', 'tbl' => 'board', 'sid' => enCryptString($this->sid) , 'file' => $file, 'name' => $name]);
@@ -280,5 +288,31 @@ class Board extends Model
         }
 
         return $txt;
+    }
+
+    public function getPrev($sid)
+    {
+        $now_bbs = Board::findOrFail($sid);
+//        $result = Board::selectRaw('sid')
+//            ->whereRaw('sid < ?',[$sid])
+//            ->whereRaw('bbs_code = ?',[$now_bbs->bbs_code])
+//            ->orderByRaw('sid DESC')
+//            ->first();
+        $result = Board::whereRaw('sid < ?',[$sid])
+            ->whereRaw('bbs_code = ?',[$now_bbs->bbs_code])
+            ->orderByRaw('sid DESC')
+            ->first();
+        return $result;
+    }
+
+    public function getNext($sid)
+    {
+        $now_bbs = Board::findOrFail($sid);
+//        return DB::select(DB::raw("SELECT sid FROM bbs_tbl WHERE sid > '".$sid."' AND bbs_code = '".$now_bbs->bbs_code."' ORDER BY sid ASC LIMIT 1"));
+        $result = Board::whereRaw('sid > ?',[$sid])
+            ->whereRaw('bbs_code = ?',[$now_bbs->bbs_code])
+            ->orderByRaw('sid ASC')
+            ->first();
+        return $result;
     }
 }

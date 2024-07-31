@@ -11,23 +11,42 @@
 
         <div class="util btn" style="display: flex; justify-content: flex-end; margin-top: 20px;">
             <a href="{{ route('overseas.register') }}" class="call_popup btnBdNavy" data-popup_name="conference-insert" data-width="1000" data-height="800">
-                국제학술대회 등록
+                해외학술대회 등록
             </a>
         </div>
 
         <table class="tblDef listTbl">
             <colgroup>
-                <col style="width: 3%;">
-                <col style="width: 10;">
+                <!-- <col style="width: 3%;">
+                <col style="width: 10%;">
                 <col style="width: 10%;">
                 <col style="width: 8%;">
                 <col style="width: 8%;">
+                
                 <col style="width: 8%;">
-
                 <col style="width: 8%;">
                 <col style="width: 6%;">
                 <col style="width: 8%;">
-                <col style="width: 8%;">
+                <col style="width: 8%;"> -->
+
+				<col style="width: 3%;">
+				<col style="width: 8%;">
+				<col style="width: 8%;">
+				<col style="width: 8%;">
+				<col style="width: 8%;">
+				<col style="width: 8%;">
+				<col style="width: 8%;">
+
+				<col style="width: 5%;">
+				<col style="width: 5%;">
+				<col style="width: 5%;">
+				<col style="width: 5%;">
+				<col style="width: 5%;">
+				<col style="width: 5%;">
+				<col style="width: 5%;">
+
+				<col style="width: 8%;">
+				<col style="width: 6%;">
             </colgroup>
             <thead>
             <tr>
@@ -39,14 +58,17 @@
                 <th rowspan="2">결과보고기간</th>
 
                 <th rowspan="2">결과발표일</th>
-                <th colspan="4">신청자통계</th>
+                <th colspan="7">신청자통계</th>
                 <th rowspan="2">신청자</th>
                 <th rowspan="2">관리</th>
             </tr>
             <tr>
+                <th style="border-left: 1px solid #d9e0eb !important;">접수중</th>
+                <th>접수<br>완료</th>
                 <th>선정</th>
                 <th>미선정</th>
-                <th>접수중</th>
+                <th>철회</th>
+                <th>정산 <br>완료</th>
                 <th>총계</th>
             </tr>
             </thead>
@@ -62,9 +84,12 @@
 
 {{--                    <td>{{ $row->updated_at->format('Y-m-d') }}</td>--}}
                     <td>{{ $row->result_date }}</td>
+                    <td>{{ $row->static[0]->i_cnt ?? 0 }}</td>
+                    <td>{{ $row->static[0]->u_cnt ?? 0 }}</td>
                     <td>{{ $row->static[0]->s_cnt ?? 0 }}</td>
                     <td>{{ $row->static[0]->d_cnt ?? 0 }}</td>
-                    <td>{{ $row->static[0]->u_cnt ?? 0 }}</td>
+                    <td>{{ $row->static[0]->w_cnt ?? 0 }}</td>
+                    <td>{{ $row->static[0]->c_cnt ?? 0 }}</td>
                     <td>{{ $row->static[0]->tot_cnt ?? 0 }}</td>
                     <td >
                         <div class="util btn">
@@ -80,7 +105,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="13">등록된 학술대회가 없습니다.</td>
+                    <td colspan="10">등록된 학술대회가 없습니다.</td>
                 </tr>
             @endforelse
             </tbody>

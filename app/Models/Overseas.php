@@ -152,7 +152,7 @@ class Overseas extends Model
             $this->assistant = $data->assistant ?? null;
         }
         if($data->result) {
-            $this->result = $data->result ?? 'U';
+            $this->result = $data->result ?? 'I';
         }
         if($data->result_request_state) {
             $this->result_request_state = $data->result_request_state ?? 'N';

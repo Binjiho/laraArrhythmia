@@ -29,6 +29,12 @@
                                         <dt><strong class="required">*</strong> {{ $boardConfig['subject'] }}</dt>
                                         <dd>
                                             <input type="text" name="subject" id="subject" class="form-item" value="{{ $board->subject ?? '' }}">
+
+                                            <div class="checkbox-wrap cst ">
+                                                <div class="checkbox-group">
+                                                    <input type="checkbox" name="notice" id="chk-tit1" value="Y" {{ ($board->notice ?? '') == 'Y' ? 'checked' : ''  }}> <label for="chk-tit1">공지</label>
+                                                </div>
+                                            </div>
                                         </dd>
                                     </dl>
 

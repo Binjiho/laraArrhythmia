@@ -130,14 +130,12 @@ class ConferenceController extends Controller
         ]);
 
         if(empty($request->sid)){
-            //사전등록 신청여부
+            //사전등록 신청여부 && 선착순 등록여부 && 신청권한 여부
             $checkRegistration = $this->conferenceServices->registrationCheckService($request);
             if(!empty($checkRegistration)){
                 setFlashData($checkRegistration);
                 return callRedirect();
             }
-            //선착순 등록여부
-            //신청권한 여부
         }
 
         return view('conference.detail.registration.upsert', $this->conferenceServices->registrationUpsertService($request));
@@ -216,6 +214,16 @@ class ConferenceController extends Controller
         view()->share([
             'tab'=>$tab,
         ]);
+
+        if(empty($request->sid)){
+            //신청권한 여부
+            $checkAbstract = $this->conferenceServices->abstractCheckService($request);
+            if(!empty($checkAbstract)){
+                setFlashData($checkAbstract);
+                return callRedirect();
+            }
+        }
+
         return view('conference.detail.abstract.upsert', $this->conferenceServices->abstractUpsertService($request));
     }
     public function abstract_preview(Request $request)

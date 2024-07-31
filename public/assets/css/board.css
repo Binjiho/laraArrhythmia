@@ -240,6 +240,65 @@
     display: none;
 }
 
+/* view::move */
+.view-move{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+.view-move-con{
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #8c8c8c;
+    letter-spacing: -0.05em;
+}
+.view-move-con .tit{
+    position: relative;
+    width: 165px;
+    padding: 17px 25px;
+    padding-right: 35px;
+    background-color: #f6f9ff;
+    background-repeat: no-repeat;
+    background-position: right 25px center;
+    color: #495d90;
+    font-weight: 800;
+    transition: background 0.3s ease;
+}
+.view-move-con .con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 165px);
+    padding: 17px 25px;
+    font-weight: 600;
+}
+.view-move-con .date{
+    flex: 0 0 auto;
+    width: 110px;
+    font-weight: 400;
+}
+.view-move-con a{
+    vertical-align: top;
+}
+
+.view-move.type2{
+    flex-direction: column;
+    border-top: 1px solid #e2e2e2;
+}
+.view-move.type2 .view-move-con .tit:after{
+    right: 0;
+}
+.view-move.type2 .view-move-con{
+    border-bottom: 1px solid #e2e2e2;
+}
+.view-move.type2 .view-prev .tit{
+    background-image: url('../image/board/ic_arrow_top.png');
+}
+.view-move.type2 .view-next .tit{
+    background-image: url('../image/board/ic_arrow_bottom.png');
+}
+
 /* paging */
 .paging-wrap{
     margin-top: 40px;
@@ -882,14 +941,17 @@
 }
 
 /* regist list */
+.bbs-event{
+	width: 15%;
+}
 .bbs-nation{
-    width: 15%;
+    width: 20%;
 }
 .bbs-regi-date{
-    width: 30%;
+    width: 20%;
 }
 .bbs-regi{
-    width: 17%;
+    width: 10%;
 }
 .bbs-regi .btn-small{
     padding: 6px 15px;
@@ -920,6 +982,57 @@
 .bbs-place + .bbs-date{
     width: 20%;
 }
+
+/* brochure */
+/* brochure::list */
+.brochure-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+}
+.brochure-list > li{
+    width: calc((100% - 40px)/3);
+    height: 100%;
+}
+.brochure-list > li > a{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 35px;
+}
+.brochure-list .text-wrap{
+    height: 120px;
+    padding-right: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.5;
+}
+.brochure-list .img-wrap{
+    overflow: hidden;
+    flex: 0 0 auto;
+    width: 52%;
+    height: 145px;
+    border: 1px solid #d1d6e8;
+    border-radius: 6px;
+}
+.brochure-list .img-wrap img{
+    width: 100%;
+    height: 100%;
+    -webkit-object-fit: cover;
+    object-fit: cover;
+}
+.brochure-list .btn-admin{
+    margin-top: 30px;
+    text-align: center;
+}
+.board-view .img-wrap > a{
+    display: inline-block;
+    border: 2px solid #b5bdcb;
+    vertical-align: top;
+}
+
 
 /* =====================================
 
@@ -968,6 +1081,15 @@
     /* event view */
     .ev-banner ul > li:before{
         top: 1px;
+    }
+
+    /* brochure */
+    /* brochure::list */
+    .brochure-list > li > a{
+        padding: 20px;
+    }
+    .brochure-list .img-wrap{
+        height: 120px;
     }
 }
 @media screen and (max-width: 768px){    
@@ -1116,6 +1238,39 @@
         margin-right: 5px;
     }
 
+    /* view::move */
+    .view-move{
+        margin-top: 10px;
+    }
+    .view-move-con{
+        font-size: 14px;
+    }
+    .view-move-con .tit{
+        width: 80px;
+        padding: 8px 10px;
+        background-size: 7px;
+        background-position: right 10px center;
+    }
+    .view-move-con .con{
+        width: calc(100% - 80px);
+        padding: 8px 10px;
+    }
+    .view-move-con .date{
+        display: none;
+    }
+    .view-move .view-prev .con{
+        padding-left: 15px;
+    }
+    .view-move .view-next .con{
+        padding-right: 15px;
+    }
+    .view-move.type2 .view-move-con .con{
+        padding: 0;
+        padding-left: 15px;
+    }
+    .view-move.type2 .view-move-con .tit{
+        background-size: 9px;
+    }
 
     /* paging */
     .paging-wrap{
@@ -1498,5 +1653,36 @@
     }
     .board-list .no-data p{
         margin-top: 15px;
+    }
+  
+    /* brochure */
+    /* brochure::list */
+    .brochure-list{
+        gap: 20px;
+    }
+    .brochure-list > li{
+        width: 100%;
+    }
+    .brochure-list > li > a{
+        padding: 20px 15px;
+    }
+    .brochure-list .text-wrap{
+        height: auto;
+        padding-right: 15px;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+    .brochure-list .img-wrap{
+        width: 90px;
+        height: auto;
+        border-radius: 3px;
+    }
+    .brochure-list .btn-admin{
+        display: none;
+        margin-top: 10px;
+        text-align: right;
+    }
+    .board-view .img-wrap > a{
+        border-width: 1px;
     }
 }

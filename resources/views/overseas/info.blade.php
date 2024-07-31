@@ -117,17 +117,23 @@
             </div>
 
             <div class="sub-contit-wrap">
-                <h4 class="sub-contit">참석 후 제출자료 (선정통보 후 제출자료 안내 메일 발송 예정)</h4>
+                <h4 class="sub-contit">참석 후 제출 자료</h4>
             </div>
             <ul class="list-type list-type-text">
                 <li>
                     <span>1)</span>
                     <div>
-                        참가자격 증빙자료(초청 또는 채택 메일, 프로그램북 사본-제목, 참여자 본인 이름, 일정 표기된 것)
+                        선정통보 후 제출자료 안내 메일 발송 예정
                     </div>
                 </li>
                 <li>
                     <span>2)</span>
+                    <div>
+                        참가자격 증빙자료 (발표자격, 발표주제, 발표일정 및 구체적인 발표장소가 기재된 채택/초청 메일 혹은 프로그램북 사본 혹은 초록사본)
+                    </div>
+                </li>
+				<li>
+                    <span>3)</span>
                     <div>
                         항공료, 숙박비, 등록비, 식비, 현지 교통비 원본 영수증 및 3개 협회에서 요청한 결제 증빙자료
                     </div>
@@ -141,61 +147,67 @@
                 <li>
                     <span>1)</span>
                     <div>
-                        신청시 우선순위에 체크하신 내용을 기준으로 심사하며, 사실과 다른 경우 선정이 취소됩니다.
+                        신청 시 우선순위에 체크하신 내용을 기준으로 심사하며, 사실과 다른 경우 선정이 취소됩니다.
                     </div>
                 </li>
                 <li>
                     <span>2)</span>
                     <div>
-                        신청 취소는 반드시 마감일 내에 메일로 연락 주시고, 선정통보 이후 취소연락 및 불참 시 향후 2년간 선정대상에서 제외됩니다.
+                        신청 취소는 반드시 선정통보 전 담당자 메일로 연락 주시고, 선정통보 이후 취소연락 및 불참 시 향후 2년간 선정대상에서 제외됩니다.
                     </div>
                 </li>
                 <li>
                     <span>3)</span>
                     <div>
-                        본 학회에서는 참석 전에 별도의 참가자격 확인절차를 진행하지 않습니다. 참가자격 미확인 및 증빙자료 미제출에 따른 불이익은 본인에게 있는 점 양지 바랍니다.
+                        본 학회에서는 참석 전에 별도의 참가자격 확인 절차를 진행하지 않습니다. 참가자격 미확인 및 증빙자료 미제출에 따른 불이익은 본인에게 있는 점 양지 바랍니다.
                     </div>
                 </li>
             </ul>
 
             <div class="sub-contit-wrap">
-                <h4 class="sub-contit">접수방법</h4>
-            </div>
-            <ul class="list-type list-type-bar">
-                <li>기한 내 제출서류 양식을 전부 작성, 서명하신 후 증빙자료와 함께 제출하여 주십시오.</li>
-                <li>제출서류: 해외학회 지원 신청서, 일정 및 이름 확인 가능한 공식 자료</li>
-            </ul>
-
-            <div class="sub-contit-wrap">
-                <h4 class="sub-contit">신청 마감일</h4>
+                <h4 class="sub-contit">접수 방법</h4>
             </div>
             <ul class="list-type list-type-text">
                 <li>
-                    <span>1)</span>
-                    <div>
-                        개최시작일 기준 60일 전까지 이며, 좌측 메뉴 ‘해외학회 일정’ 에서 확인 가능합니다.
-                    </div>
-                </li>
+					<span>1)</span>
+					<div>
+						기한 내 양식에 내용을 전부 작성하여 증빙자료를 첨부해 제출하여 주십시오.
+					</div>
+				</li>
                 <li>
-                    <span>2)</span>
-                    <div>
-                        채택발표가 나지 않은 경우 마감일은 연장될 수 있습니다.
-                    </div>
-                </li>
+					<span>2)</span>
+					<div>
+						증빙자료: 일정 및 이름 확인 가능한 초청 메일 혹은 초록 채택 메일
+					</div>
+				</li>
             </ul>
 
             <div class="sub-contit-wrap">
-                <h4 class="sub-contit">선정발표</h4>
+                <h4 class="sub-contit">신청 기간</h4>
             </div>
             <ul class="list-type list-type-bar">
-                <li>신청 마감일 이후 15일 이내 개별 이메일 통보 예정</li>
+                <li>개최시작일 기준 4~5개월 전 접수 받으며, 회원께 이메일로 사전/당일 2회에 걸쳐 공지드릴 예정입니다.</li>
+            </ul>
+
+            <div class="sub-contit-wrap">
+                <h4 class="sub-contit">선정 발표</h4>
+            </div>
+            <ul class="list-type list-type-bar">
+                <li>참여학회에 따라 상이하며, 신청 마감일 이후 최대 2달 이내 개별 이메일 통보</li>
             </ul>
 
             <div class="sub-contit-wrap">
                 <h4 class="sub-contit">정산금</h4>
             </div>
             <ul class="list-type list-type-bar">
-                <li>정산금 입금까지는 12개월 이상 소요될 수 있사오니 이점 양지하시기 바랍니다.</li>
+                <li>정산금 입금까지는 12개월 이상이 소요될 수 있사오니 이점 양지하시기 바랍니다.</li>
+            </ul>
+
+			<div class="sub-contit-wrap">
+                <h4 class="sub-contit">담당자 연락처</h4>
+            </div>
+            <ul class="list-type list-type-bar">
+                <li>김효정 과장 (<a href="mailto:khrs9@k-hrs.org">khrs9@k-hrs.org</a>)</li>
             </ul>
 
             <div class="btn-wrap text-center">

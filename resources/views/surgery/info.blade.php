@@ -84,7 +84,12 @@
             </ul>
 
             <div class="btn-wrap text-center">
-                <a href="{{ route('surgery.register') }}" class="btn btn-type1 color-type1">신청하러 가기 <span class="arrow">&gt;</span></a>
+				 @if(thisUser())
+{{--                <a href="{{ route('surgery.register') }}" class="btn btn-type1 color-type1">신청하러 가기 <span class="arrow">&gt;</span></a>--}}
+				<a href="javascript:alert('추후 오픈 예정입니다.')" class="btn btn-type1 color-type1">신청하러 가기 <span class="arrow">&gt;</span></a>
+				@else
+                <a href="javascript:;" onclick="alert('로그인을 진행해주세요.'); location.href='{{ route('login') }}'; return false;" class="btn btn-type1 color-type11">신청하러 가기<span class="arrow">&gt;</span></a>
+                @endif
             </div>
         </div>
     </article>

@@ -49,6 +49,11 @@
                     <input class="btnDel" type="submit" value="검색">
                     <a href="{{ route('surgery') }}" class="btnBdNavy">검색초기화</a>
                     <a href="{{ route('surgery.excel', request()->except(['page']) ) }}" class="btnBdBlue">데이터 백업</a>
+                    @if($_SERVER['REMOTE_ADDR']=="218.235.94.247")
+                        <a href="{{ route('surgery.collective', []) }}" class="call_popup btnBdNavy" data-popup_name="group-upsert" data-width="720">
+                            커스텀 등록
+                        </a>
+                    @endif
                 </div>
             </form>
         </form>

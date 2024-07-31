@@ -16,6 +16,7 @@
                 <div class="board-write">
                     <div class="write-form-wrap">
                         <form id="board-frm" data-sid="{{ $board->sid ?? 0 }}" data-case="board-{{ empty($board->sid) ? 'create' : 'update' }}" onsubmit="return false;">
+                            <input type="hidden" name="requestYear" value="{{ $abyear }}">
                             <fieldset>
                                 <legend class="hide">글쓰기</legend>
                                 <div class="write-wrap">
@@ -29,6 +30,17 @@
                                         <dt><strong class="required">*</strong> {{ $boardConfig['subject'] }}</dt>
                                         <dd>
                                             <input type="text" name="subject" id="subject" class="form-item" value="{{ $board->subject ?? '' }}">
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><strong class="required">*</strong> 년도</dt>
+                                        <dd>
+                                            <select name="abyear" id="abyear" class="form-item" readonly>
+                                                <option value="">선택</option>
+                                                @foreach($boardConfig['abyear'] as $key => $val)
+                                                    <option value="{{ $val }}" {{ ($board->abyear ?? '') == $val ? 'selected':'' }}>{{ $val }}</option>
+                                                @endforeach
+                                            </select>
                                         </dd>
                                     </dl>
 
@@ -172,9 +184,9 @@
                 hide: {
                     checkEmpty: true,
                 },
-                // fileName1: {
-                //     isEmpty: true,
-                // },
+                abyear: {
+                    isEmpty: true,
+                },
             },
             messages: {
                 name: {
@@ -186,9 +198,9 @@
                 hide: {
                     checkEmpty: '공개여부를 체크해주세요.',
                 },
-                // fileName1: {
-                //     isEmpty: '썸네일 이미지를 첨부해주세요.',
-                // },
+                abyear: {
+                    isEmpty: '연도를 선택해주세요.',
+                },
                 // content: {
                 //     isTinyEmpty: '내용을 입력해주세요.',
                 // },

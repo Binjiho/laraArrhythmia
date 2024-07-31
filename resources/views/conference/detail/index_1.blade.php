@@ -24,7 +24,7 @@
                 <div class="sub-contit-wrap mt-0">
                     <h4 class="sub-contit">초대의 글</h4>
                 </div>
-                <div class="view-contents">
+                <div class="view-contents editor-contents">
                     {!! $conference->invite_text ?? ''  !!}
                 </div>
                 @endif

@@ -21,23 +21,22 @@
             </p>
         </div>
     </div>
-    <div class="main-visual-con main-visual-con02">
-        <div class="main-visual-text inner-layer">
-            <h2 class="main-visual-tit font-pre">대한부정맥학회</h2>
-            <p>
-                부정맥 극복을 위한 창의적인 연구, <br>
-                인재교육 및 국민인식 개선을 통해 의료의 선진화를 주도해 나가는 학회
-            </p>
-        </div>
-    </div>
-    <div class="main-visual-con main-visual-con03">
-        <div class="main-visual-text inner-layer">
-            <h2 class="main-visual-tit font-pre">대한부정맥학회</h2>
-            <p>
-                부정맥 극복을 위한 창의적인 연구, <br>
-                인재교육 및 국민인식 개선을 통해 의료의 선진화를 주도해 나가는 학회
-            </p>
-        </div>
+	<a href="https://www.k-hrs.org/board/noticePro/view/536" target="_blank">
+		<div class="main-visual-con main-visual-con02">
+			<div class="main-visual-text inner-layer">			
+				<h2 class="main-visual-tit font-pre">대한부정맥학회</h2>
+				<p>
+					부정맥 극복을 위한 창의적인 연구, <br>
+					인재교육 및 국민인식 개선을 통해 의료의 선진화를 주도해 나가는 학회
+				</p>			
+			 </div>		
+		</div>
+	</a>
+	  <!-- <div class="main-visual-con main-visual-con02">
+	  			<a href="https://www.k-hrs.org/board/noticePro/view/536" target="_blank"><img src="/html/specialist/assets/image/main/img_mainvisual240712.png" alt="" class="p-show"></a>
+	  			<a href="https://www.k-hrs.org/board/noticePro/view/536" target="_blank"><img src="/html/specialist/assets/image/main/img_mainvisual240712_m.png" alt="" class="m-show"></a>
+	  		</div> -->
+    </div>    
     </div>
 </article>
 <article class="main-contents inner-layer">

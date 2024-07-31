@@ -900,6 +900,20 @@
         background-size: 9px;
     }
 
+    /* 24.07.02 학술행사 자료 form 추가 */
+    .radio-wrap:has(.form-group){
+        width: 100%;
+    }
+    .radio-group.form-group{
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .radio-group.form-group .form-item{
+        margin: 0 !important;
+    }
+
     /* form */
     .write-tit{
         padding: 5px 10px;
@@ -912,7 +926,7 @@
     .write-wrap dd{
         display: block;
         width: 100%;
-        min-height: 40px;
+        min-height: initial;
         padding: 8px 10px;
         font-size: 14px;
     }
@@ -1300,7 +1314,8 @@
         font-size: 12px;
     }
     .main-board-con{
-        height: 60px;
+        width: 100%;
+        height: auto;
         margin-top: 15px;
         font-size: 14px;
     }
@@ -2475,6 +2490,72 @@
     .icon-conbox ul > li + li:before{
         top: 4px;
         height: 10px;
+    }
+
+    /* 24.07.02 학술행사 자료 추가 */
+    .top-btn-wrap:has(.btn-add-session){
+        display: block !important;
+    }
+    .board-write .write-wrap + .top-btn-wrap{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .btn.btn-add-session{
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+    .btn.btn-add-session:has(.plus){
+        padding-right: 7px;
+    }
+    .btn.btn-add-session .plus{
+        margin-left: 3px;
+    }
+    .top-btn-wrap .help-text{
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    .session-write-con{
+        flex-direction: column;
+    }
+    .session-write-con .btn-admin{
+        width: 100%;
+        text-align: right;
+    }
+    .top-btn-wrap:has(.btn-add-session) select{
+        width: auto;
+        height: 36px;
+    }
+    .ev-banner.type2 + .top-btn-wrap{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .ev-banner.type2 + .top-btn-wrap .btn{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .session-table colgroup col:nth-child(1){
+        width: 25% !important;
+    }
+    .session-table .session-tit{
+        font-size: 16px;
+    }
+    .session-table .session-tit + p{
+        margin-top: 10px;
+    }
+    .session-con{
+        flex-direction: column;
+        align-items: start;
+    }
+    .session-con .btn-admin{
+        width: 100%;
+        text-align: right;
+    }
+    .session-con .btn-admin a:has(img) img{
+        height: 20px;        
     }
 
     /* 마이페이지::연구회/지회 */

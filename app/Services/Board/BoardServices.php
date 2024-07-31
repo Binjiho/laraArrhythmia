@@ -6,6 +6,7 @@ use App\Models\Board;
 use App\Models\BoardFile;
 use App\Models\BoardCounter;
 use App\Models\BoardReply;
+use App\Models\Sessions;
 use App\Services\AppServices;
 use App\Services\CommonServices;
 use Illuminate\Http\Request;
@@ -23,8 +24,26 @@ class BoardServices extends AppServices
         $category = $request->category ?? null;
         $category2 = $request->category2 ?? null;
         $abyear = $request->abyear ?? null;
+        
+    //    20240711 이광식 아래로 수정 (공지 항상 상위에 나오게 변경)
 
-        $query = Board::where('bbs_code', $request->code)->withCount('files')->orderByDesc('sid');
+        $code = $request->code;
+
+        $notice_query = Board::where('bbs_code', $code)->where(function($q) use($code) {
+            if (!isAdmin()) {
+                $q->orWhere('hide', 'N');
+
+            }
+        })
+            ->where('notice', 'Y')
+            ->withCount('files')->orderByDesc('sid');
+
+        $notice_query2  = clone $notice_query;
+        $this->data['notice'] = $notice_query->get();
+
+        $query = Board::where('bbs_code', $request->code)
+        ->where('notice', 'N')
+        ->withCount('files')->orderByDesc('sid');
 
         if (!empty($search) && !empty($keyword)) {
             switch ($search) {
@@ -54,8 +73,7 @@ class BoardServices extends AppServices
         $this->data['total'] = $cnt->count();
         $this->data['list'] = setListSeq($list);
 
-//        customDump($this->data);
-
+   
         return $this->data;
     }
 
@@ -70,6 +88,9 @@ class BoardServices extends AppServices
     public function viewService(Request $request)
     {
         $this->data['board'] = Board::withCount('files')->findOrFail($request->sid);
+//        $this->data['prev'] = Post::where('sid', '<', $request->sid)->orderBy('id', 'desc')->first();
+//        $this->data['next'] = Post::where('sid', '>', $request->sid)->orderBy('id', 'asc')->first();
+
         $this->refCounter($request); // 조회수 업데이트
 
         return $this->data;
@@ -135,14 +156,14 @@ class BoardServices extends AppServices
         if(request()->category2){
             return route('board', ['code' => request()->code, 'category' => request()->category, 'category2' => request()->category2]);
         }else{
-            return route('board', ['code' => request()->code, 'category' => request()->category]);
+            return route('board', ['code' => request()->code, 'category' => request()->category, 'abyear' => request()->requestYear ?? request()->abyear]);
         }
     }
 
     private function boardCreate(Request $request)
     {
         $this->transaction();
-//        customDump($request->all());
+
         try {
             $board = new Board();
             $board->setByData($request);
@@ -156,6 +177,23 @@ class BoardServices extends AppServices
                     $file = new BoardFile();
                     $file->setByData($row);
                     $file->save();
+                }
+
+                // 세션등록 (borad/library)
+                if($board->bbs_code == 'library' && !empty($request->title[0])){
+                    foreach ($request->session_sid as $idx => $sid) {
+                        $object = new \stdClass();
+//                        $object->bsid = $board->sid;
+                        $object->bsid = request()->bsid;
+                        $object->title = $request->title[$idx];
+                        $object->chair_person = $request->chair_person[$idx];
+                        $object->room = $request->room[$idx];
+                        $object->sort = $idx+1;
+
+                        $session = new Sessions();
+                        $session->setByData($object);
+                        $session->save();
+                    }
                 }
             }
 
@@ -194,8 +232,50 @@ class BoardServices extends AppServices
                 foreach ($board->files()->whereIn('sid', $request->plupload_file_del ?? [])->get() as $plFile) {
                     $plFile->delete();
                 }
-            }
 
+                //세션 저장
+                if($board->bbs_code == 'library') { //이 조건 없으면 문제 있을거같아서 일단 추가함 (240709 이광식) 
+
+                    $session_pre = Sessions::where(['bsid'=>$board->sid, 'del'=>'N'])->pluck('sid')->toArray(); //기존 session sid
+                    if(!empty($session_pre) && empty($request->session_sid)){
+                        $session_del = $session_pre;
+                    }else{
+                        // $session_del = array_diff($session_pre,$request->session_sid); 
+                        // 오류로 일단주석 후 아래로 수정 (240709 이광식) 
+                        $session_del = array_diff($session_pre, [$request->session_sid]);
+                    }
+
+                    if(!empty($session_del)){
+                        foreach ($session_del as $del_item){
+                            $session = Sessions::where(['sid'=>$del_item])->first();
+                            $session->del = 'Y';
+                            $session->update();
+                        }
+                    }
+
+                }
+
+                if($board->bbs_code == 'library' && !empty($request->title[0])){
+                    foreach ($request->session_sid as $idx => $sid) {
+                        $object = new \stdClass();
+                        $object->bsid = $board->sid;
+                        $object->title = $request->title[$idx];
+                        $object->chair_person = $request->chair_person[$idx];
+                        $object->room = $request->room[$idx];
+                        $object->sort = $idx+1;
+
+                        if(!empty($sid)){
+                            $session = Sessions::where(['sid'=>$sid])->first();
+                            $session->setByData($object);
+                            $session->update();
+                        }else{
+                            $session = new Sessions();
+                            $session->setByData($object);
+                            $session->save();
+                        }
+                    }
+                }
+            }
             $this->dbCommit('게시글 수정');
 
             return $this->returnJsonData('alert', [
@@ -204,7 +284,7 @@ class BoardServices extends AppServices
                 'location' => $this->ajaxActionLocation('replace', $this->listUrl()),
             ]);
         } catch (\Exception $e) {
-            return $this->dbRollback($e);
+            return $this->dbRollback($e, true);
         }
     }
 

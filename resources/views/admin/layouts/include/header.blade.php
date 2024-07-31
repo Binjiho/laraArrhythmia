@@ -17,7 +17,7 @@
             <dt class="hidden">유틸메뉴</dt>
             <dd>
                 <ul class="clfix">
-                    <li><a href="{{ env('APP_URL') }}" target="_blank">홈페이지</a></li>
+                    <li><a href="https://www.k-hrs.org/" target="_blank">홈페이지</a></li>
                     <li><a href="javascript:logout();">LOGOUT</a></li>
                 </ul>
             </dd>

@@ -62,8 +62,9 @@
             <a href="https://www.bms.com/kr" target="_blank"><img src="/assets/image/common/img_sponsor_bnr02.png" alt=""></a>
             <a href="https://www.pfizerpro.co.kr/medicine/eliquis" target="_blank"><img src="/assets/image/common/img_sponsor_bnr03.gif" alt=""></a>
             <a href="https://www.hanmi.co.kr/business/product/finder/detail-6484.hm" target="_blank"><img src="/assets/image/common/img_sponsor_bnr04.png" alt=""></a>
-            <a href="#n" target="_blank"><img src="/assets/image/common/img_no_sponsor.png" alt=""></a>
-            <a href="#n" target="_blank"><img src="/assets/image/common/img_no_sponsor.png" alt=""></a>
+            <a href="https://www.daiichisankyo.co.kr/product/1/detail?menu=%EC%A0%84%EC%B2%B4&terms=" target="_blank"><img src="/assets/image/common/img_sponsor_bnr_daiichisankyo.png" alt=""></a>
+			<a href="#" target="_blank"><img src="/assets/image/common/img_no_sponsor.png" alt=""></a>
+            <!-- <a href="https://www.campus.sanofi/kr" target="_blank"><img src="/assets/image/common/img_sponsor_bnr_MULTAQ.png" alt=""></a> -->
             <!-- <a href="#n" target="_blank"><img src="/assets/image/common/img_no_sponsor.png" alt=""></a>
             <a href="#n" target="_blank"><img src="/assets/image/common/img_no_sponsor.png" alt=""></a>
             <a href="#n" target="_blank"><img src="/assets/image/common/img_no_sponsor.png" alt=""></a>

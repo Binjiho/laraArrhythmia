@@ -57,7 +57,8 @@
                 <div class="util btn" style="display: flex; justify-content: center; margin-top: 20px;">
                     <input class="btnDel" type="submit" value="검색">
                     <a href="{{ route('overseas.detail',['csid'=>request()->csid]) }}" class="btnBdNavy">검색초기화</a>
-                    <a href="{{ route('overseas.excel', request()->except(['page'])) }}" class="btnBdBlue">데이터 백업</a>
+                    <a href="{{ route('overseas.excel', ['csid'=>request()->csid] ) }}" class="btnBdBlue">데이터 백업</a>
+{{--                    <a href="{{ route('overseas.excel', request()->except(['page']) ) }}" class="btnBdBlue">데이터 백업</a>--}}
                 </div>
 
                 <div class="util btn" style="display: flex; margin-top: 20px;">
@@ -78,7 +79,7 @@
                             미선정 메일발송
                         </a>
                         <a href="{{ route('overseas.detail.mail',[ 'csid'=>request()->csid, 'type'=>'C' ] ) }}" class="call_popup btnBdNavy" data-popup_name="mail-C" data-width="1000" data-height="800">
-                            결과보고서제출요청 메일발송
+                            정산서류 수령 메일발송
                         </a>
                         <a href="{{ route('overseas.detail.mail',[ 'csid'=>request()->csid, 'type'=>'D' ] ) }}" class="call_popup btnBdNavy" data-popup_name="mail-D" data-width="1000" data-height="800">
                             지급완료 메일발송
@@ -102,13 +103,14 @@
                 <col style="width: 7%;">
 
                 <col style="width: 7%;">
-                <col style="width: 7%;">
-                <col style="width: 7%;">
+{{--                <col style="width: 7%;">--}}
+{{--                <col style="width: 7%;">--}}
 {{--                <col style="width: 8%;">--}}
                 <col style="width: 7%;">
 
                 <col style="width: 9%;">
                 <col style="width: 6%;">
+                <col style="width: 5%;">
                 <col style="width: 5%;">
                 <col style="width: 6%;">
             </colgroup>
@@ -121,15 +123,16 @@
                 <th>핸드폰번호</th>
                 <th>참가자격</th>
 
-                <th>공동저자여부</th>
-                <th>초록</th>
-                <th>초청메일</th>
+                <th>공동저자<br>여부</th>
+{{--                <th>초록</th>--}}
+{{--                <th>초청메일</th>--}}
 {{--                <th>등록상태</th>--}}
                 <th>심사상태</th>
 
                 <th>결과보고서</th>
                 <th>등록일</th>
-                <th>지급완료</th>
+                <th>지급<br>완료</th>
+                <th>메모</th>
                 <th>관리</th>
             </tr>
             </thead>
@@ -142,17 +145,19 @@
                         <a href="{{ route('overseas.detail.preview', ['sid' => $row->sid, 'csid'=>request()->csid]) }}" class="call_popup" data-popup_name="overseas-preview" data-width="1450" data-height="1000">{{ $row->user->uid }}</a>
                     </td>
                     <td>{{ $row->user->name_kr }}</td>
-                    <td>{{ ($row->user->sosok ?? '') ? $affi[$row->user->sosok] : '' }}</td>
+                    <td>{{ $row->user->sosok_kr ?? '' }}</td>
                     <td>{{ $row->user->phone[0] ?? '' }}-{{ $row->user->phone[1] ?? '' }}-{{ $row->user->phone[2] ?? '' }}</td>
                     <td>{{ $overseasConfig['participant'][$row->participant ?? ''] }}</td>
 
                     <td>{{ ($row->common_author ?? 'N') == 'N' ? 'X':'O' }}</td>
-                    <td>
-                        <a href="{{ $row->downloadFileUrl('thumb_realfile', 'thumb_file') }}" target="_blank" class="link" style="color:dodgerblue">{{$row->thumb_file}}</a>
-                    </td>
-                    <td>
-                        <a href="{{ $row->downloadFileUrl('realfile2', 'file2') }}" target="_blank" class="link" style="color:dodgerblue">{{$row->file2}}</a>
-                    </td>
+
+{{--                    <td>--}}
+{{--                        <a href="{{ $row->downloadFileUrl('thumb_realfile', 'thumb_file') }}" target="_blank" class="link" style="color:dodgerblue">{{$row->thumb_file}}</a>--}}
+{{--                    </td>--}}
+{{--                    <td>--}}
+{{--                        <a href="{{ $row->downloadFileUrl('realfile2', 'file2') }}" target="_blank" class="link" style="color:dodgerblue">{{$row->file2}}</a>--}}
+{{--                    </td>--}}
+
                     <td>
                         <p style="color:crimson">
                             <a href="{{ route('overseas.detail.assist',['user_sid'=>$row->user->sid, 'sid'=>$row->sid, 'csid'=>request()->csid]) }}" class="call_popup btnBdNavy" data-popup_name="assist-create" data-width="900" data-height="600">
@@ -183,6 +188,11 @@
                     <td class="check">
                         <input type="checkbox" name="pay_result" id="pay_result" value="Y" {{ ($row->pay_result ?? '') === 'Y' ? 'checked' : '' }} >
                     </td>
+                    <td >
+                        <div class="util btn">
+                            <a href="{{ route('overseas.detail.memo', ['sid'=>$row->sid, 'csid'=>request()->csid]) }}" class="call_popup btnSmall btnGrey2" data-popup_name="overseas-modify" data-width="1100" data-height="700">메모</a>
+                        </div>
+                    </td>
                     <td>
                         <a href="{{ route('overseas.detail.modify', ['sid' => $row->sid, 'csid'=>request()->csid]) }}" class="call_popup" data-popup_name="overseas-modify" data-width="1450" data-height="1000">
                             <img src="{{asset('assets/image/admin/icon_modify.png')}}" alt="수정">
@@ -206,15 +216,21 @@
 
 @section('addScript')
     <script>
-        const dataUrl = '{{ route('overseas.data',['csid'=>request()->csid]) }}';
+        const dataUrl = '{{ route('overseas.data') }}';
 
         $(document).on('change', "input:checkbox[name='pay_result']", function() {
             let ajaxData = {};
+            let target = 'N';
+            if($(this).is(":checked")){
+                target = 'Y';
+            }
             ajaxData.case = 'change-pay-result';
             ajaxData.sid = $(this).parents('tr').data('sid');
-            ajaxData.target = $(this).val();
+            ajaxData.target = target;
             if (confirm('변경 하시겠습니까?')) {
                 callAjax(dataUrl, ajaxData);
+            }else{
+                location.reload();
             }
         });
 

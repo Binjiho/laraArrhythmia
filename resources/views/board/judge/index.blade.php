@@ -51,7 +51,7 @@
                             {{ $row->subject }}
                         </a>
                         <div class="acco-con" style="">
-                            <div class="view-contents">
+                            <div class="view-contents editor-contents">
                                 {!! $row->content !!}
                             </div>
                             <a href="{{ route('board.view', ['code' => $code , 'category' => $category, 'sid' => $row->sid]) }}" class="btn-more">+</a>

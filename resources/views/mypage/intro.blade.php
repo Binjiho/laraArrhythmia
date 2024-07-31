@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('mypage.changePw')}}">
+                    <a href="{{route('mypage.confirmPw')}}">
                         <strong class="tit">비밀번호 변경</strong>
                         <span class="icon"><img src="/assets/image/sub/ic_mypage02.png" alt=""></span>
                     </a>
@@ -44,6 +44,12 @@
                     <a href="{{route('mypage.research')}}">
                         <strong class="tit">연구지원</strong>
                         <span class="icon"><img src="/assets/image/sub/ic_mypage06.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('mypage.overseas')}}">
+                        <strong class="tit">해외학회 참가지원</strong>
+                        <span class="icon"><img src="/assets/image/sub/ic_mypage09.png" alt=""></span>
                     </a>
                 </li>
                 <li>

@@ -12,7 +12,7 @@
                 <div id="board" class="event-wrap board-wrap">
                     <div class="board-write">
                         <div class="write-form-wrap" id="popupPrepare">
-                            <form id="board-frm" data-sid="{{ $_GET['csid'] ?? 0 }}" data-case="change-group-assist" onsubmit="return false;">
+                            <form id="board-frm" data-sid="{{ request()->csid ?? 0 }}" data-case="change-group-assist" onsubmit="return false;">
                                 <fieldset>
 
                                     <div class="write-wrap">

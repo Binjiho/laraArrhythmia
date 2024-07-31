@@ -20,7 +20,7 @@
                         우리 지역에 있는 전문가를 찾아보세요!
                     </p>
                     <p class="text-right">
-                        <span class="text-red">*부정맥중재시술인증의란?</span> <br>
+                        <span class="text-red">*부정맥 중재시술전문의란?</span> <br>
                         대한부정맥학회에서 자격심의를 통해 인증한 부정맥중재시술 전문가
                     </p>
                 </div>
@@ -86,13 +86,13 @@
 
                             @if(($row->surgery($row->sid)->certi ?? '') == 'Y')
                                 @php
-                                    $category_title = '부정맥 중재시술인증의';
+                                    $category_title = '부정맥 중재시술전문의';
                                 @endphp
                             @endif
 
                             @if($row['level'] == 'S' && ($row->surgery($row->sid)->certi ?? '') == 'Y')
                                 @php
-                                    $category_title = '전문회원, 부정맥 중재시술인증의';
+                                    $category_title = '전문회원, 부정맥 중재시술전문의';
                                 @endphp
                             @endif
                             <li data-sid="{{ $row->sid ?? '' }}">

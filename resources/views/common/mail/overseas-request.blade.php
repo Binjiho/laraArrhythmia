@@ -19,16 +19,14 @@
                 <tbody>
                 <tr>
                     <td style="font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 15px;font-weight: 400;color: #4d4d4d;line-height: 1.9;text-align: left;letter-spacing: -0.04em;">
-                        안녕하세요, <br/>
+                        안녕하십니까 {{ $data->name_kr ?? '' }} 선생님, <br/>
                         {{ env('APP_NAME') }}입니다. <br/><br/>
 
-                        <strong>{{ $data->conference_name ?? ''}}</strong> 참가지원 서류가 제출 완료되었습니다. <br/>
-                        보내주신 서류는 1차로 학회에서 검토 후 <strong>{{ $data->assistant ?? '' }}</strong>로 원본 제출되며, <strong>{{ $data->assistant ?? ''}}</strong>에서 최종 검토를 진행할 예정입니다. 검토 과정에서 추가 보완사항이 있을 시에 연락 드리도록 하겠습니다. <br/><br/>
+                        사무국으로 보내주신 <strong>{{ $data->conference_name ?? '' }}</strong> 정산 서류 수령하여 안내 이메일 드립니다. <br/>
+                        서류 검토 과정에서 보완 필요 시 연락 드리도록 하겠습니다. <br/><br/>
 
-                        최종 지원금액은 <strong>{{ $data->assistant ?? '' }}</strong> 검토 후 결정될 예정이오니 참고 부탁드립니다. <br/>
-                        관련하여 문의사항 있으시면 사무국(khrs@k-hrs.org)으로 연락 부탁드립니다. <br/><br/>
-
-                        감사합니다.
+                        평안한 하루 보내십시오. <br/>
+                        감사합니다. <br/>
                     </td>
                 </tr>
                 </tbody>

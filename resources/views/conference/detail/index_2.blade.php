@@ -34,7 +34,7 @@
                 <div class="sub-contit-wrap mt-0">
                     <h4 class="sub-contit">프로그램</h4>
                 </div>
-                <div class="view-contents">
+                <div class="view-contents editor-contents">
                     {!! $conference->schedule_text ?? ''  !!}
                 </div>
             </div>

@@ -16,25 +16,11 @@
                                 <div class="write-wrap">
 
                                     <dl>
-                                        <dt>국제학술대회 명</dt>
+                                        <dt>해외학술대회 명</dt>
                                         <dd>
                                             <input type="text" name="subject" id="subject" class="form-item" value="{{ $conference->subject ?? '' }}">
                                         </dd>
                                     </dl>
-
-{{--                                    <dl>--}}
-{{--                                        <dt>국가</dt>--}}
-{{--                                        <dd>--}}
-{{--                                            <div class="form-group form-group-text n2">--}}
-{{--                                                <select name="ccode" id="ccode" class="form-item">--}}
-{{--                                                    <option value="">선택</option>--}}
-{{--                                                    @foreach($country_list as $country)--}}
-{{--                                                        <option value="{{ $country->ci }}" {{ ($conference->ccode ?? '') == $country->ci ? 'selected' : '' }}>{{ $country->cn }}</option>--}}
-{{--                                                    @endforeach--}}
-{{--                                                </select>--}}
-{{--                                            </div>--}}
-{{--                                        </dd>--}}
-{{--                                    </dl>--}}
 
                                     <dl>
                                         <dt>개최 장소</dt>
@@ -107,6 +93,53 @@
 {{--                                            </div>--}}
 {{--                                        </dd>--}}
 {{--                                    </dl>--}}
+
+                                    <dl>
+                                        <dt><strong class="required">*</strong> 항목명</dt>
+                                        <dd>
+                                            <div class="help-text text-blue">마지막에 '해당없음' 항목을 추가해주세요</div>
+                                            <div class="table-wrap scroll-x touch-help mt-10">
+                                                <table class="cst-table">
+                                                    <caption class="hide">항목명</caption>
+                                                    <colgroup>
+                                                        <col style="width: 70%;">
+                                                        <col style="width: 30%;">
+                                                    </colgroup>
+                                                    <tbody id="fee_tbl">
+                                                    @if(!empty($conference->sid))
+                                                        @foreach($conference->registration_status as $key => $val)
+                                                            <tr>
+                                                                <td class="text-left">
+                                                                    <input type="text" name="regist_gubun[]" value="{{ $val }}" class="form-item">
+                                                                </td>
+                                                                <td>
+                                                                    <div class="btn-admin">
+                                                                        <a href="javascript:;" onclick="change_tr(this,'add');" class="btn btn-board btn-modify">추가</a>
+                                                                        <a href="javascript:;" onclick="change_tr(this,'del');" class="btn btn-board btn-delete">삭제</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
+                                                    @else
+                                                        <tr>
+                                                            <td class="text-left">
+                                                                <input type="text" name="regist_gubun[]" class="form-item">
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-admin">
+                                                                    <a href="javascript:;" onclick="change_tr(this,'add');" class="btn btn-board btn-modify">추가</a>
+                                                                    <a href="javascript:;" onclick="change_tr(this,'del');" class="btn btn-board btn-delete">삭제</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </dd>
+                                    </dl>
+
                                 </div>
 
                                 <div class="btn-wrap text-center">
@@ -138,6 +171,32 @@
         //         $('#event_edate').attr('disabled', false);
         //     }
         // });
+
+        function change_tr(el, mode){
+            if(mode == 'add'){
+                var _html = "";
+                _html += "<tr>";
+                _html += "<td class=\"text-left\">";
+                _html += "<input type=\"text\" name=\"regist_gubun[]\" class=\"form-item\">";
+                _html += "</td>";
+                _html += "<td>";
+                _html += "<div class=\"btn-admin\">";
+                _html += "<a href=\"javascript:;\" onclick=\"change_tr(this,'add');\" class=\"btn btn-board btn-modify\">추가</a>";
+                _html += "<a href=\"javascript:;\" onclick=\"change_tr(this,'del');\" class=\"btn btn-board btn-delete\">삭제</a>";
+                _html += "</div>";
+                _html += "</td>";
+                _html += "</tr>";
+
+                $("#fee_tbl").append(_html);
+            }else{
+                if($("#fee_tbl").find("tr").length < 2){
+                    alert('최소 한개 이상은 입력해주세요.');
+                    return false;
+                }else{
+                    $(el).parent().parent().parent().remove();
+                }
+            }
+        }
 
         // 게시글 작성 취소
         $(document).on('click', '#board_cancel', function(e) {
@@ -204,7 +263,7 @@
                     isEmpty: '작성자를 입력해주세요.',
                 },
                 subject: {
-                    isEmpty: `국제학술대회명을 입력해주세요.`,
+                    isEmpty: `해외학술대회명을 입력해주세요.`,
                 },
                 // category: {
                 //     isEmpty: '구분을 선택해주세요.',

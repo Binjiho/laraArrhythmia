@@ -44,7 +44,7 @@
                         @if($conference->tel)
                         <li class="tel">
                             <span class="tit">연락처 : </span>
-                            <div class="con view-contents">
+                            <div class="con view-contents editor-contents">
                                 {{ $conference->tel ?? '' }}
                             </div>
                         </li>

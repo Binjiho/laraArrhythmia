@@ -162,11 +162,11 @@
                     <dl class="n2">
                         <dt class="text-left">시작일</dt>
                         <dd>
-                            <input type="text" name="regist_sdate" id="regist_sdate" class="form-item datepicker"  value="{{ empty($conference->sid) ? '' : $conference->regist_sdate->format('Y-m-d') ?? '' }}" readonly>
+                            <input type="text" name="regist_sdate" id="regist_sdate" class="form-item datepicker"  value="{{ !empty($conference->sid) && isValidTimestamp($conference->regist_sdate) ? $conference->regist_sdate->format('Y-m-d') : '' }}" readonly>
                         </dd>
                         <dt class="text-left">종료일</dt>
                         <dd>
-                            <input type="text" name="regist_edate" id="regist_edate" class="form-item datepicker"  value="{{ empty($conference->sid) ? '' : $conference->regist_edate->format('Y-m-d') ?? '' }}" readonly>
+                            <input type="text" name="regist_edate" id="regist_edate" class="form-item datepicker"  value="{{ !empty($conference->sid) && isValidTimestamp($conference->regist_edate) ? $conference->regist_edate->format('Y-m-d') : '' }}" readonly>
                         </dd>
                     </dl>
                 </dd>
@@ -247,10 +247,10 @@
                                         <input type="text" name="regist_gubun[]" value="{{ $res_val['gubun'] }}" class="form-item">
                                     </td>
                                     <td class="text-left">
-                                        <input type="text" name="regist_early[]" value="{{ $res_val['early'] == '0' ? '무료' : $res_val['early'] }}" id="" class="form-item" priceFormat>
+                                        <input type="text" name="regist_early[]" value="{{ $res_val['early'] }}" id="" class="form-item" priceFormat>
                                     </td>
                                     <td class="text-left">
-                                        <input type="text" name="regist_onsite[]" value="{{ $res_val['onsite'] == '0' ? '무료' : $res_val['onsite'] }}" id="" class="form-item" priceFormat>
+                                        <input type="text" name="regist_onsite[]" value="{{ $res_val['onsite'] }}" id="" class="form-item" priceFormat>
                                     </td>
                                     <td>
                                         <div class="btn-admin">
@@ -344,11 +344,11 @@
                     <dl class="n2">
                         <dt class="text-left">시작일</dt>
                         <dd>
-                            <input type="text" name="abs_sdate" id="abs_sdate" class="form-item datepicker" value="{{ empty($conference->sid) ? '' : $conference->abs_sdate->format('Y-m-d') ?? '' }}" readonly>
+                            <input type="text" name="abs_sdate" id="abs_sdate" class="form-item datepicker" value="{{ !empty($conference->sid) && isValidTimestamp($conference->abs_sdate) ? $conference->abs_sdate->format('Y-m-d') : '' }}" readonly>
                         </dd>
                         <dt class="text-left">종료일</dt>
                         <dd>
-                            <input type="text" name="abs_edate" id="abs_edate" class="form-item datepicker" value="{{ empty($conference->sid) ? '' : $conference->abs_edate->format('Y-m-d') ?? '' }}" readonly>
+                            <input type="text" name="abs_edate" id="abs_edate" class="form-item datepicker" value="{{ !empty($conference->sid) && isValidTimestamp($conference->abs_edate) ? $conference->abs_edate->format('Y-m-d') : '' }}" readonly>
                         </dd>
                     </dl>
                 </dd>

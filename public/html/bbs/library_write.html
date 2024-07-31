@@ -241,7 +241,7 @@
                                                 </dd>
                                             </dl>
                                             <dl>
-                                                <dt>카테고리 2</dt>
+                                                <dt><strong class="required">*</strong> 카테고리 2</dt>
                                                 <dd>
                                                     <select name="" id="" class="form-item">
                                                         <option value="">선택</option>
@@ -281,6 +281,108 @@
                                                 </dd>
                                             </dl>
                                             <dl>
+                                                <dt>일시</dt>
+                                                <dd>
+                                                    <div class="radio-wrap cst">
+                                                        <div class="radio-group">
+                                                            <input type="radio" name="date_type" id="date_type_D" value="D">
+                                                            <label for="date_type_D">하루행사</label>
+                                                        </div>
+                                                        <div class="radio-group">
+                                                            <input type="radio" name="date_type" id="date_type_L" value="L">
+                                                            <label for="date_type_L">장기행사</label>
+                                                        </div>
+                                                        
+                                                        <div class="radio-group form-group form-group-text n2">
+                                                            <input type="text" name="event_sdate" id="event_sdate" class="form-item datepicker" value="" readonly="" datepicker="">
+                                                            <span class="text">~</span>
+                                                            <input type="text" name="event_edate" id="event_edate" class="form-item datepicker" value="" readonly="" datepicker="">
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>장소</dt>
+                                                <dd>
+                                                    <input type="text" name="place" id="place" class="form-item" value="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>주최</dt>
+                                                <dd>
+                                                    <input type="text" name="host" id="host" class="form-item" value="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><strong class="required">*</strong> 공개 여부</dt>
+                                                <dd>
+                                                    <div class="radio-wrap cst">
+                                                        <div class="radio-group">
+                                                            <input type="radio" name="hide" id="hide_N" value="N" checked="">
+                                                            <label for="hide_N">공개</label>
+                                                        </div>
+                                                        <div class="radio-group">
+                                                            <input type="radio" name="hide" id="hide_Y" value="Y">
+                                                            <label for="hide_Y">비공개</label>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+
+                                        <div class="top-btn-wrap">
+                                            <a href="#n" class="btn btn-type1 color-type17 btn-add-session">세션 추가 <span class="plus">+</span></a>
+                                            <span class="help-text text-blue">
+                                                ※ 세션 추가 버튼을 클릭하시면 세션 입력 테이블이 추가 됩니다.
+                                            </span>
+                                        </div>
+                                        <div class="write-wrap">
+                                            <dl>
+                                                <dt>세션 입력</dt>
+                                                <dd>
+                                                    <div class="session-write-con">
+                                                        <div class="session-form-group">
+                                                            <div class="form-group">
+                                                                <input type="text" name="" id="" class="form-item" placeholder="세션 타이틀">
+                                                            </div>
+                                                            <div class="form-group n2 mt-10">
+                                                                <input type="text" name="" id="" class="form-item" placeholder="좌장이름 (소속)">
+                                                                <input type="text" name="" id="" class="form-item" placeholder="Room">
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-admin">
+                                                            <button type="button" class="btn btn-arrow"><img src="/assets/image/icon/ic_arrow_top.png" alt="위로"></button>
+                                                            <button type="button" class="btn btn-arrow"><img src="/assets/image/icon/ic_arrow_bottom.png" alt="아래로"></button>
+                                                            <a href="#n" class="btn btn-board btn-delete">삭제</a>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>세션 입력</dt>
+                                                <dd>
+                                                    <div class="session-write-con">
+                                                        <div class="session-form-group">
+                                                            <div class="form-group">
+                                                                <input type="text" name="" id="" class="form-item" placeholder="세션 타이틀">
+                                                            </div>
+                                                            <div class="form-group n2 mt-10">
+                                                                <input type="text" name="" id="" class="form-item" placeholder="좌장이름 (소속)">
+                                                                <input type="text" name="" id="" class="form-item" placeholder="Room">
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-admin">
+                                                            <button type="button" class="btn btn-arrow"><img src="/assets/image/icon/ic_arrow_top.png" alt="위로"></button>
+                                                            <button type="button" class="btn btn-arrow"><img src="/assets/image/icon/ic_arrow_bottom.png" alt="아래로"></button>
+                                                            <a href="#n" class="btn btn-board btn-delete">삭제</a>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+
+                                        <div class="write-wrap">
+                                            <dl>
                                                 <dd>
                                                     에디터 영역
                                                 </dd>
@@ -291,6 +393,7 @@
                                                 </dd>
                                             </dl>
                                         </div>
+
                                         <div class="btn-wrap text-center">
                                             <a href="#n" class="btn btn-type1 color-type4">취소</a>
                                             <button type="submit" class="btn btn-type1 color-type5">등록</button>

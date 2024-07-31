@@ -120,6 +120,22 @@ class MemberServices extends AppServices
     public function modifyService(Request $request)
     {
         $this->data['user'] = User::findOrFail($request->sid);
+
+        $this->data['search_display'] = 'N';
+        /*전문회원*/
+        if($this->data['user']->level=='S') {
+            $this->data['search_display'] = 'Y';
+        }
+        /*부정맥 중재시술인증의*/
+        $sid_arr = DB::select(DB::raw("select user_sid from surgery where del='N' AND certi='Y' "));
+        $tmp_arr = array();
+        foreach ($sid_arr as $key => $row) {
+            $tmp_arr[] = $row->user_sid;
+        }
+        if(in_array($this->data['user']->sid, $tmp_arr) !== false){
+            $this->data['search_display'] = 'Y';
+        }
+
         return $this->data;
     }
     public function dataAction(Request $request)
@@ -258,12 +274,47 @@ class MemberServices extends AppServices
 
     private function sosokCheckServices(Request $request)
     {
+//        $affi = Affiliation::where(['sid' => $request->affi_sid])->first();
+//
+//        return $this->returnJsonData('input', [
+//            $this->ajaxActionInput('#sosok_kr', $affi->office_k ),
+//            $this->ajaxActionInput('#sosok_en', $affi->office_e ),
+//        ]);
+
         $affi = Affiliation::where(['sid' => $request->affi_sid])->first();
 
-        return $this->returnJsonData('input', [
-            $this->ajaxActionInput('#sosok_kr', $affi->office_k ),
-            $this->ajaxActionInput('#sosok_en', $affi->office_e ),
-        ]);
+        if($affi->sid == '999'){
+            $this->setJsonData('prop', [
+                $this->ajaxActionProp('#sosok_kr', "readonly", FALSE ),
+                $this->ajaxActionProp('#sosok_en', "readonly", FALSE ),
+
+                $this->ajaxActionProp('#school_kr', "readonly", FALSE ),
+                $this->ajaxActionProp('#school_en', "readonly", FALSE ),
+            ]);
+            return $this->returnJsonData('input', [
+                $this->ajaxActionInput('#sosok_kr', '' ),
+                $this->ajaxActionInput('#sosok_en', '' ),
+
+                $this->ajaxActionInput('#school_kr', '' ),
+                $this->ajaxActionInput('#school_en', '' ),
+            ]);
+        }else{
+            $this->setJsonData('prop', [
+                $this->ajaxActionProp('#sosok_kr', "readonly", TRUE ),
+                $this->ajaxActionProp('#sosok_en', "readonly", TRUE ),
+
+                $this->ajaxActionProp('#school_kr', "readonly", TRUE ),
+                $this->ajaxActionProp('#school_en', "readonly", TRUE ),
+            ]);
+
+            return $this->returnJsonData('input', [
+                $this->ajaxActionInput('#sosok_kr', $affi->office_k ?? '' ),
+                $this->ajaxActionInput('#sosok_en', $affi->office_e ?? '' ),
+
+                $this->ajaxActionInput('#school_kr', $affi->school_k ?? '' ),
+                $this->ajaxActionInput('#school_en', $affi->school_e ?? '' ),
+            ]);
+        }
     }
 
 }

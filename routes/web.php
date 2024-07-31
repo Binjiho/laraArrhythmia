@@ -42,13 +42,6 @@ Route::prefix('/')->group(function () {
             Route::get('cied', 'cied')->name('guide.cied');
             Route::get('faint', 'faint')->name('guide.faint');
         });
-
-        //팩트시트
-        Route::controller(\App\Http\Controllers\Fact\FactController::class)->prefix('/fact')->group(function() {
-            Route::get('part1', 'part1')->name('fact.part1');
-            Route::get('part2', 'part2')->name('fact.part2');
-            Route::get('part3', 'part3')->name('fact.part3');
-        });
     });
 
 
@@ -90,8 +83,16 @@ Route::prefix('/')->group(function () {
             });
             Route::get('confirm', 'confirm')->name('conference.confirm');
 
-
             Route::post('data', 'data')->name('conference.data');
+        });
+    });
+
+    //학술행사 자료
+    Route::prefix('library')->group(function () {
+        Route::controller(\App\Http\Controllers\Library\LibraryController::class)->group(function () {
+            Route::get('index', 'index')->name('library.sessions');
+            Route::get('program', 'upsert')->name('library.program');
+            Route::post('data', 'data')->name('library.data');
         });
     });
 
@@ -120,7 +121,7 @@ Route::prefix('/')->group(function () {
             Route::get('/', 'info')->name('surgery');
             Route::get('guide', 'guide')->name('surgery.guide');
             Route::middleware('auth.check')->group(function() {
-                Route::get('register', 'register')->name('surgery.register');
+                Route::get('register', 'register')->middleware('permission.check')->name('surgery.register');
 //                Route::get('/career/register', 'career_register')->name('surgery.career.register');
 //                Route::get('/case/register', 'case_register')->name('surgery.case.register');
 
@@ -141,7 +142,7 @@ Route::prefix('/')->group(function () {
             Route::get('info', 'info')->name('overseas.info');
             Route::get('list', 'list')->name('overseas.list');
             Route::middleware('auth.check')->group(function() {
-                Route::get('register', 'register')->name('overseas.register');
+                Route::get('register', 'register')->middleware('permission.check')->name('overseas.register');
                 Route::get('preview', 'preview')->name('overseas.preview');
                 Route::get('complete', 'complete')->name('overseas.complete');
             });
@@ -161,7 +162,7 @@ Route::prefix('/')->group(function () {
             Route::get('info', 'info')->name('research.info');
             Route::get('result', 'result')->name('research.result');
             Route::middleware('auth.check')->group(function() {
-                Route::get('register', 'register')->name('research.register');
+                Route::get('register', 'register')->middleware('permission.check')->name('research.register');
                 Route::get('report', 'report')->name('research.report');
                 Route::get('preview', 'preview')->name('research.preview');
             });

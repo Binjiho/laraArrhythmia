@@ -22,6 +22,9 @@ class OverseasConference extends Model
         'created_at',
         'updated_at',
     ];
+    protected $casts = [
+        'registration_status' => 'array',
+    ];
 
     protected static function booted()
     {
@@ -62,6 +65,7 @@ class OverseasConference extends Model
         $this->content = $data->content ?? null;
         $this->place = $data->place ?? null;
         $this->limit_person = $data->limit_person ?? null;
+        $this->registration_status = $data->registration_status ?? null;
         $this->date_type = $data->date_type ?? 'D';
         $this->event_sdate = $data->event_sdate ?? null;
         $this->event_edate = $data->event_edate ?? null;

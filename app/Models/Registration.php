@@ -30,6 +30,7 @@ class Registration extends Model
         'updated_at',
         'deleted_at',
         'sender_date',
+        'send_complete_date',
     ];
 
     public function setByData($data)
@@ -71,6 +72,12 @@ class Registration extends Model
         $this->phone = $data->phone ?? null;
         $this->tel = $data->tel ?? null;
 
+        $this->birth = $data->birth ?? null;
+        $this->gender = $data->gender ?? null;
+        $this->job_title = $data->job_title ?? null;
+        $this->address = $data->address ?? null;
+        $this->training_score = $data->training_score ?? null;
+
         $this->gubun = $data->gubun ?? null;
         $this->method = $data->method ?? null;
         $this->sender = $data->sender ?? null;
@@ -81,6 +88,9 @@ class Registration extends Model
         }
         if( $data->pay_status ) {
             $this->pay_status = $data->pay_status ?? null;
+        }
+        if( $data->send_status ) {
+            $this->send_status = $data->send_status ?? null;
         }
         if( $data->tot_pay ) {
             $this->tot_pay = $data->tot_pay ?? null;

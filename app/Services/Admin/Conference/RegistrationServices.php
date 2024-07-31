@@ -131,6 +131,8 @@ class RegistrationServices extends AppServices
 
             case 'change-result':
                 return $this->changeResultServices($request);
+            case 'change-sendstatus':
+                return $this->changeSendStatusServices($request);
 
             default:
                 return NotFoundRedirect();
@@ -215,6 +217,27 @@ class RegistrationServices extends AppServices
             return $this->returnJsonData('alert', [
                 'case' => true,
                 'msg' => '참석상태가 변경 되었습니다.',
+                'location' => $this->ajaxActionLocation('reload'),
+            ]);
+        } catch (\Exception $e) {
+            return $this->dbRollback($e,true);
+        }
+    }
+    private function changeSendStatusServices(Request $request)
+    {
+        $this->transaction();
+
+        try {
+            $registration = Registration::findOrFail($request->sid);
+            $registration->send_status = $request->target;
+            $registration->send_complete_date = date('Y-m-d');
+            $registration->update();
+
+            $this->dbCommit('사전등록 - 입금상태 변경');
+
+            return $this->returnJsonData('alert', [
+                'case' => true,
+                'msg' => '입금상태가 변경 되었습니다.',
                 'location' => $this->ajaxActionLocation('reload'),
             ]);
         } catch (\Exception $e) {

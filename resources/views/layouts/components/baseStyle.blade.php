@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="{{ asset('plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}">
 <link rel="stylesheet" href="/assets/css/common.css">
 <link rel="stylesheet" href="/assets/css/popup.css">
+{{--<link rel="stylesheet" href="/assets/css/editor.css">--}}
+<link rel="stylesheet" href="{{ asset('assets/css/editor.css') }}">
 
 {{-- addCss --}}
 @yield('addStyle')

@@ -14,7 +14,7 @@
 <article class="main-contents inner-layer">
     <ul class="main-menu-list">
         <li>
-            <a href="http://k-hrs.m2comm.co.kr/general/know">
+            <a href="{{ route('general.know') }}">
                         <span class="icon">
                             <img src="/html/general/assets/image/main/ic_main_menu01.png" alt="">
                         </span>
@@ -22,7 +22,7 @@
             </a>
         </li>
         <li>
-            <a href="http://k-hrs.m2comm.co.kr/general/know/kind?category=1">
+            <a href="{{ route('general.know.kind',['category'=>'1']) }}">
                         <span class="icon">
                             <img src="/html/general/assets/image/main/ic_main_menu02.png" alt="">
                         </span>
@@ -30,7 +30,7 @@
             </a>
         </li>
         <li>
-            <a href="http://k-hrs.m2comm.co.kr/general/know/diagnosis">
+            <a href="{{ route('general.know.diagnosis') }}">
                         <span class="icon">
                             <img src="/html/general/assets/image/main/ic_main_menu03.png" alt="">
                         </span>
@@ -38,7 +38,7 @@
             </a>
         </li>
         <li>
-            <a href="http://k-hrs.m2comm.co.kr/general/know/therapy?category=1">
+            <a href="{{ route('general.know.therapy',['category'=>'1']) }}">
                         <span class="icon">
                             <img src="/html/general/assets/image/main/ic_main_menu04.png" alt="">
                         </span>
@@ -46,7 +46,7 @@
             </a>
         </li>
         <li>
-            <a href="http://k-hrs.m2comm.co.kr/general/search">
+            <a href="{{ route('general.search') }}">
                         <span class="icon">
                             <img src="/html/general/assets/image/main/ic_main_menu05.png" alt="">
                         </span>
@@ -59,16 +59,23 @@
     <div class="main-conbox">
         <div class="main-video-wrap">
             <div class="main-video-rolling js-video-rolling">
-                <div class="main-video-con">
-                    <a href="#n">
-                        <img src="/html/general/assets/image/main/img_video.png" alt="심장이 '철렁', 부정맥! 큰일나는 거 아닌가?">
-                    </a>
-                </div>
-                <div class="main-video-con">
-                    <a href="#n">
-                        <img src="/html/general/assets/image/main/img_video.png" alt="심장이 '철렁', 부정맥! 큰일나는 거 아닌가?">
-                    </a>
-                </div>
+                @foreach($video ?? [] as $row)
+                    <div class="main-video-con">
+                        <a href="{{ route('board.view', ['code' => 'videoGeneral', 'category' => $row->category, 'sid' => $row->sid]) }}">
+                            <img src="{{ $row->thumb_realfile }}" alt="">
+                        </a>
+                    </div>
+                @endforeach
+{{--                <div class="main-video-con">--}}
+{{--                    <a href="#n">--}}
+{{--                        <img src="/html/general/assets/image/main/img_video.png" alt="심장이 '철렁', 부정맥! 큰일나는 거 아닌가?">--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--                <div class="main-video-con">--}}
+{{--                    <a href="#n">--}}
+{{--                        <img src="/html/general/assets/image/main/img_video.png" alt="심장이 '철렁', 부정맥! 큰일나는 거 아닌가?">--}}
+{{--                    </a>--}}
+{{--                </div>--}}
             </div>
             <div class="btn-video-wrap text-right">
                 <button type="button" class="btn-video btn-video-prev">&lt;<span class="hide">이전</span></button>

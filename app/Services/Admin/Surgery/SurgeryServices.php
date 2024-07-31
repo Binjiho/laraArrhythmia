@@ -117,6 +117,9 @@ class SurgeryServices extends AppServices
     public function dataAction(Request $request)
     {
         switch ($request->case) {
+            case 'collective-create':
+                return $this->collectiveCreate($request);
+
             case 'change-result':
                 return $this->changeResultServices($request);
 
@@ -125,6 +128,8 @@ class SurgeryServices extends AppServices
 
             case 'surgery-update':
                 return $this->surgeryUpdateServices($request);
+            case 'surgery-delete':
+                return $this->surgeryDeleteServices($request);
 
             case 'career-create':
                 return $this->careerCreateServices($request);
@@ -151,6 +156,59 @@ class SurgeryServices extends AppServices
 
             default:
                 return notFoundRedirect();
+        }
+    }
+
+    private function collectiveCreate(Request $request)
+    {
+        $this->transaction();
+
+        try {
+            $data = json_decode($request->data ?? [], true);
+
+            foreach ($data as $idx => $item) {
+                $user = User::where(['uid'=>trim($item['uid'])])->orderBy('sid','desc')->first();
+                if(empty($user)) {
+                    return $this->returnJsonData('alert', [
+                        'case' => true,
+                        'msg' => '회원정보를 찾을 수 없습니다.'.trim($item['uid']),
+                        'location' => $this->ajaxActionLocation('reload' ),
+                    ]);
+                }
+
+
+                $surgery = Surgery::where(['user_sid'=>$user->sid])->orderBy('sid','desc')->first();
+                if(!empty($surgery)){
+                    $surgery->regnum = $item['regnum'];
+                    $surgery->mregnum = $item['mregnum'];
+                    $surgery->certi = 'Y';
+                    $surgery->update();
+                }else{
+//                    $item->merge([ 'user_sid' => $user->sid ]);
+//                    $item = array_merge([ 'user_sid' => $user->sid ], $item);
+//                    $surgery->setByData($item);
+
+                    $surgery = new Surgery();
+                    $surgery->user_sid = $user->sid;
+                    $surgery->year = 2024;
+                    $surgery->uid = $user->uid;
+                    $surgery->regnum = $item['regnum'];
+                    $surgery->mregnum = $item['mregnum'];
+                    $surgery->renewal = strpos($item['mregnum'],'R') !== false ? 'Y':'N';
+                    $surgery->save();
+                }
+
+            }
+
+            $this->dbCommit('커스텀 중재시술인증 데이터 등록');
+
+            return $this->returnJsonData('alert', [
+                'case' => true,
+                'msg' => '등록 되었습니다.',
+                'winClose' => $this->ajaxActionWinClose(true),
+            ]);
+        } catch (\Exception $e) {
+            return $this->dbRollback($e,true);
         }
     }
 
@@ -239,6 +297,29 @@ class SurgeryServices extends AppServices
 
         } catch (\Exception $e) {
             return $this->dbRollback($e, true);
+        }
+    }
+
+    private function surgeryDeleteServices(Request $request)
+    {
+        $this->transaction();
+
+        try {
+            $surgery = Surgery::findOrFail($request->sid);
+            $surgery->del = 'Y';
+            $surgery->deleted_at = date('Y-m-d H:i:s');
+            $surgery->update();
+
+            $this->dbCommit('중재시술인증 삭제');
+
+            return $this->returnJsonData('alert', [
+                'case' => true,
+                'msg' => '중재시술인증 삭제가 완료 되었습니다.',
+                'location' => $this->ajaxActionLocation('reload' ),
+            ]);
+
+        } catch (\Exception $e) {
+            return $this->dbRollback($e);
         }
     }
 

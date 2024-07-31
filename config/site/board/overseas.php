@@ -44,7 +44,7 @@ return [
         'popup' => false, // 팝업
         'place' => true, // 장소
         'reply' => false, // 답글
-        'notice' => false, // 공지
+        'notice' => true, // 공지
         'secret' => false, // 비밀글
         'comment' => false, // 댓글
         'category' => false, // 카테고리

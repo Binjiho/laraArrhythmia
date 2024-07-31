@@ -89,21 +89,22 @@
         <table class="tblDef listTbl">
             <colgroup>
                 <col style="width: *;">
-                <col style="width: 7%;">
-                <col style="width: 7%;">
-                <col style="width: 7%;">
-                <col style="width: 7%;">
+                <col style="width: 6%;">
+                <col style="width: 6%;">
+                <col style="width: 8%;">
+                <col style="width: 5%;">
                 <col style="width: 7%;">
 
                 <col style="width: 7%;">
                 <col style="width: 7%;">
-                <col style="width: 10%;">
+                <col style="width: 8%;">
                 <col style="width: 7%;">
                 <col style="width: 7%;">
-                <col style="width: 7%;">
+                <col style="width: 8%;">
 
+                <col style="width: 8%;">
                 <col style="width: 6%;">
-                <col style="width: 6%;">
+				<col style="width: 7%;">
             </colgroup>
             <thead>
             <tr>
@@ -111,16 +112,16 @@
                 <th>이름</th>
                 <th>아이디</th>
                 <th>회원구분</th>
-                <th>전문의번호</th>
+                <th>전문의<br>번호</th>
                 <th>소속</th>
 
                 <th>의대</th>
-                <th>근무처구분</th>
+                <th>근무처<br>구분</th>
                 <th>가입일</th>
                 <th>회비납부여부</th>
-                <th>핸드폰번호</th>
+                <th>핸드폰<br>번호</th>
                 <th>수정일</th>
-                <th>최종방문일</th>
+                <th>최종<br>방문일</th>
 
                 <th>로그인</th>
                 <th>관리</th>

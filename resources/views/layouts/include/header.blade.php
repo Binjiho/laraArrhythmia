@@ -28,6 +28,7 @@
             @if(thisAuth()->check() && getLevel() === 'M')
                 <li class="admin">
                     <a href="{{ env('APP_URL') }}/admin">ADMIN</a>
+{{--                    <a href="https://www.k-hrs.org/admin">ADMIN</a>--}}
                 </li>
             @endif
 

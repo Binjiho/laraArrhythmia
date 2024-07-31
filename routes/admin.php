@@ -86,6 +86,7 @@ Route::controller(\App\Http\Controllers\Admin\Overseas\OverseasController::class
         Route::get('/modify/{sid}', 'detail_modify')->name('overseas.detail.modify');
         Route::get('/preview/{sid}', 'detail_preview')->name('overseas.detail.preview');
         Route::get('/result_preview/{sid}', 'detail_result_preview')->name('overseas.detail.result.preview');
+        Route::get('memo', 'memo')->name('overseas.detail.memo');
 
         //지원협회 심사
         Route::get('assist', 'assist')->name('overseas.detail.assist');
@@ -142,6 +143,8 @@ Route::controller(\App\Http\Controllers\Admin\Surgery\SurgeryController::class)-
 
     Route::get('/register/reviewer', 'register_reviewer')->name('surgery.reviewer.register');
     Route::get('result', 'result')->name('surgery.result.preview');
+
+    Route::get('/collective', 'collective')->name('surgery.collective');
 
      Route::get('/excel', 'excel')->name('surgery.excel');
     Route::post('data', 'data')->name('surgery.data');

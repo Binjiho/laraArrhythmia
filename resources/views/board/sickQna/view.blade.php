@@ -4,7 +4,7 @@
 @endsection
 
 @section('contents')
-    <article class="sub-contents" style="min-height: 656px;">
+    <article class="sub-contents">
         <div class="sub-conbox inner-layer">
 
             @include('general.layouts.include.subTit')

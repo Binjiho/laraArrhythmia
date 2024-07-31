@@ -21,7 +21,7 @@
                         </div>
                     </div>
 
-                    <div class="view-contents">{!! $reply->content !!}</div>
+                    <div class="view-contents editor-contents">{!! $reply->content !!}</div>
 
                     @if($boardConfig['use']['plupload'] && $reply->files_count > 0)
                         <div class="view-attach">

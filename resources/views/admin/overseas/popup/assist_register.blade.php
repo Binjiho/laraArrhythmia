@@ -13,6 +13,7 @@
                         <div class="write-form-wrap">
                             <form id="board-frm" data-sid="{{ $overseas->sid ?? 0 }}" data-case="change-assist" onsubmit="return false;">
                                 <input type="hidden" name="user_sid" id="user_sid" value="{{ empty($overseas->sid) ? '' : ($overseas->user->sid ?? '') }}">
+                                <input type="hidden" name="csid" id="csid" value="{{ $overseas->conference->sid }}">
                                 <fieldset>
                                     <legend class="hide">심사자 등록</legend>
                                     <div class="write-wrap">
@@ -30,7 +31,7 @@
                                             </dd>
                                         </dl>
 
-                                        <dl>
+                                        <dl id="assistant_dl" @if(!in_array($overseas->result, ['S','C'])) style="display:none;" @endif  >
                                             <dt>지원협회</dt>
                                             <dd>
                                                 <div class="radio-wrap cst">
@@ -80,6 +81,19 @@
                 self.close();
             }
         });
+        
+        // 2024-07-10 추가 이광식
+        $(":radio[name='result']").on("click", function() {
+            let result = $(this).val();
+
+            if(result == 'S' || result == 'C') { //선정, 정산완료
+                $("#assistant_dl").show();
+            } else {
+                $("#assistant_dl").hide();
+                $(":radio[name='assistant']").attr("checked", false);
+            }
+
+        });
 
         defaultVaildation();
 
@@ -90,7 +104,11 @@
                     isEmpty: true,
                 },
                 assistant: {
-                    isEmpty: true,
+                    isEmpty: {
+                        depends: function(element) {
+                            return $("input[name='assistant']").is(":visible");
+                        }
+                    },
                 },
 
             },
@@ -110,9 +128,7 @@
 
         const formSubmit = () => {
             let ajaxData = newFormData(boardForm);
-            // ajaxData.case = 'change-result';
-
-            callMultiAjax("{{ route('overseas.data') }}", ajaxData);
+            callMultiAjax("{{ route('overseas.data') }}", ajaxData, true);
         }
     </script>
 @endsection

@@ -60,6 +60,11 @@ class SurgeryController extends Controller
 //        return view('surgery.popup.case', $this->surgeryServices->caseRegisterService($request));
 //    }
 
+    public function collective(Request $request)
+    {
+        return view('admin.surgery.popup.collective-upload');
+    }
+
     public function excel(Request $request)
     {
         $request->merge(['excel' => true]);

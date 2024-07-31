@@ -6,6 +6,7 @@ use App\Models\Conference;
 use App\Models\Registration;
 use App\Models\Abstracts;
 use App\Models\Group;
+use App\Models\GroupMember;
 use App\Models\User;
 use App\Models\Affiliation;
 use App\Services\AppServices;
@@ -24,7 +25,9 @@ class ConferenceServices extends AppServices
         $year = $request->year ?? null;
         $category = $request->category ?? null;
 
-        $query = Conference::orderByDesc('sid');
+//        $query = Conference::orderByDesc('sid');
+        $query = Conference::where('event_edate', '>=', date('Y-m-d'));
+
 
         if (!empty($year) ) {
             $query->where('year', '=', $year);
@@ -32,11 +35,13 @@ class ConferenceServices extends AppServices
         if (!empty($category) ) {
             $query->where('category', '=', $category);
         }
-        $query->where('event_edate', '>=', date('Y-m-d'));
 
         if(!isAdmin()){
             $query->where('del', '=', 'N');
+            $query->where('hide', '=', 'N');
         }
+
+        $query->orderByRaw("DATEDIFF(event_sdate, NOW()) ASC"); //진행중 행사는 가까운 날짜의 행사가 위, 먼 날짜의 행사가 아래로 노출될 수 있도록 수정 부탁드리겠습니다.
 
         $cnt = clone $query;
         $list = $query->paginate(5);
@@ -44,14 +49,20 @@ class ConferenceServices extends AppServices
         $this->data['total'] = $cnt->count();
         $this->data['list'] = setListSeq($list);
 
-        $query = Conference::orderByDesc('sid');
+        $query = Conference::where('event_edate', '<', date('Y-m-d'));
         if (!empty($year) ) {
             $query->where('year', '=', $year);
         }
         if (!empty($category) ) {
             $query->where('category', '=', $category);
         }
-        $query->where('event_edate', '<', date('Y-m-d'));
+
+        if(!isAdmin()){
+            $query->where('del', '=', 'N');
+            $query->where('hide', '=', 'N');
+        }
+
+        $query->orderByRaw("DATEDIFF(event_sdate, NOW()) DESC"); //지난 행사는 최근 진행한 행사가 위쪽, 과거에 진행한 행사가 아래쪽으로 노출되도록 수정 부탁드리겠습니다.
         $list_fin = $query->paginate(5)->appends([
             'year' => $year,
             'category' => $category,
@@ -100,21 +111,127 @@ class ConferenceServices extends AppServices
     }
 
     /**
+     * 사전등록 기간
      * 사전등록 신청 여부
+     * 선착순 등록여부
+     * 신청권한 여부
      */
     public function registrationCheckService(Request $request)
     {
         $result = array();
-        $check_regist = Registration::where(['del'=>'N', 'csid'=>$request->csid, 'user_sid'=>thisPk()])->first();
-        if($check_regist){
+        //사전등록 기간
+        $conference = Conference::findOrFail($request->csid);
+        if(date('Y-m-d') < $conference->regist_sdate->format('Y-m-d') || date('Y-m-d') > $conference->regist_edate->format('Y-m-d') ){
             $result = [
-                'msg' => '이미 사전등록을 하셨습니다.',
+                'msg' => '사전등록신청 기간이 아닙니다.',
                 'url' => route('conference.detail',['sid'=>$request->csid]),
                 'redirect' => 'replace',
             ];
         }
+
+        //사전등록 신청 여부
+        if(!empty(thisUser())){
+            $check_regist = Registration::where(['del'=>'N', 'csid'=>$request->csid, 'user_sid'=>thisPk()])->first();
+            if($check_regist){
+                $result = [
+                    'msg' => '이미 사전등록을 하셨습니다.',
+                    'url' => route('conference.detail',['sid'=>$request->csid]),
+                    'redirect' => 'replace',
+                ];
+            }
+        }
+        //선착순 등록여부
+        if($conference->limit_yn == 'Y'){
+            $regist_person = Registration::where(['del'=>'N', 'csid'=>$request->csid])->count();
+            if($conference->limit_person <= $regist_person){
+                $result = [
+                    'msg' => '선착순 등록이 마감되었습니다.',
+                    'url' => route('conference.detail',['sid'=>$request->csid]),
+                    'redirect' => 'replace',
+                ];
+            }
+        }
+        //신청권한 여부
+        if($conference->res_authority){
+            $state = 'S';
+            switch ($conference->res_authority) {
+                case 2/*일반회원 이상*/:
+                    if(!thisUser()){
+                        $target_msg = "로그인이 필요합니다.";
+                        $state = 'E';
+                    }
+                    break;
+                case 3/*전문회원*/:
+                    if(thisUser()->level!='S'){
+                        $target_msg = "전문회원만 가능합니다.";
+                        $state = 'E';
+                    }
+                    break;
+                case 4/*연구회 회원 전용*/:
+                    $groupMember = GroupMember::where(['g_sid'=>$conference->res_authority_etc, 'name_kr'=>thisUser()->name_kr])->first(); //user_sid로 비교해야되는데 기존DB에서 user_sid없는 사람있음
+                    $group = Group::where(['sid'=>$conference->res_authority_etc])->first();
+                    if(!$groupMember){
+                        $target_msg = $group->subject." 연구회 회원만 가능합니다.";
+                        $state = 'E';
+                    }
+                    break;
+                default:
+                    break;
+            }
+            if($state == 'E'){
+                $result = [
+                    'msg' => $target_msg,
+                    'url' => route('conference.detail',['sid'=>$request->csid]),
+                    'redirect' => 'replace',
+                ];
+            }
+        }
         return $result;
     }
+
+    public function abstractCheckService(Request $request)
+    {
+        $result = array();
+        //초록등록 기간
+        $conference = Conference::findOrFail($request->csid);
+        if(date('Y-m-d') < $conference->abs_sdate->format('Y-m-d') || date('Y-m-d') > $conference->abs_edate->format('Y-m-d') ){
+            $result = [
+                'msg' => '초록등록신청 기간이 아닙니다.',
+                'url' => route('conference.detail',['sid'=>$request->csid]),
+                'redirect' => 'replace',
+            ];
+        }
+
+        //신청권한 여부
+        if($conference->abs_authority){
+            $state = 'S';
+            switch ($conference->abs_authority) {
+                case 2/*준회원 이상 사이트에 준회원이라는 값이 없음...*/:
+                    if(!thisUser()){
+                        $target_msg = "로그인이 필요합니다.";
+                        $state = 'E';
+                    }
+                    break;
+                case 3/*정회원*/:
+                    if(!thisUser()){
+                        $target_msg = "로그인이 필요합니다.";
+                        $state = 'E';
+                    }
+                    break;
+                default:
+                    break;
+            }
+            if($state == 'E'){
+                $result = [
+                    'msg' => $target_msg,
+                    'url' => route('conference.detail',['sid'=>$request->csid]),
+                    'redirect' => 'replace',
+                ];
+            }
+        }
+        return $result;
+    }
+
     public function registrationUpsertService(Request $request)
     {
         $isLogin = false;
@@ -330,11 +447,12 @@ class ConferenceServices extends AppServices
             $pay_status = 'N';
             if($request->tot_pay=='0'){
                 $pay_status = 'F';
+                $send_status = 'Y';
             }
             if($request->method=='C'/*카드*/){
 //                $pay_status = 'N';
             }
-            $request->merge([ 'pay_status' => $pay_status ]);
+            $request->merge([ 'pay_status' => $pay_status, 'send_status' => $send_status ]);
 
             //사전 등록코드
             $reg_arr = Registration::where([ 'del'=>'N', 'year'=>date('Y') ])->get();
@@ -399,11 +517,12 @@ class ConferenceServices extends AppServices
             $pay_status = 'N';
             if($request->tot_pay=='0'){
                 $pay_status = 'F';
+                $send_status = 'Y';
             }
             if($request->method=='C'/*카드*/){
 //                $pay_status = 'N';
             }
-            $request->merge([ 'pay_status' => $pay_status ]);
+            $request->merge([ 'pay_status' => $pay_status, 'send_status' => $send_status ]);
 
             $registration->setBydata($request);
             $registration->update();

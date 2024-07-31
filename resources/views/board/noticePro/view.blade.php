@@ -4,13 +4,16 @@
 @endsection
 
 @section('contents')
-    <article class="sub-contents" style="min-height: 656px;">
+    <article class="sub-contents">
         <div class="sub-conbox inner-layer">
 
             <div class="sub-tit-wrap">
                 <h3 class="sub-tit">공지사항</h3>
             </div>
             
+            <!-- editor css -->
+            <link href="/assets/css/editor.css" rel="stylesheet">
+
             <div id="board" class="board-wrap">
                 <div class="board-view">
                     <div class="board-contop">
@@ -25,7 +28,7 @@
                         </div>
                     </div>
 
-                    <div class="view-contents">{!! $board->content !!}</div>
+                    <div class="view-contents editor-contents">{!! $board->content !!}</div>
 
                     @if($boardConfig['use']['plupload'] && $board->files_count > 0)
                         <div class="view-attach">
@@ -40,6 +43,21 @@
                                     @endforeach
                                 </div>
                             </div>
+                        </div>
+                    @endif
+                </div>
+
+                <div class="view-move type2">
+                    @if( !empty($board->getPrev($board->sid)) )
+                        <div class="view-move-con view-prev">
+                            <strong class="tit">이전글</strong>
+                            <div class="con"><a href="{{ route('board.view', ['code' => $board->getPrev($board->sid)->bbs_code, 'category'=>$board->getPrev($board->sid)->category, 'sid' => $board->getPrev($board->sid)->sid]) }}" class="ellipsis">{{ $board->getPrev($board->sid)->subject ?? '' }}</a><span class="date">{{ $board->getPrev($board->sid)->created_at->format('Y-m-d') }}</span></div>
+                        </div>
+                    @endif
+                    @if( !empty($board->getNext($board->sid)) )
+                        <div class="view-move-con view-next">
+                            <strong class="tit">다음글</strong>
+                            <div class="con"><a href="{{ route('board.view', ['code' => $board->getNext($board->sid)->bbs_code, 'category'=>$board->getNext($board->sid)->category, 'sid' => $board->getNext($board->sid)->sid]) }}" class="ellipsis">{{ $board->getNext($board->sid)->subject ?? '' }}</a><span class="date">{{ $board->getNext($board->sid)->created_at->format('Y-m-d') }}</span></div>
                         </div>
                     @endif
                 </div>

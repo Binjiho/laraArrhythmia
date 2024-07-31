@@ -10,7 +10,7 @@
                 </div>
 
         <!-- content -->
-                <div class="view-contents">
+                <div class="view-contents editor-contents">
 
                 {!! $row->content ?? $row->popup_contents !!}
 

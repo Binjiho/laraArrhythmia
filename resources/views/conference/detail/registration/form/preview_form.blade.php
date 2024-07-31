@@ -72,6 +72,46 @@
                     {{ $registration->phone[0] ?? '' }}-{{ $registration->phone[1] ?? '' }}-{{ $registration->phone[2] ?? '' }}
                 </dd>
             </dl>
+            @if( in_array('1', $conference->add_item ?? []) )
+                <dl>
+                    <dt> 생년월일</dt>
+                    <dd>
+                        {{ $registration->birth ?? '' }}
+                    </dd>
+                </dl>
+            @endif
+            @if( in_array('2', $conference->add_item ?? []) )
+                <dl>
+                    <dt> 성별</dt>
+                    <dd>
+                        {{ $conferenceConfig['gender'][$registration->gender ?? ''] }}
+                    </dd>
+                </dl>
+            @endif
+            @if( in_array('3', $conference->add_item ?? []) )
+                <dl>
+                    <dt> 직위</dt>
+                    <dd>
+                        {{ $registration->job_title ?? '' }}
+                    </dd>
+                </dl>
+            @endif
+            @if( in_array('4', $conference->add_item ?? []) )
+                <dl>
+                    <dt> 주소</dt>
+                    <dd>
+                        {{ $registration->address ?? '' }}
+                    </dd>
+                </dl>
+            @endif
+            @if( in_array('5', $conference->add_item ?? []) )
+                <dl>
+                    <dt> 연수 평점</dt>
+                    <dd>
+                        {{ $registration->training_score ?? '' }}
+                    </dd>
+                </dl>
+            @endif
         </div>
 
         <div class="sub-contit-wrap">
@@ -121,7 +161,9 @@
         <div class="btn-wrap text-center">
             <a href="#n" class="btn btn-type1 color-type20" onclick="alert('준비중입니다.')">영수증 출력</a>
             <a href="#n" class="btn btn-type1 color-type22" onclick="alert('준비중입니다.')">확인증 출력</a>
+            @if(isAdmin() || date('Y-m-d') < $registration->conference->regist_edate)
             <a href="{{ route('conference.registration.upsert',['sid'=>$registration->sid, 'csid'=>$conference->sid]) }}" class="btn btn-type1 color-type23">수정</a>
+            @endif
         </div>
     </fieldset>
 </form>

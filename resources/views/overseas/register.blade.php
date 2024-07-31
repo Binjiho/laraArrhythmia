@@ -8,7 +8,7 @@
     <article class="sub-contents">
         <div class="sub-conbox inner-layer">
             <div class="sub-tit-wrap">
-                <h3 class="sub-tit">해외학회신청</h3>
+                <h3 class="sub-tit">해외학회 참가지원 신청</h3>
             </div>
             <div class="sub-contit-wrap">
                 <h4 class="sub-contit">기본정보</h4>
@@ -64,6 +64,9 @@
                 submission_date: {
                     isEmpty: true,
                 },
+                "qualification[]": {
+                    checkEmpty: true,
+                },
                 first: {
                     isEmpty: true,
                 },
@@ -73,9 +76,9 @@
                 third: {
                     isEmpty: true,
                 },
-                // 'registration_status[]': {
-                //     checkEmpty: true,
-                // },
+                'registration_status[]': {
+                    checkEmpty: true,
+                },
                 participant: {
                     isEmpty: true,
                 },
@@ -124,6 +127,9 @@
                 submission_date: {
                     isEmpty: '투고일자를 입력해주세요.',
                 },
+                "qualification[]": {
+                    checkEmpty: '신청자격을 체크해주세요.',
+                },
                 first: {
                     isEmpty: '1순위를 선택해주세요.',
                 },
@@ -132,6 +138,9 @@
                 },
                 third: {
                     isEmpty: '3순위를 선택해주세요.',
+                },
+                'registration_status[]': {
+                    checkEmpty: '최근 3년간 대한부정맥학회 정기학술대회(KHRS) 등록여부를 체크해주세요.',
                 },
                 participant: {
                     isEmpty: '참가자격을 선택해주세요.',

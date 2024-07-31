@@ -423,7 +423,7 @@
         <dd>
             <ul>
                 <li>상태표기 : '△'(작업중 대기) , '○'(부분완료) , '●'(완료) 중 알맞은 것으로 표기. ('●'(완료) 표기부터 개발작업 가능)</li>
-                <li>날짜의 형식은 yyyy-mm-dd 으로 하며, html파일 수정내역이 있을 경우, 최초작성일('●'(완료)일 기준)은 남겨두고 옆에 마지막 수정일자를 표기. (ex.
+                <li>날짜의 형식은 yyyy-mm-dd 으로 하며, html파일 수정내역이 있을 경우, 최초작성일('●'(완료)일 기준)은 남겨두고 옆에 마지막 수정일료실를 표기. (ex.
                     <del>2014-04-26</del> 2014-05-16)</li>
             </ul>
         </dd>
@@ -501,8 +501,8 @@
                             <td class="path">/bbs/</td>
                             <td class="file"><a target="_blank" href="#">view</a></td>
                             <td class="stat">●</td>
-                            <td class="date">24.03.08</td>
-                            <td class="note"></td>
+                            <td class="date"><del>24.03.08</del><br>24.07.18</td>
+                            <td class="note">이전글/다음글 추가</td>
                         </tr>
                         <tr>
                             <td>Write</td>
@@ -565,6 +565,60 @@
                             <td class="file"><a target="_blank" href="#">mail_pw</a></td>
                             <td class="stat">●</td>
                             <td class="date">24.03.07</td>
+                            <td class="note"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="title">자료실</h2>
+            <div class="content">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th scope="col">2depth</th>
+                            <th scope="col">3depth</th>
+                            <th scope="col">4depth or tab</th>
+                            <th scope="col">tab one page</th>
+                            <th scope="col">path</th>
+                            <th scope="col">file</th>
+                            <th scope="col" title="△ 대기 / ○ 부분완료 / ● 완료">state</th>
+                            <th scope="col">date</th>
+                            <th scope="col">note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tit" rowspan="3">팩트시트</td>
+                            <td>List</td>
+                            <td></td>
+                            <td></td>
+                            <td class="path">/bbs/</td>
+                            <td class="file"><a target="_blank" href="#">fact_list</a></td>
+                            <td class="stat">●</td>
+                            <td class="date">24.07.01</td>
+                            <td class="note"></td>
+                        </tr>
+                        <tr>
+                            <td>View</td>
+                            <td></td>
+                            <td></td>
+                            <td class="path">/bbs/</td>
+                            <td class="file"><a target="_blank" href="#">fact_view</a></td>
+                            <td class="stat">●</td>
+                            <td class="date">24.07.01</td>
+                            <td class="note"></td>
+                        </tr>                        
+                        <tr>
+                            <td>Write</td>
+                            <td></td>
+                            <td></td>
+                            <td class="path">/bbs/</td>
+                            <td class="file"><a target="_blank" href="#">fact_write</a></td>
+                            <td class="stat">●</td>
+                            <td class="date">24.07.01</td>
                             <td class="note"></td>
                         </tr>
                     </tbody>
@@ -1086,7 +1140,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="tit" rowspan="2">학술행사 자료</td>
+                            <td class="tit" rowspan="4">학술행사 자료</td>
                             <td>List</td>
                             <td></td>
                             <td></td>
@@ -1103,7 +1157,28 @@
                             <td class="path">/bbs/</td>
                             <td class="file"><a target="_blank" href="#">library_write</a></td>
                             <td class="stat">●</td>
-                            <td class="date">24.03.13</td>
+                            <td class="date"><del>24.03.13</del> <br><em>24.07.02</em></td>
+                            <td class="note">
+                                <em>내용 추가 작업</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">학술대회 원고보기</td>
+                            <td></td>
+                            <td></td>
+                            <td class="path">/bbs/</td>
+                            <td class="file"><a target="_blank" href="#">library_view</a></td>
+                            <td class="stat">●</td>
+                            <td class="date"><em>24.07.03</em></td>
+                            <td class="note"></td>
+                        </tr>
+                        <tr>
+                            <td>세부 프로그램 등록</td>
+                            <td></td>
+                            <td class="path">/bbs/</td>
+                            <td class="file"><a target="_blank" href="#">library_detail_write</a></td>
+                            <td class="stat">●</td>
+                            <td class="date"><em>24.07.02</em></td>
                             <td class="note"></td>
                         </tr>
                         <tr>
@@ -1792,8 +1867,10 @@
                             <td class="path">/mypage/</td>
                             <td class="file"><a target="_blank" href="#">intro</a></td>
                             <td class="stat">●</td>
-                            <td class="date">24.03.06</td>
-                            <td class="note"></td>
+                            <td class="date"><del>24.03.06</del><br><em>24.07.03</em></td>
+                            <td class="note">
+                                <em>해외학회 참가지원 메뉴 추가</em>
+                            </td>
                         </tr>
                         <tr>
                             <td class="tit" rowspan="2">회원정보 수정</td>

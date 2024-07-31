@@ -45,8 +45,55 @@
                     @endif
                 </li>
 
-                @foreach($list ?? [] as $row)
+                @foreach($notice ?? [] as $key => $row)
                     <li class="active" data-sid="{{ $row->sid }}">
+                        <div class="bbs-no">
+                            @if($row->notice == 'Y')
+                                <img src="/assets/image/board/ic_notice1.png" alt="공지" class="ic-notice">
+                            @else
+                                {{ $row->seq }}
+                            @endif
+                        </div>
+                        <div class="bbs-tit">
+                            <a href="{{ route('board.view', ['code' => $code, 'sid' => $row->sid]) }}" class="ellipsis">
+                                {{ $row->subject }}
+                            </a>
+                            @if($row->isNew())
+                                <span class="new">new</span>
+                            @endif
+                        </div>
+                        <div class="bbs-file">
+                            @if(($row->files_count ?? 0) > 0)
+                                <a href="{{ $row->plDownloadUrl() }}">
+                                    <img src="/assets/image/board/ic_attach_file.png" alt="">
+                                </a>
+                            @endif
+                        </div>
+                        <div class="bbs-date">{{ $row->created_at->format('Y-m-d') }}</div>
+                        <div class="bbs-hit">{{ number_format($row->ref) }}</div>
+
+                        @if(isAdmin())
+                            <div class="bbs-show">
+                                <select name="hide" class="form-item">
+                                    @foreach($boardConfig['options']['hide'] as $key => $val)
+                                        <option value="{{ $key }}" {{ $row->hide == $key ? 'selected' : '' }}>{{ $val }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="bbs-admin">
+                                <div class="btn-admin">
+                                    <a href="{{ route('board.upsert', ['code' => $code, 'sid' => $row->sid]) }}" class="btn btn-board btn-modify">수정</a>
+                                    <a href="javascript:void(0);" class="btn btn-board btn-delete">삭제</a>
+                                </div>
+                            </div>
+                        @endif
+                    </li>
+                @endforeach
+                
+
+                @foreach($list ?? [] as $row)
+                    <li -class="active" data-sid="{{ $row->sid }}">
                         <div class="bbs-no">
                             @if($row->notice == 'Y')
                                 <img src="/assets/image/board/ic_notice.png" alt="공지" class="ic-notice">

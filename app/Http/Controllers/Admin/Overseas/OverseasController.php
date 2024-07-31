@@ -7,6 +7,7 @@ use App\Models\Country;
 use App\Http\Controllers\Controller;
 use App\Services\Admin\Overseas\OverseasServices;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class OverseasController extends Controller
 {
@@ -59,6 +60,14 @@ class OverseasController extends Controller
             'sub_menu' => 'SM1'
         ]);
         return view('admin.overseas.popup.assist_register', $this->overseasServices->assistService($request));
+    }
+
+    public function memo(Request $request)
+    {
+        view()->share([
+            'sub_menu' => 'SM1'
+        ]);
+        return view('admin.overseas.popup.memo', $this->overseasServices->memoService($request));
     }
 
     public function assist_group(Request $request)
@@ -133,6 +142,17 @@ class OverseasController extends Controller
 
     public function data(Request $request)
     {
+//        if($request->case == 'change-assist') {
+//            if ($request->result == 'S'/*선정*/){
+//                //제한인원 여부
+//                $checkLimit = $this->overseasServices->limitCheckService($request);
+//
+//                if (!empty($checkLimit)) {
+//                    setFlashData($checkLimit);
+//                    return callRedirect();
+//                }
+//            }
+//        }
         return $this->overseasServices->dataAction($request);
     }
 }

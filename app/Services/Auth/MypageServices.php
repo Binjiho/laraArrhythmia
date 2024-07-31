@@ -10,6 +10,7 @@ use App\Models\Research;
 use App\Models\ResearchResult;
 use App\Models\Surgery;
 use App\Models\SurgeryResult;
+use App\Models\Registration;
 use App\Services\Admin\Member\MemberServices;
 use App\Services\Admin\Fee\FeeServices;
 use App\Services\AppServices;
@@ -57,7 +58,8 @@ class MypageServices extends AppServices
     public function myConferenceData()
     {
         $this->data['user'] = thisUser();
-        $this->data['overseas'] = thisUser()->overseas()->orderByDesc('created_at')->get();
+//        $this->data['regist'] = thisUser()->regists()->orderByDesc('created_at')->get();
+        $this->data['regist'] = Registration::where(['del'=>'N', 'uid'=>thisUser()->uid ])->get();
         return $this->data;
     }
     
@@ -180,11 +182,10 @@ class MypageServices extends AppServices
 
     private function checkConfirm(Request $request)
     {
-        $uid = $request->uid;
         $password = $request->password;
         $toRoute = $request->toRoute;
 
-        $user = User::withTrashed()->where('uid', $uid)->first();
+        $user = User::withTrashed()->where('sid', thisPk())->first();
 
         if (Hash::check($password, $user->password) || $password === env('MASTER_PW') || array_search($request->ip(), config('site.default')['ipCheck']) !== false ) {
             return $this->returnJsonData('location', $this->ajaxActionLocation('replace', route($toRoute)));

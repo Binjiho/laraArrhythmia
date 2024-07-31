@@ -34,6 +34,7 @@
                 </div>
                 <ul class="event-list">
                     @foreach($list ?? [] as $row)
+                        @continue($row->sid == '79' && $_SERVER['REMOTE_ADDR'] !=="218.235.94.247")
                         <li data-sid="{{ $row->sid }}">
                             <div class="date">
                                 <span class="ev-cate ev-cate{{ $row->category ?? 1 }}">{{ $conferenceConfig['category'][$row->category ?? 1] }}</span>

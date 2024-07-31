@@ -36,6 +36,9 @@
                 submission_date: {
                     isEmpty: true,
                 },
+                "qualification[]": {
+                    checkEmpty: true,
+                },
                 first: {
                     isEmpty: true,
                 },
@@ -95,6 +98,9 @@
                 },
                 submission_date: {
                     isEmpty: '투고일자를 입력해주세요.',
+                },
+                "qualification[]": {
+                    checkEmpty: '신청자격을 체크해주세요.',
                 },
                 first: {
                     isEmpty: '1순위를 선택해주세요.',

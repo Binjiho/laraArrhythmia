@@ -133,7 +133,8 @@ class User extends Authenticatable
 
         $this->major_field = $data->major_field?? null;                //전공분야
         $this->field = $data->field?? null;                            //진료분야
-        $this->field_etc = $data->field_etc ?? null;            //진료분야(기타)
+        $this->field_etc = $data->field_etc ?? null;                   //진료분야(기타)
+        $this->search_yn = $data->search_yn ?? 'N';                   //부정맥전문가찾기여부
 
         /* 첨부파일(단일파일) 업로드 or 삭제 */
         // 파일 업로드 경로
@@ -219,6 +220,11 @@ class User extends Authenticatable
     public function overseas()
     {
         return $this->hasMany(Overseas::class, 'user_sid');
+    }
+
+    public function regists()
+    {
+        return $this->hasMany(Registration::class, 'user_sid');
     }
 
     public function research()

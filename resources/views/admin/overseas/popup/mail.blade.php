@@ -41,11 +41,6 @@
                                     </table>
 
                                     <div id="mail_preview" style="margin-top: 20px; margin-bottom: 10px;">
-{{--                                        @php--}}
-{{--                                            $conference_name = $overseas->conference->subject;--}}
-{{--                                            $data['assistant'] = $overseasConfig['assistant'][$overseas->assistant];--}}
-{{--                                            $data['result_date'] = $overseas->conference->result_date;--}}
-{{--                                        @endphp--}}
                                         @include("common.mail.$template_name")
                                     </div>
 

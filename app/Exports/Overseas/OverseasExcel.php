@@ -57,7 +57,7 @@ class OverseasExcel implements FromCollection, WithHeadings, ShouldAutoSize, Wit
             $data->seq,
             $data->user->uid,
             $data->user->name_kr,
-            $affi[$data->user->sosok],
+            $data->user->sosok_kr,
             $data->user->phone[0].'-'.$data->user->phone[1].'-'.$data->user->phone[2],
 
             $overseasConfig['participant'][$data->participant],

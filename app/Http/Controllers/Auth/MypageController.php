@@ -112,7 +112,7 @@ class MypageController extends Controller
     public function overseas(Request $request)
     {
         view()->share([
-            'sub_menu' => 'SM4',
+            'sub_menu' => 'SM9',
             'isAdminPage' => (CheckUrl() === 'admin'),
             'userConfig' => config('site.user'),
             'infoConfig' => config('site.default.info'),

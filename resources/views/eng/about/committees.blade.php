@@ -97,12 +97,12 @@
                                 <td>Korea University Anam Hospital</td>
                             </tr>
                             <tr>
-                                <td>Scientific Committee Chair</td>
+                                <td>Scientific Chair (Virtual)</td>
                                 <td>Hyoung-Seob Park</td>
                                 <td>Keimyung University Dongsan Medical Center</td>
                             </tr>
                             <tr>
-                                <td>Scientific Committee Chair</td>
+                                <td>Scientific Chair (Virtual Live)</td>
                                 <td>Tae-Hoon Kim</td>
                                 <td>Yonsei University Severance Hospital</td>
                             </tr>

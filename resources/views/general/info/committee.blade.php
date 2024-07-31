@@ -273,7 +273,7 @@
                         </thead>
                         <tbody>
 							<tr>
-								<th rowspan="14" colspan="2">학술위원회</th>
+								<th rowspan="16" colspan="2">학술위원회</th>
 								<td>고점석(원광의대)</td> 
 								<td>김동혁(이화의대)</td> 
 								<td>김성환(가톨릭의대)</td>
@@ -321,20 +321,28 @@
 							<tr>
 								<td>이지현(서울의대) </td>
 								<td>임성일(고신의대) </td>
-								<td>장성원(가톨릭의대) </td>
-							</tr>
-							<tr>
 								<td>정동섭(성균관의대) </td>
-								<td>정보영(연세의대) </td>
-								<td>조민수(울산의대) </td>
 							</tr>
-							<tr>
+							<tr>								
+								<td>조민수(울산의대) </td>
 								<td>차명진(울산의대) </td>
 								<td>최영(가톨릭의대) </td>
+							</tr>
+							<tr>								
 								<td>최의근(서울의대)</td>
+								<td></td>
+								<td></td>
 							</tr>
 							<tr>
-								<td colspan="3">간사</td>
+								<td colspan="3" style="background-color: #fff7f7;"> 명예위원</td>
+							</tr>
+							<tr>
+								<td>정보영(연세의대) </td>
+								<td>장성원(가톨릭의대) </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td colspan="3" style="background-color: #fff7f7;">간사</td>
 							</tr>
 							<tr>
 								<td>김윤기(고려의대) </td>
@@ -498,7 +506,7 @@
 								<td> 정래영(전북의대)</td>
 							</tr>
 							<tr>
-								<td colspan="3">간사</td>
+								<td colspan="3" style="background-color: #fff7f7;">간사</td>
 							</tr>
 							<tr>
 								<td>신승용(고려의대)</td>
@@ -631,7 +639,7 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td colspan="3">간사 </td>
+								<td colspan="3" style="background-color: #fff7f7;">간사 </td>
 							</tr>
 							<tr>
 								<td>반지은(성균관의대)</td>
@@ -762,7 +770,7 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td colspan="3">감수</td>
+								<td colspan="3" style="background-color: #fff7f7;">감수</td>
 							</tr>
 							<tr>
 								<td>김남호(원광의대) </td>
@@ -780,7 +788,7 @@
 								<td>한성욱(강심내과)</td>
 							</tr>
 							<tr>
-								<td colspan="3">간사 </td>
+								<td colspan="3" style="background-color: #fff7f7;">간사 </td>
 							</tr>
 							<tr>							
 								<td>김문현(연세의대) </td>
@@ -922,7 +930,7 @@
 								<td>황진경(중앙보훈병원)</td>
 							</tr>
 							<tr>
-								<td colspan="3">간사</td>
+								<td colspan="3" style="background-color: #fff7f7;">간사</td>
 							</tr>
 							<tr>
 								<td>곽혜빈(성균관의대)</td>
@@ -1049,7 +1057,7 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td colspan="3">고문</td>
+								<td colspan="3" style="background-color: #fff7f7;">고문</td>
 							</tr>
 							<tr>
 								<td>황준(KHRS Executive Advisor for Foreign Developmet)</td>
@@ -1057,7 +1065,7 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td colspan="3">총무</td>
+								<td colspan="3" style="background-color: #fff7f7;">총무</td>
 							</tr>
 							<tr>
 								<td>박희남(연세의대)</td>
@@ -1065,7 +1073,7 @@
 								<td></td>
 							</tr>
 							<tr>							
-								<td colspan="3">간사</td>
+								<td colspan="3" style="background-color: #fff7f7;">간사</td>
 							</tr>
 							<tr>
 								<td>최영(가톨릭의대)</td>
@@ -1073,7 +1081,7 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td colspan="3">감사</td>
+								<td colspan="3" style="background-color: #fff7f7;">감사</td>
 							</tr>
 							<tr>
 								<td>조용근(경북의대)</td>
@@ -1137,7 +1145,7 @@
 								<td></td>
 							</tr>
 							<tr>						
-								<td colspan="3">간사</td>
+								<td colspan="3" style="background-color: #fff7f7;">간사</td>
 							</tr>
 							<tr>
 								<td>박환철(한양의대)</td>
@@ -1145,7 +1153,7 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td colspan="3">고문</td>
+								<td colspan="3" style="background-color: #fff7f7;">고문</td>
 							</tr>
 							<tr>
 								<td>오동진(한림의대)</td>

@@ -57,16 +57,46 @@ class OverseasServices extends AppServices
 
     public function registerService(Request $request)
     {
-        $this->data['user'] = User::findOrFail(thisPk());
+//        $this->data['user'] = User::findOrFail(thisPk());
+        $this->data['user'] = thisUser();
 
         if($request->sid){
             $this->data['overseas'] = Overseas::findOrFail($request->sid);
             $this->data['conference'] = OverseasConference::findOrFail($this->data['overseas']->csid);
         }else{
             $this->data['conference'] = OverseasConference::findOrFail($request->csid);
+            $this->data['overseas'] = Overseas::where(['result'=>'I', 'csid'=>$request->csid,'user_sid'=>thisPk()])->first();
+        }
+        return $this->data;
+    }
+
+    public function registCheckService(Request $request)
+    {
+        $result = array();
+        //등록 기간
+        $conference = OverseasConference::findOrFail($request->csid);
+        if(date('Y-m-d') < $conference->regist_sdate || date('Y-m-d') > $conference->regist_edate ){
+            $result = [
+                'msg' => '해외학회 신청기간이 아닙니다.',
+                'url' => route('overseas.list'),
+                'redirect' => 'replace',
+            ];
+        }
+        //사전등록 신청 여부
+        if (!isAdmin()) {
+            if(!empty(thisUser())){
+                $check_regist = Overseas::where(['del'=>'N', 'csid'=>$request->csid, 'user_sid'=>thisPk()])->first();
+                if($check_regist){
+                    $result = [
+                        'msg' => '이미 신청 내역이 존재합니다.',
+                        'url' => route('mypage.overseas'),
+                        'redirect' => 'replace',
+                    ];
+                }
+            }
         }
 
-        return $this->data;
+        return $result;
     }
     public function dataAction(Request $request)
     {
@@ -155,15 +185,12 @@ class OverseasServices extends AppServices
         try {
             $overseas = Overseas::FindOrFail($request->sid);
             /**
-             * 등록번호
+             * result 등록완료
              */
-//            if(!$request->sid){
-//                $regnum = sprintf("04d");
-//            }
-//            $overseas->state = 'Y';
-//            $overseas->save();
+            $overseas->result = 'U';
+            $overseas->update();
 
-            $this->dbCommit('해외학회신청 complete');
+            $this->dbCommit('해외학회신청 등록완료');
 
             // 해외학회 신청 메일 발송
             $user = User::FindOrFail($overseas->user_sid);
@@ -171,6 +198,7 @@ class OverseasServices extends AppServices
             $conference = OverseasConference::FindOrFail($overseas->csid);
 
             $user->conference_name = $conference->subject;
+            $user->conference_result_date = $conference->result_date;
 
             $mail_title = "[대한부정맥학회] {$conference->subject} 참가지원 신청이 완료되었습니다.";
             $sendMail = (new MailServices())->mailSendService($user, $mail_title, 'overseas-regist', 0);

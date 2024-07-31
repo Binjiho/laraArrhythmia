@@ -910,6 +910,9 @@
     .main-video-con{
         border-radius: 5px 5px 5px 20px;
     }
+    .main-video-con > a{
+        height: auto;
+    }
     .main-video-con > a:before{
         background-size: 48px;
     }

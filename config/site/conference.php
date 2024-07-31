@@ -1,7 +1,7 @@
 <?
 $conference_year = [];
 
-for($i = (int)date('Y'); $i >= 2005; $i--) {
+for($i = (int)date('Y')+1; $i >= 2005; $i--) {
     array_push($conference_year, $i);
 }
 
@@ -61,6 +61,12 @@ return [
         '5' => '연수 평점',
     ],
 
+    //성별
+    'gender' => [
+        'M'=>'남성',
+        'F'=>'여성',
+    ],
+
     //초록 신청 권한
     'abs_authority' => [
         '1' => '제한 없음',
@@ -94,6 +100,12 @@ return [
     'method' => [
 //        'C' => '카드결제',
         'B' => '무통장 입금',
+    ],
+
+    //입금 상태
+    'send_status' => [
+        'N' => '입금대기',
+        'Y' => '입금완료',
     ],
 
     //결제 상태

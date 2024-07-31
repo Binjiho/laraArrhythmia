@@ -173,6 +173,10 @@ class Conference extends Model
             return '';
         }
 
+        if( !isValidTimestamp($this->regist_sdate) ){
+            return '';
+        }
+
         $reg_date = $this->regist_sdate->format('Y-m-d');
 
         if ($this->regist_edate) {
@@ -185,6 +189,10 @@ class Conference extends Model
     public function absDate()
     {
         if ($this->abs_yn == 'N') {
+            return '';
+        }
+
+        if( !isValidTimestamp($this->abs_sdate) ){
             return '';
         }
 

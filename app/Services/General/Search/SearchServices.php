@@ -32,6 +32,7 @@ class SearchServices extends AppServices
 
         $query->where('level','!=','M');
         $query->where('name_kr','!=','');
+        $query->where('search_yn','!=','N');
 
         if (!empty($category) ) {
             if($category == 'A' /*전문회원*/){

@@ -6,6 +6,7 @@ use App\Models\Board;
 use App\Models\Research;
 use App\Models\Overseas;
 use App\Models\Surgery;
+use App\Models\SessionPrograms;
 use App\Models\BoardFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -75,7 +76,12 @@ class CommonServices extends AppServices
             case 'mail_list':
                 $this->data = ['realfile' => $request->file, 'filename' => $request->name];
                 break;
-                
+
+            case 'session_programs':
+                $file = SessionPrograms::findOrFail($sid);
+                $this->data = ['realfile' => $file->{$request->file}, 'filename' => $file->{$request->name}];
+                break;
+
             default:
                 return notFoundRedirect();
         }

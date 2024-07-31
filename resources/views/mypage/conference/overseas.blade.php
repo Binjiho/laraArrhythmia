@@ -7,16 +7,16 @@
 
     <article class="sub-contents">
         <div class="sub-conbox inner-layer">
-            <div class="sub-tab-wrap">
-                <ul class="sub-tab-menu n2">
-                    <li ><a href="{{ route('mypage.conference') }}">학술행사</a></li>
-                    <li class="on"><a href="{{ route('mypage.overseas') }}">해외학회</a></li>
-                </ul>
-            </div>
+{{--            <div class="sub-tab-wrap">--}}
+{{--                <ul class="sub-tab-menu n2">--}}
+{{--                    <li ><a href="{{ route('mypage.conference') }}">학술행사</a></li>--}}
+{{--                    <li class="on"><a href="{{ route('mypage.overseas') }}">해외학회</a></li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
             <div class="info-conbox text-center">
                 <img src="/assets/image/sub/ic_regi_complete.png" alt="">
                 <div class="tit">
-                    <strong>{{$user->name_kr ?? ''}}</strong> 선생님의 국제학회 참가 지원 신청 내역 입니다.
+                    <strong>{{$user->name_kr ?? ''}}</strong> 선생님의 해외학회 참가 지원 신청 내역 입니다.
                 </div>
             </div>
             <div class="table-wrap scroll-x touch-help">
@@ -34,7 +34,7 @@
                         <th scope="col">해외 학술대회명</th>
                         <th scope="col">개최일자</th>
                         <th scope="col">신청일</th>
-                        <th scope="col">심사결과</th>
+                        <th scope="col">진행상황</th>
                         <th scope="col">관리</th>
                     </tr>
                     </thead>
@@ -59,8 +59,9 @@
                             </td>
                             <td>
                                 <div class="btn-admin">
-                                    <a href="{{ route('overseas.register', ['sid' => $value->sid, 'mypage' => 'Y']) }}" class="btn btn-board btn-modify">수정</a>
-                                    <a href="javascript:;" class="btn btn-board btn-delete">삭제</a>
+                                    <a href="{{ route('overseas.preview', ['sid' => $value->sid, 'mypage' => 'Y']) }}" class="btn btn-small color-type2">신청서 확인</a>
+{{--                                    <a href="{{ route('overseas.register', ['sid' => $value->sid, 'mypage' => 'Y']) }}" class="btn btn-board btn-modify">수정</a>--}}
+{{--                                    <a href="javascript:;" class="btn btn-board btn-delete">삭제</a>--}}
                                 </div>
                             </td>
                         </tr>

@@ -1,4 +1,9 @@
 <?
+$board_year = [];
+
+for($i = (int)date('Y')+1; $i >= 2005; $i--) {
+    array_push($board_year, $i);
+}
 
 return [
     'code' => 'photo', // 게시판 코드
@@ -13,6 +18,9 @@ return [
         'low' => null,
         'small' => null,
     ],
+
+    //년도
+    'abyear' => $board_year,
 
     'options' => [
         'hide' => ['N' => '공개', 'Y' => '비공개'], // 공개여부

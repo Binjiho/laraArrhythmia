@@ -129,6 +129,51 @@
                     </div>
                 </dd>
             </dl>
+            @if( in_array('1', $conference->add_item ?? []) )
+            <dl>
+                <dt> 생년월일</dt>
+                <dd>
+                    <input type="text" name="birth" id="birth" class="form-item" value="{{ $registration->birth ?? '' }}" placeholder="1970-08-02" maxlength="10" birthHyphen>
+                </dd>
+            </dl>
+            @endif
+            @if( in_array('2', $conference->add_item ?? []) )
+                <dl>
+                    <dt> 성별</dt>
+                    <dd>
+                        @foreach($conferenceConfig['gender'] as $key => $val)
+                            <div class="radio-group">
+                                <input type="radio" name="gender" id="gender_{{$key}}" value="{{$key}}" {{ ($registration->gender ?? '') == $key ? 'checked' : '' }}>
+                                <label for="gender_{{$key}}">{{$val}}</label>
+                            </div>
+                        @endforeach
+                    </dd>
+                </dl>
+            @endif
+            @if( in_array('3', $conference->add_item ?? []) )
+                <dl>
+                    <dt> 직위</dt>
+                    <dd>
+                        <input type="text" name="job_title" id="job_title" class="form-item" value="{{ $registration->job_title ?? '' }}" >
+                    </dd>
+                </dl>
+            @endif
+            @if( in_array('4', $conference->add_item ?? []) )
+                <dl>
+                    <dt> 주소</dt>
+                    <dd>
+                        <input type="text" name="address" id="address" class="form-item" value="{{ $registration->address ?? '' }}" >
+                    </dd>
+                </dl>
+            @endif
+            @if( in_array('5', $conference->add_item ?? []) )
+                <dl>
+                    <dt> 연수 평점</dt>
+                    <dd>
+                        <input type="text" name="training_score" id="training_score" class="form-item" value="{{ $registration->training_score ?? '' }}" onlyAvg>
+                    </dd>
+                </dl>
+            @endif
         </div>
 
         <div class="sub-contit-wrap">
@@ -284,197 +329,204 @@
         });
 
 
-        {{--// 게시글 작성 취소--}}
-        {{--$(document).on('click', '#board_cancel', function(e) {--}}
-        {{--    e.preventDefault();--}}
-
-        {{--    const msg = ($(form).data('sid') == 0) ?--}}
-        {{--        '등록을 취소하시겠습니까?' :--}}
-        {{--        '수정을 취소하시겠습니까?';--}}
-
-        {{--    if (confirm(msg)) {--}}
-        {{--        location.replace('{{ route('board', ['code' => $code]) }}');--}}
-        {{--    }--}}
-        {{--});--}}
-
+        @if(checkUrl() !== 'admin')
         // 아이디 중복체크
         $.validator.addMethod('uidChk', function (value, element) {
-            return $(element).data('chk') === 'Y';
+            return $(element).data('chk') === 'Y' && $("#register-frm").data('case') === 'registration-create';
         });
+        @endif
+
+        // 직책(직함) 기타 선택시 입력 값 체크
+        $.validator.addMethod('etcPositionEmpty', function (value, element) {
+            let etcCheck = false;
+
+            $("input[name='position[]']:checked").each(function(k, v) {
+                if($(v).data('etc')) {
+                    etcCheck = true;
+                    return;
+                }
+            });
+
+            return etcCheck ? !isEmpty(value) : true;
+        });
+
 
         defaultVaildation();
 
         // 게시판 폼 체크
-        $(form).validate({
-            ignore: ['content', 'popup_content'],
-            rules: {
-                @if(CheckUrl() === 'admin')
-                uid: {
-                    isEmpty: true,
-                },
-                @else
-                uid: {
-                    isEmpty: true,
-                    minlength: 4,
-                    emailRegExp :true,
-                    uidChk: {
-                        depends: function(element) {
-                            return $("#register-frm").data('case')==='registration-create';
+        $(function() {
+            $(form).validate({
+                ignore: ['content', 'popup_content'],
+                rules: {
+                    @if(CheckUrl() === 'admin')
+                    uid: {
+                        isEmpty: true,
+                    },
+                    @else
+                    uid: {
+                        isEmpty: true,
+                        emailRegExp: true,
+                        // uidChk: true,
+                        // uidChk: {
+                        //     depends: function (element) {
+                        //         return $("#register-frm").data('case') === 'registration-create' && $("#register-frm").data('case') === 'registration-create';
+                        //     }
+                        // }
+                    },
+                    @endif
+                    first_name: {
+                        isEmpty: true,
+                    },
+                    last_name: {
+                        isEmpty: true,
+                    },
+                    name_kr: {
+                        isEmpty: true,
+                    },
+                    sosok: {
+                        isEmpty: true,
+                    },
+                    sosok_kr: {
+                        isEmpty: true,
+                    },
+                    sosok_en: {
+                        isEmpty: true,
+                    },
+                    depart_kr: {
+                        isEmpty: true,
+                    },
+                    depart_en: {
+                        isEmpty: true,
+                    },
+                    'position[]': {
+                        checkEmpty: true,
+                    },
+                    position_etc: {
+                        etcPositionEmpty: true,
+                    },
+
+                    license_number: {
+                        isEmpty: true,
+                    },
+                    country: {
+                        isEmpty: true,
+                    },
+                    'phone[]': {
+                        isEmpty: true,
+                    },
+                    gubun: {
+                        checkEmpty: true,
+                    },
+                    method: {
+                        checkEmpty: true,
+                    },
+                    sender: {
+                        isEmpty: {
+                            depends: function (element) {
+                                return $("input[name='method']:checked").val() === 'B';
+                            }
                         }
-                    }
-                },
-                @endif
-                first_name: {
-                    isEmpty: true,
-                },
-                last_name: {
-                    isEmpty: true,
-                },
-                name_kr: {
-                    isEmpty: true,
-                },
-                sosok: {
-                    isEmpty: true,
-                },
-                sosok_kr: {
-                    isEmpty: true,
-                },
-                sosok_en: {
-                    isEmpty: true,
-                },
-                depart_kr: {
-                    isEmpty: true,
-                },
-                depart_en: {
-                    isEmpty: true,
-                },
-                'position[]': {
-                    checkEmpty: true,
-                },
-                position_etc: {
-                    etcPositionEmpty: true,
-                },
-
-                license_number: {
-                    isEmpty: true,
-                },
-                country: {
-                    isEmpty: true,
-                },
-                'phone[]': {
-                    isEmpty: true,
-                },
-                gubun: {
-                    checkEmpty: true,
-                },
-                method: {
-                    checkEmpty: true,
-                },
-                sender: {
-                    isEmpty: {
-                        depends: function(element) {
-                            return $("input[name='method']:checked").val()==='B';
+                    },
+                    sender_date: {
+                        isEmpty: {
+                            depends: function (element) {
+                                return $("input[name='method']:checked").val() === 'B';
+                            }
                         }
-                    }
+                    },
+                    agree: {
+                        isEmpty: true,
+                    },
                 },
-                sender_date: {
-                    isEmpty: {
-                        depends: function(element) {
-                            return $("input[name='method']:checked").val()==='B';
-                        }
-                    }
-                },
-                agree: {
-                    isEmpty: true,
-                },
-            },
-            messages: {
-                @if(CheckUrl() === 'admin')
-                uid: {
-                    isEmpty: '아이디를 입력해주세요.',
-                },
-                @else
-                uid: {
-                    isEmpty: '아이디를 입력해주세요.',
-                    emailRegExp: '아이디 이메일 형식에 맞춰서 입력해주세요.',
-                    uidChk: '아이디를 중복확인 해주세요.',
-                },
-                @endif
-                first_name: {
-                    isEmpty: '이름 (영문 - 이름)을 입력해주세요.',
-                },
-                last_name: {
-                    isEmpty: '이름 (영문 - 성)을 입력해주세요.',
-                },
-                name_kr: {
-                    isEmpty: '이름 (국문)을 입력해주세요.',
-                },
-                sosok: {
-                    isEmpty: '소속을 선택해주세요.',
-                },
-                sosok_kr: {
-                    isEmpty: '소속 (국문)을 입력해주세요.',
-                },
-                sosok_en: {
-                    isEmpty: '소속 (영문)을 입력해주세요.',
-                },
-                depart_kr: {
-                    isEmpty: '부서 (국문)을 입력해주세요.',
-                },
-                depart_en: {
-                    isEmpty: '부서 (영문)을 입력해주세요.',
-                },
-                'position[]': {
-                    checkEmpty: '직책(직함)을 선택해주세요.',
-                },
-                position_etc: {
-                    etcPositionEmpty: '직책(직함)을 입력해주세요.',
-                },
+                messages: {
+                    @if(CheckUrl() === 'admin')
+                    uid: {
+                        isEmpty: '아이디를 입력해주세요.',
+                    },
+                    @else
+                    uid: {
+                        isEmpty: '아이디를 입력해주세요.',
+                        emailRegExp: '아이디 이메일 형식에 맞춰서 입력해주세요.',
+                        uidChk: '아이디를 중복확인 해주세요.',
+                    },
+                    @endif
+                    first_name: {
+                        isEmpty: '이름 (영문 - 이름)을 입력해주세요.',
+                    },
+                    last_name: {
+                        isEmpty: '이름 (영문 - 성)을 입력해주세요.',
+                    },
+                    name_kr: {
+                        isEmpty: '이름 (국문)을 입력해주세요.',
+                    },
+                    sosok: {
+                        isEmpty: '소속을 선택해주세요.',
+                    },
+                    sosok_kr: {
+                        isEmpty: '소속 (국문)을 입력해주세요.',
+                    },
+                    sosok_en: {
+                        isEmpty: '소속 (영문)을 입력해주세요.',
+                    },
+                    depart_kr: {
+                        isEmpty: '부서 (국문)을 입력해주세요.',
+                    },
+                    depart_en: {
+                        isEmpty: '부서 (영문)을 입력해주세요.',
+                    },
+                    'position[]': {
+                        checkEmpty: '직책(직함)을 선택해주세요.',
+                    },
+                    position_etc: {
+                        etcPositionEmpty: '직책(직함)을 입력해주세요.',
+                    },
 
-                license_number: {
-                    isEmpty: '면허번호를 입력해주세요.',
+                    license_number: {
+                        isEmpty: '면허번호를 입력해주세요.',
+                    },
+                    country: {
+                        isEmpty: '거주 국가를 선택해주세요.',
+                    },
+                    'phone[]': {
+                        isEmpty: '휴대폰번호를 입력해주세요.',
+                    },
+                    gubun: {
+                        checkEmpty: '구분을 선택해주세요.',
+                    },
+                    method: {
+                        checkEmpty: '결제 수단을 선택해주세요.',
+                    },
+                    sender: {
+                        isEmpty: '송금인을 입력해주세요.',
+                    },
+                    sender_date: {
+                        isEmpty: '송금예정일을 입력해주세요.',
+                    },
+                    agree: {
+                        isEmpty: '개인정보 수집 및 활용 동의를 체크해주세요.',
+                    },
                 },
-                country: {
-                    isEmpty: '거주 국가를 선택해주세요.',
-                },
-                'phone[]': {
-                    isEmpty: '휴대폰번호를 입력해주세요.',
-                },
-                gubun: {
-                    checkEmpty: '구분을 선택해주세요.',
-                },
-                method: {
-                    checkEmpty: '결제 수단을 선택해주세요.',
-                },
-                sender: {
-                    isEmpty: '송금인을 입력해주세요.',
-                },
-                sender_date: {
-                    isEmpty: '송금예정일을 입력해주세요.',
-                },
-                agree: {
-                    isEmpty: '개인정보 수집 및 활용 동의를 체크해주세요.',
-                },
-            },
-            submitHandler: function() {
+                submitHandler: function () {
 
-                // if ($('input[name=method]:checked').val() == 'C') {
-                // callPayModuel({
-                //     'type': 'PC' // 필수
-                // });
-                // return false;
-                // }
+                    // if ($('input[name=method]:checked').val() == 'C') {
+                    // callPayModuel({
+                    //     'type': 'PC' // 필수
+                    // });
+                    // return false;
+                    // }
 
-                registerSubmit();
+                    registerSubmit();
+                }
+            });
+
+            const registerSubmit = () => {
+                let ajaxData = newFormData($(form));
+                // ajaxData.append('invite_text', tinymce.get('invite_text').getContent());
+                // ajaxData.append('plupload_file', JSON.stringify(plupladFile));
+
+                callMultiAjax(dataUrl, ajaxData);
             }
+
         });
-
-        const registerSubmit = () => {
-            let ajaxData = newFormData($(form));
-            // ajaxData.append('invite_text', tinymce.get('invite_text').getContent());
-            // ajaxData.append('plupload_file', JSON.stringify(plupladFile));
-
-            callMultiAjax(dataUrl, ajaxData);
-        }
     </script>
 @endsection

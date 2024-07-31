@@ -10,18 +10,27 @@
             @include('layouts.include.subTit')
             
             <div id="gall-board" class="board-wrap">
-                @if(isAdmin() )
-                <div class="top-btn-wrap text-right">
-                    <a href="{{ route('board.upsert', ['code' => $code]) }}" class="btn btn-type1 color-type5">등록</a>
+                <div class="top-btn-wrap text-left">
+                    <select name="abyear" id="abyear" class="form-item">
+                        @foreach($boardConfig['abyear'] as $key => $val)
+                            <option value="{{ $val }}" {{(request()->abyear ?? date('Y')) == $val ? 'selected':'' }}>{{ $val }}년</option>
+                        @endforeach
+                    </select>
+
+                    @if(isAdmin() )
+                        <div class="top-btn-wrap text-right" style="display: inline-flex;float: right;">
+                            <a href="{{ route('board.upsert', ['code' => $code, 'abyear'=>$abyear]) }}" class="btn btn-type1 color-type5">등록</a>
+                        </div>
+                    @endif
                 </div>
-                @endif
+
                 <ul class="gall-list">
                     @foreach($list ?? [] as $row)
                     <li data-sid="{{ $row->sid }}">
                         @if($row->linkurl)
                             <a href="{{ $row->linkurl }}" target="_blank">
                         @else
-                            <a href="{{ route('board.view', ['code' => $code, 'sid' => $row->sid]) }}">
+                            <a href="{{ route('board.view', ['code' => $code, 'sid' => $row->sid, 'abyear'=>$abyear]) }}">
                         @endif
 
                             <span class="gall-img">
@@ -47,7 +56,7 @@
                                     <option value="{{ $key }}" {{ $row->hide == $key ? 'selected' : '' }}>{{ $val }}</option>
                                 @endforeach
                             </select>
-                            <a href="{{ route('board.upsert', ['code' => $code, 'sid' => $row->sid]) }}" class="btn btn-board btn-modify">수정</a>
+                            <a href="{{ route('board.upsert', ['code' => $code, 'sid' => $row->sid, 'abyear'=>$abyear]) }}" class="btn btn-board btn-modify">수정</a>
                             <a href="javascript:;" class="btn btn-board btn-delete">삭제</a>
                         </div>
                         @endif
@@ -67,19 +76,26 @@
     <script>
         $(document).on('click', '.btn-delete', function() {
             const _case = $(this).hasClass('reply') ? 'reply-delete' : 'board-delete';
+            const _abyear = $("#abyear").val();
 
             if (confirm('정말로 삭제 하시겠습니까?')) {
-                callAjax(dataUrl, { case: _case, sid: $(this).closest('li').data('sid') });
+                callAjax(dataUrl, { case: _case, sid: $(this).closest('li').data('sid'), requestYear: _abyear });
             }
         });
 
         $(document).on('change', ".hidesel", function() {
             const _case = 'board-hide';
             const _hide = $(this).find('option:selected').val();
+            const _abyear = $("#abyear").val();
 
             if (confirm('게시글 공개 여부를 변경 하시겠습니까?')) {
-                callAjax(dataUrl, { case: _case, sid: $(this).closest('li').data('sid'), hide: _hide }, true);
+                callAjax(dataUrl, { case: _case, sid: $(this).closest('li').data('sid'), hide: _hide, requestYear: _abyear }, true);
             }
+        });
+
+        $(document).on('change', "#abyear", function() {
+            const url = '{{ route('board', ['code' => $code ?? '']) }}'
+            location.replace(url + '?abyear=' + $(this).val());
         });
     </script>
 @endsection

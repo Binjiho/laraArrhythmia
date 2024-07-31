@@ -4,7 +4,7 @@
 @endsection
 
 @section('contents')
-    <article class="sub-contents" style="min-height: 656px;">
+    <article class="sub-contents">
         <div class="sub-conbox inner-layer">
 
             @if(($extends_str ?? 'main') == 'layouts.web-layout')
@@ -19,7 +19,7 @@
                         </h4>
                     </div>
 
-                    <div class="view-contents">{!! $board->content !!}</div>
+                    <div class="view-contents editor-contents">{!! $board->content !!}</div>
 
                     @if($boardConfig['use']['file'])
                         @if (!empty($board->thumb_file))

@@ -129,6 +129,49 @@
                                     {{ $data->phone[0] ?? '' }}-{{ $data->phone[1] ?? '' }}-{{ $data->phone[2] ?? '' }}
                                 </td>
                             </tr>
+
+                            @if( $data->birth )
+                                <tr>
+                                    <th scope="row" style="padding: 10px 15px;background-color: #f4f4f4;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;font-weight: 400;color: #444444;line-height: 1.3;text-align: center;">
+                                        생년월일
+                                    </th>
+                                    <td style="padding: 10px 15px;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;border-left: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;color: #444444;line-height: 1.3">
+                                        {{ $data->birth ?? '' }}
+                                    </td>
+                                </tr>
+                            @endif
+                            @if( $data->gender )
+                                <tr>
+                                    <th scope="row" style="padding: 10px 15px;background-color: #f4f4f4;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;font-weight: 400;color: #444444;line-height: 1.3;text-align: center;"> 성별</th>
+                                    <td style="padding: 10px 15px;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;border-left: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;color: #444444;line-height: 1.3">
+                                        {{ ($data['gender'] ?? 'M') =='M' ? '남성' : '여성' }}
+                                    </td>
+                                </tr>
+                            @endif
+                            @if( $data->job_title )
+                                <tr>
+                                    <th scope="row" style="padding: 10px 15px;background-color: #f4f4f4;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;font-weight: 400;color: #444444;line-height: 1.3;text-align: center;"> 직위</th>
+                                    <td style="padding: 10px 15px;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;border-left: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;color: #444444;line-height: 1.3">
+                                        {{ $data->job_title ?? '' }}
+                                    </td>
+                                </tr>
+                            @endif
+                            @if( $data->address )
+                                <tr>
+                                    <th scope="row" style="padding: 10px 15px;background-color: #f4f4f4;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;font-weight: 400;color: #444444;line-height: 1.3;text-align: center;"> 주소</th>
+                                    <td style="padding: 10px 15px;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;border-left: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;color: #444444;line-height: 1.3">
+                                        {{ $data->address ?? '' }}
+                                    </td>
+                                </tr>
+                            @endif
+                            @if( $data->training_score )
+                                <tr>
+                                    <th scope="row" style="padding: 10px 15px;background-color: #f4f4f4;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;font-weight: 400;color: #444444;line-height: 1.3;text-align: center;"> 연수 평점</th>
+                                    <td style="padding: 10px 15px;border-top: 1px solid #dddddd;border-bottom: 1px solid #dddddd;border-left: 1px solid #dddddd;font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 14px;color: #444444;line-height: 1.3">
+                                        {{ $data->training_score ?? '' }}
+                                    </td>
+                                </tr>
+                            @endif
                             </tbody>
                         </table>
                     </td>
@@ -199,7 +242,7 @@
                 </tr>
                 <tr>
                     <td style="padding-top: 30px;padding-bottom: 110px;text-align: center;">
-                        <a href="http://k-hrs.m2comm.co.kr/main" target="_blank"><img src="http://k-hrs.m2comm.co.kr/assets/image/mail/btn_mail_home.png" alt="홈페이지 바로가기"></a>
+                        <a href="{{ env('APP_URL') }}" target="_blank"><img src="{{ asset('assets/image/mail/btn_mail_home.png') }}" alt="홈페이지 바로가기"></a>
                     </td>
                 </tr>
                 <tr>

@@ -168,19 +168,23 @@ class AuthServices extends AppServices
     private function forgotUidServices(Request $request)
     {
         $isCheck = FALSE;
-        $user = User::where(['name_kr' => $request->name_kr])->first();
-        if(empty($user)){
+        $users = User::where(['name_kr' => $request->name_kr])->get();
+
+        if(empty($users)){
 
         }else{
-            $phone_str = '';
-            foreach($user->phone as $item){
-                $phone_str.= $item;
+            $phone_arr = array();
+            foreach($users as $user){
+                $phone_arr[$user->sid] = implode('',$user->phone);
             }
 
-            if($phone_str == $request->phone){
-                $isCheck = TRUE;
+            foreach ($phone_arr as $idx => $tmp_phone){
+                if($tmp_phone == $request->phone){
+                    $isCheck = TRUE;
+                    $result = $idx;
+                }
             }
-
+            $user = User::findOrFail($result);
         }
 
         if (!$isCheck) {

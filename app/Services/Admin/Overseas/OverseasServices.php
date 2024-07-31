@@ -63,6 +63,9 @@ class OverseasServices extends AppServices
                     "SELECT SUM(CASE WHEN result='U' THEN 1 ELSE 0 END) AS u_cnt
                     , SUM(CASE WHEN result='S' THEN 1 ELSE 0 END) AS s_cnt
                     , SUM(CASE WHEN result='D' THEN 1 ELSE 0 END) AS d_cnt
+                    , SUM(CASE WHEN result='I' THEN 1 ELSE 0 END) AS i_cnt
+                    , SUM(CASE WHEN result='W' THEN 1 ELSE 0 END) AS w_cnt
+                    , SUM(CASE WHEN result='C' THEN 1 ELSE 0 END) AS c_cnt
                     , SUM(1) AS tot_cnt
 
                     FROM overseas
@@ -117,18 +120,6 @@ class OverseasServices extends AppServices
             });
         }
 
-//        if (!empty($request->name_kr)) {
-//            $user_query = User::orderByDesc('created_at');
-//            if ($request->uid) { // 아이디
-//                $user_query->where('uid', 'like', "%{$request->uid}%");
-//            }
-//            if ($request->name_kr) { // 이름
-//                $user_query->where('name_kr', 'like', "%{$request->name_kr}%");
-//            }
-//            $search_user = $query->first();
-//            $query->where('user_sid', '=', $search_user->sid);
-//        }
-
         if (!empty($request->result)) {
             $query->where('result', '=', $request->result);
         }
@@ -161,6 +152,12 @@ class OverseasServices extends AppServices
         $this->data['user'] = User::findOrFail($request->user_sid);
         return $this->data;
     }
+
+    public function memoService(Request $request)
+    {
+        $this->data['overseas'] = Overseas::findOrFail($request->sid);
+        return $this->data;
+    }
     public function assistGroupService(Request $request)
     {
         $this->data['conference'] = OverseasConference::findOrFail($request->csid);
@@ -170,6 +167,11 @@ class OverseasServices extends AppServices
 
     public function mailService(Request $request)
     {
+        $this->data['conference'] = OverseasConference::findOrFail($request->csid);
+
+        //서류제출 마감기한 형식
+        $edate_arr = explode("-",$this->data['conference']->result_edate);
+        $result_edate = $edate_arr[1].'/'.$edate_arr[2];
 
         $query = Overseas::where('csid', $request->csid)->orderByDesc('sid');
         $query->where('del', '=', 'N');
@@ -178,25 +180,25 @@ class OverseasServices extends AppServices
             case 'A'/*선정*/:
                 $query->where('result', '=', 'S');
                 $this->data['mail_type'] = '선정 메일 발송';
-                $this->data['mail_title'] = '[대한부정맥학회] 선정메일 발송';
+                $this->data['mail_title'] = '[대한부정맥학회] '.$this->data['conference']->subject.' 참가지원 대상자 선정 및 정산서류 안내('.$result_edate.'까지)';
                 $this->data['template_name'] = 'overseas-resultS';
                 break;
             case 'B'/*미선정*/:
                 $query->where('result', '=', 'D');
                 $this->data['mail_type'] = '미선정 메일 발송';
-                $this->data['mail_title'] = '[대한부정맥학회] 미선정메일 발송';
+                $this->data['mail_title'] = '[대한부정맥학회] '.$this->data['conference']->subject.' 참가지원 신청 결과 안내';
                 $this->data['template_name'] = 'overseas-resultD';
                 break;
             case 'C'/*제출요청*/:
                 $query->where('del', '=', 'N');
                 $this->data['mail_type'] = '결과보고서 제출 요청 메일 발송';
-                $this->data['mail_title'] = '[대한부정맥학회] 제출 요청해주세요';
+                $this->data['mail_title'] = '[대한부정맥학회] '.$this->data['conference']->subject.' 정산서류 도착 알림';
                 $this->data['template_name'] = 'overseas-request';
                 break;
             case 'D'/*지급완료*/:
                 $query->where('del', '=', 'N');
                 $this->data['mail_type'] = '지급 완료 메일 발송';
-                $this->data['mail_title'] = '[대한부정맥학회] 해외학회 지급완료 메일입니다';
+                $this->data['mail_title'] = '[대한부정맥학회] '.$this->data['conference']->subject.' 정산금 입금 완료 안내';
                 $this->data['template_name'] = 'overseas-payResult';
                 break;
             default:
@@ -204,7 +206,6 @@ class OverseasServices extends AppServices
         }
 
         $this->data['list'] = $query->get();
-        $this->data['conference'] = OverseasConference::findOrFail($request->csid);
         return $this->data;
 
     }
@@ -263,6 +264,9 @@ class OverseasServices extends AppServices
             case 'change-pay-result':
                 return $this->changePayResultServices($request);
 
+            case 'overseas-memo':
+                return $this->overseasMemoServices($request);
+
             case 'mail-send':
                 return $this->mailSendServices($request);
 
@@ -280,6 +284,19 @@ class OverseasServices extends AppServices
 
         try {
             $conference = new OverseasConference();
+
+            $registration_status = array();
+            $res_cnt = count($request->regist_gubun);
+
+            for ($i=0; $i<$res_cnt; $i++){
+                if(strpos($request->regist_gubun[$i], '해당없음') !== false){
+                    $registration_status[99] = $request->regist_gubun[$i];
+                    continue;
+                }
+                $registration_status[$i+1] = $request->regist_gubun[$i];
+            }
+            $request->merge([ 'registration_status' => $registration_status ]);
+
             $conference->setBydata($request);
             $conference->save();
 
@@ -303,6 +320,18 @@ class OverseasServices extends AppServices
         try {
             $conference = OverseasConference::findOrFail($request->sid);
 
+            $registration_status = array();
+            $res_cnt = count($request->regist_gubun);
+
+            for ($i=0; $i<$res_cnt; $i++){
+                if(strpos($request->regist_gubun[$i], '해당없음') !== false){
+                    $registration_status[99] = $request->regist_gubun[$i];
+                    continue;
+                }
+                $registration_status[$i+1] = $request->regist_gubun[$i];
+            }
+            $request->merge([ 'registration_status' => $registration_status ]);
+
             // 회원사진 바로 삭제할수 있지만 DB update 실패시 사진 사라지면 안되서 변수로 임시 저장
             if ($request->file_del === 'Y') {
                 $delete_file_path = $conference->image_path;
@@ -320,7 +349,7 @@ class OverseasServices extends AppServices
                 'winClose' => $this->ajaxActionWinClose(true)
             ]);
         } catch (\Exception $e) {
-            return $this->dbRollback($e);
+            return $this->dbRollback($e,true);
         }
     }
 
@@ -408,7 +437,8 @@ class OverseasServices extends AppServices
 
             return $this->returnJsonData('alert', [
                 'case' => true,
-                'msg' => '연구비신청이 삭제 되었습니다.',
+                // 'msg' => '연구비신청이 삭제 되었습니다.',
+                'msg' => '참가 지원 신청이 삭제되었습니다.',
                 'location' => $this->ajaxActionLocation('reload'),
             ]);
 
@@ -424,6 +454,22 @@ class OverseasServices extends AppServices
 
         try {
             $overseas = Overseas::findOrFail($request->sid);
+
+            if($request->result == 'S'/*선정*/){
+                //선정인원 등록여부
+                $overseasConference = OverseasConference::where(['del'=>'N', 'sid'=>$request->csid])->first();
+                $limit_person = $overseasConference->limit_person ?? 0;
+
+                $already_person = Overseas::where(['del'=>'N', 'csid'=>$request->csid, 'result'=>'S'])->whereNotIn('user_sid', [$request->user_sid])->count();
+
+                if($limit_person <= $already_person) {
+                    return $this->returnJsonData('alert', [
+                        'case' => true,
+                        'msg' => '선정 인원이 마감되었습니다.',
+                        'winClose' => $this->ajaxActionWinClose(true),
+                    ]);
+                }
+            }
 
             $overseas->result = $request->result;
             $overseas->assistant = $request->assistant;
@@ -447,8 +493,23 @@ class OverseasServices extends AppServices
 
         try {
             $overseas_arr = json_decode($request->overseas_sid, true);
+            $arr_cnt = count($overseas_arr);
+
+            //선정인원 등록여부
+            $overseasConference = OverseasConference::where(['del'=>'N', 'sid'=>$request->sid])->first();
+            $limit_person = $overseasConference->limit_person ?? 0;
+
+            $already_person = Overseas::where(['del'=>'N', 'csid'=>$request->sid, 'result'=>'S'])->count();
+
+            if($limit_person < $already_person+$arr_cnt) {
+                return $this->returnJsonData('alert', [
+                    'case' => true,
+                    'msg' => '선정 제한 인원을 초과하였습니다.',
+                    'location' => $this->ajaxActionLocation('reload'),
+                ]);
+            }
+
             foreach ($overseas_arr as $sid){
-//                $overseas = Overseas::where('sid','=',$sid)->first();
                 $overseas = Overseas::findOrFail($sid);
 
                 $overseas->result = 'S';
@@ -471,12 +532,21 @@ class OverseasServices extends AppServices
 
     private function changePayResultServices(Request $request)
     {
-        $this->transaction();
 
+        $this->transaction();
         try {
             $overseas = Overseas::findOrFail($request->sid);
 
-            $overseas->pay_result = $request->target;
+            if($request->target == 'Y'){
+                $overseas->pay_result = 'Y';
+                $overseas->pre_result = $overseas->result/*이전상태값*/;
+                $overseas->result = 'C'/*정산완료*/;
+            }else{
+                $overseas->pay_result = 'N';
+                $overseas->result = $overseas->pre_result;
+//                $overseas->result = 'W'/*철회*/;
+            }
+
             $overseas->update();
 
             $this->dbCommit('해외학술대회 지급상태 변경');
@@ -485,6 +555,27 @@ class OverseasServices extends AppServices
                 'case' => true,
                 'msg' => '해외학술대회 지급상태가 변경 되었습니다.',
                 'location' => $this->ajaxActionLocation('reload'),
+            ]);
+        } catch (\Exception $e) {
+            return $this->dbRollback($e);
+        }
+    }
+
+    private function overseasMemoServices(Request $request)
+    {
+        $this->transaction();
+
+        try {
+            $overseas = Overseas::findOrFail($request->sid);
+            $overseas->memo = $request->memo;
+            $overseas->update();
+
+            $this->dbCommit('어드민 해외학술대회 메모 수정');
+
+            return $this->returnJsonData('alert', [
+                'case' => true,
+                'msg' => '관리자 메모가 등록되었습니다.',
+                'winClose' => $this->ajaxActionWinClose(true),
             ]);
         } catch (\Exception $e) {
             return $this->dbRollback($e);
@@ -506,8 +597,45 @@ class OverseasServices extends AppServices
                 $user = $overseas->user;
 
                 $user->conference_name = $overseas->conference->subject;
-                $user->assistant = $this->overseasConfig['assistant'][$overseas->assistant];
+                $user->place = $overseas->conference->place;
+                $user->assistant = $this->overseasConfig['assistant'][$overseas->assistant ?? '1'];
                 $user->result_date = $overseas->conference->result_date;
+
+                /**
+                 * 미선정 인원
+                 */
+                $user->limit_person = $overseas->conference->limit_person ?? 0;
+                $user->regist_person = Overseas::where(['del'=>'N', 'csid'=>$overseas->csid ])->count();
+
+                /**
+                 * event_date
+                 */
+                $custom_event_date = '';
+                $sarr = explode("-",$overseas->conference->event_sdate);
+                $custom_sdate = sprintf("%s년 %s월 %s일",$sarr[0],$sarr[1],$sarr[2]);
+                $custom_event_date .= $custom_sdate;
+
+                if($overseas->conference->event_sdate != $overseas->conference->event_edate || !$overseas->conference->event_edate){
+//                    $earr = explode("-",$overseas->conference->event_edate);
+//                    if($sarr[0] !== $earr[0]/*연도*/){
+//                        $custom_edate = sprintf("%s년 %s월 %s일",$earr[0],$earr[1],$earr[2]);
+//                    }else{
+//                        if($sarr[1] !== $earr[1]/*월*/){
+//                            $custom_edate = sprintf("%s월 %s일",$earr[1],$earr[2]);
+//                        }else{
+//                            if($sarr[2] !== $earr[2]/*일*/) {
+//                                $custom_edate = sprintf("%s일", $earr[2]);
+//                            }
+//                        }
+//                    }
+                    $earr = explode("-",$overseas->conference->event_edate);
+                    $custom_edate = sprintf("%s년 %s월 %s일",$earr[0],$earr[1],$earr[2]);
+                    if($custom_edate){
+                        $custom_event_date .= ' ~ '.$custom_edate;
+                    }
+                }
+                $user->event_date = $custom_event_date;
+
 
                 $sendMail = (new MailServices())->mailSendService($user, $mail_title, $template_name, 0);
 
@@ -550,5 +678,39 @@ class OverseasServices extends AppServices
         }
 
     }
+
+    /**
+     * 선정인원 등록여부
+     */
+//    public function limitCheckService(Request $request)
+//    {
+//        $result = array();
+//
+//        //선정인원 등록여부
+//        $overseasConference = OverseasConference::where(['del'=>'N', 'sid'=>$request->csid])->first();
+//        $limit_person = $overseasConference->limit_person ?? 0;
+//
+//        $already_person = Overseas::where(['del'=>'N', 'csid'=>$request->csid, 'result'=>'S'])->count();
+//
+//        if($limit_person <= $already_person){
+//            return $this->returnJsonData('alert', [
+//                'case' => true,
+//                'msg' => '국제학술대회가 등록 되었습니다.',
+//                'winClose' => $this->ajaxActionWinClose(true),
+//            ]);
+//            $result = [
+//                'msg' => '선정 인원이 마감되었습니다.',
+//                'redirect' => 'reload',
+//            ];
+//
+//            $result = [
+//                'msg' => '선정 인원이 마감되었습니다.',
+//                'url' => route('overseas.detail.assist',['user_sid'=>request()->user_sid, 'sid'=>request()->sid, 'csid'=>request()->csid]),
+//                'redirect' => 'replace',
+//            ];
+//        }
+//
+//        return $result;
+//    }
 
 }

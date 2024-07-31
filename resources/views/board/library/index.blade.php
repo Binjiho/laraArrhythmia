@@ -56,16 +56,23 @@
                         <a href="javascript:;" class="acco-tit">
                             {{ $row->subject }}
                         </a>
-{{--                        <a href="{{ route('board.view', ['code' => $code, 'category' => $category, 'sid' => $row->sid]) }}" class="acco-tit">--}}
-{{--                            {{ $row->subject }}--}}
-{{--                        </a>--}}
                         <div class="acco-con">
-                            <div class="view-contents">
-                                {!! $row->content !!}
+                            <div class="view-contents editor-contents">
+{{--                                {!! $row->content !!}--}}
+                                @if($row->event_sdate)
+                                    <div>일시 : {{ $row->event_sdate }} {{ $row->event_edate ? '~'.$row->event_edate : '' }}</div>
+                                @endif
+                                @if($row->place)
+                                    <div>장소 : {{ $row->place }}</div>
+                                @endif
+                                @if($row->host)
+                                    <div>주최 : {{ $row->host }}</div>
+                                @endif
                             </div>
                             <div class="btn-wrap text-right">
-                                @if($row->linkurl2)
-                                <a href="{{ $row->linkurl2 }}" class="btn btn-small color-type12" target="_blank">학술대회 원고보기 <span class="arrow">&gt;</span></a>
+                                @if($row->sessions->count() > 0)
+{{--                                @if($row->linkurl2)--}}
+                                <a href="{{ route('library.sessions',['bsid'=>$row->sid]) }}" class="btn btn-small color-type12" target="_blank">학술대회 원고보기 <span class="arrow">&gt;</span></a>
                                 @endif
                                 @if($row->thumb_realfile)
                                 <a href="{{ $row->downloadFileUrl('thumb_realfile', 'thumb_file') }}" class="btn btn-small color-type8" target="_blank">프로그램북 보기 <span class="arrow">&gt;</span></a>
@@ -83,7 +90,7 @@
                                     <option value="{{ $key }}" {{ $row->hide == $key ? 'selected' : '' }}>{{ $val }}</option>
                                 @endforeach
                             </select>
-                            <a href="{{ route('board.upsert', ['code' => $code, 'category' => $category, 'sid' => $row->sid]) }}" class="btn btn-board btn-modify">수정</a>
+                            <a href="{{ route('board.upsert', ['code' => $code, 'category' => $category, 'category2' => $category2, 'sid' => $row->sid]) }}" class="btn btn-board btn-modify">수정</a>
                             <a href="javascript:;" class="btn btn-board btn-delete">삭제</a>
                         </div>
                         @endif

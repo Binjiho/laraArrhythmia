@@ -71,5 +71,6 @@ class Kernel extends HttpKernel
         'session.check' => Middleware\Site\SessionCheck::class,
         'web.counter' => Middleware\Site\Counter::class,
         'view.menu' => Middleware\Site\ViewShareMenu::class,
+        'permission.check' => Middleware\Site\PermissionCheck::class,
     ];
 }

@@ -19,13 +19,11 @@
                 <tbody>
                 <tr>
                     <td style="font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 15px;font-weight: 400;color: #4d4d4d;line-height: 1.9;text-align: left;letter-spacing: -0.04em;">
-                        <strong>수신: {{ $data->name_kr ?? '' }} 교수님</strong> <br/><br/>
-
                         안녕하세요, <br/>
-                        대한부정맥학회입니다. <br/><br/>
+                        {{ env('APP_NAME') }} 사무국 입니다. <br/><br/>
 
-                        <strong>{{ $data->conference_name ?? '' }}</strong> 참가지원 경비가 교수님께서 신청하여 주셨던 계좌 정보로 입금되었음을 안내드립니다. <br/>
-                        관련하여 문의사항이 있으시면 학회 사무국(khrs@k-hrs.org)으로 연락 부탁드립니다. <br/><br/>
+                        <strong>{{ $data->conference_name ?? '' }}</strong> 참가지원 정산금이 입금되었음을 안내드립니다. <br/>
+                        관련하여 문의사항 있으실 경우 학회 사무국으로 연락주시기 바랍니다. <br/><br/>
 
                         감사합니다.
 

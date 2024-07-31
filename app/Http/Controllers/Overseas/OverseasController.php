@@ -39,6 +39,15 @@ class OverseasController extends Controller
             'affi' => getAffi(),
         ]);
 
+        if(empty($request->sid)){
+            //신청유무 여부
+            $checkRegist = $this->overseasServices->registCheckService($request);
+            if(!empty($checkRegist)){
+                setFlashData($checkRegist);
+                return callRedirect();
+            }
+        }
+
         return view('overseas.register', $this->overseasServices->registerService($request));
     }
 

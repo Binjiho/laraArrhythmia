@@ -85,7 +85,7 @@ class MainServices extends AppServices
         $this->data['notice'] = $query->get();
 
         //동영상 강의 게시판
-        $query = Board::where(['bbs_code'=>'video', 'app_push'=>'Y', 'hide'=>'N', 'del' => 'N'])->withCount('files')->orderByDesc('sid');
+        $query = Board::where(['bbs_code'=>'videoGeneral', 'app_push'=>'Y', 'hide'=>'N', 'del' => 'N'])->withCount('files')->orderByDesc('sid');
         if(!isAdmin()){
 //            $query->where('hide', '=', 'N');
         }

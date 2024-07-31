@@ -1291,6 +1291,122 @@ ul + .table-wrap{
     display: inline-block;
 }
 
+/* 24.07.02 학술행사 자료 추가 */
+.board-write .write-wrap + .top-btn-wrap{
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+.btn.btn-add-session{
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+.btn.btn-add-session:has(.plus){
+    padding-right: 15px;
+}
+.btn.btn-add-session .plus{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.top-btn-wrap .help-text{
+    padding: 0 30px;
+    font-size: 1.7rem;
+    vertical-align: middle;
+}
+.session-write-con{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.session-write-con .session-form-group{
+    width: 100%;
+}
+.session-write-con .btn-admin{
+    flex: 0 0 auto;
+}
+.btn.btn-arrow{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 27px;
+    margin: 1px;
+    border: 1px solid #d0d9e7;
+    border-radius: 2px;
+    vertical-align: top;
+}
+.top-btn-wrap:has(.btn-add-session) select{
+    width: 80px;
+    height: 50px;
+    margin: 2px;
+}
+.ev-banner.type2{
+    background-color: #f5f8ff;
+    background-position: 0 0, right 0;
+    background-image: url('../image/sub/bg_ev_banner02_left.png'), url('../image/sub/bg_ev_banner02_right.png');
+    background-size: auto 100%;
+}
+.ev-banner.type2 + .top-btn-wrap{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.ev-banner.type2 + .top-btn-wrap .btn{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.session-table th,
+.session-table td{
+    padding: 20px 30px;
+    font-size: 1.8rem;
+    letter-spacing: -0.075em;
+    vertical-align: middle;
+}
+.session-table .text-left{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.session-table thead th{
+    font-weight: 500;
+    color: #111111;
+}
+.session-table td{
+    color: #585858;
+    font-weight: 500;
+}
+.session-table .session-tit{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #144393;
+}
+.session-table .session-tit + p{
+    margin-top: 20px;
+}
+.session-table .time{
+    font-weight: 700;
+    color: #111111;
+}
+.session-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.session-info .tit{
+    font-weight: 700;
+    color: #111;
+}
+.session-con .btn-admin{
+    flex: 0 0 auto;
+}
+.session-con .btn-admin a{
+    display: inline-block;
+    margin: 2px;
+    vertical-align: middle;
+}
+.session-con .btn-admin a:has(img){
+    margin: 2px 4px;
+}
+
+
 /* 마이페이지::해외학회 */
 .info-conbox .tit{
     margin-top: 20px;

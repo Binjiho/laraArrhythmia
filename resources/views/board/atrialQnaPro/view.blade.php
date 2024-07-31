@@ -1,10 +1,11 @@
 @extends('pro.layouts.pro-layout')
 
 @section('addStyle')
+{{--    <link rel="stylesheet" href="{{ asset('assets/css/editor.css') }}">--}}
 @endsection
 
 @section('contents')
-    <article class="sub-contents" style="min-height: 656px;">
+    <article class="sub-contents">
         <div class="sub-conbox inner-layer">
 
             @include('layouts.include.subTit')

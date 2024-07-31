@@ -185,6 +185,7 @@ hr{
     left: 0;
     z-index: 10;
     width: 100%;
+    background-color: rgba(0,0,0,0.2);
 }
 .util-wrap{
     width: 100%;

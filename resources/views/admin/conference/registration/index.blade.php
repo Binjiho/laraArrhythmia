@@ -71,11 +71,18 @@
                     <td>{{ $row->sosok_kr ?? '' }}</td>
                     <td>{{ $row->phone[0] ?? [] }}-{{ $row->phone[1] ?? [] }}-{{ $row->phone[2] ?? [] }}</td>
                     <td>{{ number_format($row->tot_pay) ?? '0' }}원</td>
-                    <td>{{ $conferenceConfig['pay_status'][$row->pay_status ?? ''] ?? '' }}</td>
-                    <td>{{ $row->sender_date ? $row->sender_date->format('Y-m-d') : '' }}</td>
-                    <td>{{ $row->send_complete_date ? $row->send_complete_date->format('Y-m-d') : '' }}</td>
+{{--                    <td>{{ $conferenceConfig['pay_status'][$row->pay_status ?? ''] ?? '' }}</td>--}}
                     <td>
-                        <select name="change_result">
+                        <select name="hide" id="hide" class="form-item sendsel">
+                            @foreach($conferenceConfig['send_status'] as $key => $val)
+                                <option value="{{ $key }}" {{ $row->send_status == $key ? 'selected' : '' }}>{{ $val }}</option>
+                            @endforeach
+                        </select>
+                    </td>
+                    <td>{{ $row->sender_date ? $row->sender_date->format('Y-m-d') : '' }}</td>
+                    <td>{{ ( $row->send_complete_date && isValidTimestamp($row->send_complete_date) ) ? $row->send_complete_date->format('Y-m-d') : '' }}</td>
+                    <td>
+                        <select name="change_result" class="form-item ">
                             @foreach($conferenceConfig['attend'] as $key => $val)
                                 <option value="{{ $key }}" {{ $key === $row->attend ? 'selected' : '' }}>{{ $val }}</option>
                             @endforeach
@@ -127,6 +134,17 @@
             ajaxData.target = $(this).val();
 
             if (confirm('변경 하시겠습니까?')) {
+                callAjax(dataUrl, ajaxData);
+            }
+        });
+
+        $(document).on('change', ".sendsel", function() {
+            let ajaxData = {};
+            ajaxData.case = 'change-sendstatus';
+            ajaxData.sid = $(this).parents('tr').data('sid');
+            ajaxData.target = $(this).val();
+
+            if (confirm('입금상태를 변경 하시겠습니까?')) {
                 callAjax(dataUrl, ajaxData);
             }
         });

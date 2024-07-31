@@ -64,22 +64,6 @@
                                         </dd>
                                     </dl>
 
-                                @if($boardConfig['use']['date'])
-                                    <dl>
-                                        <dt><strong class="required">*</strong> 행사기간</dt>
-                                        <dd>
-                                            <div class="radio-wrap cst">
-                                                @foreach($boardConfig['options']['date_type'] as $date_type_key => $date_type_val)
-                                                    <div class="radio-group">
-                                                        <input type="radio" name="date_type" id="date_type_{{ $date_type_key }}" value="{{ $date_type_key }}" {{ (($board->date_type ?? 'N') == $date_type_key) ? 'checked' : '' }}>
-                                                        <label for="date_type_{{ $date_type_key }}">{{$date_type_val}}</label>
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                @endif
-
                                     <dl>
                                         <dt>학술대회 원고 URL</dt>
                                         <dd>
@@ -115,6 +99,37 @@
                                         </dl>
                                     @endif
 
+                                    <dl>
+                                        <dt>일시</dt>
+                                        <dd>
+                                            <div class="radio-wrap cst">
+                                                @foreach($boardConfig['options']['date_type'] as $key => $val)
+                                                    <div class="radio-group">
+                                                        <input type="radio" name="date_type" id="date_type_{{ $key }}" value="{{ $key }}" {{ (($board->date_type ?? '') == $key) ? 'checked' : '' }}>
+                                                        <label for="date_type_{{ $key }}">{{$val}}</label>
+                                                    </div>
+                                                @endforeach
+
+                                                <div class="radio-group form-group form-group-text n2">
+                                                    <input type="text" name="event_sdate" id="event_sdate" class="form-item" value="{{ $board->event_sdate ?? '' }}" readonly datepicker>
+                                                    <span class="text">~</span>
+                                                    <input type="text" name="event_edate" id="event_edate" class="form-item" value="{{ $board->event_edate ?? '' }}" readonly datepicker {{ (($board->date_type ?? '') == 'D') ? 'disabled' : '' }}>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>장소</dt>
+                                        <dd>
+                                            <input type="text" name="place" id="place" class="form-item" value="{{ $board->place ?? '' }}">
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>주최</dt>
+                                        <dd>
+                                            <input type="text" name="host" id="host" class="form-item" value="{{ $board->host ?? '' }}">
+                                        </dd>
+                                    </dl>
                                     @if($boardConfig['use']['hide'])
                                         <dl>
                                             <dt><strong class="required">*</strong> 공개 여부</dt>
@@ -130,7 +145,69 @@
                                             </dd>
                                         </dl>
                                     @endif
+                                </div>
 
+
+                                <div class="top-btn-wrap">
+                                    <a href="javascript:;" onclick="change_tr(this,'add');" class="btn btn-type1 color-type17 btn-add-session">세션 추가 <span class="plus">+</span></a>
+                                    <span class="help-text text-blue">
+                                    ※ 세션 추가 버튼을 클릭하시면 세션 입력 테이블이 추가 됩니다.
+                                    </span>
+                                </div>
+
+                                <div class="write-wrap" id="fee_tbl">
+                                @if(!empty($board->sid) && $board->sessions->count() > 0)
+                                    @foreach($board->sessions as $key => $session_item)
+                                        <dl>
+                                            <input type="hidden" name="session_sid[]" value="{{ $session_item['sid'] }}" readonly>
+                                            <dt>세션 입력</dt>
+                                            <dd>
+                                                <div class="session-write-con">
+                                                    <div class="session-form-group">
+                                                        <div class="form-group">
+                                                            <input type="text" name="title[]" value="{{ $session_item['title'] }}" id="" class="form-item" placeholder="세션 타이틀">
+                                                        </div>
+                                                        <div class="form-group n2 mt-10">
+                                                            <input type="text" name="chair_person[]" value="{{ $session_item['chair_person'] }}" id="" class="form-item" placeholder="좌장이름 (소속)">
+                                                            <input type="text" name="room[]" value="{{ $session_item['room'] }}" id="" class="form-item" placeholder="Room">
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-admin">
+                                                        <button type="button" class="btn btn-arrow" onclick="move_order(this,'up')"><img src="/assets/image/icon/ic_arrow_top.png" alt="위로"></button>
+                                                        <button type="button" class="btn btn-arrow" onclick="move_order(this,'down')"><img src="/assets/image/icon/ic_arrow_bottom.png" alt="아래로"></button>
+                                                        <a href="javascript:;" onclick="change_tr(this,'del');" class="btn btn-board btn-delete">삭제</a>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    @endforeach
+                                @else
+                                    <dl>
+                                        <input type="hidden" name="session_sid[]" value="" readonly>
+                                        <dt>세션 입력</dt>
+                                        <dd>
+                                            <div class="session-write-con">
+                                                <div class="session-form-group">
+                                                    <div class="form-group">
+                                                        <input type="text" name="title[]" value="" id="" class="form-item" placeholder="세션 타이틀">
+                                                    </div>
+                                                    <div class="form-group n2 mt-10">
+                                                        <input type="text" name="chair_person[]" value="" id="" class="form-item" placeholder="좌장이름 (소속)">
+                                                        <input type="text" name="room[]" value="" id="" class="form-item" placeholder="Room">
+                                                    </div>
+                                                </div>
+                                                <div class="btn-admin">
+                                                    <button type="button" class="btn btn-arrow" onclick="move_order(this,'up')"><img src="/assets/image/icon/ic_arrow_top.png" alt="위로"></button>
+                                                    <button type="button" class="btn btn-arrow" onclick="move_order(this,'down')"><img src="/assets/image/icon/ic_arrow_bottom.png" alt="아래로"></button>
+                                                    <a href="javascript:;" onclick="change_tr(this,'del');" class="btn btn-board btn-delete">삭제</a>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                @endif
+                                </div>
+
+                                <div class="write-wrap">
                                     @if($boardConfig['use']['plupload'] && ($board->files_count ?? 0) > 0)
                                         <dl>
                                             <dt>첨부 파일</dt>
@@ -161,6 +238,7 @@
                                         </dl>
                                     @endif
                                 </div>
+
                                 <div class="btn-wrap text-center">
                                     <a href="javascript:void(0);" class="btn btn-type1 color-type4" id="board_cancel">취소</a>
                                     <button type="submit" class="btn btn-type1 color-type5">{{ empty($board->sid) ? '등록' : '수정' }}</button>
@@ -177,6 +255,12 @@
 @section('addScript')
     @include("board.{$boardConfig['skin']}.script.default-script")
     <script>
+        $(function(){
+            if( $("#category").val() == '1'/*KHRS*/ || $("#category").val() == '5'/*부정맥연구회*/) {
+                $('#category2').attr('disabled', false);
+            }
+        });
+
         $(document).on('click', '.file_del', function() {
             let ajaxData = {};
             ajaxData.case = 'file-delete';
@@ -184,6 +268,16 @@
             ajaxData.filePath = $(this).data('path');
 
             actionConfirmAlert('삭제 하시겠습니까?', {'ajax': actionAjax(dataUrl, ajaxData)});
+        });
+
+        $(document).on('click', 'input[name=date_type]', function() {
+            let _type = $(this).val();
+            if(_type == 'D'/*하루행사*/){
+                $("input[name='event_edate']").val('');
+                $("input[name='event_edate']").prop('disabled',true);
+            }else{
+                $("input[name='event_edate']").prop('disabled',false);
+            }
         });
 
         function category2_change(el){
@@ -198,6 +292,55 @@
             }else{
                 $('#category2').attr('disabled', 'disabled');
                 $('#category2').val('');
+            }
+        }
+
+        function change_tr(el, mode){
+            if(mode == 'add'){
+                var _html = "";
+                _html += "<dl>";
+                _html += "<input type=\"hidden\" name=\"session_sid[]\" class=\"form-item\" readonly>";
+                _html += "<dt>세션 입력</dt>";
+                _html += "<dd>";
+                _html += "<div class=\"session-write-con\">";
+                _html += "<div class=\"session-form-group\">";
+                _html += "<div class=\"form-group\">";
+                _html += "<input type=\"text\" name=\"title[]\" class=\"form-item\" placeholder=\"세션 타이틀\">";
+                _html += "</div>";
+                _html += "<div class=\"form-group n2 mt-10\">";
+                _html += "<input type=\"text\" name=\"chair_person[]\" class=\"form-item\" placeholder=\"좌장이름 (소속)\"> ";
+                _html += "<input type=\"text\" name=\"room[]\" class=\"form-item\" placeholder=\"Room\">";
+                _html += "</div>";
+                _html += "</div>";
+
+                _html += "<div class=\"btn-admin\">";
+                _html += "<button type=\"button\" onclick=\"move_order(this,'up');\" class=\"btn btn-arrow\"><img src=\"/assets/image/icon/ic_arrow_top.png\" alt=\"위로\"></button> ";
+                _html += "<button type=\"button\" onclick=\"move_order(this,'down');\" class=\"btn btn-arrow\"><img src=\"/assets/image/icon/ic_arrow_bottom.png\" alt=\"아래로\"></button> ";
+                _html += "<a href=\"javascript:;\" onclick=\"change_tr(this,'del');\" class=\"btn btn-board btn-delete\">삭제</a>";
+                _html += "</div>";
+
+                _html += "</div>";
+                _html += "</dd>";
+                _html += "</dl>";
+
+                $("#fee_tbl").append(_html);
+            }else{
+                $(el).closest("dl").remove();
+                // if($("#fee_tbl").find("dl").length < 2){
+                //     alert('최소 한개 이상은 입력해주세요.');
+                //     return false;
+                // }else{
+                //     $(el).closest("dl").remove();
+                // }
+            }
+        }
+
+        function move_order(el,mode){
+            var target = $(el).closest("dl");
+            if( mode == "down" ){
+                target.next().after(target);
+            }else{
+                target.prev().before(target);
             }
         }
 
@@ -251,11 +394,37 @@
                     isEmpty: true,
                 },
                 event_edate: {
-                    isEmpty: true,
+                    // isEmpty: true,
+                    isEmpty: {
+                        depends: function (element) {
+                            return $("input[name='date_type']:checked").val() === 'L';
+                        }
+                    }
                 },
                 hide: {
                     checkEmpty: true,
                 },
+                // "title[]" : {
+                //     isEmpty: {
+                //         depends: function(element) {
+                //             return $("input[name='title[]']").is(":visible");
+                //         }
+                //     },
+                // },
+                // "chair_person[]" : {
+                //     isEmpty: {
+                //         depends: function(element) {
+                //             return $("input[name='chair_person[]']").is(":visible");
+                //         }
+                //     },
+                // },
+                // "room[]" : {
+                //     isEmpty: {
+                //         depends: function(element) {
+                //             return $("input[name='room[]']").is(":visible");
+                //         }
+                //     },
+                // },
                 popup: {
                     checkEmpty: true,
                 },
@@ -290,6 +459,15 @@
                 },
                 hide: {
                     checkEmpty: '공개여부를 체크해주세요.',
+                },
+                "title[]": {
+                    isEmpty: '세션 타이틀을 입력해주세요.',
+                },
+                "chair_person[]" : {
+                    isEmpty: '좌장이름(소속)을 입력해주세요.',
+                },
+                "room[]" : {
+                    isEmpty: 'Room을 입력해주세요.',
                 },
                 popup: {
                     checkEmpty: '팝업 설정을 체크해주세요.',

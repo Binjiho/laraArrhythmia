@@ -16,8 +16,11 @@ use App\Services\AppServices;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Maatwebsite\Excel\Facades\Excel;
 use function Symfony\Component\Translation\t;
+
+ini_set('memory_limit','-1');
 
 /**
  * Class MailServices
@@ -25,6 +28,7 @@ use function Symfony\Component\Translation\t;
  */
 class MailServices extends AppServices
 {
+
     public function findMail(int $sid = 0)
     {
         return MailList::findOrFail($sid);
@@ -220,7 +224,7 @@ class MailServices extends AppServices
                 'winClose' => $this->ajaxActionWinClose(true)
             ]);
         } catch (\Exception $e) {
-            return $this->dbRollback($e);
+            return $this->dbRollback($e,true);
         }
     }
 
@@ -460,31 +464,36 @@ class MailServices extends AppServices
             // 회원등급별 발송
             if ($mail->send_type == 1) {
                 $user = User::whereIn('level', $mail->level)
-                    ->where('confirm', 'Y') // 승인회원 대상
-//                    ->where('email_yn', 'Y') // 이메일 수신 선택만 발송했는데 조건변경으로 주석
+                    ->whereNull('del_confirm') //240712 이광식 추가
                     ->get();
 
                 foreach ($user as $row) {
                     $mail->name_kr = $row->name_kr;
-                    $mail->uid = $row->email;
-//                    $mail->email = $row->email;
+                    $mail->uid = $row->uid;
 
                     $sendMail = $this->mailSendService($mail, $mail->subject, $view, $ml_sid);
 
-                    if ($sendMail === true) {
-                        if(!empty($row->email2)) {
-                            $mail->email = $row->email2;
-
-                            $sendMail = $this->mailSendService($mail, $mail->subject, $view, $ml_sid);
-
-                            if ($sendMail !== true) {
-                                return $sendMail;
-                            }
-                        }
-                    } else {
+                    if ($sendMail !== true) {
                         return $sendMail;
                     }
                 }
+
+                /**
+                 * 대용량 처리
+                 */
+//                User::whereIn('level', $mail->level)->whereNull('del_confirm')
+//                    ->chunk(100, function ($users) {
+//                        foreach ($users as $row) {
+//                            $mail->name_kr = $row->name_kr;
+//                            $mail->uid = $row->uid;
+//
+//                            $sendMail = $this->mailSendService($mail, $mail->subject, $view, $ml_sid);
+//
+//                            if ($sendMail !== true) {
+//                                return $sendMail;
+//                            }
+//                        }
+//                    });
 
                 return true;
             }
@@ -537,7 +546,7 @@ class MailServices extends AppServices
         $now = Carbon::now();
         $seq = $now->timestamp . $now->micro;
 
-        $receiver_name = $data->name_kr;
+        $receiver_name = $data->name_kr ?? "대한부정맥학회 회원";
         $receiver_email = $data->uid;
 
         $this->data['data'] = $data;
@@ -547,12 +556,17 @@ class MailServices extends AppServices
         if($rebody){
             $body = $rebody;
         }
-        
+
         $this->transaction();
 
         try {
             if (env('APP_ENV') !== 'local') {
                 //인터페이스 테이블
+
+                if (request()->ip() == '218.235.94.247') {
+                    $receiver_email = 'jh2.park@m2community.co.kr';
+                }
+
                 WiseUMailInterface::insert([
                     'ECARE_NO' => config('site.mail')['eCareNo'],
                     'RECEIVER_ID' => $seq,
@@ -597,10 +611,12 @@ class MailServices extends AppServices
             $mailSend->setByData($data);
             $mailSend->save();
 
-            $this->dbCommit('메일발송');
+            DB::commit();
+
             return true;
         } catch (\Exception $e) {
-            return $this->dbRollback($e,true);
+            \Log::error('====================================' . $e->getMessage());
+            return $this->dbRollback($e);
         }
     }
 

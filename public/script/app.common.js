@@ -253,6 +253,7 @@ const callAjax = (url, obj, isDebug = false) => {
 
 // multi-part ajax (file 전송시 or 배열값 전송시)
 const callMultiAjax = (url, obj, isDebug = false) => {
+
     callbackMultiAjax(url, obj, function(data, error) {
         (data) ? ajaxSuccessData(data) : ajaxErrorData(error);
     }, isDebug);
@@ -372,6 +373,10 @@ const ajaxSuccessData = (obj) => {
 
     if (obj.remove) {
         isRemove(obj.remove);
+    }
+
+    if (obj.lastRemove) {
+        lastRemove(obj.lastRemove);
     }
 
     if (obj.childrenRemove) {
@@ -680,6 +685,12 @@ const isRemove = (obj) => {
     });
 }
 
+const lastRemove = (obj) => {
+    $.each(obj, function (key, data) {
+        $(data.selector).last().remove();
+    });
+}
+
 const isChildrenRemove = (obj) => {
     $.each(obj, function (key, data) {
         $(data.selector).children().remove();
@@ -725,13 +736,15 @@ const actionAlert = (obj) => {
 
 // file input check
 const fileCheck = (_this, inputTarget = null) => {
+
     const str = $(_this).val();
+
     const fileName = str.split('\\').pop().toLowerCase();
 
     let addInputData = [
         {selecter: _this, input: ''},
     ]
-
+    
     if (!isEmpty(inputTarget)) {
         addInputData.push({selecter: inputTarget, input: ''});
     }
@@ -917,6 +930,12 @@ $(document).on("keyup", "input[phoneHyphen]", function () {
     $(this).val(phone);
 });
 
+// birth only number Auto Hyphen
+$(document).on("keyup", "input[birthHyphen]", function () {
+    const birth = $(this).val().replace(/[^0-9]/g, "").replace(/([0-9]{3})([0-9]{2})?([0-9]{2})$/, "$1-$2-$3").replace("--", "-");
+    $(this).val(birth);
+});
+
 // numberFormat add comma
 $(document).on("keyup", "input[priceFormat]", function () {
     const num = uncomma($(this).val()).replace(/[^0-9\s+]/gi, "")
@@ -926,6 +945,12 @@ $(document).on("keyup", "input[priceFormat]", function () {
 // onlyNumber
 $(document).on("keyup", "input[onlyNumber]", function () {
     const num = $(this).val().replace(/[^0-9\s+]/gi, "");
+    $(this).val(isNaN(num) ? '' : num);
+});
+
+// avg onlyNumber
+$(document).on("keyup", "input[onlyAvg]", function () {
+    const num = $(this).val().replace(/[^.0-9\s+]/gi, "");
     $(this).val(isNaN(num) ? '' : num);
 });
 

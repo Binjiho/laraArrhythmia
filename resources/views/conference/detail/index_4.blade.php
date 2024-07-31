@@ -25,12 +25,14 @@
                     초록접수 마감일 : <strong class="text-pink2">{{ $conference->abs_edate->format('Y-m-d') }}</strong> 까지
                 </div>
 
+                @if($conference->caution_text)
                 <div class="sub-contit-wrap">
                     <h4 class="sub-contit">주의사항</h4>
                 </div>
-                <div class="view-contents">
-                    {!! $conference->notice_text ?? ''  !!}
+                <div class="view-contents editor-contents">
+                    {!! $conference->caution_text ?? ''  !!}
                 </div>
+                @endif
             </div>
 
             <div class="btn-wrap text-center">

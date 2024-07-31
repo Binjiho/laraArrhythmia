@@ -46,12 +46,17 @@ class AppServices
             setFlashData(['msg' => $msg]);
         }
 
-        QueryLog::create([
-            'u_idx' => thisPk(),
-            'subject' => $subject,
-            'query' => $this->getQuery(),
-            'ip' => request()->ip(),
-        ]);
+//        if($subject!=='대용량 메일발송'){
+
+            QueryLog::create([
+                'u_idx' => thisPk(),
+                'subject' => $subject,
+                'query' => $this->getQuery(),
+                'ip' => request()->ip(),
+            ]);
+
+//        }
+
     }
 
     protected function dbRollback($error, $stop = false)
@@ -71,15 +76,15 @@ class AppServices
             dd($errorInfo);
         }
 
-        // Log::channel('dbError')->error("================================== DB ERROR ===================================");
-        //     foreach($errorInfo as $key => $val) {
-        //         if ($key == 'Trace') {
-        //             continue;
-        //         }
-
-        //         Log::channel('dbError')->error("ERROR {$key}: " . $val);
-        //     }
-        // Log::channel('dbError')->error("===============================================================================");
+//         Log::channel('dbError')->error("================================== DB ERROR ===================================");
+//             foreach($errorInfo as $key => $val) {
+//                 if ($key == 'Trace') {
+//                     continue;
+//                 }
+//
+//                 Log::channel('dbError')->error("ERROR {$key}: " . $val);
+//             }
+//         Log::channel('dbError')->error("===============================================================================");
 
         return dbRedirect();
     }

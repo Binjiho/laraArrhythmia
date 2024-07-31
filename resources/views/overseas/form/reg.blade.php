@@ -25,7 +25,8 @@
             <dl>
                 <dt>소속 (병원명)</dt>
                 <dd>
-                    {{ $affi[$user->sosok ?? '' ]['office_e'] ?? '' }}
+                    {{-- $affi[$user->sosok ?? '' ]['office_k'] ?? '' --}}
+                    {{ $user->sosok_kr ?? '' }}
                 </dd>
             </dl>
             <dl>
@@ -151,7 +152,7 @@
         </div>
         <div class="write-wrap">
             <dl>
-                <dt>신청자격</dt>
+                <dt><strong class="required">*</strong> 신청자격</dt>
                 <dd>
                     <div class="checkbox-wrap cst">
                         @foreach($overseasConfig['qualification'] as $qualification_key => $qualification_val)
@@ -243,15 +244,21 @@
                 </dd>
             </dl>
             <dl>
-                <dt>최근 3년간 대한부정맥학회 정기학술대회 (KHRS) 등록여부</dt>
+                <dt><strong class="required">*</strong> 최근 3년간 대한부정맥학회 정기학술대회 (KHRS) 등록여부</dt>
                 <dd>
                     <div class="checkbox-wrap cst full">
-                        @foreach($overseasConfig['registration_status'] as $registration_status_key => $registration_status_val)
+                        @foreach($conference->registration_status as $registration_status_key => $registration_status_val)
                             <div class="checkbox-group">
                                 <input type="checkbox" name="registration_status[]" id="registration_status_{{$registration_status_key}}" value="{{$registration_status_key}}" {{ in_array($registration_status_key, $overseas->registration_status ?? []) ? 'checked':'' }}>
                                 <label for="registration_status_{{$registration_status_key}}">{{$registration_status_val}}</label>
                             </div>
                         @endforeach
+{{--                        @foreach($overseasConfig['registration_status'] as $registration_status_key => $registration_status_val)--}}
+{{--                            <div class="checkbox-group">--}}
+{{--                                <input type="checkbox" name="registration_status[]" id="registration_status_{{$registration_status_key}}" value="{{$registration_status_key}}" {{ in_array($registration_status_key, $overseas->registration_status ?? []) ? 'checked':'' }}>--}}
+{{--                                <label for="registration_status_{{$registration_status_key}}">{{$registration_status_val}}</label>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
                     </div>
                 </dd>
             </dl>
@@ -262,7 +269,7 @@
         </div>
         <div class="write-wrap">
             <dl>
-                <dt>참가신청 국제학술회의</dt>
+                <dt>참가신청 학술대회명</dt>
                 <dd>
                     {{$conference->subject ?? ''}}
                 </dd>
@@ -281,7 +288,10 @@
                 </dd>
             </dl>
             <dl>
-                <dt><strong class="required">*</strong> 공동 저자 여부</dt>
+                <dt>
+					<strong class="required">*</strong> 초록의 공동 저자 여부 <br>
+					<span style="font-size: 1.4rem;">※초록 채택으로 참가하시는 분 중, <u>발표자가 아닌</u> 공동 저자로 참가하실 경우 <span class="text-red">반드시 ‘예’ 체크</span></span>
+				</dt>
                 <dd>
                     <div class="radio-wrap cst">
                         <div class="radio-group">

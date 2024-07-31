@@ -162,6 +162,9 @@
                 place: {
                     isEmpty: true,
                 },
+                // link_url: {
+                //     isEmpty: true,
+                // },
                 contact_name: {
                     isEmpty: true,
                 },
@@ -171,17 +174,37 @@
                 contact_email: {
                     isEmpty: true,
                 },
-                invite_text: {
-                    isTinyEmpty: true,
-                },
+                // invite_text: {
+                //     isTinyEmpty: {
+                //         depends: function(element) {
+                //             return $("input[name='detail']:checked").val()==='Y';
+                //         }
+                //     },
+                //     // isTinyEmpty: true,
+                // },
                 schedule_text: {
-                    isTinyEmpty: true,
+                    isTinyEmpty: {
+                        depends: function(element) {
+                            return $("input[name='detail']:checked").val()==='Y';
+                        }
+                    },
+                    // isTinyEmpty: true,
                 },
+                // fileName1: {
+                //     isEmpty: true,
+                // },
                 //사전등록 사용유무
                 regist_yn: {
                     checkEmpty: true,
                 },
                 regist_sdate: {
+                    required: {
+                        depends: function(element) {
+                            return $("input[name='regist_yn']:checked").val()==='Y';
+                        }
+                    },
+                },
+                regist_edate: {
                     required: {
                         depends: function(element) {
                             return $("input[name='regist_yn']:checked").val()==='Y';
@@ -230,26 +253,34 @@
                         }
                     },
                 },
-                "regist_onsite[]" : {
-                    registOnsiteCheck: {
-                        depends: function(element) {
-                            return $("input[name='regist_yn']:checked").val()==='Y';
-                        }
-                    },
-                },
-                account: {
-                    required: {
-                        depends: function(element) {
-                            return $("input[name='regist_yn']:checked").val()==='Y';
-                        }
-                    },
-                },
+                // "regist_onsite[]" : {
+                //     registOnsiteCheck: {
+                //         depends: function(element) {
+                //             return $("input[name='regist_yn']:checked").val()==='Y';
+                //         }
+                //     },
+                // },
+                // account: {
+                //     required: {
+                //         depends: function(element) {
+                //             return $("input[name='regist_yn']:checked").val()==='Y';
+                //         }
+                //     },
+                // },
 
                 //초록접수 사용유무
                 abs_yn: {
                     checkEmpty: true,
                 },
                 abs_sdate: {
+                    required: {
+                        depends: function(element) {
+                            return $("input[name='abs_yn']:checked").val()==='Y';
+                        }
+                    },
+                    // isEmpty: true,
+                },
+                abs_edate: {
                     required: {
                         depends: function(element) {
                             return $("input[name='abs_yn']:checked").val()==='Y';
@@ -293,6 +324,9 @@
                 place: {
                     isEmpty: '행사 장소를 입력해주세요.',
                 },
+                // link_url: {
+                //     isEmpty: '홈페이지 URL을 입력해주세요.',
+                // },
                 contact_name: {
                     isEmpty: '문의처 이름을 입력해주세요.',
                 },
@@ -302,17 +336,25 @@
                 contact_email: {
                     isEmpty: '문의처 E-mail를 입력해주세요.',
                 },
-                invite_text: {
-                    isTinyEmpty: '초대의 글을 입력해주세요.',
-                },
+                // invite_text: {
+                //     // required: '초대의 글을 입력해주세요.',
+                //     isTinyEmpty: '초대의 글을 입력해주세요.',
+                // },
                 schedule_text: {
+                    // required: '행사 일정을 입력해주세요.',
                     isTinyEmpty: '행사 일정을 입력해주세요.',
                 },
+                // fileName1: {
+                //     isEmpty: '썸네일을 등록해주세요.',
+                // },
                 regist_yn: {
                     checkEmpty: '사전등록 사용을 선택해주세요.',
                 },
                 regist_sdate: {
                     required: '사전등록 시작일을 입력해주세요.',
+                },
+                regist_edate: {
+                    required: '사전등록 마감일을 입력해주세요.',
                 },
                 limit_yn: {
                     required: '선착순 등록 사용유무를 선택해주세요.',
@@ -332,18 +374,22 @@
                 "regist_early[]" : {
                     registEarlyCheck: '사전 등록비를 입력해주세요.',
                 },
-                "regist_onsite[]" : {
-                    registOnsiteCheck: '현장 등록비를 입력해주세요.',
-                },
-                account: {
-                    required: '입금계좌를 입력해주세요.',
-                },
+                // "regist_onsite[]" : {
+                //     registOnsiteCheck: '현장 등록비를 입력해주세요.',
+                // },
+                // account: {
+                //     required: '입금계좌를 입력해주세요.',
+                // },
 
                 abs_yn: {
                     checkEmpty: '초록접수 사용을 선택해주세요.',
                 },
                 abs_sdate: {
+                    // isEmpty: '초록접수 시작일을 입력해주세요.',
                     required: '초록접수 시작일을 입력해주세요.',
+                },
+                abs_edate: {
+                    required: '초록접수 마감일을 입력해주세요.',
                 },
                 abs_authority: {
                     checkEmpty: '초록접수 신청 권한을 체크해주세요.',
@@ -361,6 +407,12 @@
         const registerSubmit = () => {
             let ajaxData = newFormData($(form));
             ajaxData.append('invite_text', tinymce.get('invite_text').getContent());
+            ajaxData.append('schedule_text', tinymce.get('schedule_text').getContent());
+            ajaxData.append('etc_text', tinymce.get('etc_text').getContent());
+            ajaxData.append('refund_text', tinymce.get('refund_text').getContent());
+            ajaxData.append('notice_text', tinymce.get('notice_text').getContent());
+            ajaxData.append('privacy_text', tinymce.get('privacy_text').getContent());
+            ajaxData.append('caution_text', tinymce.get('caution_text').getContent());
             // ajaxData.append('plupload_file', JSON.stringify(plupladFile));
 
             callMultiAjax(dataUrl, ajaxData);

@@ -19,30 +19,15 @@
                     <img src="/assets/image/main/img_mainvisual01.png" alt="MISSION: 심장의 건강함 리듬을 지키기 위해 끊임없이 도전하고 헌신한다. + VISION: 부정맥 극볼을 위한 창의적 연구, 인재교육 및 국민인식 개선을 통해 의료의 선진화를 주도해 나가는 학회">
                 </picture>
             </div>
-            <div class="main-visual-con main-visual-con02">
-                <img src="/assets/image/main/img_mainvisual02.png" alt="KHRS 2024. The 16th Auunal Scientific Session of the Korean Heart Rhythm Society. June 21(Fri.) - 22(Sat.), 2024. Grand Walkerhill Seoul, Korea. Beyound Rhythm, Better Life" usemap="#mainvisual02" class="p-show">
-                <img src="/assets/image/main/img_mainvisual02_m.png" alt="KHRS 2024. The 16th Auunal Scientific Session of the Korean Heart Rhythm Society. June 21(Fri.) - 22(Sat.), 2024. Grand Walkerhill Seoul, Korea. Beyound Rhythm, Better Life" usemap="#mainvisual02-m" class="m-show">
-                <map name="mainvisual02">
-                    <area target="_blank" href="https://abstract-hrs.org/abstract/" alt="[Abstract Submission] by April 22, 2024" coords="849,707,1168,620" shape="rect">
-                    <area target="_blank" href="https://abstract-hrs.org/registration/" alt="[Pre-Registration] by June 7, 2024" coords="1219,707,1534,618" shape="rect">
-                </map>
-                <map name="mainvisual02-m">
-                    <area target="_blank" href="https://abstract-hrs.org/abstract/" alt="[Abstract Submission] by April 22, 2024" coords="38,472,356,559" shape="rect">
-                    <area target="_blank" href="https://abstract-hrs.org/registration/" alt="[Pre-Registration] by June 7, 2024" coords="365,470,681,559" shape="rect">
-                </map>
-            </div>
-			<div class="main-visual-con main-visual-con03">
-				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual03.png" alt="" class="p-show"></a>
-				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual03_m.png" alt="" class="m-show"></a>
+			<div class="main-visual-con main-visual-con10">
+				<a href="https://k-hrs.org/board/notice/view/537" target="_blank"><img src="/assets/image/main/img_mainvisual240712.png" alt="" class="p-show"></a>
+				<a href="https://k-hrs.org/board/notice/view/537" target="_blank"><img src="/assets/image/main/img_mainvisual240712_m.png" alt="" class="m-show"></a>
 			</div>
-			<div class="main-visual-con main-visual-con04">
-				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual04.png" alt="" class="p-show"></a>
-				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual04_m.png" alt="" class="m-show"></a>
-			</div>
-			<div class="main-visual-con main-visual-con05">
-				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual05.png" alt="" class="p-show"></a>
-				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual05_m.png" alt="" class="m-show"></a>
-			</div>
+			<div class="main-visual-con main-visual-con09">
+				<a href="https://k-hrs.org/board/fact?category=1" target="_blank"><img src="/assets/image/main/img_mainvisual240704.png" alt="" class="p-show"></a>
+				<a href="https://k-hrs.org/board/fact?category=1" target="_blank"><img src="/assets/image/main/img_mainvisual240704_m.png" alt="" class="m-show"></a>
+			</div>      			
+			
 			<div class="main-visual-con main-visual-con06">
 				<a href="/assets/file/main_bnr_240620.pdf" target="_blank"><img src="/assets/image/main/img_mainvisual06_v2.png" alt="" class="p-show"></a>
 				<a href="/assets/file/main_bnr_240620.pdf" target="_blank"><img src="/assets/image/main/img_mainvisual06_m.png" alt="" class="m-show"></a>
@@ -51,11 +36,52 @@
 				<img src="/assets/image/main/img_mainvisual07.jpg" alt="" class="p-show">
 				<img src="/assets/image/main/img_mainvisual07_m.jpg" alt="" class="m-show">
 			</div>
+			<div class="main-visual-con main-visual-con08">
+				<img src="/assets/image/main/img_mainvisual08.jpg" alt="" class="p-show">
+				<img src="/assets/image/main/img_mainvisual08_m.jpg" alt="" class="m-show">
+			</div>			
         </div>
         <div class="btn-visual-wrap">
             <button type="button" class="btn-visual btn-visual-prev">&lt;<span class="hide">이전</span></button>
             <button type="button" class="btn-visual btn-visual-next">&gt;<span class="hide">다음</span></button>
         </div>
+
+		<!-- 삭제배너 -->
+		<!-- 
+			<div class="main-visual-con main-visual-con10">
+				<a href="https://www.k-hrs.org/conference/detail?sid=76" target="_blank"><img src="/assets/image/main/img_mainvisual240708.jpg" alt="" class="p-show"></a>
+				<a href="https://www.k-hrs.org/conference/detail?sid=76" target="_blank"><img src="/assets/image/main/img_mainvisual240708_m.jpg" alt="" class="m-show"></a>
+			</div> 추후 오픈예정 배너
+
+			<div class="main-visual-con main-visual-con02">
+				<img src="/assets/image/main/img_mainvisual02.png" alt="KHRS 2024. The 16th Auunal Scientific Session of the Korean Heart Rhythm Society. June 21(Fri.) - 22(Sat.), 2024. Grand Walkerhill Seoul, Korea. Beyound Rhythm, Better Life" usemap="#mainvisual02" class="p-show">
+				<img src="/assets/image/main/img_mainvisual02_m.png" alt="KHRS 2024. The 16th Auunal Scientific Session of the Korean Heart Rhythm Society. June 21(Fri.) - 22(Sat.), 2024. Grand Walkerhill Seoul, Korea. Beyound Rhythm, Better Life" usemap="#mainvisual02-m" class="m-show">
+				<map name="mainvisual02">
+					<area target="_blank" href="https://abstract-hrs.org/abstract/" alt="[Abstract Submission] by April 22, 2024" coords="849,707,1168,620" shape="rect">
+					<area target="_blank" href="https://abstract-hrs.org/registration/" alt="[Pre-Registration] by June 7, 2024" coords="1219,707,1534,618" shape="rect">
+				</map>
+				<map name="mainvisual02-m">
+					<area target="_blank" href="https://abstract-hrs.org/abstract/" alt="[Abstract Submission] by April 22, 2024" coords="38,472,356,559" shape="rect">
+					<area target="_blank" href="https://abstract-hrs.org/registration/" alt="[Pre-Registration] by June 7, 2024" coords="365,470,681,559" shape="rect">
+				</map>
+			</div> 
+
+			<div class="main-visual-con main-visual-con03">
+				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual03.png" alt="" class="p-show"></a>
+				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual03_m.png" alt="" class="m-show"></a>
+			</div> 
+
+			<div class="main-visual-con main-visual-con04">
+				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual04.png" alt="" class="p-show"></a>
+				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual04_m.png" alt="" class="m-show"></a>
+			</div> 
+
+			<div class="main-visual-con main-visual-con05">
+				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual05.png" alt="" class="p-show"></a>
+				<a href="https://abstract-hrs.org/" target="_blank"><img src="/assets/image/main/img_mainvisual05_m.png" alt="" class="m-show"></a>
+			</div> 
+		-->
+		<!-- 삭제배너 -->
     </article>
     <article class="main-contents bg-skyblue">
         <div class="quick-menu-wrap inner-layer">

@@ -19,7 +19,7 @@ class LoginServices extends AppServices
         $uid = $request->uid;
         $password = $request->password;
 
-        $user = User::withTrashed()->where('uid', $uid)->first();
+        $user = User::withTrashed()->where('uid', $uid)->orderByDesc('sid')->first();
 
         if (is_null($user)) {
             return $this->returnJsonData('alert', [

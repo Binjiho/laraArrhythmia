@@ -72,7 +72,7 @@ return [
 
 
             'M11' => [
-                'name' => '해외학회',
+                'name' => '해외학회 참가지원',
                 'class' => 'sub06',
                 'route' => 'overseas.info',
                 'param' => [],
@@ -194,6 +194,13 @@ return [
                     'low' => null,
                 ],
 
+                'SM9' => [
+                    'name' => '해외학회 참가지원',
+                    'route' => 'mypage.overseas',
+                    'param' => [],
+                    'low' => null,
+                ],
+
                 'SM7' => [
                     'name' => '중재시술인증',
                     'route' => 'mypage.surgery',
@@ -268,29 +275,29 @@ return [
 
                 'SM2' => [
                     'name' => '팩트시트',
-                    'route' => 'fact.part1',
-                    'param' => [],
+                    'route' => 'board',
+                    'param' => ['code' => 'fact', 'category'=>'1' ],
                     'low' => [
                         'SL1' => [
                             'name' => 'Part1',
-                            'route' => 'fact.part1',
-                            'param' => [],
+                            'route' => 'board',
+                            'param' => ['code' => 'fact', 'category'=>'1'],
                             'url' => null,
                             'small' => null,
                         ],
 
                         'SL2' => [
                             'name' => 'Part2',
-                            'route' => 'fact.part2',
-                            'param' => [],
+                            'route' => 'board',
+                            'param' => ['code' => 'fact', 'category'=>'2'],
                             'url' => null,
                             'small' => null,
                         ],
 
                         'SL3' => [
                             'name' => 'Part3',
-                            'route' => 'fact.part3',
-                            'param' => [],
+                            'route' => 'board',
+                            'param' => ['code' => 'fact', 'category'=>'3'],
                             'url' => null,
                             'small' => null,
                         ],
@@ -497,7 +504,7 @@ return [
                     'name' => '포토갤러리',
                     'route' => 'board',
                     'url' => '',
-                    'param' => ['code' => 'photo'],
+                    'param' => ['code' => 'photo', 'abyear'=>date('Y')],
                     'low' => null,
                 ],
             ],
@@ -513,7 +520,7 @@ return [
                 ],
 
                 'SM2' => [
-                    'name' => '자주하는 질문(FAQ)',
+                    'name' => '공지사항',
                     'route' => 'board',
                     'url' => '',
                     'param' => ['code'=>'overseas'],
@@ -1282,7 +1289,7 @@ return [
                     'name' => '포토갤러리',
                     'route' => 'board',
                     'url' => '',
-                    'param' => ['code' => 'photoPro'],
+                    'param' => ['code' => 'photoPro', 'abyear'=>date('Y')],
                     'low' => null,
                 ],
                 'SM3' => [

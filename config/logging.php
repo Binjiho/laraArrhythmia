@@ -50,7 +50,13 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['daily'], // daily 채널을 사용한다.
+            'ignore_exceptions' => false,
+        ],
+
+        'dbError' => [
+            'driver' => 'dbError',
+            'channels' => ['daily'], // daily 채널을 사용한다.
             'ignore_exceptions' => false,
         ],
 

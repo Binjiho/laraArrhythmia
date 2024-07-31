@@ -44,12 +44,13 @@ class DBTransferServices extends AppServices
 
         var_dump('################# start Transfer ################# <br> <br> <br> <br>');
 //        $this->userTransfer();
+//        $this->userModifyTransfer();
 //        $this->reviewerTransfer();
 //        $this->researchResultTransfer();
 //        $this->researchTransfer();
 //        $this->feeTransfer();
 //        $this->conferenceTransfer();
-        $this->conferenceModifyTransfer();
+//        $this->conferenceModifyTransfer();
 //        $this->registrationTransfer();
 //        $this->OverseasConferenceTransfer();
 //        $this->overseasRegistrationTransfer();
@@ -421,12 +422,13 @@ class DBTransferServices extends AppServices
         $custom_old_user = [];
 
         foreach ($old_user as $key => $row) {
-
-            array_push($custom_old_user, (object)[
-                'Member_idx' => $row->Member_idx,
-                'Member_OrganisationK' => $row->Member_OrganisationK,
-                'Member_Organisation' => $row->Member_Organisation,
-            ]);
+            if(!empty($row->Member_NewOrganisation_NameK)){
+                array_push($custom_old_user, (object)[
+                    'Member_idx' => $row->Member_idx,
+                    'Member_OrganisationK' => $row->Member_NewOrganisation_NameK,
+                    'Member_Organisation' => $row->Member_NewOrganisation_NameE,
+                ]);
+            }
         }
         $this->activationDBConnection();
         $this->transaction();
@@ -437,11 +439,13 @@ class DBTransferServices extends AppServices
 
             foreach ($custom_old_user as $key => $row) {
 
-                $user = User::findOrFail($row->Member_idx);
-                $user->sosok_kr = $row->Member_OrganisationK;
-                $user->sosok_en = $row->Member_Organisation;
+                $user = User::where(['sid'=>($row->Member_idx ?? 0 )])->first();
+                if(!$user) continue;
 
-                $user->save();
+                $user->sosok_kr = $row->Member_OrganisationK ?? '';
+                $user->sosok_en = $row->Member_Organisation ?? '';
+
+                $user->update();
 
 //                DB::commit();
                 $cnt = number_format($key + 1);

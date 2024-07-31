@@ -24,7 +24,7 @@
                 <dl>
                     <dt>소속 (병원명)</dt>
                     <dd>
-                        {{$affi[$user->sosok ?? '']['office_e']}}
+                        {{ $user->sosok_kr ?? '' }}
                     </dd>
                 </dl>
                 <dl>
@@ -245,12 +245,18 @@
                     <dt>최근 3년간 대한부정맥학회 정기학술대회 (KHRS) 등록여부</dt>
                     <dd>
                         <div class="checkbox-wrap cst full">
-                            @foreach($overseasConfig['registration_status'] as $registration_status_key => $registration_status_val)
+                            @foreach($conference->registration_status as $registration_status_key => $registration_status_val)
                                 <div class="checkbox-group">
                                     <input type="checkbox" name="registration_status[]" id="registration_status_{{$registration_status_key}}" value="{{$registration_status_key}}" {{ in_array($registration_status_key, $overseas->registration_status ?? []) ? 'checked':'' }} disabled="disabled">
                                     <label for="registration_status_{{$registration_status_key}}">{{$registration_status_val}}</label>
                                 </div>
                             @endforeach
+{{--                            @foreach($overseasConfig['registration_status'] as $registration_status_key => $registration_status_val)--}}
+{{--                                <div class="checkbox-group">--}}
+{{--                                    <input type="checkbox" name="registration_status[]" id="registration_status_{{$registration_status_key}}" value="{{$registration_status_key}}" {{ in_array($registration_status_key, $overseas->registration_status ?? []) ? 'checked':'' }} disabled="disabled">--}}
+{{--                                    <label for="registration_status_{{$registration_status_key}}">{{$registration_status_val}}</label>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
                         </div>
                     </dd>
                 </dl>
@@ -261,7 +267,7 @@
             </div>
             <div class="write-wrap">
                 <dl>
-                    <dt>참가신청 국제학술회의</dt>
+                    <dt>참가신청 학술대회명</dt>
                     <dd>
                         {{$conference->subject ?? ''}}
                     </dd>
@@ -387,11 +393,18 @@
                         </dl>
                     </dd>
                 </dl>
+                @if( (request()->mypage ?? '')=='Y')
+				<p class="text-red">※ 내용 수정 및 철회를 원하실 경우 사무국으로 연락주시기 바랍니다. (email: khrs9@k-hrs.org)</p>
+                @endif
             </div>
 
             @if($isAdminPage)
                 <div class="btn-wrap text-center">
                     <a href="javascript:;" class="btn btn-type1 btn-board btn-modify" onclick="self.close();">닫기</a>
+                </div>
+            @elseif( (request()->mypage ?? '')=='Y')
+                <div class="btn-wrap text-center">
+                    <a href="{{ route('mypage.overseas') }}" class="btn btn-type1 btn-board btn-modify">뒤로가기</a>
                 </div>
             @else
                 <div class="btn-wrap text-center">

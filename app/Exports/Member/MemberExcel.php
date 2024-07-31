@@ -86,6 +86,21 @@ class MemberExcel implements FromCollection, WithHeadings, ShouldAutoSize, WithE
     {
         $userConfig = $this->userConfig;
 
+        //DB이전 하면서 없던값들이 들어옴
+        $tmp_category = '';
+        if($data->category == '99') {
+            $tmp_category = $data->category_etc ?? '';
+        }else{
+            if($data->category && $data->category < 10) $tmp_category = config('site.user.category')[$data->category];
+        }
+
+        $tmp_major = '';
+        if($data->major == '99') {
+            $tmp_major = $data->major_etc ?? '';
+        }else{
+            if($data->major && $data->major < 3) $tmp_major = config('site.user.major')[$data->major];
+        }
+
         return [
             $data->seq,
             $userConfig['level'][$data->level],
@@ -94,7 +109,6 @@ class MemberExcel implements FromCollection, WithHeadings, ShouldAutoSize, WithE
             $data->first_name.' '.$data->last_name,
 
             $data->name_kr,
-//            $data->affiliation->office_k."/".$data->affiliation->office_e,
             $data->sosok_kr,
             $data->sosok_en,
             $data->school_kr,
@@ -103,13 +117,13 @@ class MemberExcel implements FromCollection, WithHeadings, ShouldAutoSize, WithE
 
             $data->depart_en,
             $data->userPosition,
-            implode('-',$data->tel),
-            implode('-',$data->phone),
+            !empty($data->tel) ? implode('-',$data->tel) : '',
+            !empty($data->phone) ? implode('-',$data->phone) : '',
             '['.$data->office_zipcode.'] '.$data->office_addr1.' '.$data->office_addr2,
 
             $data->office == '99' ? $data->office_etc : config('site.user.office')[$data->office],
-            $data->category == '99' ? $data->category_etc : config('site.user.category')[$data->category],
-            $data->major == '99' ? $data->major_etc : config('site.user.major')[$data->major],
+            $tmp_category,
+            $tmp_major,
             $data->university,
             $data->university_year,
 

@@ -231,7 +231,7 @@
 
                 <tr>
                     <td style="padding-top: 30px;padding-bottom: 110px;text-align: center;">
-                        <a href="http://k-hrs.m2comm.co.kr/main" target="_blank"><img src="http://k-hrs.m2comm.co.kr/assets/image/mail/btn_mail_home.png" alt="홈페이지 바로가기"></a>
+                        <a href="{{ env('APP_URL') }}" target="_blank"><img src="{{ asset('assets/image/mail/btn_mail_home.png') }}" alt="홈페이지 바로가기"></a>
                     </td>
                 </tr>
                 <tr>

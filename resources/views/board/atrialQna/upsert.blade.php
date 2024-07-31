@@ -3,6 +3,7 @@
 @section('addStyle')
     <link type="text/css" rel="stylesheet" href="{{ asset('plugins/plupload/2.3.6/jquery.plupload.queue/css/jquery.plupload.queue.css') }}" />
     <link type="text/css" rel="stylesheet" href="{{ asset('plugins/bootstrap-datepicker/css/bootstrap-datepicker.css') }}"/>
+{{--    <link rel="stylesheet" href="{{ asset('assets/css/editor.css') }}">--}}
 @endsection
 
 @section('contents')

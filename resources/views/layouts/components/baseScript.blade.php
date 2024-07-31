@@ -1,6 +1,6 @@
 {{-- Scripts --}}
-<script src="/assets/js/jquery-1.12.4.min.js"></script>
-<script src="/assets/js/jquery-ui.min.js"></script>
+<script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
 <script src="/assets/js/slick.min.js"></script>
 <script src="/assets/js/common.js"></script>
 <script src="{{ asset('plugins/moment/js/moment.min.js') }}"></script>
@@ -9,7 +9,7 @@
 {{--<script src="{{ asset('plugins/flatpickr/js/flatpickr-ko.min.js') }}"></script>--}}
 <script src="{{ asset('plugins/jquery-validation/jquery.validate.min.js') }}"></script>
 {{--<script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>--}}
-<script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+
 <script src="{{ asset('assets/js/jquery.rwdImageMaps.js') }}"></script>
 <script src="{{ asset('script/app.common.js') }}?v={{ config('site.app.asset_version') }}"></script>
 

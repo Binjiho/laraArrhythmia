@@ -60,9 +60,10 @@
             </div>
             <div class="btn-wrap text-center">
                 @if(thisUser())
-                <a href="{{route('research.register')}}" class="btn btn-type1 color-type11">연구비 신청하기 <span class="arrow">&gt;</span></a>
+{{--                <a href="{{route('research.register')}}" class="btn btn-type1 color-type11">연구비 신청하기 <span class="arrow">&gt;</span></a>--}}
+                <a href="javascript:alert('추후 오픈 예정입니다.')" class="btn btn-type1 color-type11">연구비 신청하기 <span class="arrow">&gt;</span></a>
                 @else
-                <a href="javascript:;" onclick="alert('로그인을 진행해주세요.'); return false;" class="btn btn-type1 color-type11">연구비 신청하기 <span class="arrow">&gt;</span></a>
+                <a href="javascript:;" onclick="alert('로그인을 진행해주세요.'); location.href='{{ route('login') }}'; return false;" class="btn btn-type1 color-type11">연구비 신청하기 <span class="arrow">&gt;</span></a>
                 @endif
             </div>
         </div>

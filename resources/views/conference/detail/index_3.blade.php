@@ -26,7 +26,7 @@
                 </div>
 
                 @if($conference->etc_text)
-                    <div class="view-contents">
+                    <div class="view-contents editor-contents">
                         {!! $conference->etc_text ?? ''  !!}
                     </div>
                 @endif
@@ -76,7 +76,7 @@
                 <div class="sub-contit-wrap">
                     <h4 class="sub-contit">입금계좌</h4>
                 </div>
-                <div class="view-contents">
+                <div class="view-contents editor-contents">
                     {!! $conference->account ?? ''  !!}
                 </div>
                 @endif
@@ -85,7 +85,7 @@
                 <div class="sub-contit-wrap">
                     <h4 class="sub-contit">환불규정</h4>
                 </div>
-                <div class="view-contents">
+                <div class="view-contents editor-contents">
                     {!! $conference->refund_text ?? ''  !!}
                 </div>
                 @endif
@@ -94,7 +94,7 @@
                 <div class="sub-contit-wrap">
                     <h4 class="sub-contit">유의사항</h4>
                 </div>
-                <div class="view-contents">
+                <div class="view-contents editor-contents">
                     {!! $conference->notice_text ?? ''  !!}
                 </div>
                 @endif
@@ -103,7 +103,7 @@
                 <div class="sub-contit-wrap">
                     <h4 class="sub-contit">문의처</h4>
                 </div>
-                <div class="view-contents">
+                <div class="view-contents editor-contents">
                     {!! $conference->contact_name ?? ''  !!} <br>
                     - TEL : {!! $conference->contact_tel ?? ''  !!} <br>
                     - E-mail : {!! $conference->contact_email ?? ''  !!}

@@ -20,15 +20,25 @@
                 <tr>
                     <td style="font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 15px;font-weight: 400;color: #4d4d4d;line-height: 1.9;text-align: left;letter-spacing: -0.04em;">
                         안녕하세요, <br/>
-                        <strong>{{ $data->conference_name ?? ''}}</strong> 의 지원에 대한 대한부정맥학회의 심의 결과를 안내드립니다. <br/><br/>
+                        {{ env('APP_NAME') }}입니다. <br/><br/>
 
-                        죄송스럽게도 선생님의 국제학술회의 참가자 지원 신청이 선정되지 않았음을 알려드립니다. <br/>
-                        지원가능 인원보다 많은 분이 접수해 주셔서 국제교류위원회에서 선정여부에 대한 논의를 거친 후에 결정되었음을 알려드립니다. <br/><br/>
+                        <strong>{{ $data->conference_name ?? ''}}</strong> 참가지원 신청에 대한 심의 결과를 안내드립니다.<br/><br/>
 
-                        대한부정맥학회에서 진행하는 국제학술대회 참가자 지원신청은 회원 여러분들께 계속 안내될 예정입니다. <br/>
-                        앞으로도 대한부정맥학회에 지속적인 관심 부탁드립니다. <br/><br/>
+                        금번에 많은 분께서 신청해주시어 사무국에서는 최대한 신청하신 모든 선생님을 지원하고자 노력하였으나 인원 제한으로 어려움이 있었습니다.<br/>
+                        총 {{ $data->regist_person ?? 0 }}분 중 {{ $data->limit_person ?? 0 }}분께만 지원이 가능하게 되어 일부 선생님께는 지원 기회를 드리지 못하게 되었음을 너른 양해 부탁드립니다. <br/><br/>
 
-                        감사합니다.
+                        선정 기준은 신청서 내에 안내된 우선순위 항목 외에도, 직전 해외학회 지원 선정 여부 및 1편의 초록에 신청한 2인 중 발표자가 아닌 경우 등을 고려하였습니다. <br/><br/>
+
+                        <u>이에 해당 이메일을 받으신 선생님께서는 금번 <strong style="font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;">{{ $data->conference_name ?? ''}} 참가지원 대상자</strong>로 <strong style="font-family: 'Malgun Gothic', '맑은고딕', '돋움', 'dotum', sans-serif;font-size: 15px;color: #0000ff;">미선정</strong>되었음을 알려드립니다. </u><br/><br/>
+
+                        기다리고 있으셨을 답변을 드리지 못해 송구하며,
+                        다시 한번 선생님의 너른 양해 부탁드립니다. <br/><br/>
+
+                        관련하여 문의사항 있으실 경우 편히 말씀 주십시오.
+                        감사합니다. <br/><br/>
+
+                        {{ env('APP_NAME') }} <br/>
+                        {{ env('APP_ALT') }} 배상
                     </td>
                 </tr>
                 </tbody>
